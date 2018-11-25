@@ -26,7 +26,8 @@
         <script src="../js/contact_me.js"></script>
 
         <script src="main.js"></script>
-        <title> New Eudoxus </title>
+        <script src="datepicker.js"></script>
+        <title> Registration </title>
     </head>
     <body>
         <!-- Header Start  -->
@@ -74,6 +75,7 @@
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                   <li><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                  <li>Εγγραφή</li>
                 </ul>
             </div>
             <div class="login-area">
@@ -96,63 +98,103 @@
                     <div id="result"></div>
                 </div>
                 <div class="my-signup">
-                    <a href="./registration_form.html" class="btn" >Εγγραφή</a>
+                    <a href="#" class="btn" >Εγγραφή</a>
+                </div>
+            </div>
+        </div>
+        <!-- Header End  -->
+
+        <div class="my-main-content-registration">
+            <p> Η συμπλήρωση των πεδίων με <span class="my-req-star">*</span> είναι υποχρεωτική.</p>
+            <div class="my-reg-account-info">
+                <h> Στοιχεία Λογαριασμού </h>
+                <form>
+                  <div class="form-group row">
+                    <label for="myEmail" class="col-5 col-form-label"><i class="fa fa-envelope" aria-hidden="true"></i>   <span class="my-req-star">*</span>Email:</label>
+                    <div class="col-6">
+                      <input type="text" class="form-control" id="myEmail">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="myPassword" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Κωδικός:</label>
+                    <div class="col-6">
+                      <input type="password" class="form-control" id="myPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="myPasswordConfirm" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Επιβεβαίωση:</label>
+                    <div class="col-6">
+                      <input type="password" class="form-control" id="myPasswordConfirm" placeholder="Password">
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="my-reg-personal-info">
+                <h> Προσωπικά Στοιχεία </h>
+                <div class="form-group row">
+                  <label for="myFirstName" class="col-5 col-form-label"><span class="my-req-star">*</span>Όνομα:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myFirstName">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="myLastName" class="col-5 col-form-label"><span class="my-req-star">*</span>Επώνυμο:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myLastName">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myBirthDate">
+                  </div>
+                </div>
+            </div>
+            <div class="my-reg-law-info">
+                <h> Νομικά Στοιχεία </h>
+                <div class="form-group row">
+                  <label for="myIdNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>Αριθμός Ταυτότητας:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myIdNumber">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="myTaxNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΦΜ:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myTaxNumber">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="myAmkaNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΜΚΑ:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myAmkaNumber">
+                  </div>
+                </div>
+            </div>
+            <div class="my-reg-contact-info">
+                <h> Στοιχεία Επικοινωνίας </h>
+                <div class="form-group row">
+                  <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myPhoneNumber">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="myAddress">
+                  </div>
                 </div>
             </div>
         </div>
 
-        <!-- Header End  -->
-
-            <div class="main-content mr-auto ml-auto">
-                <div class="my-section student-area">
-                  <div class="title-area">
-                    <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i>Φοιτητής</h5>
-                  </div>
-                  <div class="button-area">
-                          <a href="#" class="btn section-button" >Δήλωση Συγγραμμάτων</span></a>
-                          <a href="#" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                          <a href="#" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                          <a href="#" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
-                  </div>
-                </div>
-                <div class="my-section secretary-area">
-                    <div class="title-area">
-                      <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i>Γραμματεία</h5>
-                    </div>
-                    <div class="button-area">
-                            <a href="#" class="btn section-button" >Δήλωση Συγγραμμάτων</span></a>
-                            <a href="#" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                            <a href="#" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                            <a href="#" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
-                    </div>
-                </div>
-                <div class="my-section publisher-area">
-                    <div class="title-area">
-                      <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i>Γραμματεία</h5>
-                    </div>
-                    <div class="button-area">
-                            <a href="#" class="btn section-button" >Δήλωση Συγγραμμάτων</span></a>
-                            <a href="#" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                            <a href="#" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                            <a href="#" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
-                    </div>
-                </div>
-                <div class="my-section library-area">
-                    <div class="title-area">
-                      <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i>Γραμματεία</h5>
-                    </div>
-                    <div class="button-area">
-                            <a href="#" class="btn section-button" >Δήλωση Συγγραμμάτων</span></a>
-                            <a href="#" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                            <a href="#" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                            <a href="#" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
-                    </div>
-                </div>
+        <div class="my-registration-submit">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">  Έχω διαβάσει και αποδέχομαι τους <a href="#">όρους χρήσης</a> </label>
             </div>
+            <a href="#" class="btn btn-primary"> Ολοκλήρωση Εγγραφής </a>
+        </div>
 
-            <div class="my-announcement mr-auto ml-auto">
-                Anouncements
-            </div>
 
         <!-- Footer Start  -->
         <footer class="bg-dark footer">
