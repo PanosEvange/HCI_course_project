@@ -90,74 +90,103 @@ ul.breadcrumb li a:hover {
 }
 
 .student-area{
-    grid-area: student-area;
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 200px;
+    width: 850px;
+}
+
+.student-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    height: 300px;
-    width: 850px;
-    background-color: #d89da7;
-    border: 1px solid #1d2124;
-    padding: 25px;
+    grid-column-gap: 15px;
+}
+
+.section-title{
+    font-size: 25px;
+    border-bottom: 1px solid #8b8c8e;
+    width: 115px;
 }
 
 .my-section{
-    margin-left: 20%;
-    margin-top: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.my-nav-bar-container{
+    margin:0 !important;
+}
+
+.my-main-nav-list{
+    margin-left: 100px;
 }
 
 .secretary-area{
-    grid-area: secretary-area;
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 200px;
+    width: 850px;
+}
+
+.secretary-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    height: 300px;
-    width: 850px;
-    background-color: #d89da7;
-    border: 1px solid #1d2124;
-    padding: 25px;
+    grid-column-gap: 15px;
 }
 
 .publisher-area{
-    grid-area: publisher-area;
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 200px;
+    width: 850px;
+}
+
+.publisher-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    height: 300px;
-    width: 850px;
-    background-color: #d89da7;
-    border: 1px solid #1d2124;
-    padding: 25px;
+    grid-column-gap: 15px;
 }
 
 .library-area{
-    grid-area: library-area;
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 200px;
+    width: 850px;
+}
+
+.library-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    height: 300px;
-    width: 850px;
-    background-color: #d89da7;
-    border: 1px solid #1d2124;
-    padding: 25px;
+    grid-column-gap: 15px;
 }
 
 .announcement-area{
-    height: 300px;
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 200px;
     width: 850px;
-    background-color: #d89da7;
-    border: 1px solid #1d2124;
-    padding: 25px;
     margin-bottom: 10px;
 }
 
 .section-button{
     height: 100px;
-    margin-top: 65px;
+    margin-top: 15px;
     border-radius: 10px;
     background-color: red;
     text-align: center;
     padding: 30px 10px 10px 10px !important;
+
 }
 
 a.section-button{
@@ -165,7 +194,31 @@ a.section-button{
 }
 
 .student-area .section-button{
-    background-color: #bd6d7b;
+    border: 0;
+    color: #212529;
+    background-color: #fff;
+    box-shadow: 5px 10px #888888;
+}
+
+.secretary-area .section-button{
+    border: 0;
+    color: #212529;
+    background-color: #fff;
+    box-shadow: 5px 10px #888888;
+}
+
+.publisher-area .section-button{
+    border: 0;
+    color: #212529;
+    background-color: #fff;
+    box-shadow: 5px 10px #888888;
+}
+
+.library-area .section-button{
+    border: 0;
+    color: #212529;
+    background-color: #fff;
+    box-shadow: 5px 10px #888888;
 }
 
 .footer {
