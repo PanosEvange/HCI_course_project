@@ -1,9 +1,46 @@
 .below-nav-bar {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns:1fr 1fr 400px;
     grid-template-rows: fit-content;
     grid-template-areas:
-        ". login-area";
+        "my-breadcrumb . login-area";
+}
+
+.my-breadcrumb{
+    grid-area: my-breadcrumb;
+    margin-top:10px;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #f8f9fa;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "\003e";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
 }
 
 .login-area{
@@ -47,6 +84,89 @@
 
 .form-control {width:120px;}
 .popover {max-width:400px;}
+
+.main-content{
+
+}
+
+.student-area{
+    grid-area: student-area;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    height: 300px;
+    width: 850px;
+    background-color: #d89da7;
+    border: 1px solid #1d2124;
+    padding: 25px;
+}
+
+.my-section{
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.secretary-area{
+    grid-area: secretary-area;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    height: 300px;
+    width: 850px;
+    background-color: #d89da7;
+    border: 1px solid #1d2124;
+    padding: 25px;
+}
+
+.publisher-area{
+    grid-area: publisher-area;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    height: 300px;
+    width: 850px;
+    background-color: #d89da7;
+    border: 1px solid #1d2124;
+    padding: 25px;
+}
+
+.library-area{
+    grid-area: library-area;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    height: 300px;
+    width: 850px;
+    background-color: #d89da7;
+    border: 1px solid #1d2124;
+    padding: 25px;
+}
+
+.announcement-area{
+    height: 300px;
+    width: 850px;
+    background-color: #d89da7;
+    border: 1px solid #1d2124;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.section-button{
+    height: 100px;
+    margin-top: 65px;
+    border-radius: 10px;
+    background-color: red;
+    text-align: center;
+    padding: 30px 10px 10px 10px !important;
+}
+
+a.section-button{
+    color: black;
+}
+
+.student-area .section-button{
+    background-color: #bd6d7b;
+}
 
 .footer {
     text-align: center;
