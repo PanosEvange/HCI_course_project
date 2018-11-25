@@ -64,7 +64,19 @@
                         <a class="dropdown-item" href="#">Πληροφορίες για Βιβλιοθήκη</a>
                       </div>
                     </li>
-                  </ul>
+                </ul>
+
+                  <div class="col-sm-3 col-md-3 pull-right">
+                    <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+
                 </div>
               </div>
             </nav>
@@ -73,16 +85,17 @@
         <div class="below-nav-bar">
             <div class="login-area">
                 <div class="my-login">
-                    <div class="well">
-                        <button type="button" id="login" class="btn">Είσοδος</button>
-                    </div>
+                    <button type="button" id="login" class="btn">Είσοδος</button>
                     <div id="myForm" class="my-hide">
                         <form action="/echo/html/" id="popForm" method="get">
                             <div>
-                                <label for="email">Email</label>
+                                <label for="email">Email:</label>
                                 <input type="email" name="email" id="email" class="form-control input-md">
                                 <label for="password">Password:</label>
-                                <input type="text" name="password" id="password" class="form-control input-md">
+                                <!-- Password field -->
+                                <input type="password" id="password" class="form-control input-md">
+                                <a href="#">Υπενθύμιση Password</a>
+                                <label><input type="checkbox" value="">Να παραμείνω συνδεδεμένος</label>
                                 <button type="button" class="btn btn-primary my-submit" data-loading-text="Sending info.."><em class="icon-ok"></em> Είσοδος</button>
                             </div>
                         </form>
@@ -90,7 +103,7 @@
                     <div id="result"></div>
                 </div>
                 <div class="my-signup">
-                    <button type="button"class="btn"><a href="#" >Εγγραφή</a></button>
+                    <a href="#" class="btn" >Εγγραφή</a>
                 </div>
             </div>
         </div>

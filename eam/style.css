@@ -22,13 +22,14 @@
     color: black;
     text-decoration: none;
 }
-.my-signup:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+
+.my-signup .btn{
+    background-color: #dddddd;
+    border-color: #dddddd;
 }
 
 .my-signup a:hover {
-    color: black;
+    color: black !important;
     text-decoration: none;
 }
 
