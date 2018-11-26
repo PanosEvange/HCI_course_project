@@ -2,6 +2,10 @@
     margin:0;
 }
 
+.my-question-popover:hover{
+    color: red;
+}
+
 .my-nav-bar .navbar{
     min-width: 1300px;
 }
