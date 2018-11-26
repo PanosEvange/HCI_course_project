@@ -21,12 +21,60 @@
     margin-left: 10px;
 }
 
-.my-search-area{
-
+.form-control.my-search-area:focus{
+    border-color: #fff;
+    box-shadow: none;
 }
 
-.my-search-button{
+.my-login .label{
+    margin-top: 15px;
+}
 
+
+.my-search-button{
+    margin-left: 4px;
+    color: #797a7b !important;
+    border-color: #acb0b5 !important;
+    background-color: #ffffff;
+}
+
+.my-search-button:focus{
+    border-color: #fff;
+    box-shadow: none !important;
+}
+
+.my-search-button:hover {
+    background-color: #dee2e6 !important;
+    color:black !important;
+}
+
+.my-label-email{
+    margin-top: 10px;
+}
+
+.my-label-email .fa.fa-envelope{
+    font-size: 16px;
+}
+
+.my-label-password{
+    margin-top: 10px;
+}
+
+.my-password-input{
+    margin-bottom: 10px;
+}
+
+.my-password-remember {
+    margin-left: 55px;
+}
+
+.my-label-password .fa.fa-lock{
+    font-size: 16px;
+}
+
+.my-label-stay-login {
+    margin-top: 10px;
+    margin-left: 25px;
 }
 
 .below-nav-bar {
@@ -49,12 +97,14 @@
     grid-area: my-breadcrumb;
     margin-top:10px;
 }
+.my-breadcrumb .breadcrumb{
+    background-color: #fff !important;
+}
 
 /* Style the list */
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
-    background-color: #f8f9fa;
 }
 
 /* Display list items side by side */
@@ -181,7 +231,7 @@ ul.breadcrumb li a:hover {
     border: 0;
     color: #212529;
     background-color: #fff;
-    box-shadow: 5px 10px #888888;
+    box-shadow: 5px 5px #888888;
     width: 200px;
     margin-top: 20px;
 }
@@ -189,6 +239,21 @@ ul.breadcrumb li a:hover {
 a.section-button{
     font-size: 14px;
 }
+
+a.section-button:hover{
+    color: black !important;
+}
+
+.section-button:hover{
+    background-color: yellow;
+}
+
+.section-button:focus{
+    margin-top:20px;
+    border-color: #fff !important;
+    box-shadow: none !important;
+}
+
 .secretary-area{
     display: flex;
     flex-direction: column;

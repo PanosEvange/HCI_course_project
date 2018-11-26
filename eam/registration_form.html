@@ -36,7 +36,7 @@
             <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
               <a class="navbar-brand ml-auto" href="./index.html">Νέος Εύδοξος</a>
                 <ul class="my-navbar-main-list navbar-nav">
-                  <li class="nav-item active">
+                  <li class="nav-item">
                     <a class="nav-link" href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>Αρχική <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
@@ -46,10 +46,10 @@
                     <a class="nav-link" href="#">Αναζήτηση Συγγραμμάτων</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link" href="#">Επικοινωνία</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Αναζήτηση Συγγραμμάτων</a>
+                    <a class="nav-link" href="#">FAQ</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,7 +65,7 @@
                 </ul>
                 <form class="my-search-bar mr-auto">
                   <input class="form-control my-search-area" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  <button class="btn my-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </nav>
         </div>
@@ -84,13 +84,13 @@
                     <div id="myForm" class="my-hide">
                         <form action="/echo/html/" id="popForm" method="get">
                             <div>
-                                <label for="email">Email:</label>
+                                <label class="my-label-email" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
                                 <input type="email" name="email" id="email" class="form-control input-md">
-                                <label for="password">Password:</label>
+                                <label class="my-label-password" for="password"><i class="fa fa-lock" aria-hidden="true"></i>  Password:</label>
                                 <!-- Password field -->
-                                <input type="password" id="password" class="form-control input-md">
-                                <a href="#">Υπενθύμιση Password</a>
-                                <label><input type="checkbox" value="">Να παραμείνω συνδεδεμένος</label>
+                                <input type="password" id="password" class="form-control input-md my-password-input">
+                                <a class="my-password-remember" href="#">Υπενθύμιση Password</a>
+                                <label class="my-label-stay-login"><input type="checkbox" value="">Να παραμείνω συνδεδεμένος</label>
                                 <button type="button" class="btn btn-primary my-submit" data-loading-text="Sending info.."><em class="icon-ok"></em> Είσοδος</button>
                             </div>
                         </form>
@@ -98,10 +98,11 @@
                     <div id="result"></div>
                 </div>
                 <div class="my-signup">
-                    <a href="#" class="btn" >Εγγραφή</a>
+                    <a href="./registration_form.html" class="btn" >Εγγραφή</a>
                 </div>
             </div>
         </div>
+
         <!-- Header End  -->
 
         <div class="my-main-content-registration">
