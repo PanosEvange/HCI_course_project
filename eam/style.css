@@ -30,6 +30,13 @@
     margin-top: 15px;
 }
 
+.my-login .btn{
+    box-shadow: 5px 5px #545b62;
+}
+
+.my-signup .btn{
+    box-shadow: 5px 5px #545b62;
+}
 
 .my-search-button{
     margin-left: 4px;
@@ -39,6 +46,16 @@
 }
 
 .my-search-button:focus{
+    border-color: #fff;
+    box-shadow: none !important;
+}
+
+.my-signup .btn:focus{
+    border-color: #fff;
+    box-shadow: none !important;
+}
+
+.my-login .btn:focus{
     border-color: #fff;
     box-shadow: none !important;
 }
