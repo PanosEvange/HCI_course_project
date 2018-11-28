@@ -45,6 +45,18 @@
     border-color: #dddddd !important;
 }
 
+.my-login .btn:hover{
+    box-shadow: 5px 5px #545b62;
+    background-color: #17a2b8;
+    border-color:#0d6471;
+}
+
+.my-signup .btn:hover{
+    box-shadow: 5px 5px #545b62;
+    background-color: #17a2b8 !important;
+    border-color:#0d6471 !important;
+}
+
 .my-search-button{
     margin-left: 4px;
     color: #797a7b !important;
