@@ -293,7 +293,7 @@ ul.breadcrumb li a:hover {
 .student-area .section-button.btn:hover{
     background-color: #e0e05a;
     border-color:#f4ff00;
-    border:3px solid #f4ff00;
+    border:1px solid #f4ff00;
 }
 
 a.section-button{
