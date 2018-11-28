@@ -2,6 +2,32 @@
     margin:0;
 }
 
+.input-group-addon{
+    background-color: #e9ecef;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    width: 30px;
+    margin-left: -1px;
+}
+
+.input-group-addon a{
+    color: black !important;
+}
+
+.input-group-addon .fa-eye-slash:before{
+    font-size: 18px !important;
+    position: relative;
+    top:4px;
+    left: 4px ;
+}
+
+.input-group-addon .fa-eye:before{
+    font-size: 18px !important;
+    position: relative;
+    top:4px;
+    left: 4px ;
+}
+
 .my-question-popover:hover{
     color: red;
 }
