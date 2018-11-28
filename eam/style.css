@@ -36,10 +36,13 @@
 
 .my-login .btn{
     box-shadow: 5px 5px #545b62;
+    background-color: #dddddd;
 }
 
 .my-signup .btn{
     box-shadow: 5px 5px #545b62;
+    background-color: #dddddd !important;
+    border-color: #dddddd !important;
 }
 
 .my-search-button{
@@ -49,9 +52,32 @@
     background-color: #ffffff;
 }
 
-.my-search-button:focus{
+/*.my-search-button:focus{
     border-color: #fff;
     box-shadow: none !important;
+}
+
+.my-search-button:hover {
+    background-color: #dee2e6 !important;
+    color:black !important;
+}*/
+
+.my-search-button.btn:hover {
+    background-color: #7e8080 !important;
+    color:black !important;
+    border: 1px solid #999a9a !important;
+    border-color: #999a9a !important;
+    box-shadow: 1px 1px #999a9a;
+}
+
+.my-search-button.btn:focus{
+/*     border-color: #fff;
+    box-shadow: none !important; */
+    background-color: #7e8080 !important;
+    color:black !important;
+    border: 1px solid #999a9a !important;
+    border-color: #999a9a !important;
+    box-shadow: 1px 1px #999a9a;
 }
 
 .my-signup .btn:focus{
@@ -62,11 +88,6 @@
 .my-login .btn:focus{
     border-color: #fff;
     box-shadow: none !important;
-}
-
-.my-search-button:hover {
-    background-color: #dee2e6 !important;
-    color:black !important;
 }
 
 .my-label-email{
@@ -255,6 +276,12 @@ ul.breadcrumb li a:hover {
     box-shadow: 5px 5px #888888;
     width: 200px;
     margin-top: 20px;
+}
+
+.student-area .section-button.btn:hover{
+    background-color: #e0e05a;
+    border-color:#f4ff00;
+    border:3px solid #f4ff00;
 }
 
 a.section-button{
