@@ -226,13 +226,14 @@ function valAmkaNumber() {
 
 function valPhoneNumber() {
     var $phone = $("#myPhoneNumber-reg").val();
-    if( $phone == 10 ){
+    re = /^2[0-9]+|69[0-9]+$/;
+    if( $phone.length == 10 && re.test($phone)){
         document.getElementById("myPhoneNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-phone-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid phone number";
         $(".error-phone-reg").html(msg);
     }
 
