@@ -2,26 +2,14 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover({html:true});
 });
 
-$(function(){
-    $('#login').popover({
-        placement: 'bottom',
-        title: '',
-        html:true,
-        content:  $('#myForm').html()
-    }).on('click', function(){
-      // had to put it within the on click action so it grabs the correct info on submit
-      $('.btn-primary').click(function(){
-       //$('#result').after("form submitted by " + $('#email').val())
-        $.post('/echo/html/',  {
-            email: $('#email').val(),
-            password: $('#password').val()
-        }, function(r){
-          $('#pops').popover('hide')
-        //   $('#result').html('response from server could be here' )
-        })
-      })
-  })
-})
+$(document).on('click', function (e) {
+    $('[data-toggle="popover"],[data-original-title]').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            (($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false
+        }
+
+    });
+});
 
 $(document).ready(function() {
     $("#show_hide_password_first a").on('click', function(event) {

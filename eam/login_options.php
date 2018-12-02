@@ -40,7 +40,6 @@
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
-              echo "Success!!!";
               $_SESSION['loggedin'] = true;
               $_SESSION['username'] = $email;
               header('Location: index.php');
@@ -57,30 +56,36 @@
 <!-- Login Start -->
 <div class="login-area">
     <div class="my-login">
-        <button type="button" id="login" class="btn">Είσοδος</button>
-        <div id="myForm" class="my-hide">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="popForm">
-                <div>
-                    <label class="my-label-email" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
-                    <input type="email" name="email" id="email" class="form-control input-md">
-                    <label class="my-label-password" for="password"><i class="fa fa-lock" aria-hidden="true"></i>  Password:</label>
-                    <!-- Password field -->
-                    <div class="input-group" id="show_hide_password_login">
-                        <input class="form-control" type="password" name="password" id="password">
-                        <div class="input-group-addon">
-                          <a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="error-msg-login">
-                            <?php echo $error;?>
-                    </div>
-                    <a class="my-password-remember" href="./under_construction.php">Υπενθύμιση Password</a>
-                    <label class="my-label-stay-login"><input type="checkbox" value="">  Να παραμείνω συνδεδεμένος</label>
-                    <input type="submit" name="submit" class="btn btn-primary my-submit" value="Είσοδος">
-                </div>
-            </form>
-        </div>
-        <div id="result"></div>
+        <a href="#" tabindex="0" data-placement="bottom"
+         class="btn" role="button" data-toggle="popover"
+         data-trigger="click" title="Είσοδος"
+         data-content='
+             <div id="popover-content" class="hidden">
+                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="popForm">
+                     <div>
+                         <label class="my-label-email" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
+                         <input type="email" name="email" id="email" class="form-control input-md">
+                         <label class="my-label-password" for="password"><i class="fa fa-lock" aria-hidden="true"></i>  Password:</label>
+                         <!-- Password field -->
+                         <div class="input-group" id="show_hide_password_login">
+                             <input class="form-control" type="password" name="password" id="password">
+                             <div class="input-group-addon">
+                               <a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                             </div>
+                         </div>
+                         <div class="error-msg-login">
+                                 <?php echo $error;?>
+                         </div>
+                         <a class="my-password-remember" href="./under_construction.php">Υπενθύμιση Password</a>
+                         <label class="my-label-stay-login"><input type="checkbox" value="">  Να παραμείνω συνδεδεμένος</label>
+                         <input type="submit" name="submit" class="btn btn-primary my-submit" value="Είσοδος">
+                     </div>
+                 </form>
+             </div>
+         '
+         >
+         Είσοδος
+         </a>
     </div>
     <div class="my-signup">
         <a href="./registration_form.php" class="btn" >Εγγραφή</a>

@@ -248,6 +248,21 @@ ul.breadcrumb li a:hover {
 
 }
 
+.my-login a{
+    color: black;
+    text-decoration: none;
+}
+
+.my-login .btn{
+    background-color: #dddddd;
+    border-color: #dddddd;
+}
+
+.my-login a:hover {
+    color: black !important;
+    text-decoration: none;
+}
+
 .placeholder{
     height: 900px;
 }
