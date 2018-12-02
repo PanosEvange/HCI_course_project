@@ -28,6 +28,16 @@
     left: 4px ;
 }
 
+.login-popup i.fa.fa-eye-slash {
+    top: 3px;
+    position: relative;
+}
+
+.login-popup i.fa.fa-eye {
+    top: 3px;
+    position: relative;
+}
+
 .my-question-popover:hover{
     color: red;
 }

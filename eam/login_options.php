@@ -13,7 +13,7 @@
                          <!-- Password field -->
                          <div class="input-group" id="show_hide_password_login">
                              <input class="form-control" type="password" name="password" id="login-password">
-                             <div class="input-group-addon">
+                             <div class="input-group-addon login-popup">
                                <a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                              </div>
                          </div>

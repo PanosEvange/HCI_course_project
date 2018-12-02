@@ -37,29 +37,6 @@ $(document).on("click", "#login-submit-button", function () {
     }
 });
 
-// $(document).ready(function(){
-//     $("#login-submit-button").click(function(){
-//         var username = $("#login-email").val().trim();
-//         var password = $("#login-password").val().trim();
-//
-//         if( username != "" && password != "" ){
-//             $.ajax({
-//                 url:'login.php',
-//                 type:'post',
-//                 data:{username:username,password:password},
-//                 success:function(response){
-//                     var msg = "";
-//                     if(response == 1){
-//                         window.location = "index.php";
-//                     }else{
-//                         msg = "Invalid username and password!";
-//                     }
-//                     $(".error-msg-login").html(msg);
-//                 }
-//             });
-//         }
-//     });
-// });
 
 $(document).ready(function() {
     $("#show_hide_password_first a").on('click', function(event) {
@@ -91,18 +68,15 @@ $(document).ready(function() {
     });
 });
 
-
-$(document).ready(function() {
-    $("#show_hide_password_login a").on('click', function(event) {
-        event.preventDefault();
-        if($('#show_hide_password_login input').attr("type") == "text"){
-            $('#show_hide_password_login input').attr('type', 'password');
-            $('#show_hide_password_login i').addClass( "fa-eye-slash" );
-            $('#show_hide_password_login i').removeClass( "fa-eye" );
-        }else if($('#show_hide_password_login input').attr("type") == "password"){
-            $('#show_hide_password_login input').attr('type', 'text');
-            $('#show_hide_password_login i').removeClass( "fa-eye-slash" );
-            $('#show_hide_password_login i').addClass( "fa-eye" );
-        }
-    });
+$(document).on("click", "#show_hide_password_login a", function (event) {
+    event.preventDefault();
+    if($('#show_hide_password_login input').attr("type") == "text"){
+        $('#show_hide_password_login input').attr('type', 'password');
+        $('#show_hide_password_login i').addClass( "fa-eye-slash" );
+        $('#show_hide_password_login i').removeClass( "fa-eye" );
+    }else if($('#show_hide_password_login input').attr("type") == "password"){
+        $('#show_hide_password_login input').attr('type', 'text');
+        $('#show_hide_password_login i').removeClass( "fa-eye-slash" );
+        $('#show_hide_password_login i').addClass( "fa-eye" );
+    }
 });
