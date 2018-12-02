@@ -1,5 +1,3 @@
-<?php
-echo '
 <!-- Login Start -->
 <div class="login-area">
     <div class="my-login">
@@ -31,5 +29,3 @@ echo '
     </div>
 </div>
 <!-- Login End -->
-';
-?>

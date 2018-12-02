@@ -1,5 +1,3 @@
-<?php
-echo '
 <!-- Header Start -->
 <div class="my-nav-bar">
     <!-- Navigation -->
@@ -40,5 +38,3 @@ echo '
     </nav>
 </div>
 <!-- Header End -->
-';
-?>
