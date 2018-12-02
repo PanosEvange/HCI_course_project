@@ -83,7 +83,9 @@ $(document).on("click", "#show_hide_password_login a", function (event) {
 
 function valRegEmail() {
     var $email = $("#myEmail-reg").val();
-    if( $email == 10 ){ //if email is ok put a success class and remove error message
+    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    // if( $email == 10 ){ //if email is ok put a success class and remove error message
+    if( re.test($email)){ //if email is ok put a success class and remove error message
         document.getElementById("myEmail-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-email-reg").html(msg);
