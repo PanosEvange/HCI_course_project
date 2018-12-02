@@ -492,10 +492,22 @@ a.section-button:hover{
 }
 
 .my-registration-submit{
-    margin-bottom: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 1100px;
+}
+
+.error-msg {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+form.my-registration-from {
+    margin-bottom: 100px;
+}
+
+.success-registration{
+    color: green;
 }
