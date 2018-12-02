@@ -246,7 +246,11 @@ function valAmkaNumber() {
 function valPhoneNumber() {
     var $phone = $("#myPhoneNumber-reg").val();
     re = /^2[0-9]+|69[0-9]+$/;
-    if( $phone.length == 10 && re.test($phone)){
+    if ($phone.length == 0) {
+        var msg = "";
+        $(".error-phone-reg").html(msg);
+    }
+    else if( $phone.length == 10 && re.test($phone)){
         document.getElementById("myPhoneNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-phone-reg").html(msg);
@@ -261,7 +265,11 @@ function valPhoneNumber() {
 function valAddress() {
     var $address = $("#myAddress-reg").val();
     re = /^[A-Za-z]+ [0-9]+, [A-Za-z]+, [0-9]+$/;
-    if( re.test($address) ){
+    if ($address.length == 0) {
+        var msg = "";
+        $(".error-myAddress-reg").html(msg);
+    }
+    else if( re.test($address) ){
         document.getElementById("myAddress-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-myAddress-reg").html(msg);
