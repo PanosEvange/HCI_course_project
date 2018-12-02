@@ -112,21 +112,20 @@
                       <div class="form-group row">
                         <label for="myEmail" class="col-5 col-form-label"><i class="fa fa-envelope" aria-hidden="true"></i>   <span class="my-req-star">*</span>Email:</label>
                         <div class="col-6">
-                          <input type="text" name="email" value="<?php echo $email;?>" class="form-control" id="myEmail">
+                          <input type="text" name="email" onfocusout="valRegEmail()" value="<?php echo $email;?>" id="myEmail-reg" class="form-control" >
                         </div>
                       </div>
                       <div class="row error-msg">
                           <div class="col-5">
                           </div>
-                          <div class="col-6">
-                              <?php echo $emailErr;?>
+                          <div class="col-6 error-email-reg">
                           </div>
                       </div>
                       <div class="form-group row">
                         <label for="myPassword" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Κωδικός:</label>
                         <div class="col-6">
                             <div class="input-group" id="show_hide_password_first">
-                              <input class="form-control" name="password" value="<?php echo $pass;?>" type="password" id="myPassword">
+                              <input class="form-control" name="password" onfocusout="valPassword()" value="<?php echo $pass;?>" type="password" id="myPassword-reg">
                               <div class="input-group-addon">
                                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                               </div>
@@ -136,15 +135,14 @@
                       <div class="row error-msg">
                           <div class="col-5">
                           </div>
-                          <div class="col-6">
-                              <?php echo $passErr;?>
+                          <div class="col-6 error-pass-reg">
                           </div>
                       </div>
                       <div class="form-group row">
                         <label for="myPasswordConfirm" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Επιβεβαίωση:</label>
                         <div class="col-6">
                             <div class="input-group" id="show_hide_password_confirm">
-                              <input class="form-control" type="password" id="myPasswordConfirm">
+                              <input class="form-control" onfocusout="valPassConf()" type="password" id="myPasswordConfirm-reg">
                               <div class="input-group-addon">
                                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                               </div>
@@ -152,26 +150,50 @@
                           <!-- <input type="password" class="form-control" id="myPasswordConfirm" placeholder="Password"> -->
                         </div>
                       </div>
+                      <div class="row error-msg">
+                          <div class="col-5">
+                          </div>
+                          <div class="col-6 error-conf-pass-reg">
+                          </div>
+                      </div>
                 </div>
                 <div class="my-reg-personal-info">
                     <h> Προσωπικά Στοιχεία </h>
                     <div class="form-group row">
                       <label for="myFirstName" class="col-5 col-form-label"><span class="my-req-star">*</span>Όνομα:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myFirstName">
+                        <input type="text" onfocusout="valFirstName()" class="form-control" id="myFirstName-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-first-name-reg">
+                        </div>
                     </div>
                     <div class="form-group row">
                       <label for="myLastName" class="col-5 col-form-label"><span class="my-req-star">*</span>Επώνυμο:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myLastName">
+                        <input type="text" onfocusout="valLastName()" class="form-control" id="myLastName-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-last-name-reg">
+                        </div>
                     </div>
                     <div class="form-group row">
                       <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myBirthDate">
+                        <input type="text" onfocusout="valBirthDate()" class="form-control" id="myBirthDate-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-date-reg">
+                        </div>
                     </div>
                 </div>
                 <div class="my-reg-law-info">
@@ -179,7 +201,7 @@
                     <div class="form-group row">
                       <label for="myIdNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>Αριθμός Ταυτότητας:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myIdNumber">
+                        <input type="text" onfocusout="valIdNumber()" class="form-control" id="myIdNumber-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
@@ -188,17 +210,35 @@
                               <i class="fa fa-question-circle" aria-hidden="true"></i></span>
                       </div>
                     </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-id-reg">
+                        </div>
+                    </div>
                     <div class="form-group row">
                       <label for="myTaxNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΦΜ:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myTaxNumber">
+                        <input type="text" onfocusout="valTaxNumber()" class="form-control" id="myTaxNumber-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-tax-reg">
+                        </div>
                     </div>
                     <div class="form-group row">
                       <label for="myAmkaNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΜΚΑ:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myAmkaNumber">
+                        <input type="text" onfocusout="valAmkaNumber()" class="form-control" id="myAmkaNumber-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-amka-reg">
+                        </div>
                     </div>
                 </div>
                 <div class="my-reg-contact-info">
@@ -206,14 +246,26 @@
                     <div class="form-group row">
                       <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myPhoneNumber">
+                        <input type="text" onfocusout="valPhoneNumber()" class="form-control" id="myPhoneNumber-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-phone-reg">
+                        </div>
                     </div>
                     <div class="form-group row">
                       <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
                       <div class="col-6">
-                        <input type="text" class="form-control" id="myAddress">
+                        <input type="text" onfocusout="valAddress()" class="form-control" id="myAddress-reg">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-myAddress-reg">
+                        </div>
                     </div>
                 </div>
                 <div class="my-registration-submit">
@@ -223,7 +275,6 @@
                     <div class="row">
                         <input type="submit" name="submit" class="btn btn-primary" value="Ολοκλήρωση Εγγραφής">
                     </div>
-
                 </div>
             </form>
         </div>

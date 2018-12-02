@@ -80,3 +80,158 @@ $(document).on("click", "#show_hide_password_login a", function (event) {
         $('#show_hide_password_login i').addClass( "fa-eye" );
     }
 });
+
+function valRegEmail() {
+    var $email = $("#myEmail-reg").val();
+    if( $email == 10 ){ //if email is ok put a success class and remove error message
+        document.getElementById("myEmail-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-email-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Invalid Email form!";
+        $(".error-email-reg").html(msg);
+    }
+
+}
+
+function valPassword() {
+    var $password = $("#myPassword-reg").val();
+    if( $password == 10 ){
+        document.getElementById("myPassword-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-pass-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Invalid Password!";
+        $(".error-pass-reg").html(msg);
+    }
+
+}
+
+function valPassConf() {
+    var $passConf = $("#myPasswordConfirm-reg").val();
+    var $pass = $("#myPassword-reg").val();
+    if( $passConf == $pass ){
+        document.getElementById("myPasswordConfirm-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-conf-pass-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-conf-pass-reg").html(msg);
+    }
+
+}
+
+function valFirstName() {
+    var $firstName = $("#myFirstName-reg").val();
+    if( $firstName == 10 ){
+        document.getElementById("myFirstName-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-first-name-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-first-name-reg").html(msg);
+    }
+
+}
+
+function valLastName() {
+    var $lastName = $("#myLastName-reg").val();
+    if( $lastName == 10 ){
+        document.getElementById("myLastName-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-last-name-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-last-name-reg").html(msg);
+    }
+
+}
+
+function valBirthDate() {
+    var $date = $("#myBirthDate-reg").val();
+    if( $date == 10 ){
+        document.getElementById("myBirthDate-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-date-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-date-reg").html(msg);
+    }
+
+}
+
+function valIdNumber() {
+    var $id = $("#myIdNumber-reg").val();
+    if( $id == 10 ){
+        document.getElementById("myIdNumber-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-id-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-id-reg").html(msg);
+    }
+
+}
+
+function valTaxNumber() {
+    var $tax = $("#myTaxNumber-reg").val();
+    if( $tax == 10 ){
+        document.getElementById("myTaxNumber-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-tax-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-tax-reg").html(msg);
+    }
+
+}
+
+function valAmkaNumber() {
+    var $amka = $("#myAmkaNumber-reg").val();
+    if( $amka == 10 ){
+        document.getElementById("myAmkaNumber-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-amka-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-amka-reg").html(msg);
+    }
+
+}
+
+function valPhoneNumber() {
+    var $phone = $("#myPhoneNumber-reg").val();
+    if( $phone == 10 ){
+        document.getElementById("myPhoneNumber-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-phone-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-phone-reg").html(msg);
+    }
+
+}
+
+function valAddress() {
+    var $address = $("#myAddress-reg").val();
+    if( $address == 10 ){
+        document.getElementById("myAddress-reg").setAttribute("class", "successRegField form-control");
+        var msg = "";
+        $(".error-myAddress-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Passwords don't match!";
+        $(".error-myAddress-reg").html(msg);
+    }
+
+}
