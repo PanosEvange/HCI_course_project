@@ -260,13 +260,14 @@ function valPhoneNumber() {
 
 function valAddress() {
     var $address = $("#myAddress-reg").val();
-    if( $address == 10 ){
+    re = /^[A-Za-z]+ [0-9]+, [A-Za-z]+, [0-9]+$/;
+    if( re.test($address) ){
         document.getElementById("myAddress-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-myAddress-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid address";
         $(".error-myAddress-reg").html(msg);
     }
 
