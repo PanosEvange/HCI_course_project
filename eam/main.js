@@ -99,8 +99,8 @@ function valRegEmail() {
 
 function valPassword() {
     var $password = $("#myPassword-reg").val();
-    re = /^[0-9]*$/i;
-    if( $password.length > 8 && re.text($password) ){
+    re = /^[0-9]*$/;
+    if( $password.length > 8 && re.test($password) ){
         document.getElementById("myPassword-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-pass-reg").html(msg);
@@ -129,13 +129,19 @@ function valPassConf() {
 
 function valFirstName() {
     var $firstName = $("#myFirstName-reg").val();
-    if( $firstName == 10 ){
+    re = /^[A-Za-z]+|[Α-Ωα-ω]+$/;
+    // if( $firstName == 10 ){
+    if ($firstName.length == 0) {
+        var msg = "Please insert a first name";
+        $(".error-first-name-reg").html(msg);
+    }
+    else if( re.test($firstName) ){
         document.getElementById("myFirstName-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-first-name-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid first name";
         $(".error-first-name-reg").html(msg);
     }
 
@@ -143,13 +149,17 @@ function valFirstName() {
 
 function valLastName() {
     var $lastName = $("#myLastName-reg").val();
-    if( $lastName == 10 ){
+    if ($lastName.length == 0) {
+        var msg = "Please insert a last name";
+        $(".error-last-name-reg").html(msg);
+    }
+    else if ( re.test($lastName)) {
         document.getElementById("myLastName-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-last-name-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid last name";
         $(".error-last-name-reg").html(msg);
     }
 
@@ -171,13 +181,14 @@ function valBirthDate() {
 
 function valIdNumber() {
     var $id = $("#myIdNumber-reg").val();
-    if( $id == 10 ){
+    re = /^Α[0-9]*$/;
+    if( $id.length == 10 && re.test($id)){
         document.getElementById("myIdNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-id-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invlaid ID number";
         $(".error-id-reg").html(msg);
     }
 
@@ -185,13 +196,14 @@ function valIdNumber() {
 
 function valTaxNumber() {
     var $tax = $("#myTaxNumber-reg").val();
-    if( $tax == 10 ){
+    re = /^[0-9]*$/;
+    if( $tax.length == 10 && re.test($tax)){
         document.getElementById("myTaxNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-tax-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid tax number";
         $(".error-tax-reg").html(msg);
     }
 
@@ -199,13 +211,14 @@ function valTaxNumber() {
 
 function valAmkaNumber() {
     var $amka = $("#myAmkaNumber-reg").val();
-    if( $amka == 10 ){
+    re = /^[0-9]*$/;
+    if( $amka.length == 10 && re.test($amka)){
         document.getElementById("myAmkaNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-amka-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid amka";
         $(".error-amka-reg").html(msg);
     }
 
