@@ -511,3 +511,8 @@ form.my-registration-from {
 .success-registration{
     color: green;
 }
+
+.error-msg-login {
+    margin-top: 3px;
+    color: red;
+}
