@@ -11,6 +11,56 @@ $(document).on('click', function (e) {
     });
 });
 
+$(document).on("click", "#login-submit-button", function () {
+    var email = $("#login-email").val();
+    var password = $("#login-password").val();
+
+    if( email != "" && password != "" ){
+        $.ajax({
+            url:'login.php',
+            type:'post',
+            data:{email:email,password:password},
+            success:function(response){
+                var msg = "";
+                if(response == 1){
+                    window.location = "index.php";
+                }else{
+                    msg = "Invalid email or password!";
+                }
+                $(".error-msg-login").html(msg);
+            }
+        });
+    }
+    else{
+        var msg = "Enter email and password!";
+        $(".error-msg-login").html(msg);
+    }
+});
+
+// $(document).ready(function(){
+//     $("#login-submit-button").click(function(){
+//         var username = $("#login-email").val().trim();
+//         var password = $("#login-password").val().trim();
+//
+//         if( username != "" && password != "" ){
+//             $.ajax({
+//                 url:'login.php',
+//                 type:'post',
+//                 data:{username:username,password:password},
+//                 success:function(response){
+//                     var msg = "";
+//                     if(response == 1){
+//                         window.location = "index.php";
+//                     }else{
+//                         msg = "Invalid username and password!";
+//                     }
+//                     $(".error-msg-login").html(msg);
+//                 }
+//             });
+//         }
+//     });
+// });
+
 $(document).ready(function() {
     $("#show_hide_password_first a").on('click', function(event) {
         event.preventDefault();
