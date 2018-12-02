@@ -47,7 +47,8 @@
 
               if (empty($_POST["password"])) {
                 $passErr = "Password is required";
-              } else {
+              }
+              else {
                 $pass = test_input($_POST["password"]);
                 // check if name only contains letters and whitespace
                 if (!preg_match("/^[a-zA-Z]*$/",$pass)) {
@@ -57,20 +58,43 @@
 
               if (empty($_POST["email"])) {
                 $emailErr = "Email is required";
-              } else {
-                $email = test_input($_POST["email"]);
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                  $emailErr = "Invalid email format";
-                }
-
-                if( ! (strcmp($emailErr, "") or strcmp($emailErr, "")) ){
-                    //save to db
-                    
-                    $succ = "Επιτυχής καταχώρηση!";
-                }
-
               }
+              else {
+                  $email = test_input($_POST["email"]);
+                  // check if e-mail address is well-formed
+                  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                      $emailErr = "Invalid email format";
+                  }
+              }
+
+              $servername = "localhost";
+              $username = "root";
+              $password = "";
+              $dbname = "sdi1500039";
+
+              if( ! (strcmp($emailErr, "") or strcmp($passErr, "")) ){
+                  //save to db
+                  // Create connection
+                  $conn = new mysqli($servername, $username, $password, $dbname);
+                  // Check connection
+                  if ($conn->connect_error) {
+                      die("Connection failed: " . $conn->connect_error);
+                  }
+
+                  $sql = "INSERT INTO user (id, username, password)
+                  VALUES ('0', '$email', '$pass')";
+
+                  if ($conn->query($sql) === TRUE) {
+                      $succ = "Επιτυχής καταχώρηση!";
+                  }
+                  else {
+                      echo "Error: " . $sql . "<br>" . $conn->error;
+                  }
+
+                  $conn->close();
+
+                }
+
             }
 
             function test_input($data) {
