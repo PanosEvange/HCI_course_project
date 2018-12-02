@@ -99,7 +99,8 @@ function valRegEmail() {
 
 function valPassword() {
     var $password = $("#myPassword-reg").val();
-    if( $password == 10 ){
+    re = /^[0-9]*$/i;
+    if( $password.length > 8 && re.text($password) ){
         document.getElementById("myPassword-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-pass-reg").html(msg);
