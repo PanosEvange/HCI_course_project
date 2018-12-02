@@ -67,10 +67,7 @@
                   }
               }
 
-              $servername = "localhost";
-              $username = "root";
-              $password = "";
-              $dbname = "sdi1500039";
+              require_once 'login_db.php'; //db info
 
               if( ! (strcmp($emailErr, "") or strcmp($passErr, "")) ){
                   //save to db

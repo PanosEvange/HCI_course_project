@@ -27,10 +27,7 @@
 
       if( ! (strcmp($emailErr, "") or strcmp($passErr, "")) ){
 
-          $servername = "localhost";
-          $username = "root";
-          $password = "";
-          $dbname = "sdi1500039";
+          require_once 'login_db.php'; //db info
 
           // Create connection
           $conn = new mysqli($servername, $username, $password, $dbname);
