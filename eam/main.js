@@ -84,8 +84,11 @@ $(document).on("click", "#show_hide_password_login a", function (event) {
 function valRegEmail() {
     var $email = $("#myEmail-reg").val();
     var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    // if( $email == 10 ){ //if email is ok put a success class and remove error message
-    if( re.test($email)){ //if email is ok put a success class and remove error message
+    if ($email.length == 0) {
+        var msg = "Please enter an email! Email is a required filed!";
+        $(".error-email-reg").html(msg);
+    }
+    else if( re.test($email)){ //if email is ok put a success class and remove error message
         document.getElementById("myEmail-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-email-reg").html(msg);
@@ -100,7 +103,11 @@ function valRegEmail() {
 function valPassword() {
     var $password = $("#myPassword-reg").val();
     re = /^[0-9]*$/;
-    if( $password.length > 8 && re.test($password) ){
+    if ($password.length == 0) {
+        var msg = "Please enter a password! Password is a required field";
+        $(".error-pass-reg").html(msg);
+    }
+    else if( $password.length > 8 && re.test($password) ){
         document.getElementById("myPassword-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-pass-reg").html(msg);
@@ -130,9 +137,8 @@ function valPassConf() {
 function valFirstName() {
     var $firstName = $("#myFirstName-reg").val();
     re = /^[A-Za-z]+|[Α-Ωα-ω]+$/;
-    // if( $firstName == 10 ){
     if ($firstName.length == 0) {
-        var msg = "Please insert a first name";
+        var msg = "Please insert a first name! First name is a required field!";
         $(".error-first-name-reg").html(msg);
     }
     else if( re.test($firstName) ){
@@ -149,8 +155,9 @@ function valFirstName() {
 
 function valLastName() {
     var $lastName = $("#myLastName-reg").val();
+    re = /^[A-Za-z]+|[Α-Ωα-ω]+$/;
     if ($lastName.length == 0) {
-        var msg = "Please insert a last name";
+        var msg = "Please insert a last name! Last name is a required field";
         $(".error-last-name-reg").html(msg);
     }
     else if ( re.test($lastName)) {
@@ -173,7 +180,7 @@ function valBirthDate() {
         $(".error-date-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Invalid date of birth";
         $(".error-date-reg").html(msg);
     }
 
@@ -182,7 +189,11 @@ function valBirthDate() {
 function valIdNumber() {
     var $id = $("#myIdNumber-reg").val();
     re = /^Α[0-9]*$/;
-    if( $id.length == 10 && re.test($id)){
+    if ($id.length == 0) {
+        var msg = "Please insert an ID number! ID number is a required field";
+        $(".error-id-reg").html(msg);
+    }
+    else if( $id.length == 10 && re.test($id)){
         document.getElementById("myIdNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-id-reg").html(msg);
@@ -197,7 +208,11 @@ function valIdNumber() {
 function valTaxNumber() {
     var $tax = $("#myTaxNumber-reg").val();
     re = /^[0-9]*$/;
-    if( $tax.length == 10 && re.test($tax)){
+    if ($tax.length == 0) {
+        var msg = "Please insert a tax number! Tax number is a required field";
+        $(".error-tax-reg").html(msg);
+    }
+    else if( $tax.length == 10 && re.test($tax)){
         document.getElementById("myTaxNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-tax-reg").html(msg);
@@ -212,7 +227,11 @@ function valTaxNumber() {
 function valAmkaNumber() {
     var $amka = $("#myAmkaNumber-reg").val();
     re = /^[0-9]*$/;
-    if( $amka.length == 10 && re.test($amka)){
+    if ($amka.length == 0) {
+        var msg = "Please insert an amka number! Amka number is a required field";
+        $(".error-amka-reg").html(msg);
+    }
+    else if( $amka.length == 10 && re.test($amka)){
         document.getElementById("myAmkaNumber-reg").setAttribute("class", "successRegField form-control");
         var msg = "";
         $(".error-amka-reg").html(msg);
