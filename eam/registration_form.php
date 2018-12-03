@@ -37,71 +37,7 @@
 
         </div>
 
-        <?php
-            // define variables and set to empty values
-            $emailErr = $passErr = "";
-            $email = $pass = "";
-            $succ = "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-              if (empty($_POST["password"])) {
-                $passErr = "Password is required";
-              }
-              else {
-                $pass = test_input($_POST["password"]);
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z]*$/",$pass)) {
-                  $passErr = "Only letters allowed";
-                }
-              }
-
-              if (empty($_POST["email"])) {
-                $emailErr = "Email is required";
-              }
-              else {
-                  $email = test_input($_POST["email"]);
-                  // check if e-mail address is well-formed
-                  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                      $emailErr = "Invalid email format";
-                  }
-              }
-
-              require_once 'login_db.php'; //db info
-
-              if( ! (strcmp($emailErr, "") or strcmp($passErr, "")) ){
-                  //save to db
-                  // Create connection
-                  $conn = new mysqli($servername, $username, $password, $dbname);
-                  // Check connection
-                  if ($conn->connect_error) {
-                      die("Connection failed: " . $conn->connect_error);
-                  }
-
-                  $sql = "INSERT INTO user (id, username, password)
-                  VALUES ('0', '$email', '$pass')";
-
-                  if ($conn->query($sql) === TRUE) {
-                      $succ = "Επιτυχής καταχώρηση!";
-                  }
-                  else {
-                      echo "Error: " . $sql . "<br>" . $conn->error;
-                  }
-
-                  $conn->close();
-
-                }
-
-            }
-
-            function test_input($data) {
-              $data = trim($data);
-              $data = stripslashes($data);
-              $data = htmlspecialchars($data);
-              return $data;
-            }
-
-        ?>
+        <?php include 'signup.php';?>
 
         <div class="my-main-content-registration">
             <p> Η συμπλήρωση των πεδίων με <span class="my-req-star">*</span> είναι υποχρεωτική.</p>
@@ -149,7 +85,7 @@
                         <label for="myPasswordConfirm" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Επιβεβαίωση:</label>
                         <div class="col-6">
                             <div class="input-group" id="show_hide_password_confirm">
-                              <input class="form-control" onfocusout="valPassConf()" type="password" id="myPasswordConfirm-reg">
+                              <input class="form-control" name="passwordConf" onfocusout="valPassConf()" value="<?php echo $passConf ?>"type="password" id="myPasswordConfirm-reg">
                               <div class="input-group-addon">
                                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                               </div>
@@ -174,7 +110,7 @@
                     <div class="form-group row">
                       <label for="myFirstName" class="col-5 col-form-label"><span class="my-req-star">*</span>Όνομα:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valFirstName()" class="form-control" id="myFirstName-reg">
+                        <input type="text" name="firstName" onfocusout="valFirstName()" value="<?php echo $firstName ?>" class="form-control" id="myFirstName-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -186,7 +122,7 @@
                     <div class="form-group row">
                       <label for="myLastName" class="col-5 col-form-label"><span class="my-req-star">*</span>Επώνυμο:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valLastName()" class="form-control" id="myLastName-reg">
+                        <input type="text" name="lastName" onfocusout="valLastName()" value="<?php echo $lastName ?>"class="form-control" id="myLastName-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -198,7 +134,7 @@
                     <div class="form-group row">
                       <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valBirthDate()" class="form-control" id="myBirthDate-reg">
+                        <input type="text" name="date" onfocusout="valBirthDate()" value="<?php echo $date ?>"class="form-control" id="myBirthDate-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -213,7 +149,7 @@
                     <div class="form-group row">
                       <label for="myIdNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>Αριθμός Ταυτότητας:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valIdNumber()" class="form-control" id="myIdNumber-reg">
+                        <input type="text" name="id" onfocusout="valIdNumber()" value="<?php echo $id ?>"class="form-control" id="myIdNumber-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
@@ -231,7 +167,7 @@
                     <div class="form-group row">
                       <label for="myTaxNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΦΜ:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valTaxNumber()" class="form-control" id="myTaxNumber-reg">
+                        <input type="text" name="taxNum" onfocusout="valTaxNumber()" value="<?php echo $tax ?>"class="form-control" id="myTaxNumber-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
@@ -248,7 +184,7 @@
                     <div class="form-group row">
                       <label for="myAmkaNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΜΚΑ:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valAmkaNumber()" class="form-control" id="myAmkaNumber-reg">
+                        <input type="text" name="amka" onfocusout="valAmkaNumber()" value="<?php echo $amka ?>"class="form-control" id="myAmkaNumber-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
@@ -268,7 +204,7 @@
                     <div class="form-group row">
                       <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valPhoneNumber()" class="form-control" id="myPhoneNumber-reg">
+                        <input type="text" name="phone" onfocusout="valPhoneNumber()" value="<?php echo $phone ?>"class="form-control" id="myPhoneNumber-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
@@ -286,7 +222,7 @@
                     <div class="form-group row">
                       <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
                       <div class="col-6">
-                        <input type="text" onfocusout="valAddress()" class="form-control" id="myAddress-reg">
+                        <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control" id="myAddress-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
