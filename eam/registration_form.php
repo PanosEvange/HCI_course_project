@@ -292,10 +292,10 @@
                 </div>
                 <div class="my-registration-submit">
                     <div class="row">
-                        <label><input type="checkbox" value="">  Έχω διαβάσει και αποδέχομαι τους <a href="./under_construction.php">όρους χρήσης</a> </label>
+                        <label><input type="checkbox" value="" id="reg-checkbox">  Έχω διαβάσει και αποδέχομαι τους <a href="./under_construction.php">όρους χρήσης</a> </label>
                     </div>
                     <div class="row">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Ολοκλήρωση Εγγραφής">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Ολοκλήρωση Εγγραφής" disabled id="submit-reg-button">
                     </div>
                 </div>
             </form>

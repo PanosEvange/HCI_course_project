@@ -87,17 +87,19 @@ function valRegEmail() {
     if ($email.length == 0) {
         var msg = "Please enter an email! Email is a required filed!";
         $(".error-email-reg").html(msg);
+        document.getElementById("myEmail-reg").classList.remove("successRegField");
     }
     else if( re.test($email)){ //if email is ok put a success class and remove error message
-        document.getElementById("myEmail-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myEmail-reg").classList.add("successRegField");
         var msg = "";
         $(".error-email-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid Email form!";
         $(".error-email-reg").html(msg);
+        document.getElementById("myEmail-reg").classList.remove("successRegField");
     }
-
+    checkToEnable();
 }
 
 function valPassword() {
@@ -106,32 +108,35 @@ function valPassword() {
     if ($password.length == 0) {
         var msg = "Please enter a password! Password is a required field";
         $(".error-pass-reg").html(msg);
+        document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
     else if( $password.length > 8 && re.test($password) ){
-        document.getElementById("myPassword-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myPassword-reg").classList.add('successRegField');
         var msg = "";
         $(".error-pass-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid Password!";
         $(".error-pass-reg").html(msg);
+        document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valPassConf() {
     var $passConf = $("#myPasswordConfirm-reg").val();
     var $pass = $("#myPassword-reg").val();
     if( $passConf == $pass ){
-        document.getElementById("myPasswordConfirm-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myPasswordConfirm-reg").classList.add('successRegField');
         var msg = "";
         $(".error-conf-pass-reg").html(msg);
     }
     else{ //write error message
         var msg = "Passwords don't match!";
         $(".error-conf-pass-reg").html(msg);
+        document.getElementById("myPasswordConfirm-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valFirstName() {
@@ -140,17 +145,19 @@ function valFirstName() {
     if ($firstName.length == 0) {
         var msg = "Please insert a first name! First name is a required field!";
         $(".error-first-name-reg").html(msg);
+        document.getElementById("myFirstName-reg").classList.remove('successRegField');
     }
     else if( re.test($firstName) ){
-        document.getElementById("myFirstName-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myFirstName-reg").classList.add('successRegField');
         var msg = "";
         $(".error-first-name-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid first name";
         $(".error-first-name-reg").html(msg);
+        document.getElementById("myFirstName-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valLastName() {
@@ -159,31 +166,34 @@ function valLastName() {
     if ($lastName.length == 0) {
         var msg = "Please insert a last name! Last name is a required field";
         $(".error-last-name-reg").html(msg);
+        document.getElementById("myLastName-reg").classList.remove('successRegField');
     }
     else if ( re.test($lastName)) {
-        document.getElementById("myLastName-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myLastName-reg").classList.add('successRegField');
         var msg = "";
         $(".error-last-name-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid last name";
         $(".error-last-name-reg").html(msg);
+        document.getElementById("myLastName-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valBirthDate() {
     var $date = $("#myBirthDate-reg").val();
     if( $date == 10 ){
-        document.getElementById("myBirthDate-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myBirthDate-reg").classList.add('successRegField');
         var msg = "";
         $(".error-date-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid date of birth";
         $(".error-date-reg").html(msg);
+        document.getElementById("myBirthDate-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valIdNumber() {
@@ -192,17 +202,19 @@ function valIdNumber() {
     if ($id.length == 0) {
         var msg = "Please insert an ID number! ID number is a required field";
         $(".error-id-reg").html(msg);
+        document.getElementById("myIdNumber-reg").classList.remove('successRegField');
     }
     else if( $id.length == 10 && re.test($id)){
-        document.getElementById("myIdNumber-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myIdNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-id-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invlaid ID number";
         $(".error-id-reg").html(msg);
+        document.getElementById("myIdNumber-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valTaxNumber() {
@@ -211,17 +223,19 @@ function valTaxNumber() {
     if ($tax.length == 0) {
         var msg = "Please insert a tax number! Tax number is a required field";
         $(".error-tax-reg").html(msg);
+        document.getElementById("myTaxNumber-reg").classList.remove('successRegField');
     }
     else if( $tax.length == 10 && re.test($tax)){
-        document.getElementById("myTaxNumber-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myTaxNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-tax-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid tax number";
         $(".error-tax-reg").html(msg);
+        document.getElementById("myTaxNumber-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valAmkaNumber() {
@@ -230,17 +244,19 @@ function valAmkaNumber() {
     if ($amka.length == 0) {
         var msg = "Please insert an amka number! Amka number is a required field";
         $(".error-amka-reg").html(msg);
+        document.getElementById("myAmkaNumber-reg").classList.remove('successRegField');
     }
     else if( $amka.length == 10 && re.test($amka)){
-        document.getElementById("myAmkaNumber-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myAmkaNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-amka-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid amka";
         $(".error-amka-reg").html(msg);
+        document.getElementById("myAmkaNumber-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valPhoneNumber() {
@@ -251,15 +267,16 @@ function valPhoneNumber() {
         $(".error-phone-reg").html(msg);
     }
     else if( $phone.length == 10 && re.test($phone)){
-        document.getElementById("myPhoneNumber-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myPhoneNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-phone-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid phone number";
         $(".error-phone-reg").html(msg);
+        document.getElementById("myPhoneNumber-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valAddress() {
@@ -270,13 +287,47 @@ function valAddress() {
         $(".error-myAddress-reg").html(msg);
     }
     else if( re.test($address) ){
-        document.getElementById("myAddress-reg").setAttribute("class", "successRegField form-control");
+        document.getElementById("myAddress-reg").classList.add('successRegField');
         var msg = "";
         $(".error-myAddress-reg").html(msg);
     }
     else{ //write error message
         var msg = "Invalid address";
         $(".error-myAddress-reg").html(msg);
+        document.getElementById("myAddress-reg").classList.remove('successRegField');
+    }
+    checkToEnable();
+}
+
+function checkToEnable() {
+    var fields = [
+        document.getElementById("myEmail-reg").classList.contains("successRegField"),
+        document.getElementById("myPassword-reg").classList.contains("successRegField"),
+        document.getElementById("myPasswordConfirm-reg").classList.contains("successRegField"),
+        document.getElementById("myFirstName-reg").classList.contains("successRegField"),
+        document.getElementById("myLastName-reg").classList.contains("successRegField"),
+        document.getElementById("myBirthDate-reg").classList.contains("successRegField"),
+        document.getElementById("myIdNumber-reg").classList.contains("successRegField"),
+        document.getElementById("myTaxNumber-reg").classList.contains("successRegField"),
+        document.getElementById("myAmkaNumber-reg").classList.contains("successRegField")
+    ];
+
+    for (var i = 0; i < fields.length; i++) {
+        if( fields[i] == false ){
+            break;
+        }
     }
 
+    if( i == fields.length && (document.getElementById("reg-checkbox").checked == true) ){ //all field are ok
+        //enable button
+        document.getElementById("submit-reg-button").disabled = false;
+    }
+    else{
+        //disable button
+        document.getElementById("submit-reg-button").disabled = true;
+    }
 }
+
+$(document).on('change', '#reg-checkbox', function() {
+    checkToEnable();
+});
