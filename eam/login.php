@@ -32,7 +32,7 @@
               die("Connection failed: " . $conn->connect_error);
           }
 
-          $sql = "SELECT id FROM user WHERE username = '$email' and password = '$mypassword' ";
+          $sql = "SELECT id FROM Publisher WHERE Email = '$email' and Password = '$mypassword' ";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
