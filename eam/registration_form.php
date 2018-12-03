@@ -221,6 +221,11 @@
                       <div class="col-6">
                         <input type="text" onfocusout="valTaxNumber()" class="form-control" id="myTaxNumber-reg">
                       </div>
+                      <div class="col-1">
+                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
+                          data-content="Εισάγετε το ΑΦΜ σας. Αποτελείται υποχρεωτικά από 10 ψηφία">
+                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                      </div>
                     </div>
                     <div class="row error-msg">
                         <div class="col-5">
@@ -232,6 +237,11 @@
                       <label for="myAmkaNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>ΑΜΚΑ:</label>
                       <div class="col-6">
                         <input type="text" onfocusout="valAmkaNumber()" class="form-control" id="myAmkaNumber-reg">
+                      </div>
+                      <div class="col-1">
+                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
+                          data-content="Εισάγετε το ΑΜΚΑ σας. Αποτελείται υποχρεωτικά από 10 ψηφία">
+                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -248,6 +258,12 @@
                       <div class="col-6">
                         <input type="text" onfocusout="valPhoneNumber()" class="form-control" id="myPhoneNumber-reg">
                       </div>
+                      <div class="col-1">
+                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
+                          data-content="Εισάγετε τον αριθμό του κινητού η του σταθρού τηλεφώνου σας. Αποτελείται υποχρεωτικά από
+                          10 ψηφία και ξεκινάει με 2 η 69">
+                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                      </div>
                     </div>
                     <div class="row error-msg">
                         <div class="col-5">
@@ -259,6 +275,12 @@
                       <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
                       <div class="col-6">
                         <input type="text" onfocusout="valAddress()" class="form-control" id="myAddress-reg">
+                      </div>
+                      <div class="col-1">
+                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
+                          data-content="Εισάγετε την διεύθηνση κατοικίας σας. Πρέπει να είανι υποχρεωτικά στη μορφή
+                          Διέυθηνση Αριθμός, Πόλη, ΤΚ">
+                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
                       </div>
                     </div>
                     <div class="row error-msg">
