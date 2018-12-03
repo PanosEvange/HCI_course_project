@@ -5,7 +5,7 @@ $(document).ready(function(){
 $(document).on('click', function (e) {
     $('[data-toggle="popover"],[data-original-title]').each(function () {
         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            (($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false
+            (($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false;
         }
 
     });
@@ -105,14 +105,27 @@ function valRegEmail() {
 function valPassword() {
     var $password = $("#myPassword-reg").val();
     re = /^[0-9]*$/;
+    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{8,})");
+    var weakRegex = new RegExp("^(((?=.*[a-z]))|((?=.*[0-9]))|((?=.*[A-Z])))(?=.{8,})");
     if ($password.length == 0) {
         var msg = "Please enter a password! Password is a required field";
         $(".error-pass-reg").html(msg);
         document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
-    else if( $password.length > 8 && re.test($password) ){
+    else if ( strongRegex.test($password) ){
         document.getElementById("myPassword-reg").classList.add('successRegField');
-        var msg = "";
+        var msg = "Strong";
+        $(".error-pass-reg").html(msg);
+    }
+    else if ( mediumRegex.test($password) ) {
+        document.getElementById("myPassword-reg").classList.add('successRegField');
+        var msg = "Medium";
+        $(".error-pass-reg").html(msg);
+    }
+    else if ( weakRegex.test($password)) {
+        document.getElementById("myPassword-reg").classList.add('successRegField');
+        var msg = "Weak";
         $(".error-pass-reg").html(msg);
     }
     else{ //write error message
@@ -126,7 +139,12 @@ function valPassword() {
 function valPassConf() {
     var $passConf = $("#myPasswordConfirm-reg").val();
     var $pass = $("#myPassword-reg").val();
-    if( $passConf == $pass ){
+    if ( $passConf.length == 0) {
+        var msg = "This field is required!";
+        $(".error-conf-pass-reg").html(msg);
+        document.getElementById("myPasswordConfirm-reg").classList.remove('successRegField');
+    }
+    else if( $passConf == $pass ){
         document.getElementById("myPasswordConfirm-reg").classList.add('successRegField');
         var msg = "";
         $(".error-conf-pass-reg").html(msg);
@@ -263,6 +281,7 @@ function valPhoneNumber() {
     var $phone = $("#myPhoneNumber-reg").val();
     re = /^2[0-9]+|69[0-9]+$/;
     if ($phone.length == 0) {
+        document.getElementById("myPhoneNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-phone-reg").html(msg);
     }
@@ -281,8 +300,9 @@ function valPhoneNumber() {
 
 function valAddress() {
     var $address = $("#myAddress-reg").val();
-    re = /^[A-Za-z]+ [0-9]+, [A-Za-z]+, [0-9]+$/;
+    re = /^[A-Za-z]+ *[0-9]+ *, *[A-Za-z]+ *, *[0-9]+$/;
     if ($address.length == 0) {
+        document.getElementById("myAddress-reg").classList.add('successRegField');
         var msg = "";
         $(".error-myAddress-reg").html(msg);
     }
@@ -309,7 +329,9 @@ function checkToEnable() {
         document.getElementById("myBirthDate-reg").classList.contains("successRegField"),
         document.getElementById("myIdNumber-reg").classList.contains("successRegField"),
         document.getElementById("myTaxNumber-reg").classList.contains("successRegField"),
-        document.getElementById("myAmkaNumber-reg").classList.contains("successRegField")
+        document.getElementById("myAmkaNumber-reg").classList.contains("successRegField"),
+        document.getElementById("myPhoneNumber-reg").classList.contains("successRegField"),
+        document.getElementById("myAddress-reg").classList.contains("successRegField")
     ];
 
     for (var i = 0; i < fields.length; i++) {
