@@ -340,44 +340,44 @@ function valAddress() {
 }
 
 function valUniv() {
-    var $univ = $("#myUniv-reg").val();
-    // re = /^[A-Za-z]+ *[0-9]+ *, *[A-Za-z]+ *, *[0-9]+$/;
-    // if ($address.length == 0) {
-    //     document.getElementById("myUniv-reg").classList.add('successRegField');
-    //     var msg = "";
-    //     $(".error-myAddress-reg").html(msg);
-    // }
-    // else if( re.test($address) ){
-    //     document.getElementById("myAddress-reg").classList.add('successRegField');
-    //     var msg = "";
-    //     $(".error-myAddress-reg").html(msg);
-    // }
-    // else{ //write error message
-    //     var msg = "Invalid address";
-    //     $(".error-myAddress-reg").html(msg);
-    //     document.getElementById("myAddress-reg").classList.remove('successRegField');
-    // }
+    var $uni = $("#myUniv-reg").val();
+    re = /^[A-Za-z]+ */;
+    if ($uni.length == 0) {
+        document.getElementById("myUniv-reg").classList.remove('successRegField');
+        var msg = "This field is required!";
+        $(".error-univ-reg").html(msg);
+    }
+    else if( re.test($uni) ){
+        document.getElementById("myUniv-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-univ-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Invalid university name";
+        $(".error-univ-reg").html(msg);
+        document.getElementById("myUniv-reg").classList.remove('successRegField');
+    }
     checkToEnable();
 }
 
 function valDep() {
     var $dep = $("#myDepart-reg").val();
-    // re = /^[A-Za-z]+ *[0-9]+ *, *[A-Za-z]+ *, *[0-9]+$/;
-    // if ($address.length == 0) {
-    //     document.getElementById("myAddress-reg").classList.add('successRegField');
-    //     var msg = "";
-    //     $(".error-myAddress-reg").html(msg);
-    // }
-    // else if( re.test($address) ){
-    //     document.getElementById("myAddress-reg").classList.add('successRegField');
-    //     var msg = "";
-    //     $(".error-myAddress-reg").html(msg);
-    // }
-    // else{ //write error message
-    //     var msg = "Invalid address";
-    //     $(".error-myAddress-reg").html(msg);
-    //     document.getElementById("myAddress-reg").classList.remove('successRegField');
-    // }
+    re = /^[A-Za-z]+ */;
+    if ($dep.length == 0) {
+        document.getElementById("myDepart-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myDepart-reg").html(msg);
+    }
+    else if( re.test($dep) ){
+        document.getElementById("myDepart-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myDepart-reg").html(msg);
+    }
+    else{ //write error message
+        var msg = "Invalid address";
+        $(".error-myDepart-reg").html(msg);
+        document.getElementById("myDepart-reg").classList.remove('successRegField');
+    }
     checkToEnable();
 }
 

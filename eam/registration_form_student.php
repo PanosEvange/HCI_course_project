@@ -37,7 +37,7 @@
 
         </div>
 
-        <?php include 'signup.php';?>
+        <?php include 'signup_student.php';?>
 
         <div class="groups-option-registration">
             <div class="student-reg-opt">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-1">
                             <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
-                            data-content="Εισάγετε τον κωδικό σας. Πρέπει να είναι υποχρεωτικά τουλάχιστον 8 χαρακτήρες
+                            data-conten123456789t="Εισάγετε τον κωδικό σας. Πρέπει να είναι υποχρεωτικά τουλάχιστον 8 χαρακτήρες
                             και μπορεί να αποτελείται απο κεφαλαίους και μικρούς λατινικούς χαρακτήρες, αριθμούς και
                             σύμβολα">
                                 <i class="fa fa-question-circle" aria-hidden="true"></i></span>
@@ -164,7 +164,7 @@
                     <div class="form-group row">
                       <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
                       <div class="col-6">
-                        <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg">
+                        <input type="text" name="university" onfocusout="valUniv()" value="<?php echo $uni ?>"class="form-control" id="myUniv-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -176,7 +176,7 @@
                     <div class="form-group row">
                       <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
-                        <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg">
+                        <input type="text" name="department" onfocusout="valDep()" value="<?php echo $dept ?>"class="form-control" id="myDepart-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
