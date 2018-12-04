@@ -5,7 +5,7 @@
         '
         <div class="login-area">
             <div class="user-info">
-                <a href="./under_construction.php" >
+                <a href="./my_profile.php" >
         '
                 . $_SESSION['username'] .
         '
