@@ -9,7 +9,7 @@
         '
                 . $_SESSION['username'] .
         '
-                </span></a>
+                </a>
             </div>
             <div class="my-logout">
                 <a href="./logout.php" >Αποσύνδεση</span></a>

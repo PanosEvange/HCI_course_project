@@ -2,6 +2,11 @@
     margin:0;
 }
 
+.user-info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .input-group-addon{
     background-color: #e9ecef;
     border: 1px solid rgba(0,0,0,.15);
@@ -226,8 +231,8 @@ ul.breadcrumb li a:hover {
     margin-right: auto;
     grid-area: login-area;
     display: grid;
-    grid-template-columns: repeat(2, 100px);
-    grid-column-gap: 5px;
+    grid-template-columns: repeat(2, 150px);
+    grid-column-gap: 10px;
     margin-top:10px;
 }
 
