@@ -204,7 +204,7 @@
                     <div class="form-group row">
                       <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
                       <div class="col-6">
-                        <input type="text" name="phone" onfocusout="valPhoneNumber()" value="<?php echo $phone ?>"class="form-control" id="myPhoneNumber-reg">
+                        <input type="text" name="phone" onfocusout="valPhoneNumber()" value="<?php echo $phone ?>"class="form-control successRegField" id="myPhoneNumber-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
@@ -222,7 +222,7 @@
                     <div class="form-group row">
                       <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
                       <div class="col-6">
-                        <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control" id="myAddress-reg">
+                        <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
                       </div>
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
