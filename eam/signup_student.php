@@ -25,9 +25,9 @@
         }
 
         $sql = ("INSERT INTO Users (Email, Password, FirstName,
-                                LastName, DateOfBirth, Phone, Address)
+                                LastName, DateOfBirth, Phone, Address, UserType)
                                 VALUES ('$email', '$pass', '$firstName',
-                                    '$lastName', '$date', '$phone', '$address')");
+                                    '$lastName', '$date', '$phone', '$address', 'Student')");
 
         if ($conn->query($sql) === TRUE) {
             $succ = "Επιτυχής καταχώρηση!";
