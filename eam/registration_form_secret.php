@@ -37,7 +37,7 @@
 
         </div>
 
-        <?php include 'signup.php';?>
+        <?php include 'signup_secretary.php';?>
 
         <div class="groups-option-registration">
             <div class="student-reg-opt">
@@ -164,7 +164,7 @@
                     <div class="form-group row">
                       <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
                       <div class="col-6">
-                        <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg">
+                        <input type="text" name="university" onfocusout="valUniv()" value="<?php echo $uni ?>"class="form-control" id="myUniv-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -176,13 +176,13 @@
                     <div class="form-group row">
                       <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
-                        <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg">
+                        <input type="text" name="department" onfocusout="valDep()" value="<?php echo $dept ?>"class="form-control" id="myDepart-reg">
                       </div>
                     </div>
                     <div class="row error-msg">
                         <div class="col-5">
                         </div>
-                        <div class="col-6 error-dep-reg">
+                        <div class="col-6 error-myDepart-reg">
                         </div>
                     </div>
                 </div>
