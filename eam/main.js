@@ -319,20 +319,118 @@ function valAddress() {
     checkToEnable();
 }
 
+function valUniv() {
+    var $univ = $("#myUniv-reg").val();
+    // re = /^[A-Za-z]+ *[0-9]+ *, *[A-Za-z]+ *, *[0-9]+$/;
+    // if ($address.length == 0) {
+    //     document.getElementById("myUniv-reg").classList.add('successRegField');
+    //     var msg = "";
+    //     $(".error-myAddress-reg").html(msg);
+    // }
+    // else if( re.test($address) ){
+    //     document.getElementById("myAddress-reg").classList.add('successRegField');
+    //     var msg = "";
+    //     $(".error-myAddress-reg").html(msg);
+    // }
+    // else{ //write error message
+    //     var msg = "Invalid address";
+    //     $(".error-myAddress-reg").html(msg);
+    //     document.getElementById("myAddress-reg").classList.remove('successRegField');
+    // }
+    checkToEnable();
+}
+
+function valDep() {
+    var $dep = $("#myDepart-reg").val();
+    // re = /^[A-Za-z]+ *[0-9]+ *, *[A-Za-z]+ *, *[0-9]+$/;
+    // if ($address.length == 0) {
+    //     document.getElementById("myAddress-reg").classList.add('successRegField');
+    //     var msg = "";
+    //     $(".error-myAddress-reg").html(msg);
+    // }
+    // else if( re.test($address) ){
+    //     document.getElementById("myAddress-reg").classList.add('successRegField');
+    //     var msg = "";
+    //     $(".error-myAddress-reg").html(msg);
+    // }
+    // else{ //write error message
+    //     var msg = "Invalid address";
+    //     $(".error-myAddress-reg").html(msg);
+    //     document.getElementById("myAddress-reg").classList.remove('successRegField');
+    // }
+    checkToEnable();
+}
+
 function checkToEnable() {
-    var fields = [
-        document.getElementById("myEmail-reg").classList.contains("successRegField"),
-        document.getElementById("myPassword-reg").classList.contains("successRegField"),
-        document.getElementById("myPasswordConfirm-reg").classList.contains("successRegField"),
-        document.getElementById("myFirstName-reg").classList.contains("successRegField"),
-        document.getElementById("myLastName-reg").classList.contains("successRegField"),
-        document.getElementById("myBirthDate-reg").classList.contains("successRegField"),
-        document.getElementById("myIdNumber-reg").classList.contains("successRegField"),
-        document.getElementById("myTaxNumber-reg").classList.contains("successRegField"),
-        document.getElementById("myAmkaNumber-reg").classList.contains("successRegField"),
-        document.getElementById("myPhoneNumber-reg").classList.contains("successRegField"),
-        document.getElementById("myAddress-reg").classList.contains("successRegField")
-    ];
+
+    //find which elements exist
+    fields = [];
+
+    var myEle = document.getElementById("myEmail-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myPassword-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myPasswordConfirm-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myFirstName-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myLastName-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myBirthDate-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myIdNumber-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myTaxNumber-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myAmkaNumber-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myPhoneNumber-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myAddress-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myUniv-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myDepart-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
 
     for (var i = 0; i < fields.length; i++) {
         if( fields[i] == false ){

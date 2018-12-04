@@ -499,6 +499,24 @@ a.section-button:hover{
     margin-top: 10px;
 }
 
+.my-university-info{
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+
+    margin-bottom: 30px;
+    width: 600px;
+}
+
+.my-university-info h{
+    border-bottom: 1px solid #0e0e0e;
+}
+
+.my-university-info .form-group{
+    margin-top: 10px;
+}
+
 .my-reg-contact-info{
     background-color: #ddd;
     padding: 10px;
@@ -545,4 +563,27 @@ form.my-registration-from {
 .error-msg-login {
     margin-top: 3px;
     color: red;
+}
+
+.groups-option-registration{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.student-reg-opt{
+
+}
+
+.secret-reg-opt{
+
+}
+
+.publisher-reg-opt{
+
+}
+
+.library-reg-opt{
+
 }
