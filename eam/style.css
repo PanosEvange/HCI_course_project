@@ -587,3 +587,15 @@ form.my-registration-from {
 .library-reg-opt{
 
 }
+
+.strongPass{
+    color: green;
+}
+
+.mediumPass{
+    color: orange;
+}
+
+.weakPass{
+    color: yellow;
+}

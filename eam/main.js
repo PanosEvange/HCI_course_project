@@ -109,26 +109,46 @@ function valPassword() {
     var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{8,})");
     var weakRegex = new RegExp("^(((?=.*[a-z]))|((?=.*[0-9]))|((?=.*[A-Z])))(?=.{8,})");
     if ($password.length == 0) {
+
+        //replace all classes with only error
+        document.getElementById("myPasswordStrength").className = "col-6 error-pass-reg";
+
         var msg = "Please enter a password! Password is a required field";
         $(".error-pass-reg").html(msg);
         document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
     else if ( strongRegex.test($password) ){
         document.getElementById("myPassword-reg").classList.add('successRegField');
+
+        //replace all classes with success and strong
+        document.getElementById("myPasswordStrength").className = "col-6 successRegField strongPass";
+
         var msg = "Strong";
-        $(".error-pass-reg").html(msg);
+        $(".strongPass").html(msg);
     }
     else if ( mediumRegex.test($password) ) {
         document.getElementById("myPassword-reg").classList.add('successRegField');
+
+        //replace all classes with success and medium
+        document.getElementById("myPasswordStrength").className = "col-6 successRegField mediumPass";
+
         var msg = "Medium";
-        $(".error-pass-reg").html(msg);
+        $(".mediumPass").html(msg);
     }
     else if ( weakRegex.test($password)) {
         document.getElementById("myPassword-reg").classList.add('successRegField');
+
+        //replace all classes with success and weak
+        document.getElementById("myPasswordStrength").className = "col-6 successRegField weakPass";
+
         var msg = "Weak";
-        $(".error-pass-reg").html(msg);
+        $(".weakPass").html(msg);
     }
     else{ //write error message
+
+        //replace all classes with only error
+        document.getElementById("myPasswordStrength").className = "col-6 error-pass-reg";
+
         var msg = "Invalid Password!";
         $(".error-pass-reg").html(msg);
         document.getElementById("myPassword-reg").classList.remove('successRegField');

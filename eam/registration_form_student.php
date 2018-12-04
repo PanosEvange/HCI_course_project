@@ -93,7 +93,7 @@
                       <div class="row error-msg">
                           <div class="col-5">
                           </div>
-                          <div class="col-6 error-pass-reg">
+                          <div class="col-6 error-pass-reg" id="myPasswordStrength">
                           </div>
                       </div>
                       <div class="form-group row">
