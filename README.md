@@ -3,13 +3,13 @@
 ## TO DO list
 
 ### General
-* Login Popover show password functionality
+* Colors all pages
 
-### Form
-* Check if password is same with confirm password
-* Check if fields Name, LastName etc have only letters
-* Check if fields phone etc have only numbers
-* Check if email is at the form of something@somethingElse.someEnd
+###Registration_form
+* Datepicker
+* Danger triangle with '!' at errors
+* Popup of successful registration
+* Dropdown/Suggestion for department/university fields
 
 ### Home Page
 * Icons for sections (secretary,library etc)
@@ -17,8 +17,10 @@
 * Announcements
 
 ### DataBase and PHP
-* login
-* Sign Up
 * Search
 * Browse
 * Edit Profile
+
+### Login/logout
+* Where to redirect? At home page always?
+* Popup of successful logout
