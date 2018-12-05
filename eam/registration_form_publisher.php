@@ -37,7 +37,7 @@
 
         </div>
 
-        <?php include 'signup.php';?>
+        <?php include 'signup_publisher.php';?>
 
         <div class="groups-option-registration">
             <div class="student-reg-opt">
