@@ -5,11 +5,14 @@
             if( $_SESSION['userType'] === "Student" ){
                 include 'my_profile_student.php';
             }
-            else if( $_SESSION['userType'] === "SomethingElse" ){
+            else if( $_SESSION['userType'] === "Secretary" ){
                 include 'my_profile_secretary.php';
             }
-            else if( $_SESSION['userType'] === "SomethingElse2" ){
+            else if( $_SESSION['userType'] === "Publisher" ){
                 include 'my_profile_publisher.php';
+            }
+            elseif ($_SESSION['userType'] === "Library") {
+                include 'my_profile_library.php';
             }
             else{
                 echo "AHAHHAA you are noob!!!!";

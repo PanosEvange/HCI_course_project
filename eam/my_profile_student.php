@@ -36,6 +36,8 @@
 
         </div>
 
+        <?php include 'student_profile_info.php';?>
+
         <div class="my-main-content-registration">
 
                 <div class="my-reg-account-info">
@@ -43,7 +45,7 @@
                       <div class="form-group row">
                         <label for="myEmail" class="col-5 col-form-label"><i class="fa fa-envelope" aria-hidden="true"></i>   <span class="my-req-star">*</span>Email:</label>
                         <div class="col-6">
-                            Test
+                            <?php echo $email;?>
                         </div>
                         <div class="col-1">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -52,18 +54,7 @@
                       <div class="form-group row">
                         <label for="myPassword" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Κωδικός:</label>
                         <div class="col-6">
-                            Test
-                        </div>
-                        <div class="col-1">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="myPasswordConfirm" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   <span class="my-req-star">*</span>Επιβεβαίωση:</label>
-                        <div class="col-6">
-                            <div class="input-group" id="show_hide_password_confirm">
-                                Test
-                            </div>
+                            <?php echo $pass;?>
                         </div>
                         <div class="col-1">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -75,7 +66,7 @@
                     <div class="form-group row">
                       <label for="myFirstName" class="col-5 col-form-label"><span class="my-req-star">*</span>Όνομα:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $firstName;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -84,7 +75,7 @@
                     <div class="form-group row">
                       <label for="myLastName" class="col-5 col-form-label"><span class="my-req-star">*</span>Επώνυμο:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $lastName ;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -93,7 +84,7 @@
                     <div class="form-group row">
                       <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $date ;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -105,7 +96,7 @@
                     <div class="form-group row">
                       <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $uni;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -114,7 +105,7 @@
                     <div class="form-group row">
                       <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $dept;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -126,7 +117,7 @@
                     <div class="form-group row">
                       <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $phone;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -135,7 +126,7 @@
                     <div class="form-group row">
                       <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
                       <div class="col-6">
-                          Test
+                          <?php echo $address;?>
                       </div>
                       <div class="col-1">
                           <i class="fa fa-pencil" aria-hidden="true"></i>

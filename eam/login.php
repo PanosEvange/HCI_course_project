@@ -32,13 +32,14 @@
               die("Connection failed: " . $conn->connect_error);
           }
 
-          $sql = "SELECT idUsers FROM Users WHERE Email = '$email' and Password = '$mypassword' ";
+          $sql = "SELECT idUsers, UserType FROM Users WHERE Email = '$email' and Password = '$mypassword' ";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
+              $row = $result->fetch_assoc();
               $_SESSION['loggedin'] = true;
               $_SESSION['username'] = $email;
-              $_SESSION['userType'] = "Student"; //and other options like Secretary etc 
+              $_SESSION['userType'] = $row["UserType"];
               echo 1;
           }
           else {
