@@ -179,7 +179,7 @@ function valPassConf() {
 
 function valFirstName() {
     var $firstName = $("#myFirstName-reg").val();
-    re = /^[A-Za-z]+|[Α-Ωα-ω]+$/;
+    re =/^[α-ωάέήίόύώ ,.'-]|[a-z ,.'-]+$/i;
     if ($firstName.length == 0) {
         var msg = "Please insert a first name! First name is a required field!";
         $(".error-first-name-reg").html(msg);
@@ -200,7 +200,8 @@ function valFirstName() {
 
 function valLastName() {
     var $lastName = $("#myLastName-reg").val();
-    re = /^[A-Za-z]+|[Α-Ωα-ω]+$/;
+    re =/^[α-ωάέήίόύώ ,.'-]|[a-z ,.'-]+$/i;
+    // re =/^[a-z ,.'-]+$/i;
     if ($lastName.length == 0) {
         var msg = "Please insert a last name! Last name is a required field";
         $(".error-last-name-reg").html(msg);
@@ -341,7 +342,7 @@ function valAddress() {
 
 function valUniv() {
     var $uni = $("#myUniv-reg").val();
-    re = /^[A-Za-z]+ */;
+    re = /^[Α-Ωα-ω]+ */;
     if ($uni.length == 0) {
         document.getElementById("myUniv-reg").classList.remove('successRegField');
         var msg = "This field is required!";
@@ -362,7 +363,7 @@ function valUniv() {
 
 function valDep() {
     var $dep = $("#myDepart-reg").val();
-    re = /^[A-Za-z]+ */;
+    re = /^[Α-Ωα-ω]+ */;
     if ($dep.length == 0) {
         document.getElementById("myDepart-reg").classList.add('successRegField');
         var msg = "This field is required!";
