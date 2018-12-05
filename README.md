@@ -5,7 +5,7 @@
 ### General
 * Colors all pages
 
-###Registration_form
+### Registration_form
 * Datepicker
 * Danger triangle with '!' at errors
 * Popup of successful registration
