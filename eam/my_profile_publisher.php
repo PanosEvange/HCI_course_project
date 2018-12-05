@@ -28,10 +28,7 @@
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                   <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li><a href="#">Previous1</a></li>
-                  <li><a href="#">Previous2</a></li>
-                  <li><a href="#">Previous3</a></li>
-                  <li>current</li>
+                  <li>Το προφίλ μου - Εκδότης</li>
                 </ul>
             </div>
 
@@ -39,7 +36,9 @@
 
         </div>
 
+        <div class="placeholder">
 
+        </div>
 
         <?php include 'footer.php';?>
 

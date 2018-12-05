@@ -38,6 +38,7 @@
           if ($result->num_rows > 0) {
               $_SESSION['loggedin'] = true;
               $_SESSION['username'] = $email;
+              $_SESSION['userType'] = "Student"; //and other options like Secretary etc 
               echo 1;
           }
           else {
