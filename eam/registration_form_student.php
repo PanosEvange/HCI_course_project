@@ -40,17 +40,17 @@
         <?php include 'signup_student.php';?>
 
         <div class="groups-option-registration">
-            <div class="student-reg-opt">
-                <a href="./registration_form_student.php" class="btn"> Εγγραφή Φοιτητή </a>
+            <div class="student-reg-opt selected-reg">
+                <a href="./registration_form_student.php" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i><br/>Εγγραφή<br/>Φοιτητή</a>
             </div>
             <div class="secret-reg-opt">
-                <a href="./registration_form_secret.php" class="btn"> Εγγραφή Γραμματείας </a>
+                <a href="./registration_form_secret.php" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i><br/>Εγγραφή<br/>Γραμματείας</a>
             </div>
             <div class="publisher-reg-opt">
-                <a href="./registration_form_publisher.php" class="btn"> Εγγραφή Εκδότη </a>
+                <a href="./registration_form_publisher.php" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i><br/>Εγγραφή<br/>Εκδότη</a>
             </div>
             <div class="library-reg-opt">
-                <a href="./under_construction.php" class="btn"> Εγγραφή Βιβλιοθήκης </a>
+                <a href="./under_construction.php" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i><br/>Εγγραφή<br/>Βιβλιοθήκης</a>
             </div>
         </div>
 

@@ -579,22 +579,147 @@ form.my-registration-from {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .student-reg-opt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
 
+.student-reg-opt .btn{
+    box-shadow: 5px 5px #545b62;
+    background-color: #dddddd !important;
+    border-color: #dddddd !important;
+    width: 150px;
+    height: 120px;
+}
+
+.student-reg-opt a{
+    font-size: 20px;
+    color: black;
+}
+
+.student-reg-opt a:hover{
+    color: black;
+}
+
+.student-reg-opt .btn:hover{
+    box-shadow: 5px 5px #545b62 !important;
+    background-color: #17a2b8 !important;
+    border-color: #0d6471 !important;
+}
+
+.student-reg-opt .btn:focus{
+    border-color: #fff !important;
+    box-shadow: none !important;
 }
 
 .secret-reg-opt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
 
+.secret-reg-opt .btn{
+    box-shadow: 5px 5px #545b62;
+    background-color: #dddddd !important;
+    border-color: #dddddd !important;
+    width: 150px;
+    height: 120px;
+}
+
+.secret-reg-opt a{
+    font-size: 20px;
+    color: black;
+}
+
+.secret-reg-opt a:hover{
+    color: black;
+}
+
+.secret-reg-opt .btn:hover{
+    box-shadow: 5px 5px #545b62 !important;
+    background-color: #17a2b8 !important;
+    border-color: #0d6471 !important;
+}
+
+.secret-reg-opt .btn:focus{
+    border-color: #fff !important;
+    box-shadow: none !important;
 }
 
 .publisher-reg-opt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.publisher-reg-opt .btn{
+    box-shadow: 5px 5px #545b62;
+    background-color: #dddddd !important;
+    border-color: #dddddd !important;
+    width: 150px;
+    height: 120px;
+    margin-right: 40px;
+}
+
+.publisher-reg-opt a{
+    font-size: 20px;
+    color: black;
+}
+
+.publisher-reg-opt a:hover{
+    color: black;
+}
+
+.publisher-reg-opt .btn:hover{
+    box-shadow: 5px 5px #545b62 !important;
+    background-color: #17a2b8 !important;
+    border-color: #0d6471 !important;
+}
+
+.publisher-reg-opt .btn:focus{
+    border-color: #fff !important;
+    box-shadow: none !important;
 }
 
 .library-reg-opt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.library-reg-opt .btn{
+    box-shadow: 5px 5px #545b62;
+    background-color: #dddddd !important;
+    border-color: #dddddd !important;
+    width: 150px;
+    height: 120px;
+}
+
+.library-reg-opt a{
+    font-size: 20px;
+    color: black;
+}
+
+.library-reg-opt a:hover{
+    color: black;
+}
+
+.library-reg-opt .btn:hover{
+    box-shadow: 5px 5px #545b62 !important;
+    background-color: #17a2b8 !important;
+    border-color: #0d6471 !important;
+}
+
+.library-reg-opt .btn:focus{
+    border-color: #fff !important;
+    box-shadow: none !important;
 }
 
 .strongPass{
@@ -607,4 +732,9 @@ form.my-registration-from {
 
 .weakPass{
     color: yellow;
+}
+
+.selected-reg .btn{
+    background-color: #8ab3d8 !important;
+    border-color: #8ab3d8 !important;
 }
