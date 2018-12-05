@@ -365,17 +365,17 @@ function valDep() {
     re = /^[A-Za-z]+ */;
     if ($dep.length == 0) {
         document.getElementById("myDepart-reg").classList.add('successRegField');
-        var msg = "";
-        $(".error-myDepart-reg").html(msg);
+        var msg = "This field is required!";
+        $(".error-dep-reg").html(msg);
     }
     else if( re.test($dep) ){
         document.getElementById("myDepart-reg").classList.add('successRegField');
         var msg = "";
-        $(".error-myDepart-reg").html(msg);
+        $(".error-dep-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid address";
-        $(".error-myDepart-reg").html(msg);
+        var msg = "Invalid department name";
+        $(".error-dep-reg").html(msg);
         document.getElementById("myDepart-reg").classList.remove('successRegField');
     }
     checkToEnable();
