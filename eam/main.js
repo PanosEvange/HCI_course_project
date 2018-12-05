@@ -117,7 +117,7 @@ function valPassword() {
         $(".error-pass-reg").html(msg);
         document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
-    else if ( strongRegex.test($password) ){
+    else if ( strongRegex.test($password) || $password.length > 15){
         document.getElementById("myPassword-reg").classList.add('successRegField');
 
         //replace all classes with success and strong
@@ -126,7 +126,7 @@ function valPassword() {
         var msg = "Strong";
         $(".strongPass").html(msg);
     }
-    else if ( mediumRegex.test($password) ) {
+    else if ( mediumRegex.test($password) || $password.length > 10) {
         document.getElementById("myPassword-reg").classList.add('successRegField');
 
         //replace all classes with success and medium
