@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-1">
                             <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
-                            data-conten123456789t="Εισάγετε τον κωδικό σας. Πρέπει να είναι υποχρεωτικά τουλάχιστον 8 χαρακτήρες
+                            data-content="Εισάγετε τον κωδικό σας. Πρέπει να είναι υποχρεωτικά τουλάχιστον 8 χαρακτήρες
                             και μπορεί να αποτελείται απο κεφαλαίους και μικρούς λατινικούς χαρακτήρες, αριθμούς και
                             σύμβολα">
                                 <i class="fa fa-question-circle" aria-hidden="true"></i></span>
