@@ -3,7 +3,7 @@
         // User is logged in
         echo
         '
-        <div class="login-area">
+        <div class="login-area loggedin-user">
             <div class="user-info">
                 <a href="./my_profile.php" >
         '
