@@ -4,6 +4,8 @@
 
 ### General
 * Colors all pages
+* NavBar HomePage link should be shown as active only at home page -- maybe to
+do it dynamically using php
 
 ### Registration_form
 * Datepicker
