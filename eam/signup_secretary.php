@@ -1,7 +1,7 @@
 <?php
     include 'login_db.php';
     // define variables and set to empty values
-    $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $tax = $address = $phone = "";
+    $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $address = $phone = "";
     $succ = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
