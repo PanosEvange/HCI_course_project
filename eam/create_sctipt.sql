@@ -6,6 +6,7 @@
 DROP TABLE Users;
 DROP TABLE Student;
 DROP TABLE Secretary;
+DROP TABLE Publisher;
 DROP TABLE University;
 DROP TABLE Department;
 DROP TABLE Books;
@@ -22,6 +23,8 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Users (
   DateOfBirth VARCHAR(250) NOT NULL,
   Phone VARCHAR(10) NULL,
   Address VARCHAR(250) NULL,
+  AddressNum INT NULL,
+  TK INT NULL,
   UserType VARCHAR(250) NOT NULL,
   PRIMARY KEY (idUsers)
 );
@@ -33,6 +36,7 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Student (
   idStudent INT NOT NULL,
   DepartmentName VARCHAR(250) NOT NULL,
   UniversityName VARCHAR(250) NOT NULL,
+  AM VARCHAR(10) NOT NULL,
   PRIMARY KEY (idStudent)
 );
 
@@ -43,6 +47,7 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Secretary (
   idSecretary INT NOT NULL,
   UniversityName VARCHAR(250) NOT NULL,
   DepartmentName VARCHAR(250) NOT NULL,
+  IdNumber VARCHAR(10) NOT NULL,
   PRIMARY KEY (idSecretary)
 );
 
@@ -104,25 +109,25 @@ INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
 -- Insert student
 -- -----------------------------------------------------
 INSERT INTO `Users`(`idUsers`, `Email`, `Password`, `FirstName`, `LastName`,
-                    `DateOfBirth`, `Phone`, `Address`, `UserType`)
+                    `DateOfBirth`, `Phone`, `UserType`)
                     VALUES (0, 'dougas97@gmail.com', '123456789', 'Vagos',
-                            'Spi', '10', '2102102102', 'Thar 5, ath, 17', 'Student');
+                            'Spi', '10', '2102102102', 'Student');
 
-INSERT INTO `Student`(`idStudent`, `DepartmentName`, `UniversityName`)
+INSERT INTO `Student`(`idStudent`, `DepartmentName`, `UniversityName`, `AM`)
                 VALUES (0, 'Department of Informatics and Telecomunications',
-                        'National and Kapodistrian Univeristy of Athens' );
+                        'National and Kapodistrian Univeristy of Athens', '1234567890' );
 
 -- -----------------------------------------------------
 -- Insert Secretary
 -- -----------------------------------------------------
 INSERT INTO `Users`(`idUsers`, `Email`, `Password`, `FirstName`, `LastName`,
                     `DateOfBirth`, `UserType`)
-                    VALUES (1, 'sdi1500147@di.uoa.com', '987654321', 'Nancy',
+                    VALUES (1, 'sdi1500147@di.uoa.gr', '987654321', 'Nancy',
                             'Nanacy', '10', 'Secretary');
 
-INSERT INTO `Secretary`(`idSecretary`, `DepartmentName`, `UniversityName`)
+INSERT INTO `Secretary`(`idSecretary`, `DepartmentName`, `UniversityName`, `IdNumber`)
                     VALUES (1, 'Department of Informatics and Telecomunications',
-                            'National and Kapodistrian Univeristy of Athens' );
+                            'National and Kapodistrian Univeristy of Athens', 'A234567890' );
 
 -- -----------------------------------------------------
 -- Insert Publisher
