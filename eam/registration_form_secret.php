@@ -186,6 +186,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="my-reg-law-info">
+                    <h> Νομικά Στοιχεία </h>
+                    <div class="form-group row">
+                      <label for="myIdNumber" class="col-5 col-form-label"><span class="my-req-star">*</span>Αριθμός Ταυτότητας:</label>
+                      <div class="col-6">
+                        <input type="text" name="id" onfocusout="valIdNumber()" value="<?php echo $id ?>"class="form-control" id="myIdNumber-reg">
+                      </div>
+                      <div class="col-1">
+                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
+                          data-content="Εισάγετε τον αριθμό που αναγράφεται στην μπροστινή μεριά της αστυνομικής ταυτότητας σας. Ξεκινάει υποχρεωτικά
+                          με Α ακολουθούμενο από ένα γράμμα και αριθμούς ή μόνο αριθμούς. Απαραίτητα 10 χαρακτήρες.">
+                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                      </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-id-reg">
+                        </div>
+                    </div>
+                </div>
                 <div class="my-reg-contact-info">
                     <h> Στοιχεία Επικοινωνίας </h>
                     <div class="form-group row">
