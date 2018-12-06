@@ -102,6 +102,15 @@
                           <i class="fa fa-pencil" aria-hidden="true"></i>
                       </div>
                     </div>
+                    <div class="form-group row">
+                      <label for="myDepart" class="col-5 col-form-label"></span>Αριθμός Μητρώου:</label>
+                      <div class="col-6">
+                          <?php echo $am;?>
+                      </div>
+                      <div class="col-1">
+                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </div>
+                    </div>
                 </div>
                 <div class="my-reg-contact-info">
                     <h> Στοιχεία Επικοινωνίας </h>

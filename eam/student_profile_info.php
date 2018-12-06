@@ -29,6 +29,7 @@ require_once 'login_db.php'; //db info
 
     $uni = $row["UniversityName"];
     $dept = $row["DepartmentName"];
+    $am = $row["AM"];
 
     $conn->close();
 ?>
