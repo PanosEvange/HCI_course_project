@@ -1,7 +1,7 @@
 <?php
     include 'login_db.php';
     // define variables and set to empty values
-    $email = $pass = $passConf = $firstName = $lastName = $date = $id = $amka = $tax = $address = $phone = "";
+    $email = $pass = $passConf = $firstName = $lastName = $date = $id = $tax = $amka = $address = $phone = "";
     $succ = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,17 +24,30 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $stmt = $conn->prepare("INSERT INTO Publisher (Email, Password, LastName,
-                                FirstName, DateOfBirth, IdNum, TaxNum, AMKA, Phone,
-                                 Address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssssss", $email, $pass, $firstName,
-                            $lastName, $date, $id, $tax, $amka, $phone, $address);
 
-        $stmt->execute();
+        $sql = ("INSERT INTO Users (Email, Password, FirstName,
+                                LastName, DateOfBirth, Phone, Address, UserType)
+                                VALUES ('$email', '$pass', '$firstName',
+                                    '$lastName', '$date', '$phone', '$address', 'Publisher')");
 
-        $succ = "Επιτυχής καταχώρηση!";
+        if ($conn->query($sql) === TRUE) {
+            $succ = "Επιτυχής καταχώρηση!";
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        $last_id = $conn->insert_id;
+        $sql = ("INSERT INTO `Publisher`(`idPublisher`, `IdNumber`, `TaxNumber`, `Amka`)
+                            VALUES ($last_id, '$id', '$tax', '$amka');");
+        if ($conn->query($sql) === TRUE) {
+            $succ = "Επιτυχής καταχώρηση!";
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
 
-        $stmt->close();
         $conn->close();
     }
+?>
+
 ?>
