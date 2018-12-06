@@ -185,6 +185,18 @@
                         <div class="col-6 error-dep-reg">
                         </div>
                     </div>
+                    <div class="form-group row">
+                      <label for="myAm" class="col-5 col-form-label"><span class="my-req-star">*</span>Αριθμός Μητρώου:</label>
+                      <div class="col-6">
+                        <input type="text" name="am" onfocusout="valAm()" value="<?php echo $am ?>"class="form-control" id="myAm-reg">
+                      </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-5">
+                        </div>
+                        <div class="col-6 error-am-reg">
+                        </div>
+                    </div>
                 </div>
                 <div class="my-reg-contact-info">
                     <h> Στοιχεία Επικοινωνίας </h>

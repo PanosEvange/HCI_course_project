@@ -1,7 +1,7 @@
 <?php
     include 'login_db.php';
     // define variables and set to empty values
-    $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $address = $phone = "";
+    $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $am = $address = $phone = "";
     $succ = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -14,6 +14,7 @@
         $date = $_POST["date"];
         $uni = $_POST["university"];
         $dept = $_POST["department"];
+        $am = $_POST["am"];
         $phone = $_POST["phone"];
         $address = $_POST["address"];
 
@@ -36,8 +37,8 @@
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
         $last_id = $conn->insert_id;
-        $sql = ("INSERT INTO Student (idStudent, DepartmentName, UniversityName)
-                                VALUES ($last_id, '$uni', '$dept')");
+        $sql = ("INSERT INTO Student (idStudent, DepartmentName, UniversityName, AM)
+                                VALUES ($last_id, '$uni', '$dept', '$am')");
         if ($conn->query($sql) === TRUE) {
             $succ = "Επιτυχής καταχώρηση!";
         }

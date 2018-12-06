@@ -365,7 +365,7 @@ function valDep() {
     var $dep = $("#myDepart-reg").val();
     re = /^[Α-Ωα-ω]+ */;
     if ($dep.length == 0) {
-        document.getElementById("myDepart-reg").classList.add('successRegField');
+        document.getElementById("myDepart-reg").classList.remove('successRegField');
         var msg = "This field is required!";
         $(".error-dep-reg").html(msg);
     }
@@ -378,6 +378,26 @@ function valDep() {
         var msg = "Invalid department name";
         $(".error-dep-reg").html(msg);
         document.getElementById("myDepart-reg").classList.remove('successRegField');
+    }
+    checkToEnable();
+}
+
+function valAm() {
+    var $am = $("#myAm-reg").val();
+    re = /^[0-9]{10,}/;
+    if ($am.length == 0) {
+        document.getElementById("myAm-reg").classList.remove('successRegField');
+        var msg = "This field is required";
+        $(".error-am-reg").html(msg);
+    } else if ( re.test($am) && $am.length == 10) {
+        document.getElementById("myAm-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-am-reg").html(msg);
+    }
+    else {
+        document.getElementById("myAm-reg").classList.remove('successRegField');
+        var msg = "invalid AM";
+        $(".error-am-reg").html(msg);
     }
     checkToEnable();
 }
@@ -448,6 +468,11 @@ function checkToEnable() {
     }
 
     myEle = document.getElementById("myDepart-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myAm-reg");
     if(myEle){
         fields[fields.length] = myEle.classList.contains("successRegField");
     }
