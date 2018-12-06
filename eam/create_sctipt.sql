@@ -93,18 +93,44 @@ CREATE TABLE IF NOT EXISTS Books (
 -- -----------------------------------------------------
 -- Insert some mock data
 -- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Insert Univerities
+-- -----------------------------------------------------
 INSERT INTO `University`(`UniversityName`)
                 VALUES ('National and Kapodistrian Univeristy of Athens');
 INSERT INTO `University`(`UniversityName`)
                 VALUES ('Aristotelian Univerity of Thesalonica');
+INSERT INTO `University`(`UniversityName`)
+                VALUES ('Athens Univerity of Economics and Business ');
+
+-- -----------------------------------------------------
+-- Insert Departments
+-- -----------------------------------------------------
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                VALUES ('Department of Informatics and Telecomunications', 'National and Kapodistrian Univeristy of Athens');
 
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of Informatics and Telecomunications', 'National and Kapodistrian Univeristy of Athens');
+                VALUES ('Department of Chemistry', 'National and Kapodistrian Univeristy of Athens');
+
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
                         VALUES ('Department of Mathematics', 'National and Kapodistrian Univeristy of Athens');
+
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Department of science', 'National and Kapodistrian Univeristy of Athens');
+
+
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Department of science', 'Aristotelian Univerity of Thesalonica');
+
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
                         VALUES ('Department of Mathematics', 'Aristotelian Univerity of Thesalonica');
 
+
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('LOXRI', 'Athens Univerity of Economics and Business');
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Kapoio allo', 'Athens Univerity of Economics and Business');
 -- -----------------------------------------------------
 -- Insert student
 -- -----------------------------------------------------
@@ -140,7 +166,7 @@ INSERT INTO `Users`(`idUsers`, `Email`, `Password`, `FirstName`, `LastName`,
 INSERT INTO `Publisher`(`idPublisher`, `IdNumber`, `TaxNumber`, `Amka`)
                     VALUES (2, 'A123456789', '9876543210', '1472583690');
 
--- -----------------------------------------------------
+-- ------------------------Έκανα ένα Push. -----------------------------
 -- Insert Books
 -- -----------------------------------------------------
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
