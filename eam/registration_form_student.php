@@ -20,6 +20,9 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
         <script src="./vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
 
+        <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
+        <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+
         <script src="main.js"></script>
         <title> Registration </title>
     </head>
@@ -135,10 +138,16 @@
                         </div>
                     </div>
                     <div class="form-group row">
+
                       <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
-                      <div class="col-6">
-                        <input type="text" name="date" onfocusout="valBirthDate()" value="<?php echo $date ?>"class="form-control" id="myBirthDate-reg">
+                      <!-- <div class="col-6">
+                        <input type="text" name="date" onfocusout="valBirthDate()" value=""class="form-control" id="myBirthDate-reg">
+                      </div> -->
+                      <div class="input-group date col-6 successRegField" id="myBirthDate-reg">
+                          <input type="text" class="form-control" name="date">
+                          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                       </div>
+
                     </div>
                     <div class="row error-msg">
                         <div class="col-5">

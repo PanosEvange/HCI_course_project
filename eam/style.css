@@ -737,3 +737,15 @@ form.my-registration-from {
 .weakPass{
     color: #dc3545;
 }
+
+#myBirthDate-reg .fa-calendar:before {
+    content: "\f073";
+    position: relative;
+    left: 6px;
+    top: 6px;
+}
+
+.datepicker {
+    top: 657px !important;
+    left: 877.328px !important;;
+}
