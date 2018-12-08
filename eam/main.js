@@ -499,8 +499,8 @@ $(document).on('change', '#reg-checkbox', function() {
 });
 
 $(document).ready(function() {
-    $('#myUniv-reg').select2();
+    $('#myUniv-reg').select2({ width: '100%' });
 
-    $('#myDepart-reg').select2();
+    $('#myDepart-reg').select2({ width: '100%' });
 
 });
