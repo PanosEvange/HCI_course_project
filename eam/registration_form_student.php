@@ -17,6 +17,9 @@
         <script src="./vendor/jquery/jquery.min.js"></script>
         <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <script src="./vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
+
         <script src="main.js"></script>
         <title> Registration </title>
     </head>
@@ -149,7 +152,14 @@
                     <div class="form-group row">
                       <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
                       <div class="col-6">
-                        <input type="text" name="university" onfocusout="valUniv()" value="<?php echo $uni ?>"class="form-control" id="myUniv-reg">
+                        <!-- <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg"> -->
+                        <select class="successRegField" name="university" id="myUniv-reg">
+                            <option value="UOA"> University of Athens </option>
+                            <option value="ATH"> Aristotele university of Thessaloniki </option>
+                            <option value="DPTH"> Makedonian University </option>
+                            <option value="EMP"> National Metsobion Polytechnium </option>
+                            <option value="UOC"> University of Crete </option>
+                        </select>
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -161,7 +171,14 @@
                     <div class="form-group row">
                       <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
-                        <input type="text" name="department" onfocusout="valDep()" value="<?php echo $dept ?>"class="form-control" id="myDepart-reg">
+                        <!-- <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg"> -->
+                        <select class="successRegField" name="department" id="myDepart-reg">
+                            <option value="DIT"> Department Of Informatics </option>
+                            <option value="MATH"> Mathematics </option>
+                            <option value="PHY"> Physics </option>
+                            <option value="PHI"> Philosophy </option>
+                            <option value="CH"> Chemistry </option>
+                        </select>
                       </div>
                     </div>
                     <div class="row error-msg">

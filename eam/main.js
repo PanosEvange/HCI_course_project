@@ -497,3 +497,10 @@ function checkToEnable() {
 $(document).on('change', '#reg-checkbox', function() {
     checkToEnable();
 });
+
+$(document).ready(function() {
+    $('#myUniv-reg').select2();
+
+    $('#myDepart-reg').select2();
+
+});
