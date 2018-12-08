@@ -31,7 +31,7 @@
          </a>
     </div>
     <div class="my-signup">
-        <a href="./registration_form_student.php" class="btn" >Εγγραφή</a>
+        <a href="./register_options.php" class="btn" >Εγγραφή</a>
     </div>
 </div>
 <!-- Login End -->

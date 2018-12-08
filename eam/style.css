@@ -575,10 +575,13 @@ form.my-registration-from {
 }
 
 .groups-option-registration{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-left: 500px;
+    padding-right: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-row-gap: 100px;
+    margin-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -587,15 +590,15 @@ form.my-registration-from {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 40px;
 }
 
 .student-reg-opt .btn{
     box-shadow: 5px 5px #545b62;
     background-color: #dddddd !important;
     border-color: #dddddd !important;
-    width: 150px;
-    height: 120px;
+    width: 300px;
+    height: 250px;
+    padding-top: 70px;
 }
 
 .student-reg-opt a{
@@ -622,15 +625,15 @@ form.my-registration-from {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 40px;
 }
 
 .secret-reg-opt .btn{
     box-shadow: 5px 5px #545b62;
     background-color: #dddddd !important;
     border-color: #dddddd !important;
-    width: 150px;
-    height: 120px;
+    width: 300px;
+    height: 250px;
+    padding-top: 70px;
 }
 
 .secret-reg-opt a{
@@ -663,9 +666,9 @@ form.my-registration-from {
     box-shadow: 5px 5px #545b62;
     background-color: #dddddd !important;
     border-color: #dddddd !important;
-    width: 150px;
-    height: 120px;
-    margin-right: 40px;
+    width: 300px;
+    height: 250px;
+    padding-top: 70px;
 }
 
 .publisher-reg-opt a{
@@ -698,8 +701,9 @@ form.my-registration-from {
     box-shadow: 5px 5px #545b62;
     background-color: #dddddd !important;
     border-color: #dddddd !important;
-    width: 150px;
-    height: 120px;
+    width: 300px;
+    height: 250px;
+    padding-top: 70px;
 }
 
 .library-reg-opt a{
@@ -732,9 +736,4 @@ form.my-registration-from {
 
 .weakPass{
     color: yellow;
-}
-
-.selected-reg .btn{
-    background-color: #8ab3d8 !important;
-    border-color: #8ab3d8 !important;
 }
