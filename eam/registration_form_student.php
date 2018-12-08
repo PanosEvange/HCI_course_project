@@ -221,15 +221,15 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
-                      <div class="col-6">
-                        <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
+                      <label for="myAddress" class="col-2 col-form-label">Οδός:</label>
+                      <div class="col-4">
+                        <input type="text" name="address" onfocusout="" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
+                      </div>
+                      <label for="myAddressNum" class="col-3 col-form-label">Αριθμός:</label>
+                      <div class="col-2">
+                        <input type="text" name="addressNum"  value="" class="form-control" id="myAddressNum-reg">
                       </div>
                       <div class="col-1">
-                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
-                          data-content="Εισάγετε την διεύθηνση κατοικίας σας. Πρέπει να είανι υποχρεωτικά στη μορφή
-                          Διέυθηνση Αριθμός, Πόλη, ΤΚ">
-                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -237,6 +237,18 @@
                         </div>
                         <div class="col-6 error-myAddress-reg">
                         </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="myDimos" class="col-2 col-form-label">Δήμος:</label>
+                      <div class="col-4">
+                        <input type="text" name="addressDimos" value="" class="form-control successRegField" id="myAddressDimos-reg">
+                      </div>
+                      <label for="myAddressTK" class="col-3 col-form-label">Ταχ. Κώδικας:</label>
+                      <div class="col-2">
+                        <input type="text" name="addressTK"  value="" class="form-control" id="myAddressTK-reg">
+                      </div>
+                      <div class="col-1">
+                      </div>
                     </div>
                 </div>
                 <div class="my-registration-submit">
