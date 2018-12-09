@@ -164,13 +164,12 @@
                       <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
                       <div class="col-6">
                         <!-- <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg"> -->
-                        <select class="successRegField" name="university" id="myUniv-reg">
-                            <option value="UOA"> University of Athens </option>
-                            <option value="ATH"> Aristotele university of Thessaloniki </option>
-                            <option value="DPTH"> Makedonian University </option>
-                            <option value="EMP"> National Metsobion Polytechnium </option>
-                            <option value="UOC"> University of Crete </option>
+
+                        <select class="successRegField" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
+                            <option value="" selected disabled hidden>Επιλογή Πανεπιστημίου</option>
+                            <?php include 'universityValues.php';?>
                         </select>
+
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -183,12 +182,8 @@
                       <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
                         <!-- <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg"> -->
-                        <select class="successRegField" name="department" id="myDepart-reg">
-                            <option value="DIT"> Department Of Informatics </option>
-                            <option value="MATH"> Mathematics </option>
-                            <option value="PHY"> Physics </option>
-                            <option value="PHI"> Philosophy </option>
-                            <option value="CH"> Chemistry </option>
+                        <select class="successRegField" name="department" id="myDepart-reg" disabled>
+                            <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
                         </select>
                       </div>
                     </div>
