@@ -532,3 +532,8 @@ function myDepartmentOptionsDisplay(str) {
     }
 
 }
+
+function mySearchBookFind(){
+    var $searchTerm = $("#mySearchBookTerm").val();
+    window.location.replace("./searchBooks.php" +"?q=" + $searchTerm );
+}

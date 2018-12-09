@@ -45,7 +45,7 @@ session_start();
                     <a class="nav-link" href="./under_construction.php">Ανακοινώσεις</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">Αναζήτηση Συγγραμμάτων</a>
+                    <a class="nav-link" href="./searchBooks.php">Αναζήτηση Συγγραμμάτων</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./under_construction.php">Επικοινωνία</a>
