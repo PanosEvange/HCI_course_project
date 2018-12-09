@@ -2,6 +2,12 @@
     margin:0;
 }
 
+.myNavbarDropdownInfo .dropdown-item:hover{
+    /*box-shadow: 5px 5px #545b62;*/
+    background-color: #17a2b8 !important;
+    border-color:#0d6471 !important;
+}
+
 .user-info {
     overflow: hidden;
     text-overflow: ellipsis;

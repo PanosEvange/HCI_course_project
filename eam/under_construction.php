@@ -17,6 +17,12 @@
     <script src="./vendor/jquery/jquery.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="./vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
+
+    <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
+    <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+    
     <script src="main.js"></script>
     <title> New Eudoxus </title>
 </head>
@@ -36,6 +42,6 @@
         </div>
 
         <?php include 'footer.php';?>
-        
+
     </body>
 </html>
