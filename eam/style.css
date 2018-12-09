@@ -13,6 +13,17 @@
     text-overflow: ellipsis;
 }
 
+.title-area h5 {
+    font-size: 25px !important;
+    margin-top: 10px;
+}
+
+span.my-svg-text {
+    position: relative;
+    top: -10px;
+    margin-left: 0px;
+}
+
 .input-group-addon{
     background-color: #e9ecef;
     border: 1px solid rgba(0,0,0,.15);
@@ -338,7 +349,7 @@ ul.breadcrumb li a:hover {
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    height: 350px;
+    height: 450px;
 }
 
 .title-area{
@@ -357,7 +368,8 @@ ul.breadcrumb li a:hover {
     color: #212529;
     background-color: #fff;
     box-shadow: 5px 5px #888888;
-    width: 220px;
+    width: 240px;
+    height: 75px;
     margin-top: 20px;
 }
 
@@ -368,22 +380,20 @@ ul.breadcrumb li a:hover {
 }
 
 .secretary-area a.section-button{
-    font-family: "Courier New", Courier, monospace;
-    font-size: 15px !important;
+
 }
 
 .publisher-area a.section-button{
-    font-family: none !important;font-size: 18px !important;
 }
 
 .library-area a.section-button{
-    font-family: fantasy !important;
-    font-size: 19px !important;
-    font-style: italic;
 }
 
 a.section-button{
-    font-size: 16px !important;
+    font-size: 18px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 a.section-button:hover{
@@ -408,7 +418,7 @@ a.section-button:hover{
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    height: 350px;
+    height: 450px;
 }
 
 .publisher-area{
@@ -419,7 +429,7 @@ a.section-button:hover{
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    height: 350px;
+    height: 450px;
 }
 
 .library-area{
@@ -427,14 +437,14 @@ a.section-button:hover{
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    height: 350px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .my-announcement{
-    width: 1150px;
+    width: 1232px;
     margin-top:20px;
     margin-bottom:70px;
     background-color: #ddd;
