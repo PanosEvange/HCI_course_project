@@ -32,6 +32,10 @@ span.my-svg-text {
     margin-left: -1px;
 }
 
+.my-calendar{
+    cursor: pointer;
+}
+
 .input-group-addon a{
     color: black !important;
 }

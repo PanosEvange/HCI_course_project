@@ -504,10 +504,3 @@ $(document).ready(function() {
     $('#myDepart-reg').select2({ width: '100%' });
 
 });
-
-$(document).ready(function() {
-    $('#myBirthDate-reg').datepicker({
-        format: "dd/mm/yyyy",
-        orientation: "bottom"
-    });
-});

@@ -23,6 +23,11 @@
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
         <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+        <script src="./vendor/daterangepicker/moment.min.js"></script>
+        <script src="./vendor/daterangepicker/daterangepicker.js"></script>
+        <link href="./vendor/daterangepicker/daterangepicker.css" rel="stylesheet">
+
+        <script src="myDatePickerReg.js"></script>
         <script src="main.js"></script>
         <title> Registration </title>
     </head>
@@ -140,12 +145,9 @@
                     <div class="form-group row">
 
                       <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
-                      <!-- <div class="col-6">
-                        <input type="text" name="date" onfocusout="valBirthDate()" value=""class="form-control" id="myBirthDate-reg">
-                      </div> -->
-                      <div class="input-group date col-6 successRegField" id="myBirthDate-reg">
-                          <input type="text" class="form-control" name="date">
-                          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                      <div class="input-group date col-6 successRegField my-calendar" id="myBirthDate-reg">
+                          <input type="text" class="form-control" onkeydown="return false" name="date" value="" >
+                          <!-- <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span> -->
                       </div>
 
                     </div>
