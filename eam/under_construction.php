@@ -6,7 +6,8 @@
 
     <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="under_construct_style.css">
+    
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
