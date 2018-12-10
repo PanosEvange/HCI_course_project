@@ -1,30 +1,25 @@
 <?php
-    // include 'login_db.php';
-    // // define variables and set to empty values
-    //
-    //
-    // require_once 'login_db.php'; //db info
-    //
-    // $conn = new mysqli($servername, $username, $password, $dbname);
-    // if ($conn->connect_error) {
-    //     die("Connection failed: " . $conn->connect_error);
-    // }
-    //
-    // $sql = ("SELECT FROM  Universities ");
-    //
-    // if ($conn->query($sql) === TRUE) {
-    //     //do the echos
-    // }
-    // else {
-    //     echo "Error: " . $sql . "<br>" . $conn->error;
-    // }
-    //
-    // $conn->close();
+    include 'login_db.php';
 
-    echo '<option value="University of Athens"> University of Athens </option>';
-    echo '<option value="Aristotele university of Thessaloniki"> Aristotele university of Thessaloniki </option>';
-    echo '<option value="Makedonian University"> Makedonian University </option>';
-    echo '<option value="National Metsobion Polytechnium"> National Metsobion Polytechnium </option>';
-    echo '<option value="University of Crete"> University of Crete </option>';
+    require_once 'login_db.php'; //db info
 
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = ("SELECT * FROM  University");
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $uni = $row["UniversityName"];
+            echo '<option value="'.$row["UniversityName"].'">'.$row["UniversityName"].'</option>';
+        }
+    }
+    else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
 ?>

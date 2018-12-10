@@ -102,7 +102,9 @@ INSERT INTO `University`(`UniversityName`)
 INSERT INTO `University`(`UniversityName`)
                 VALUES ('Aristotelian Univerity of Thesalonica');
 INSERT INTO `University`(`UniversityName`)
-                VALUES ('Athens Univerity of Economics and Business ');
+                VALUES ('Athens Univerity of Economics and Business');
+INSERT INTO `University`(`UniversityName`)
+                VALUES ('University of Crete');
 
 -- -----------------------------------------------------
 -- Insert Departments
@@ -131,6 +133,10 @@ INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
                         VALUES ('LOXRI', 'Athens Univerity of Economics and Business');
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
                         VALUES ('Kapoio allo', 'Athens Univerity of Economics and Business');
+
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Department of Mathematics', 'University of Crete');
+
 -- -----------------------------------------------------
 -- Insert student
 -- -----------------------------------------------------

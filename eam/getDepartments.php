@@ -2,14 +2,26 @@
     $q = $_GET['q'];
 
     //connect to database and use $q
+    include 'login_db.php';
 
-    echo '
-    <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
-    <option value="Department Of Informatics">'.$q.'  Department Of Informatics </option>
-    <option value="Mathematics">'.$q.' Mathematics </option>
-    <option value="Physics">'.$q.' Physics </option>
-    <option value="Philosophy">'.$q.' Philosophy </option>
-    <option value="Chemistry">'.$q.' Chemistry </option>
-    ';
+    require_once 'login_db.php'; //db info
 
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = ("SELECT * FROM  Department WHERE UniversityName = '$q'");
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo '<option value="'.$row["DepartmentName"].'">'.$row["DepartmentName"].'</option>';
+        }
+    }
+    else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
 ?>
