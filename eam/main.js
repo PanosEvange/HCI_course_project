@@ -537,3 +537,18 @@ function mySearchBookFind(){
     var $searchTerm = $("#mySearchBookTerm").val();
     window.location.replace("./searchBooks.php" +"?q=" + $searchTerm );
 }
+
+function BookSearchFilterToggle(){
+    $("#filterButtonContainer").toggleClass("openFilters");
+    $("#myFiltersInput").toggleClass("myHiddenClass");
+    if ( document.getElementById("filterButtonContainer").classList.contains('openFilters') ){
+        //angle up
+        document.getElementById("filterButtonIcon").classList.remove('fa-angle-down');
+        document.getElementById("filterButtonIcon").classList.add('fa-angle-up');
+    }
+    else{
+        //angle down
+        document.getElementById("filterButtonIcon").classList.remove('fa-angle-up');
+        document.getElementById("filterButtonIcon").classList.add('fa-angle-down');
+    }
+}

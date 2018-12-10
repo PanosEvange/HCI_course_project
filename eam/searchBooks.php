@@ -86,6 +86,14 @@
             <button class="MySearchBookSearchButton" type="submit" onclick="mySearchBookFind()"><i class="fa fa-search"></i></button>
         </div>
 
+        <div id="filterButtonContainer" class="myBooksSearchFiltersButton">
+            <a href="#" class="btn" onclick="BookSearchFilterToggle()" id="myFilterButton"> Φίλτρα <br/> Αναζήτησης <i id="filterButtonIcon" class="fa fa-angle-down" aria-hidden="true"></i> </a>
+        </div>
+
+        <div class="myBooksSearchFiltersInput myHiddenClass" id="myFiltersInput">
+            hahahah
+        </div>
+
         <?php include 'executeSearch.php';?>
 
         <!-- <div class="mySearchBookResultsCount">
