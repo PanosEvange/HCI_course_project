@@ -1,6 +1,7 @@
 <?php
     $q = $_GET['q'];
 
+
     //connect to database and use $q
     include 'login_db.php';
 
@@ -13,6 +14,8 @@
 
     $sql = ("SELECT * FROM  Department WHERE UniversityName = '$q'");
     $result = $conn->query($sql);
+
+    echo '<option value="" selected disabled hidden>Επιλογή Τμήματος</option>';
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {

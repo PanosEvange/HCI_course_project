@@ -137,6 +137,9 @@ INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
                         VALUES ('Department of Mathematics', 'University of Crete');
 
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Department of science', 'University of Crete');
+
 -- -----------------------------------------------------
 -- Insert student
 -- -----------------------------------------------------
