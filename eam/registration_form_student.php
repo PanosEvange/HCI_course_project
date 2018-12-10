@@ -4,11 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
 
         <!-- Bootstrap core CSS -->
         <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +15,7 @@
         <script src="./vendor/jquery/jquery.min.js"></script>
         <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <link href="./vendor/select2-4.0.6-rc.1/dist/css/select2.css" rel="stylesheet">
         <script src="./vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
 
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
