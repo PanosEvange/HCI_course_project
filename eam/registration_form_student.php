@@ -227,11 +227,11 @@
                     <div class="form-group row">
                       <label for="myAddress" class="col-2 col-form-label">Οδός:</label>
                       <div class="col-4">
-                        <input type="text" name="address" onfocusout="" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
+                        <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
                       </div>
                       <label for="myAddressNum" class="col-3 col-form-label">Αριθμός:</label>
                       <div class="col-2">
-                        <input type="text" name="addressNum"  value="" class="form-control" id="myAddressNum-reg">
+                        <input type="text" name="addressNum" onfocusout="valAddressNumber()" value="<?php echo $addressNum ?>" class="form-control" id="myAddressNum-reg">
                       </div>
                       <div class="col-1">
                       </div>
@@ -245,11 +245,11 @@
                     <div class="form-group row">
                       <label for="myDimos" class="col-2 col-form-label">Δήμος:</label>
                       <div class="col-4">
-                        <input type="text" name="addressDimos" value="" class="form-control successRegField" id="myAddressDimos-reg">
+                        <input type="text" name="addressDimos" onfocusout="valMunicipality()" value="<?php echo $municipality ?>" class="form-control successRegField" id="myAddressDimos-reg">
                       </div>
                       <label for="myAddressTK" class="col-3 col-form-label">Ταχ. Κώδικας:</label>
                       <div class="col-2">
-                        <input type="text" name="addressTK"  value="" class="form-control" id="myAddressTK-reg">
+                        <input type="text" name="addressTK" onfocusout="valTK()" value="<?php echo $TK ?>" class="form-control" id="myAddressTK-reg">
                       </div>
                       <div class="col-1">
                       </div>

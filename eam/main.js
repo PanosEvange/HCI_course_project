@@ -321,7 +321,7 @@ function valPhoneNumber() {
 
 function valAddress() {
     var $address = $("#myAddress-reg").val();
-    re = /^[A-Za-z]+ *[0-9]+ *, *[A-Za-z]+ *, *[0-9]+$/;
+    re = /^[Α-Ωα-ω]+ *$/;
     if ($address.length == 0) {
         document.getElementById("myAddress-reg").classList.add('successRegField');
         var msg = "";
@@ -338,6 +338,50 @@ function valAddress() {
         document.getElementById("myAddress-reg").classList.remove('successRegField');
     }
     checkToEnable();
+}
+
+function valAddressNumber() {
+    var $addressNum = $("#myAddressNum-reg");
+    re = /^[0-9]+$/;
+    if (re.test($addressNum)) {
+        document.getElementById("myAddressNum-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myAddressΝum-reg").html(msg);
+    } else {
+        var msg = "Invalid address number";
+        $(".error-myAddressNum-reg").html(msg);
+        document.getElementById("myAddressNum-reg").classList.remove('successRegField');
+    }
+
+}
+
+function valMunicipality() {
+    var $municipality = $("#myAddressDimos-reg");
+    re = /^Δήμος ([α-ω]+ *)*$/i;
+    if (re.test($municipality)) {
+        document.getElementById("myAddressNum-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myAddressDimos-reg").html(msg);
+    } else {
+        var msg = "Invalid Municipality";
+        $(".error-myAddressNum-reg").html(msg);
+        document.getElementById("myAddressDimos-reg").classList.remove('successRegField');
+    }
+
+}
+
+function valTK() {
+    var $TK = $("#myAddressTK-reg");
+    re = /^[0-9]+$/;
+    if (re.test($TK) && $TK.length == 5) {
+        document.getElementById("myAddressTK-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myAddressTK-reg").html(msg);
+    } else {
+        var msg = "Invalid TK";
+        $(".error-myAddressTk-reg").html(msg);
+        document.getElementById("myAddressTk-reg").classList.remove('successRegField');
+    }
 }
 
 function valUniv() {

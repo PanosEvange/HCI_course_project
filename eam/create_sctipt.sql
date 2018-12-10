@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Users (
   Phone VARCHAR(10) NULL,
   Address VARCHAR(250) NULL,
   AddressNum INT NULL,
+  Municipality VARCHAR(250) NULL,
   TK INT NULL,
   UserType VARCHAR(250) NOT NULL,
   PRIMARY KEY (idUsers)
