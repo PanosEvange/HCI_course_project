@@ -91,7 +91,57 @@
         </div>
 
         <div class="myBooksSearchFiltersInput myHiddenClass" id="myFiltersInput">
-            hahahah
+            <div class="form-group row">
+              <label for="University" class="col-2 col-form-label">Πανεπιστήμιο:</label>
+              <div class="col-3">
+                <input type="text" name="University" id="myUniv-filter" class="form-control" >
+              </div>
+              <div class="col-2"></div>
+              <label for="Publisher" class="col-2 col-form-label">Εκδόσεις:</label>
+              <div class="col-3">
+                <input type="text" name="Publisher" id="myPubl-filter" class="form-control" >
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="Department" class="col-2 col-form-label">Τμήμα:</label>
+              <div class="col-3">
+                <input type="text" name="Department" id="myDep-filter" class="form-control" >
+              </div>
+              <div class="col-2"></div>
+              <label for="Author" class="col-2 col-form-label">Συγγραφέας:</label>
+              <div class="col-3">
+                <input type="text" name="Author" id="myAuthor-filter" class="form-control" >
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="Semister" class="col-2 col-form-label">Εξάμηνο:</label>
+              <div class="col-3">
+                <input type="text" name="Semister" id="mySem-filter" class="form-control" >
+              </div>
+              <div class="col-2"></div>
+              <label for="Isbn" class="col-2 col-form-label">ISBN:</label>
+              <div class="col-3">
+                <input type="text" name="Isbn" id="myIsbn-filter" class="form-control" >
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="Subject" class="col-2 col-form-label">Μάθημα:</label>
+              <div class="col-3">
+                <input type="text" name="Subject" id="mySubj-filter" class="form-control" >
+              </div>
+              <div class="col-2"></div>
+              <label for="Year" class="col-2 col-form-label">Έτος:</label>
+              <div class="col-3">
+                <input type="text" name="Year" id="myYear-filter" class="form-control" >
+              </div>
+            </div>
+            <div class="form-group row">
+
+              <div class="col-8"></div>
+              <div class="col-4">
+                <a href="#" class="btn" onclick="mySearchBookFind()" id="myFilterApplyButton"> Εφαρμογή Φίλτρων </a>
+              </div>
+            </div>
         </div>
 
         <?php include 'executeSearch.php';?>

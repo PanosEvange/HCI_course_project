@@ -918,7 +918,7 @@ span.mySearchBookCounter {
 
 .myBooksSearchFiltersInput {
     background-color: #ddd;
-    padding: 10px;
+    padding: 25px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     margin-bottom: 30px;
@@ -926,4 +926,49 @@ span.mySearchBookCounter {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
+}
+
+.myBooksSearchFiltersInput .form-group.row {
+    margin-bottom: 35px;
+}
+
+.myBooksSearchFiltersInput .col-form-label{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.myBooksSearchFiltersInput .form-control{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#myFilterApplyButton.btn{
+    border: 0;
+    color: #212529;
+    background-color: #f8f9fa;
+    box-shadow: 5px 5px #888888;
+    width: 240px;
+    height: 75px;
+    margin-top: 20px;
+}
+
+#myFilterApplyButton.btn:hover{
+    background-color: #999;
+}
+
+a#myFilterApplyButton{
+    font-size: 18px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a#myFilterApplyButton:hover{
+    color: black !important;
+}
+
+#myFilterApplyButton.btn:focus{
+    margin-top:20px;
+    border-color: #fff !important;
+    box-shadow: none !important;
 }
