@@ -980,3 +980,7 @@ a#myFilterApplyButton:hover{
 .my-profile-info .my-reg-contact-info {
     margin-bottom: 80px;
 }
+
+.my-profile-info .fa.fa-pencil-alt{
+    cursor: pointer;
+}

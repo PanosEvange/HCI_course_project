@@ -626,3 +626,9 @@ function BookSearchFilterToggle(){
         document.getElementById("filterButtonIcon").classList.add('fa-angle-down');
     }
 }
+
+$(document).ready(function() {
+    $(".myEmail-edit-icon .fa.fa-pencil-alt").click(function(){
+        alert("WoW you want to change your email.");
+    });
+});
