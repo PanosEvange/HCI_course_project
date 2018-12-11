@@ -608,8 +608,55 @@ function myDepartmentOptionsDisplay(str) {
 }
 
 function mySearchBookFind(){
+
+    var $url = "./searchBooks.php";
+
     var $searchTerm = $("#mySearchBookTerm").val();
-    window.location.replace("./searchBooks.php" +"?q=" + $searchTerm );
+    if( $searchTerm != "" ){
+        $url += "?q=" + $searchTerm;
+    }
+
+    var $univFilter = $("#myUniv-filter").val();
+    if( $univFilter != "" ){
+        $url += "?u=" + $univFilter;
+    }
+
+    var $publFilter = $("#myPubl-filter").val();
+    if( $publFilter != "" ){
+        $url += "?p=" + $publFilter;
+    }
+
+    var $depFilter = $("#myDep-filter").val();
+    if( $depFilter != "" ){
+        $url += "?d=" + $depFilter;
+    }
+
+    var $authorFilter = $("#myAuthor-filter").val();
+    if( $authorFilter != "" ){
+        $url += "?a=" + $authorFilter;
+    }
+
+    var $semFilter = $("#mySem-filter").val();
+    if( $semFilter != "" ){
+        $url += "?s=" + $semFilter;
+    }
+
+    var $isbnFilter = $("#myIsbn-filter").val();
+    if( $isbnFilter != "" ){
+        $url += "?i=" + $isbnFilter;
+    }
+
+    var $subjFilter = $("#mySubj-filter").val();
+    if( $subjFilter != "" ){
+        $url += "?su=" + $subjFilter;
+    }
+
+    var $yearFilter = $("#myYear-filter").val();
+    if( $yearFilter != "" ){
+        $url += "?y=" + $yearFilter;
+    }
+
+    window.location.replace($url);
 }
 
 function BookSearchFilterToggle(){
