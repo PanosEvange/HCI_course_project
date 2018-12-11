@@ -41,26 +41,26 @@
 
         <?php include 'student_profile_info.php';?>
 
-        <div class="my-main-content-registration">
+        <div class="my-main-content-registration my-profile-info">
 
                 <div class="my-reg-account-info">
                     <h> Στοιχεία Λογαριασμού </h>
                       <div class="form-group row">
-                        <label for="myEmail" class="col-5 col-form-label"><i class="fa fa-envelope" aria-hidden="true"></i>Email:</label>
+                        <label for="myEmail" class="col-5 col-form-label"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
                         <div class="col-6">
                             <?php echo $email;?>
                         </div>
                         <div class="col-1">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="myPassword" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>Κωδικός:</label>
+                        <label for="myPassword" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   Κωδικός:</label>
                         <div class="col-6">
                             <?php echo $pass;?>
                         </div>
                         <div class="col-1">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                         </div>
                       </div>
                 </div>
@@ -93,7 +93,7 @@
                           <?php echo $uni;?>
                       </div>
                       <div class="col-1">
-                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="form-group row">
@@ -102,7 +102,7 @@
                           <?php echo $dept;?>
                       </div>
                       <div class="col-1">
-                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="form-group row">
@@ -111,7 +111,7 @@
                           <?php echo $am;?>
                       </div>
                       <div class="col-1">
-                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                       </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                           <?php echo $phone;?>
                       </div>
                       <div class="col-1">
-                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                       </div>
                     </div>
                     <div class="form-group row">
@@ -132,7 +132,7 @@
                           <?php echo $address;?>
                       </div>
                       <div class="col-1">
-                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                       </div>
                     </div>
 

@@ -976,3 +976,7 @@ a#myFilterApplyButton:hover{
 .my-calendar .form-control {
     background: white !important;
 }
+
+.my-profile-info .my-reg-contact-info {
+    margin-bottom: 80px;
+}
