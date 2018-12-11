@@ -51,7 +51,7 @@
         <div class="my-main-content-registration">
             <p> Η συμπλήρωση των πεδίων με <span class="my-req-star">*</span> είναι υποχρεωτική.</p>
             <p class="success-registration"> <?php echo $succ;?> </p>
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="my-registration-from">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="my-registration-from" autocomplete="false">
                 <div class="my-reg-account-info">
                     <h> Στοιχεία Λογαριασμού </h>
                       <div class="form-group row">
@@ -144,8 +144,8 @@
 
                       <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
                       <div class="input-group date col-6 successRegField my-calendar" id="myBirthDate-reg">
-                          <input type="text" class="form-control" onkeydown="return false" name="date" value="" >
-                          <!-- <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span> -->
+                          <input type="text" class="form-control" onkeydown="return false" name="date" value="" disabled>
+                          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                       </div>
 
                     </div>
@@ -231,15 +231,21 @@
                       </div>
                       <label for="myAddressNum" class="col-3 col-form-label">Αριθμός:</label>
                       <div class="col-2">
-                        <input type="text" name="addressNum" onfocusout="valAddressNumber()" value="<?php echo $addressNum ?>" class="form-control" id="myAddressNum-reg">
+                        <input type="text" name="addressNum" onfocusout="valAddressNumber()" value="<?php echo $addressNum ?>" class="form-control successRegField" id="myAddressNum-reg">
                       </div>
                       <div class="col-1">
                       </div>
                     </div>
                     <div class="row error-msg">
-                        <div class="col-5">
+                        <div class="col-2">
                         </div>
-                        <div class="col-6 error-myAddress-reg">
+                        <div class="col-4 error-myAddress-reg">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                        <div class="col-2 error-myAddressΝum-reg">
+                        </div>
+                        <div class="col-1">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -249,10 +255,22 @@
                       </div>
                       <label for="myAddressTK" class="col-3 col-form-label">Ταχ. Κώδικας:</label>
                       <div class="col-2">
-                        <input type="text" name="addressTK" onfocusout="valTK()" value="<?php echo $TK ?>" class="form-control" id="myAddressTK-reg">
+                        <input type="text" name="addressTK" onfocusout="valTK()" value="<?php echo $TK ?>" class="form-control successRegField" id="myAddressTK-reg">
                       </div>
                       <div class="col-1">
                       </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-4 error-myAddressDimos-reg">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                        <div class="col-2 error-myAddressTK-reg">
+                        </div>
+                        <div class="col-1">
+                        </div>
                     </div>
                 </div>
                 <div class="my-registration-submit">

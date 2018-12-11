@@ -341,47 +341,63 @@ function valAddress() {
 }
 
 function valAddressNumber() {
-    var $addressNum = $("#myAddressNum-reg");
+    var $addressNum = $("#myAddressNum-reg").val();
     re = /^[0-9]+$/;
-    if (re.test($addressNum)) {
+    if ($addressNum.length == 0) {
+        document.getElementById("myAddressNum-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myAddressΝum-reg").html(msg);
+    }
+    else if (re.test($addressNum)) {
         document.getElementById("myAddressNum-reg").classList.add('successRegField');
         var msg = "";
         $(".error-myAddressΝum-reg").html(msg);
     } else {
-        var msg = "Invalid address number";
-        $(".error-myAddressNum-reg").html(msg);
+        var msg = "Invalid";
+        $(".error-myAddressΝum-reg").html(msg);
         document.getElementById("myAddressNum-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valMunicipality() {
-    var $municipality = $("#myAddressDimos-reg");
-    re = /^Δήμος ([α-ω]+ *)*$/i;
-    if (re.test($municipality)) {
-        document.getElementById("myAddressNum-reg").classList.add('successRegField');
+    var $municipality = $("#myAddressDimos-reg").val();
+    re = /^[Α-Ωα-ω]+ */;
+    if ($municipality.length == 0) {
+        document.getElementById("myAddressDimos-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myAddressDimos-reg").html(msg);
+    }
+    else if (re.test($municipality)) {
+        document.getElementById("myAddressDimos-reg").classList.add('successRegField');
         var msg = "";
         $(".error-myAddressDimos-reg").html(msg);
     } else {
         var msg = "Invalid Municipality";
-        $(".error-myAddressNum-reg").html(msg);
+        $(".error-myAddressDimos-reg").html(msg);
         document.getElementById("myAddressDimos-reg").classList.remove('successRegField');
     }
-
+    checkToEnable();
 }
 
 function valTK() {
-    var $TK = $("#myAddressTK-reg");
+    var $TK = $("#myAddressTK-reg").val();
     re = /^[0-9]+$/;
-    if (re.test($TK) && $TK.length == 5) {
+    if ($TK.length == 0) {
+        document.getElementById("myAddressTK-reg").classList.add('successRegField');
+        var msg = "";
+        $(".error-myAddressTK-reg").html(msg);
+    }
+    else if (re.test($TK) && $TK.length == 5) {
         document.getElementById("myAddressTK-reg").classList.add('successRegField');
         var msg = "";
         $(".error-myAddressTK-reg").html(msg);
     } else {
         var msg = "Invalid TK";
-        $(".error-myAddressTk-reg").html(msg);
-        document.getElementById("myAddressTk-reg").classList.remove('successRegField');
+        $(".error-myAddressTK-reg").html(msg);
+        document.getElementById("myAddressTK-reg").classList.remove('successRegField');
     }
+    checkToEnable();
 }
 
 function valUniv() {
@@ -521,6 +537,20 @@ function checkToEnable() {
         fields[fields.length] = myEle.classList.contains("successRegField");
     }
 
+    myEle = document.getElementById("myAddressNum-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myAddressDimos-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
+
+    myEle = document.getElementById("myAddressTK-reg");
+    if(myEle){
+        fields[fields.length] = myEle.classList.contains("successRegField");
+    }
 
     for (var i = 0; i < fields.length; i++) {
         if( fields[i] == false ){

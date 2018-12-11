@@ -972,3 +972,7 @@ a#myFilterApplyButton:hover{
     border-color: #fff !important;
     box-shadow: none !important;
 }
+
+.my-calendar .form-control {
+    background: white !important;
+}

@@ -1,6 +1,6 @@
 $(function() {
 
-    $('input[name="date"]').daterangepicker({
+    $('.fa.fa-calendar').daterangepicker({
         locale: {format: 'DD/MM/YYYY'},
         singleDatePicker: true,
         showDropdowns: true,
