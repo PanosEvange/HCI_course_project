@@ -679,3 +679,11 @@ $(document).ready(function() {
         alert("WoW you want to change your email.");
     });
 });
+
+$(document).ready(function(){
+    $('#mySearchBookTerm').keypress(function(e){
+      if(e.keyCode==13){
+          mySearchBookFind();
+      }
+    });
+});

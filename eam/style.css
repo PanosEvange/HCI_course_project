@@ -827,11 +827,18 @@ input.MySearchBookSearchBox {
     height: 60px;
     font-size: 25px;
     padding-left: 10px;
+    border: 1px solid #676666;
+    border-radius: 15px;
 }
 
 button.MySearchBookSearchButton {
     width: 75px;
     cursor: pointer;
+    border-radius: 15px;
+}
+
+button.MySearchBookSearchButton:hover{
+    background: #cac4c4;
 }
 
 button.MySearchBookSearchButton .fa.fa-search {
