@@ -618,42 +618,42 @@ function mySearchBookFind(){
 
     var $univFilter = $("#myUniv-filter").val();
     if( $univFilter != "" ){
-        $url += "?u=" + $univFilter;
-    }
-
-    var $publFilter = $("#myPubl-filter").val();
-    if( $publFilter != "" ){
-        $url += "?p=" + $publFilter;
+        $url += "&u=" + $univFilter;
     }
 
     var $depFilter = $("#myDep-filter").val();
     if( $depFilter != "" ){
-        $url += "?d=" + $depFilter;
-    }
-
-    var $authorFilter = $("#myAuthor-filter").val();
-    if( $authorFilter != "" ){
-        $url += "?a=" + $authorFilter;
+        $url += "&d=" + $depFilter;
     }
 
     var $semFilter = $("#mySem-filter").val();
     if( $semFilter != "" ){
-        $url += "?s=" + $semFilter;
-    }
-
-    var $isbnFilter = $("#myIsbn-filter").val();
-    if( $isbnFilter != "" ){
-        $url += "?i=" + $isbnFilter;
+        $url += "&s=" + $semFilter;
     }
 
     var $subjFilter = $("#mySubj-filter").val();
     if( $subjFilter != "" ){
-        $url += "?su=" + $subjFilter;
+        $url += "&su=" + $subjFilter;
+    }
+
+    var $publFilter = $("#myPubl-filter").val();
+    if( $publFilter != "" ){
+        $url += "&p=" + $publFilter;
+    }
+
+    var $authorFilter = $("#myAuthor-filter").val();
+    if( $authorFilter != "" ){
+        $url += "&a=" + $authorFilter;
+    }
+
+    var $isbnFilter = $("#myIsbn-filter").val();
+    if( $isbnFilter != "" ){
+        $url += "&i=" + $isbnFilter;
     }
 
     var $yearFilter = $("#myYear-filter").val();
     if( $yearFilter != "" ){
-        $url += "?y=" + $yearFilter;
+        $url += "&y=" + $yearFilter;
     }
 
     window.location.replace($url);
