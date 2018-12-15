@@ -1,5 +1,9 @@
-.body{
-    margin:0;
+body{
+    background: url("./background_eudoxus.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 .myNavbarDropdownInfo .dropdown-item:hover{
@@ -215,6 +219,7 @@ span.my-svg-text {
 }
 .my-breadcrumb .breadcrumb{
     background-color: #fff !important;
+    background: none !important;
 }
 
 /* Style the list */
@@ -349,7 +354,7 @@ ul.breadcrumb li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ddd;
+    background-color: #ecc6c6;
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
@@ -378,9 +383,13 @@ ul.breadcrumb li a:hover {
 }
 
 .student-area .section-button.btn:hover{
-    background-color: #e0e05a;
-    border-color:#f4ff00;
-    border:1px solid #f4ff00;
+    background-color: #f18686;
+    border-color:#ea7a91;
+    border:1px solid #ea7a91;
+}
+
+.student-area .section-button.btn{
+    background-color: #f7a7a7;
 }
 
 .secretary-area a.section-button{
@@ -418,26 +427,46 @@ a.section-button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ddd;
+    background-color: #b6dcef;
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     height: 450px;
+}
+
+.secretary-area .section-button.btn:hover{
+    background-color: #7babc3;
+    border-color:#76afcc;
+    border:1px solid #76afcc;
+}
+
+.secretary-area .section-button.btn{
+    background-color: #86c7e8;
 }
 
 .publisher-area{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ddd;
+    background-color: #58e879;
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     height: 450px;
 }
 
+.publisher-area .section-button.btn:hover{
+    background-color: #49b361;
+    border-color:#368447;
+    border:1px solid #368447;
+}
+
+.publisher-area .section-button.btn{
+    background-color: #13c73c;
+}
+
 .library-area{
-    background-color: #ddd;
+    background-color: #efe78f;
     padding: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
@@ -445,6 +474,16 @@ a.section-button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.library-area .section-button.btn:hover{
+    background-color: #b7ac26;
+    border-color:#948b20;
+    border:1px solid #948b20;
+}
+
+.library-area .section-button.btn{
+    background-color: #d6c82c;
 }
 
 .my-announcement{
