@@ -4,7 +4,7 @@ $(function() {
         locale: {format: 'DD/MM/YYYY'},
         singleDatePicker: true,
         showDropdowns: true,
-        minYear: 1951,
+        minYear: 1930,
         maxYear: 2000,
         autoUpdateInput: false
     }, function(chosen_date) {
@@ -15,7 +15,7 @@ $(function() {
         locale: {format: 'DD/MM/YYYY'},
         singleDatePicker: true,
         showDropdowns: true,
-        minYear: 1951,
+        minYear: 1930,
         maxYear: 2000,
         autoUpdateInput: false
     }, function(chosen_date) {
