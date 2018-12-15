@@ -7,7 +7,7 @@
     <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="under_construct_style.css">
-    
+
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -36,6 +36,10 @@
 
             <div class="my-under-construct-button-to-home container">
                 <a href="./index.php" class="btn" ><i class="fa fa-home" aria-hidden="true"></i>  Αρχική Σελίδα</a>
+            </div>
+
+            <div class="my-under-construct-button-to-previous container">
+                <a href="javascript:history.go(-1)" class="btn" ><i class="fa fa-chevron-left" aria-hidden="true"></i>  Προηγούμενη Σελίδα</a>
             </div>
         </div>
 

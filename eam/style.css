@@ -1039,7 +1039,8 @@ a#myFilterApplyButton:hover{
 }
 
 .back-to-reg-options {
-    margin-left: 315px;
+    position: fixed;
+    left: 279px;
 }
 
 .back-to-reg-options .btn{
