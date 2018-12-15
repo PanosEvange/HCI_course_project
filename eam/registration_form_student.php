@@ -122,7 +122,7 @@
                 <div class="my-reg-personal-info">
                     <h> Προσωπικά Στοιχεία </h>
                     <div class="form-group row">
-                      <label for="myFirstName" class="col-5 col-form-label"><span class="my-req-star">*</span>Όνομα:</label>
+                      <label for="myFirstName" class="col-5 col-form-label"><i class="fa fa-address-book" aria-hidden="true"></i>   <span class="my-req-star">*</span>Όνομα:</label>
                       <div class="col-6">
                         <input type="text" name="firstName" onfocusout="valFirstName()" value="<?php echo $firstName ?>" class="form-control" id="myFirstName-reg">
                       </div>
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myLastName" class="col-5 col-form-label"><span class="my-req-star">*</span>Επώνυμο:</label>
+                      <label for="myLastName" class="col-5 col-form-label"><i class="fa fa-address-book" aria-hidden="true"></i>   <span class="my-req-star">*</span>Επώνυμο:</label>
                       <div class="col-6">
                         <input type="text" name="lastName" onfocusout="valLastName()" value="<?php echo $lastName ?>"class="form-control" id="myLastName-reg">
                       </div>
@@ -147,7 +147,7 @@
                     </div>
                     <div class="form-group row">
 
-                      <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
+                      <label for="myBirthDate" class="col-5 col-form-label"><i class="fa fa-calendar" aria-hidden="true"></i>   <span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
                       <div class="input-group date col-6 successRegField my-calendar" id="myBirthDate-reg">
                           <input type="text" readonly onfocus="this.blur" class="form-control" onkeydown="return false" name="date" value="">
                           <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
@@ -164,12 +164,12 @@
                 <div class="my-university-info">
                     <h> Στοιχεία Σχολής </h>
                     <div class="form-group row">
-                      <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
+                      <label for="myUniv" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Ίδρυμα:</label>
                       <div class="col-6">
                         <!-- <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg"> -->
 
                         <select class="successRegField" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
-                            <option value="" selected disabled hidden>Επιλογή Πανεπιστημίου</option>
+                            <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
                             <?php include 'universityValues.php';?>
                         </select>
 
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
+                      <label for="myDepart" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
                         <!-- <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg"> -->
                         <select class="successRegField" name="department" id="myDepart-reg" disabled>
@@ -197,7 +197,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myAm" class="col-5 col-form-label"><span class="my-req-star">*</span>Αριθμός Μητρώου:</label>
+                      <label for="myAm" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Αριθμός Μητρώου:</label>
                       <div class="col-6">
                         <input type="text" name="am" onfocusout="valAm()" value="<?php echo $am ?>"class="form-control" id="myAm-reg">
                       </div>
@@ -230,11 +230,11 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myAddress" class="col-2 col-form-label">Οδός:</label>
+                      <label for="myAddress" class="col-2 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Οδός:</label>
                       <div class="col-4">
                         <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
                       </div>
-                      <label for="myAddressNum" class="col-3 col-form-label">Αριθμός:</label>
+                      <label for="myAddressNum" class="col-3 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Αριθμός:</label>
                       <div class="col-2">
                         <input type="text" name="addressNum" onfocusout="valAddressNumber()" value="<?php echo $addressNum ?>" class="form-control successRegField" id="myAddressNum-reg">
                       </div>
@@ -254,11 +254,11 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myDimos" class="col-2 col-form-label">Δήμος:</label>
+                      <label for="myDimos" class="col-2 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Δήμος:</label>
                       <div class="col-4">
                         <input type="text" name="addressDimos" onfocusout="valMunicipality()" value="<?php echo $municipality ?>" class="form-control successRegField" id="myAddressDimos-reg">
                       </div>
-                      <label for="myAddressTK" class="col-3 col-form-label">Ταχ. Κώδικας:</label>
+                      <label for="myAddressTK" class="col-3 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Ταχ. Κώδικας:</label>
                       <div class="col-2">
                         <input type="text" name="addressTK" onfocusout="valTK()" value="<?php echo $TK ?>" class="form-control successRegField" id="myAddressTK-reg">
                       </div>

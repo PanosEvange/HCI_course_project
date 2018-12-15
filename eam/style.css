@@ -614,6 +614,12 @@ a.section-button:hover{
     align-items: center;
 }
 
+.my-registration-submit .btn:disabled {
+    color: #fff;
+    background-color: #aaa;
+    border-color: #aaa;
+}
+
 .error-msg {
     margin-top: -15px;
     margin-bottom: 20px;

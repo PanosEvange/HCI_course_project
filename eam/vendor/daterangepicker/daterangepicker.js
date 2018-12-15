@@ -702,9 +702,13 @@
 
             if (this.showDropdowns) {
                 var currentMonth = calendar[1][1].month();
+                console.log("currentMonth: ",currentMonth );
                 var currentYear = calendar[1][1].year();
+                console.log("currentYear: ",currentYear )
                 var maxYear = (maxDate && maxDate.year()) || (this.maxYear);
+                console.log("maxYear: ",maxYear );
                 var minYear = (minDate && minDate.year()) || (this.minYear);
+                console.log("minYear: ",minYear );
                 var inMinYear = currentYear == minYear;
                 var inMaxYear = currentYear == maxYear;
 
