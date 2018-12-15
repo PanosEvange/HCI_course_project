@@ -653,15 +653,15 @@ form.my-registration-from {
 
 .student-reg-opt .btn{
     box-shadow: 5px 5px #545b62;
-    background-color: #dddddd !important;
-    border-color: #dddddd !important;
-    width: 300px;
-    height: 250px;
+    background-color: #ecc6c6 !important;
+    border-color: #ecc6c6 !important;
+    width: 270px;
+    height: 270px;
     padding-top: 70px;
 }
 
 .student-reg-opt a{
-    font-size: 20px;
+    font-size: 25px;
     color: black;
 }
 
@@ -671,12 +671,12 @@ form.my-registration-from {
 
 .student-reg-opt .btn:hover{
     box-shadow: 5px 5px #545b62 !important;
-    background-color: #17a2b8 !important;
-    border-color: #0d6471 !important;
+    background-color: #fda5a7 !important;
+    border-color: #fda5a7 !important;
 }
 
 .student-reg-opt .btn:focus{
-    border-color: #fff !important;
+    /*border-color: #fff !important;*/
     box-shadow: none !important;
 }
 
@@ -688,15 +688,15 @@ form.my-registration-from {
 
 .secret-reg-opt .btn{
     box-shadow: 5px 5px #545b62;
-    background-color: #dddddd !important;
-    border-color: #dddddd !important;
-    width: 300px;
-    height: 250px;
+    background-color: #b0dbed !important;
+    border-color: #b0dbed !important;
+    width: 270px;
+    height: 270px;
     padding-top: 70px;
 }
 
 .secret-reg-opt a{
-    font-size: 20px;
+    font-size: 25px;
     color: black;
 }
 
@@ -706,12 +706,12 @@ form.my-registration-from {
 
 .secret-reg-opt .btn:hover{
     box-shadow: 5px 5px #545b62 !important;
-    background-color: #17a2b8 !important;
-    border-color: #0d6471 !important;
+    background-color: #7bc6e5 !important;
+    border-color: #7bc6e5 !important;
 }
 
 .secret-reg-opt .btn:focus{
-    border-color: #fff !important;
+    /*border-color: #fff !important;*/
     box-shadow: none !important;
 }
 
@@ -723,15 +723,15 @@ form.my-registration-from {
 
 .publisher-reg-opt .btn{
     box-shadow: 5px 5px #545b62;
-    background-color: #dddddd !important;
-    border-color: #dddddd !important;
-    width: 300px;
-    height: 250px;
+    background-color: #3ce77f !important;
+    border-color: #3ce77f !important;
+    width: 270px;
+    height: 270px;
     padding-top: 70px;
 }
 
 .publisher-reg-opt a{
-    font-size: 20px;
+    font-size: 25px;
     color: black;
 }
 
@@ -741,12 +741,12 @@ form.my-registration-from {
 
 .publisher-reg-opt .btn:hover{
     box-shadow: 5px 5px #545b62 !important;
-    background-color: #17a2b8 !important;
-    border-color: #0d6471 !important;
+    background-color: #00c54a !important;
+    border-color: #00c54a !important;
 }
 
 .publisher-reg-opt .btn:focus{
-    border-color: #fff !important;
+    /*border-color: #fff !important;*/
     box-shadow: none !important;
 }
 
@@ -758,15 +758,16 @@ form.my-registration-from {
 
 .library-reg-opt .btn{
     box-shadow: 5px 5px #545b62;
-    background-color: #dddddd !important;
-    border-color: #dddddd !important;
-    width: 300px;
-    height: 250px;
+    background-color: #f1e694 !important;
+    border-color: #f1e694 !important;
+    width: 270px;
+    height: 270px;
     padding-top: 70px;
+
 }
 
 .library-reg-opt a{
-    font-size: 20px;
+    font-size: 25px;
     color: black;
 }
 
@@ -776,12 +777,12 @@ form.my-registration-from {
 
 .library-reg-opt .btn:hover{
     box-shadow: 5px 5px #545b62 !important;
-    background-color: #17a2b8 !important;
-    border-color: #0d6471 !important;
+    background-color: #d8c644 !important;
+    border-color: #d8c644 !important;
 }
 
 .library-reg-opt .btn:focus{
-    border-color: #fff !important;
+    /*border-color: #fff !important;*/
     box-shadow: none !important;
 }
 
@@ -1022,4 +1023,25 @@ a#myFilterApplyButton:hover{
 
 .my-profile-info .fa.fa-pencil-alt{
     cursor: pointer;
+}
+
+.back-to-reg-options {
+    margin-left: 315px;
+}
+
+.back-to-reg-options .btn{
+    background-color: #dddddd;
+    border-color: #dddddd;
+    box-shadow: 5px 5px #545b62;
+}
+
+.back-to-reg-options a.btn{
+    color: black;
+    text-decoration: none;
+}
+
+.back-to-reg-options .btn:hover{
+    box-shadow: 5px 5px #545b62;
+    background-color: #17a2b8;
+    border-color:#0d6471;
 }

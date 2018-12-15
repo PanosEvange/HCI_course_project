@@ -37,6 +37,7 @@
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                     <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li><a href="./register_options.php">Εγγραφή</a></li>
                     <li>Εγγραφή Φοιτητή</li>
                 </ul>
             </div>
@@ -44,6 +45,10 @@
             <!-- If user is not logged in  -->
             <?php include 'login_options.php';?>
 
+        </div>
+
+        <div class="back-to-reg-options">
+            <a href="./register_options.php" class="btn"><i class="fa fa-chevron-left" aria-hidden="true"></i>    Επιστροφή στην Επιλογή Εγγραφής </a>
         </div>
 
         <?php include 'signup_student.php';?>
