@@ -1039,7 +1039,7 @@ a#myFilterApplyButton:hover{
 }
 
 .back-to-reg-options {
-    position: fixed;
+    position: relative;
     left: 279px;
 }
 
