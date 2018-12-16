@@ -50,7 +50,7 @@ do it dynamically using php
 
 * ~~Επίσης το κουμπί αναζήτησης να φωτίζεται όταν πάει το mouse πάνω~~
 
-* Μπορούμε στη under construction να έχουμε λινκ στην σελίδα από την οποία προήλθε και όχι μόνο στην αρχική;
+* ~~Μπορούμε στη under construction να έχουμε λινκ στην σελίδα από την οποία προήλθε και όχι μόνο στην αρχική;~~
 
 ### General MUST
 * At registration form make the submit button available only when user selects university and department.
