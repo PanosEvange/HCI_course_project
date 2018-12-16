@@ -101,26 +101,31 @@ span.my-svg-text {
 }
 
 .my-login .btn{
-    box-shadow: 5px 5px #545b62;
-    background-color: #dddddd;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+}
+
+.my-login a.btn{
+    color: #a8acad;
 }
 
 .my-signup .btn{
-    box-shadow: 5px 5px #545b62;
-    background-color: #dddddd !important;
-    border-color: #dddddd !important;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
 }
 
-.my-login .btn:hover{
-    box-shadow: 5px 5px #545b62;
-    background-color: #17a2b8;
-    border-color:#0d6471;
+.my-signup a.btn{
+    color: #a8acad;
 }
 
-.my-signup .btn:hover{
-    box-shadow: 5px 5px #545b62;
-    background-color: #17a2b8 !important;
-    border-color:#0d6471 !important;
+.my-login a.btn:hover{
+    color: #fffff3 !important;
+}
+
+.my-signup a.btn:hover{
+    color: #fffff3 !important;
 }
 
 .my-search-button{
@@ -831,18 +836,33 @@ input.MySearchBookSearchBox {
     border-radius: 15px;
 }
 
+input.MySearchBookSearchBox:focus {
+    outline: none !important;
+    box-shadow: none;
+    border: 1px solid #2104ff;
+}
+
 button.MySearchBookSearchButton {
+    color: #212529;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
     width: 75px;
     cursor: pointer;
     border-radius: 15px;
 }
 
-button.MySearchBookSearchButton:hover{
-    background: #cac4c4;
+button.MySearchBookSearchButton:hover .fa.fa-search{
+    color: #fffff3 !important;
+}
+
+button.MySearchBookSearchButton:focus{
+    outline: none !important;
+    box-shadow: none;
 }
 
 button.MySearchBookSearchButton .fa.fa-search {
     font-size: 35px;
+    color: #a8acad !important;
 }
 
 .mySearchBookResultsCount {
@@ -927,15 +947,16 @@ span.mySearchBookCounter {
 .myBooksSearchFiltersButton .btn{
     border: 0;
     color: #212529;
-    background-color: #ddd;
-    box-shadow: 5px 5px #888888;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
     width: 240px;
     height: 75px;
     margin-top: 20px;
 }
 
 .myBooksSearchFiltersButton .btn:hover{
-    background-color: #999;
+
 }
 
 .myBooksSearchFiltersButton a{
@@ -943,10 +964,11 @@ span.mySearchBookCounter {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #a8acad !important;
 }
 
 .myBooksSearchFiltersButton a:hover{
-    color: black !important;
+    color: #fffff3 !important;
 }
 
 .myBooksSearchFiltersButton .btn:focus{
@@ -1044,18 +1066,16 @@ a#myFilterApplyButton:hover{
 }
 
 .back-to-reg-options .btn{
-    background-color: #dddddd;
-    border-color: #dddddd;
-    box-shadow: 5px 5px #545b62;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
 }
 
 .back-to-reg-options a.btn{
-    color: black;
+    color: #a8acad;
     text-decoration: none;
 }
 
-.back-to-reg-options .btn:hover{
-    box-shadow: 5px 5px #545b62;
-    background-color: #17a2b8;
-    border-color:#0d6471;
+.back-to-reg-options a.btn:hover{
+    color: #fffff3;
 }
