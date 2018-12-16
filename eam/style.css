@@ -1079,3 +1079,127 @@ a#myFilterApplyButton:hover{
 .back-to-reg-options a.btn:hover{
     color: #fffff3;
 }
+
+.student-app-content {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 320px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    display: grid;
+    grid-template-areas:
+        "new-dilosi-button edit-current-button current-dilosi"
+        "exchange-button history-button current-dilosi"
+        "remaining-books remaining-books remaining-books";
+}
+
+.new-dilosi-button {
+    grid-area: new-dilosi-button;
+}
+
+.edit-current-button {
+    grid-area: edit-current-button;
+}
+
+.current-dilosi {
+    grid-area: current-dilosi;
+    border: 2px solid #343940;
+    background: #f7a7a7;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.exchange-button {
+    grid-area: exchange-button;
+}
+
+.history-button{
+    grid-area: history-button;
+}
+
+.remaining-books {
+    grid-area: remaining-books;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.student-app-button .btn{
+    box-shadow: 5px 5px #545b62;
+    background-color: #f7a7a7 !important;
+    border-color: #f7a7a7 !important;
+    width: 270px;
+    height: 140px;
+    padding-top: 70px;
+}
+
+.student-app-button .btn:hover{
+    background-color: #f18686 !important;
+    border-color:#ea7a91 !important;
+    border:1px solid #ea7a91 !important;
+}
+
+.student-app-button a.btn{
+    color: black !important;
+    font-size: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-app-button a.btn:hover{
+    color: black !important;
+}
+
+.student-app-button .button-text{
+    position: relative;
+    bottom: 50px;
+}
+
+.current-dilosi .title{
+    margin-top: 10px;
+}
+
+.current-dilosi .my-pin{
+    margin-top: 30px;
+    border: 1px solid black;
+    background: #9c9ea2;
+    border-radius: 10px;
+    padding: 10px;
+    width: 280px;
+}
+
+.current-subjects {
+    margin-top: 40px;
+    background: #9c9ea2;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.current-subjects .table{
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.current-subjects .table th{
+    text-align: center;
+}
+
+.current-subjects .table td{
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+.current-subjects .table input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+}

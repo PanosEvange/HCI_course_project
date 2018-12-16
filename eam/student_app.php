@@ -43,11 +43,15 @@ session_start();
         </div>
 
         <?php
-
+            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                // User is logged in
+                include 'student_app_content_loggedin.php';
+            }
+            else {
+                // User is not logged in
+                include 'student_app_content_not_loggedin.php';
+            }
         ?>
-
-        <div class="placeholder">
-        </div>
 
         <?php include 'footer.php';?>
 
