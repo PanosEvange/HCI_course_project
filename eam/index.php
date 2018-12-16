@@ -92,7 +92,7 @@ session_start();
                   <div class="button-area">
                           <a href="./under_construction.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
                           <a href="./under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                          <a href="./under_construction.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
+                          <a href="./student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
                           <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
                   </div>
                 </div>

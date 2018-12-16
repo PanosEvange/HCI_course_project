@@ -34,7 +34,7 @@ session_start();
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                   <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li>Το προφίλ μου - Γραμματεία</li>
+                  <li>Εφαρμογή Φοιτητών</li>
                 </ul>
             </div>
 
@@ -42,8 +42,11 @@ session_start();
 
         </div>
 
-        <div class="placeholder">
+        <?php
 
+        ?>
+
+        <div class="placeholder">
         </div>
 
         <?php include 'footer.php';?>
