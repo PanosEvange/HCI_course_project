@@ -1137,7 +1137,6 @@ a#myFilterApplyButton:hover{
     border-color: #f7a7a7 !important;
     width: 270px;
     height: 140px;
-    padding-top: 70px;
 }
 
 .student-app-button .btn:hover{
@@ -1150,7 +1149,6 @@ a#myFilterApplyButton:hover{
     color: black !important;
     font-size: 20px !important;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -1159,8 +1157,6 @@ a#myFilterApplyButton:hover{
 }
 
 .student-app-button .button-text{
-    position: relative;
-    bottom: 50px;
 }
 
 .current-dilosi .title{
@@ -1202,4 +1198,173 @@ a#myFilterApplyButton:hover{
 .current-subjects .table input[type=checkbox]{
     width: 15px;
     height: 15px;
+}
+
+.secretary-app-content {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 320px;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+    display: grid;
+    grid-template-areas:
+        "edit-books my-agenta"
+        "edit-program-studies my-agenta";
+}
+
+.edit-books {
+    grid-area: edit-books;
+}
+
+.edit-program-studies{
+    grid-area: edit-program-studies;
+}
+
+.secretary-app-button .btn{
+    box-shadow: 5px 5px #545b62;
+    background-color: #86c7e8 !important;
+    border-color: #86c7e8 !important;
+    width: 270px;
+    height: 140px;
+}
+
+.secretary-app-button .btn:hover{
+    background-color: #7babc3 !important;
+    border-color:#76afcc !important;
+    border:1px solid #76afcc !important;
+}
+
+.secretary-app-button a.btn{
+    color: black !important;
+    font-size: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secretary-app-button a.btn:hover{
+    color: black !important;
+}
+
+.secretary-app-button .button-text{
+
+}
+
+.my-agenta .title{
+    margin-top: 10px;
+}
+
+.my-agenta {
+    grid-area: my-agenta;
+    border: 2px solid #343940;
+    background: #86c7e8;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.my-agenta .my-reminder{
+    margin-top: 30px;
+    border: 1px solid black;
+    background: #9c9ea2;
+    border-radius: 10px;
+    padding: 10px;
+    width: 425px;
+}
+
+.my-reminder .fa.fa-exclamation {
+    font-size: 20px;
+    color: red;
+}
+
+.verify-program{
+    margin-top: 10px;
+    margin-left: 220px;
+}
+
+.verify-program .btn{
+    box-shadow: 5px 5px #8b8e90;
+    background-color: #b5b5b5 !important;
+    border-color: #b5b5b5 !important;
+    width: 195px;
+    height: 40px;
+}
+
+.verify-program .btn:hover{
+    background-color: #9c9ea2 !important;
+    border-color:#9c9ea2 !important;
+    border:1px solid #9c9ea2 !important;
+}
+
+.verify-program a.btn{
+    color: black !important;
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verify-program a.btn:hover{
+    color: black !important;
+}
+
+.subjects-to-verify {
+    background: #9c9ea2;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.subjects-to-verify .table{
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.subjects-to-verify .table th{
+    text-align: center;
+}
+
+.subjects-to-verify .table td{
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+.verify-subjects .btn{
+    box-shadow: 5px 5px #8b8e90;
+    background-color: #b5b5b5 !important;
+    border-color: #b5b5b5 !important;
+    width: 210px;
+    height: 40px;
+}
+
+.verify-subjects .btn:hover{
+    background-color: #9c9ea2 !important;
+    border-color:#9c9ea2 !important;
+    border:1px solid #9c9ea2 !important;
+}
+
+.verify-subjects a.btn{
+    color: black !important;
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verify-subjects a.btn:hover{
+    color: black !important;
+}
+
+.verify-subjects{
+    margin-top: 10px;
+}
+
+.title-of-table {
+    margin-top: 40px;
 }
