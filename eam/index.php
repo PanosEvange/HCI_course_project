@@ -256,7 +256,7 @@ session_start();
           </div>
         </div>
 
-        <!-- Login Modal -->
+        <!-- Logout Modal -->
         <div class="modal" id="logoutModal">
           <div class="modal-dialog">
             <div class="modal-content">
