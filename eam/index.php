@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -231,6 +230,65 @@ session_start();
             </div>
 
         <?php include 'footer.php';?>
+
+        <!-- Login Modal -->
+        <div class="modal" id="loginModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Καλωσήρθατε!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                Συνδεθήκατε Επιτυχώς!
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal" id="logoutModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Αντίο!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                Αποσυνδεθήκατε Επιτυχώς!
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <?php
+            if (isset($_GET['login'])) {
+                echo '<script>loginPopup()</script>';
+            }
+            if (isset($_GET['logout'])) {
+                echo '<script>logoutPopup()</script>';
+            }
+        ?>
 
     </body>
 </html>

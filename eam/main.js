@@ -23,7 +23,7 @@ $(document).on("click", "#login-submit-button", function () {
             success:function(response){
                 var msg = "";
                 if(response == 1){
-                    window.location = "index.php";
+                    window.location = "index.php?login";
                 }else{
                     msg = "Invalid email or password!";
                 }
@@ -687,3 +687,11 @@ $(document).ready(function(){
       }
     });
 });
+
+function loginPopup(){
+    $('#loginModal').modal();
+}
+
+function logoutPopup(){
+    $('#logoutModal').modal();
+}
