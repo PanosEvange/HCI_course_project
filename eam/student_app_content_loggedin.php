@@ -26,19 +26,19 @@
               <tbody>
                 <tr>
                     <td>Διακριτά Μαθηματικά</td>
-                    <td><input checked type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><input disabled checked type=checkbox onclick="return false;" onkeydown="return false;" /></td>
                 </tr>
                 <tr>
                     <td>Πιθανότητες και Στοιχεία Στατιστικής</td>
-                    <td><input type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><input disabled type=checkbox onclick="return false;" onkeydown="return false;" /></td>
                 </tr>
                 <tr>
                     <td>Γραμμική Άλγεβρα</td>
-                    <td><input checked type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><input disabled checked type=checkbox onclick="return false;" onkeydown="return false;" /></td>
                 </tr>
                 <tr>
                     <td>Λογική Σχεδιάση</td>
-                    <td><input type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><input disabled type=checkbox onclick="return false;" onkeydown="return false;" /></td>
                 </tr>
               </tbody>
             </table>
