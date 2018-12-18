@@ -675,10 +675,31 @@ function BookSearchFilterToggle(){
 }
 
 $(document).ready(function() {
-    $(".myEmail-edit-icon .fa.fa-pencil-alt").click(function(){
-        alert("WoW you want to change your email.");
+
+    $(document).on("click", "#myEmail-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myEmail-edit-content").innerHTML;
+        document.getElementById("myEmail-edit-content").innerHTML =
+        '<input type="text" name="email" onfocusout="updateValue()" value="' + currentEmail.trim() + '" id="myEmail-edit-profile" class="form-control" >';
+
+        document.getElementById("myEmail-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
     });
+
+    $(document).on("click", "#myEmail-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myEmail-edit-content").innerHTML =
+        document.getElementById("myEmail-edit-content").value;
+
+        document.getElementById("myEmail-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        alert("Ευχαριστούμε. Το email σας ενημερώθηκε επιτυχώς!");
+    });
+
 });
+
+
 
 $(document).ready(function(){
     $('#mySearchBookTerm').keypress(function(e){

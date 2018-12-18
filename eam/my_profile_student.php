@@ -50,10 +50,10 @@ session_start();
                     <h> Στοιχεία Λογαριασμού </h>
                       <div class="form-group row">
                         <label for="myEmail" class="col-5 col-form-label"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
-                        <div class="col-6 myEmail-edit">
+                        <div class="col-6 myEmail-edit" id="myEmail-edit-content">
                             <?php echo $email;?>
                         </div>
-                        <div class="col-1 myEmail-edit-icon">
+                        <div class="col-1 myEmail-edit-icon" id="myEmail-edit-icon-content">
                             <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                         </div>
                       </div>
