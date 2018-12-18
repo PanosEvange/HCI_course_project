@@ -695,3 +695,19 @@ function loginPopup(){
 function logoutPopup(){
     $('#logoutModal').modal();
 }
+
+$(document).ready(function(){
+
+    $(document).on("keyup", "#login-password", function (e) {
+        if(e.keyCode==13){
+            document.getElementById("login-submit-button").click();
+        }
+    });
+
+    $(document).on("keyup", "#login-email", function (e) {
+        if(e.keyCode==13){
+            document.getElementById("login-submit-button").click();
+        }
+    });
+
+});
