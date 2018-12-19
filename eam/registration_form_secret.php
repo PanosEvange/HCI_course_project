@@ -142,12 +142,6 @@ session_start();
                         <div class="col-6 error-last-name-reg">
                         </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
-                      <div class="col-6">
-                        <input type="text" name="date" onfocusout="valBirthDate()" value="<?php echo $date ?>"class="form-control" id="myBirthDate-reg">
-                      </div>
-                    </div>
                     <div class="row error-msg">
                         <div class="col-5">
                         </div>
@@ -158,9 +152,15 @@ session_start();
                 <div class="my-university-info">
                     <h> Στοιχεία Σχολής </h>
                     <div class="form-group row">
-                      <label for="myUniv" class="col-5 col-form-label"><span class="my-req-star">*</span>Σχολή:</label>
+                      <label for="myUniv" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Ίδρυμα:</label>
                       <div class="col-6">
-                        <input type="text" name="university" onfocusout="valUniv()" value="<?php echo $uni ?>"class="form-control" id="myUniv-reg">
+                        <!-- <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg"> -->
+
+                        <select class="successRegField" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
+                            <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
+                            <?php include 'universityValues.php';?>
+                        </select>
+
                       </div>
                     </div>
                     <div class="row error-msg">
@@ -170,15 +170,18 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myDepart" class="col-5 col-form-label"><span class="my-req-star">*</span>Τμήμα:</label>
+                      <label for="myDepart" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
-                        <input type="text" name="department" onfocusout="valDep()" value="<?php echo $dept ?>"class="form-control" id="myDepart-reg">
+                        <!-- <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg"> -->
+                        <select class="successRegField" name="department" id="myDepart-reg" disabled>
+                            <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
+                        </select>
                       </div>
                     </div>
                     <div class="row error-msg">
                         <div class="col-5">
                         </div>
-                        <div class="col-6 error-myDepart-reg">
+                        <div class="col-6 error-dep-reg">
                         </div>
                     </div>
                 </div>

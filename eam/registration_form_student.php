@@ -150,7 +150,7 @@ session_start();
                     </div>
                     <div class="form-group row">
 
-                      <label for="myBirthDate" class="col-5 col-form-label"><i class="fa fa-calendar" aria-hidden="true"></i>   <span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
+                      <label for="myBirthDate" class="col-5 col-form-label"><i class="fa fa-calendar" aria-hidden="true"></i>  Ημερομηνία Γέννησης:</label>
                       <div class="input-group date col-6 successRegField my-calendar" id="myBirthDate-reg">
                           <input type="text" readonly onfocus="this.blur" class="form-control" onkeydown="return false" name="date" value="">
                           <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>

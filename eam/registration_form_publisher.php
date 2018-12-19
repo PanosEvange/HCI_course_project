@@ -142,18 +142,6 @@ session_start();
                         <div class="col-6 error-last-name-reg">
                         </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
-                      <div class="col-6">
-                        <input type="text" name="date" onfocusout="valBirthDate()" value="<?php echo $date ?>"class="form-control" id="myBirthDate-reg">
-                      </div>
-                    </div>
-                    <div class="row error-msg">
-                        <div class="col-5">
-                        </div>
-                        <div class="col-6 error-date-reg">
-                        </div>
-                    </div>
                 </div>
                 <div class="my-reg-law-info">
                     <h> Νομικά Στοιχεία </h>
