@@ -26,19 +26,19 @@
               <tbody>
                 <tr>
                     <td>...</td>
-                    <td><input disabled checked type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><i class="fa fa-check" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>....</td>
-                    <td><input disabled type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><i class="fa fa-minus" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>...</td>
-                    <td><input disabled checked type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><i class="fa fa-check" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>...</td>
-                    <td><input disabled type=checkbox onclick="return false;" onkeydown="return false;" /></td>
+                    <td><i class="fa fa-minus" aria-hidden="true"></i></td>
                 </tr>
               </tbody>
             </table>
