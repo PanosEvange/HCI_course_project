@@ -69,6 +69,7 @@ session_start();
         </div>
         <!-- Header End -->
 
+        <?php include 'userOptions.php';?>
 
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
@@ -80,7 +81,6 @@ session_start();
             <?php include 'isLoggedIn.php';?>
 
         </div>
-
 
             <div class="main-content mr-auto ml-auto">
                 <div class="my-section student-area">
