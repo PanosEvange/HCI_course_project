@@ -621,19 +621,9 @@ function mySearchBookFind(){
         $url += "?u=" + $univFilter;
     }
 
-    var $publFilter = $("#myPubl-filter").val();
-    if( $publFilter != "" ){
-        $url += "?p=" + $publFilter;
-    }
-
     var $depFilter = $("#myDep-filter").val();
     if( $depFilter != "" ){
         $url += "?d=" + $depFilter;
-    }
-
-    var $authorFilter = $("#myAuthor-filter").val();
-    if( $authorFilter != "" ){
-        $url += "?a=" + $authorFilter;
     }
 
     var $semFilter = $("#mySem-filter").val();
@@ -641,14 +631,24 @@ function mySearchBookFind(){
         $url += "?s=" + $semFilter;
     }
 
-    var $isbnFilter = $("#myIsbn-filter").val();
-    if( $isbnFilter != "" ){
-        $url += "?i=" + $isbnFilter;
-    }
-
     var $subjFilter = $("#mySubj-filter").val();
     if( $subjFilter != "" ){
         $url += "?su=" + $subjFilter;
+    }
+    
+    var $publFilter = $("#myPubl-filter").val();
+    if( $publFilter != "" ){
+        $url += "?p=" + $publFilter;
+    }
+
+    var $authorFilter = $("#myAuthor-filter").val();
+    if( $authorFilter != "" ){
+        $url += "?a=" + $authorFilter;
+    }
+
+    var $isbnFilter = $("#myIsbn-filter").val();
+    if( $isbnFilter != "" ){
+        $url += "?i=" + $isbnFilter;
     }
 
     var $yearFilter = $("#myYear-filter").val();

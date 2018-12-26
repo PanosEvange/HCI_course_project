@@ -5,20 +5,42 @@
     if (isset($_GET['q'])) {
 
         $searchTerm = $_GET['q'];
+        $splited = explode("?", $searchTerm);
+        $title = $splited[0];
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = ("SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'");
+        // $sql = ("SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'");
+        // $result = $conn->query($sql);
+        // $rows = $result->num_rows;
+
+        $sql = ("SELECT * FROM Books WHERE Name LIKE '%$title%'");
+
+        $query = "SELECT * FROM donar";
+        $conditions = array();
+
+
+        if (isset($_GET['p'])) {
+            $pub = $_GET['p'];
+            $conditions[] = ("Publisher LIKE '$pub'");
+            echo "pub = '$pub'";
+        } else {
+            echo "Boo";
+        }
+
+        if (count($conditions) > 0) {
+            $sql .= implode(' AND ', $conditions); 
+        }
         $result = $conn->query($sql);
         $rows = $result->num_rows;
 
         if ($rows > 0) {
             echo '
                 <div class="mySearchBookResultsCount">
-                Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
+                Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$title.'\'.
                 </div>
             ';
             while ($rows != 0) {
