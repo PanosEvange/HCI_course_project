@@ -1437,7 +1437,7 @@ a#myFilterApplyButton:hover{
     border: none;
 }
 
-#myPassowrd-edit-content-value{
+#myPassword-edit-content-value{
     background: none;
     border: none;
 }
@@ -1448,4 +1448,14 @@ a#myFilterApplyButton:hover{
     top: 7px;
     left: 3px;
     font-size: 20px;
+}
+
+#myPhone-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myAddress-edit-content-value{
+    background: none;
+    border: none;
 }

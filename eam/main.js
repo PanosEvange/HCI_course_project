@@ -699,17 +699,17 @@ $(document).ready(function() {
         successEditΕmail();
     });
 
-    $(document).on("click", "#myPassowrd-edit-icon-content .fa.fa-pencil-alt", function (e) {
-        var currentPassword = document.getElementById("myPassowrd-edit-content-value").value;
-        document.getElementById("myPassowrd-edit-content").innerHTML =
+    $(document).on("click", "#myPassword-edit-icon-content .fa.fa-pencil-alt", function (e) {
+        var currentPassword = document.getElementById("myPassword-edit-content-value").value;
+        document.getElementById("myPassword-edit-content").innerHTML =
         `<div class="input-group" id="show_hide_password_edit">
-          <input id="myPassowrd-editable-content-value" class="form-control" name="password" value="` + currentPassword.trim() + `" type="password"
+          <input id="myPassword-editable-content-value" class="form-control" name="password" value="` + currentPassword.trim() + `" type="password"
           <div class="input-group-addon">
             <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
           </div>
          </div>`;
 
-        document.getElementById("myPassowrd-edit-icon-content").innerHTML =
+        document.getElementById("myPassword-edit-icon-content").innerHTML =
         '<i class="fa fa-check" aria-hidden="true"></i>';
     });
 
@@ -726,16 +726,62 @@ $(document).ready(function() {
         }
     });
 
-    $(document).on("click", "#myPassowrd-edit-icon-content .fa.fa-check", function (e) {
+    $(document).on("click", "#myPassword-edit-icon-content .fa.fa-check", function (e) {
 
-        document.getElementById("myPassowrd-edit-content").innerHTML =
-        '<input id="myPassowrd-edit-content-value" type=password value=' +
-         document.getElementById("myPassowrd-editable-content-value").value  + '" disabled/>';
+        document.getElementById("myPassword-edit-content").innerHTML =
+        '<input id="myPassword-edit-content-value" type=password value=' +
+         document.getElementById("myPassword-editable-content-value").value  + '" disabled/>';
 
-        document.getElementById("myPassowrd-edit-icon-content").innerHTML =
+        document.getElementById("myPassword-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
         successEditPassword();
+    });
+
+    $(document).on("click", "#myPhone-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myPhone-edit-content-value").value;
+        document.getElementById("myPhone-edit-content").innerHTML =
+        '<input id="myPhone-editable-content-value" type="text" name="myPhone" value="'
+         + currentEmail.trim() + '" id="myPhone-edit-profile" class="form-control" >';
+
+        document.getElementById("myPhone-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myPhone-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myPhone-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myPhone-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myPhone-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditPhone();
+    });
+
+    $(document).on("click", "#myAddress-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myAddress-edit-content-value").value;
+        document.getElementById("myAddress-edit-content").innerHTML =
+        '<input id="myAddress-editable-content-value" type="text" name="myAddress" value="'
+         + currentEmail.trim() + '" id="myAddress-edit-profile" class="form-control" >';
+
+        document.getElementById("myAddress-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myAddress-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myAddress-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myAddress-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myAddress-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditAddress();
     });
 
 });
@@ -764,6 +810,14 @@ function successEditΕmail(){
 
 function successEditPassword(){
     $('#successEdit-password').modal();
+}
+
+function successEditPhone(){
+    $('#successEdit-phone').modal();
+}
+
+function successEditAddress(){
+    $('#successEdit-address').modal();
 }
 
 $(document).ready(function(){

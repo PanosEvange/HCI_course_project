@@ -57,10 +57,10 @@
                   </div>
                   <div class="form-group row">
                     <label for="myPassword" class="col-5 col-form-label"><i class="fa fa-lock" aria-hidden="true"></i>   Κωδικός:</label>
-                    <div class="col-6 myPassowrd-edit" id="myPassowrd-edit-content">
-                        <input id="myPassowrd-edit-content-value" type=password value="<?php echo $pass;?>" disabled/>
+                    <div class="col-6 myPassword-edit" id="myPassword-edit-content">
+                        <input id="myPassword-edit-content-value" type=password value="<?php echo $pass;?>" disabled/>
                     </div>
-                    <div class="col-1 myPassowrd-edit-icon" id="myPassowrd-edit-icon-content">
+                    <div class="col-1 myPassword-edit-icon" id="myPassword-edit-icon-content">
                         <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                     </div>
                   </div>
@@ -111,19 +111,19 @@
                 <h> Στοιχεία Επικοινωνίας </h>
                 <div class="form-group row">
                   <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
-                  <div class="col-6">
-                      <?php echo $phone;?>
+                  <div class="col-6 myPhone-edit" id="myPhone-edit-content">
+                      <input id="myPhone-edit-content-value" type=text value="<?php echo $phone;?>" disabled/>
                   </div>
-                  <div class="col-1">
+                  <div class="col-1 myPhone-edit-icon" id="myPhone-edit-icon-content">
                       <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
-                  <div class="col-6">
-                      <?php echo $address;?>
+                  <div class="col-6 myAddress-edit" id="myAddress-edit-content">
+                      <input id="myAddress-edit-content-value" type=text value="<?php echo $address;?>" disabled/>
                   </div>
-                  <div class="col-1">
+                  <div class="col-1 myAddress-edit-icon" id="myAddress-edit-icon-content">
                       <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -175,6 +175,56 @@
               <!-- Modal body -->
               <div class="modal-body">
                 Το password σας ενημερώθηκε επιτυχώς!
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Edit Modal -->
+        <div class="modal" id="successEdit-phone">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Ευχαριστούμε!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                Το τηλέφωνο σας ενημερώθηκε επιτυχώς!
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Address Edit Modal -->
+        <div class="modal" id="successEdit-address">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Ευχαριστούμε!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                Η διεύθυνσή σας ενημερώθηκε επιτυχώς!
               </div>
 
               <!-- Modal footer -->
