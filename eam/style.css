@@ -1058,13 +1058,6 @@ a#myFilterApplyButton:hover{
     cursor: pointer;
 }
 
-.user-options{
-    margin-top: 60px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .my-profile-info .fa.fa-check{
     cursor: pointer;
 }
@@ -1382,27 +1375,41 @@ a#myFilterApplyButton:hover{
 .user-options .card a {
     color: black;
 }
+
 .user-options .card {
+    background: none;
+    border: none;
+}
+
+.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px red;
     background: #f89b9c;
+    width: 200px;
+    border-radius: 0px 0px 50px 30px;
 }
 
-.student-area .section-button.btn:hover{
-    background-color: #bf0808;
-    border-color:#ea7a91;
-    border:1px solid #ea7a91;
+.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px red;
+    background: #f89b9c;
+    height: 90px;
+    border-radius: 0px 0px 20px 0px;
 }
 
-.student-area .section-button.btn{
-    background-color: #ff5b5b;
+.user-options{
+    margin-top: 50px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .user-options-buttons .btn {
+    align-self: flex-end;
     border: 0;
     color: #212529;
     background-color: #ff5b5b;
     box-shadow: 5px 5px #888888;
     width: 240px;
-    height: 75px;
+    height: 40px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
