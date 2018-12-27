@@ -2,9 +2,53 @@
 
     include 'login_db.php';
 
-    if (isset($_GET['q'])) {
+    if (isset($_REQUEST['q'])) {
 
-        $searchTerm = $_GET['q'];
+        $searchTerm = $_REQUEST["q"];
+
+        echo "q is ".$searchTerm."<br>";
+
+        if (isset($_REQUEST['u'])) {
+            $x = $_REQUEST["u"];
+
+            echo "u is ".$x."<br>";
+        }
+        if (isset($_REQUEST['p'])) {
+            $x = $_REQUEST["p"];
+
+            echo "p is ".$x."<br>";
+        }
+        if (isset($_REQUEST['d'])) {
+            $x = $_REQUEST["d"];
+
+            echo "d is ".$x."<br>";
+        }
+        if (isset($_REQUEST['a'])) {
+            $x = $_REQUEST["a"];
+
+            echo "a is ".$x."<br>";
+        }
+        if (isset($_REQUEST['s'])) {
+            $x = $_REQUEST["s"];
+
+            echo "s is ".$x."<br>";
+        }
+        if (isset($_REQUEST['i'])) {
+            $x = $_REQUEST["i"];
+
+            echo "i is ".$x."<br>";
+        }
+        if (isset($_REQUEST['su'])) {
+            $x = $_REQUEST["su"];
+
+            echo "su is ".$x."<br>";
+        }
+        if (isset($_REQUEST['y'])) {
+            $x = $_REQUEST["y"];
+
+            echo "y is ".$x."<br>";
+        }
+
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
@@ -84,4 +128,6 @@
             <div class="placeholder"></div>
         ';
     }
+
+
 ?>
