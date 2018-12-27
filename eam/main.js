@@ -237,13 +237,13 @@ function valBirthDate() {
 
 function valIdNumber() {
     var $id = $("#myIdNumber-reg").val();
-    re = /^Α[0-9]*$/;
+    re = /^Α[Α-Ω]?[0-9]*$/;
     if ($id.length == 0) {
         var msg = "Please insert an ID number! ID number is a required field";
         $(".error-id-reg").html(msg);
         document.getElementById("myIdNumber-reg").classList.remove('successRegField');
     }
-    else if( $id.length == 10 && re.test($id)){
+    else if( $id.length == 9 && re.test($id)){
         document.getElementById("myIdNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-id-reg").html(msg);
@@ -444,12 +444,12 @@ function valDep() {
 
 function valAm() {
     var $am = $("#myAm-reg").val();
-    re = /^[0-9]{10,}/;
+    re = /^[0-9]*$/;
     if ($am.length == 0) {
         document.getElementById("myAm-reg").classList.remove('successRegField');
         var msg = "This field is required";
         $(".error-am-reg").html(msg);
-    } else if ( re.test($am) && $am.length == 10) {
+    } else if ( re.test($am) && $am.length >= 8 && $am.length <= 14) {
         document.getElementById("myAm-reg").classList.add('successRegField');
         var msg = "";
         $(".error-am-reg").html(msg);
