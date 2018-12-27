@@ -1431,3 +1431,21 @@ a#myFilterApplyButton:hover{
     flex-direction: row;
     justify-content: center;
 }
+
+#myEmail-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myPassowrd-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myPassowrd-edit-content .fa{
+    color: black;
+    position: relative;
+    top: 7px;
+    left: 3px;
+    font-size: 20px;
+}
