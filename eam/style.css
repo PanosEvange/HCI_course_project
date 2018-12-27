@@ -204,7 +204,7 @@ span.my-svg-text {
 
 .below-nav-bar {
     min-width: 1300px;
-    margin-top: 10px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: fit-content;
