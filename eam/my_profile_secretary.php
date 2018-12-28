@@ -26,6 +26,8 @@
     <body>
 
         <?php include 'header.php';?>
+        
+        <?php include 'userOptions.php';?>
 
         <div class="below-nav-bar">
             <div class="my-breadcrumb">

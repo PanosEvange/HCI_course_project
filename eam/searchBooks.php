@@ -69,6 +69,8 @@ session_start();
         </div>
         <!-- Header End -->
 
+        <?php include 'userOptions.php';?>
+        
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">

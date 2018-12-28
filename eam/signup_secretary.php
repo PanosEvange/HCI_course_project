@@ -11,7 +11,6 @@
         $passConf = $_POST["passwordConf"];
         $firstName = $_POST["firstName"];
         $lastName = $_POST["lastName"];
-        $date = $_POST["date"];
         $uni = $_POST["university"];
         $dept = $_POST["department"];
         $id = $_POST["id"];
@@ -28,7 +27,7 @@
         $sql = ("INSERT INTO Users (Email, Password, FirstName,
                                 LastName, DateOfBirth, Phone, Address, UserType)
                                 VALUES ('$email', '$pass', '$firstName',
-                                    '$lastName', '$date', '$phone', '$address', 'Secretary')");
+                                    '$lastName', 'none', '$phone', '$address', 'Secretary')");
 
         if ($conn->query($sql) === TRUE) {
             $succ = "Επιτυχής καταχώρηση!";

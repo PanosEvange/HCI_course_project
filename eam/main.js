@@ -844,4 +844,20 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on("click", "#user-options-whole-area-icon", function (e) {
+
+        if ( document.getElementById("user-options-icon").classList.contains('fa-angle-down') ){
+            //angle up
+            document.getElementById("user-options-icon").classList.remove('fa-angle-down');
+            document.getElementById("user-options-icon").classList.add('fa-angle-up');
+        }
+        else{
+            //angle down
+            document.getElementById("user-options-icon").classList.remove('fa-angle-up');
+            document.getElementById("user-options-icon").classList.add('fa-angle-down');
+        }
+
+    });
+
+
 });
