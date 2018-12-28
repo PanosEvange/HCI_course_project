@@ -10,6 +10,8 @@ DROP TABLE Publisher;
 DROP TABLE University;
 DROP TABLE Department;
 DROP TABLE Books;
+DROP Table Subject;
+DROP Table SubjectBook;
 
 -- -----------------------------------------------------
 -- Table sdi1500039.Users
@@ -62,6 +64,7 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Publisher (
   Amka VARCHAR(10) NOT NULL,
   PRIMARY KEY (idPublisher)
 );
+
 -- -----------------------------------------------------
 -- Table sdi1500039.University
 -- -----------------------------------------------------
@@ -80,6 +83,18 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Department (
 );
 
 -- -----------------------------------------------------
+-- Table sdi1500039.Subject
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS sdi1500039.Subject (
+  SubjectName VARCHAR(250) NOT NULL,
+  DepartmentName VARCHAR(250) NOT NULL,
+  UniversityName VARCHAR(250) NOT NULL,
+  Semester INT NOT NULL,
+  Professor VARCHAR(250) NOT NULL,
+  CONSTRAINT PK_Subject PRIMARY KEY (UniversityName, DepartmentName, SubjectName)
+);
+
+-- -----------------------------------------------------
 -- Table sdi1500039.Books
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Books (
@@ -92,6 +107,18 @@ CREATE TABLE IF NOT EXISTS Books (
 );
 
 -- -----------------------------------------------------
+-- Table sdi1500039.SubjectBook
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBook (
+  SubjectName VARCHAR(250) NOT NULL,
+  DepartmentName VARCHAR(250) NOT NULL,
+  UniversityName VARCHAR(250) NOT NULL,
+  ISBN INT NOT NULL,
+  CONSTRAINT PK_Subject PRIMARY KEY (UniversityName, DepartmentName, SubjectName, ISBN)
+);
+
+
+-- -----------------------------------------------------
 -- Insert some mock data
 -- -----------------------------------------------------
 
@@ -99,47 +126,48 @@ CREATE TABLE IF NOT EXISTS Books (
 -- Insert Univerities
 -- -----------------------------------------------------
 INSERT INTO `University`(`UniversityName`)
-                VALUES ('National and Kapodistrian Univeristy of Athens');
+                VALUES ('Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
 INSERT INTO `University`(`UniversityName`)
-                VALUES ('Aristotelian Univerity of Thesalonica');
+                VALUES ('Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης');
 INSERT INTO `University`(`UniversityName`)
-                VALUES ('Athens Univerity of Economics and Business');
+                VALUES ('Οικονομικό Πανεπηστήμιο ΑΘηνών');
 INSERT INTO `University`(`UniversityName`)
-                VALUES ('University of Crete');
+                VALUES ('Πανεπηστήμιο Κρήτης');
 
 -- -----------------------------------------------------
 -- Insert Departments
 -- -----------------------------------------------------
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                VALUES ('Department of Informatics and Telecomunications', 'National and Kapodistrian Univeristy of Athens');
+                VALUES ('Τμήμα Πληροφορικής και Τηλεπικοινωνιών', 'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
 
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                VALUES ('Department of Chemistry', 'National and Kapodistrian Univeristy of Athens');
+                VALUES ('Τμήμα Χημείας', 'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
 
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of Mathematics', 'National and Kapodistrian Univeristy of Athens');
+                        VALUES ('Τμήμα Μαθηματικών', 'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
 
-INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of science', 'National and Kapodistrian Univeristy of Athens');
-
-
-INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of science', 'Aristotelian Univerity of Thesalonica');
-
-INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of Mathematics', 'Aristotelian Univerity of Thesalonica');
+-- INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+--                         VALUES ('Τμήμα Φυσικής', 'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
 
 
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('LOXRI', 'Athens Univerity of Economics and Business');
-INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Kapoio allo', 'Athens Univerity of Economics and Business');
+                        VALUES ('Τμήμα Φυσικής', 'Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης');
 
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of Mathematics', 'University of Crete');
+                        VALUES ('Τμήμα Μαθηματικών', 'Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης');
+
 
 INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
-                        VALUES ('Department of science', 'University of Crete');
+                        VALUES ('Τμήμα Λογιστικής και Χρηματοοικονομικής', 'Οικονομικό Πανεπηστήμιο ΑΘηνών');
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Τμήμα Διεθνών και Ευρωπαϊκών Σπουδών', 'Οικονομικό Πανεπηστήμιο ΑΘηνών');
+
+
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Τμήμα Μαθηματικών', 'Πανεπηστήμιο Κρήτης');
+
+INSERT INTO `Department`(`DepartmentName`, `UniversityName`)
+                        VALUES ('Τμήμα Φυσικής', 'Πανεπηστήμιο Κρήτης');
 
 -- -----------------------------------------------------
 -- Insert student
@@ -150,8 +178,8 @@ INSERT INTO `Users`(`idUsers`, `Email`, `Password`, `FirstName`, `LastName`,
                             'Spi', '10', '2102102102', 'Student');
 
 INSERT INTO `Student`(`idStudent`, `DepartmentName`, `UniversityName`, `AM`)
-                VALUES (0, 'Department of Informatics and Telecomunications',
-                        'National and Kapodistrian Univeristy of Athens', '1234567890' );
+                VALUES (0, 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                        'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών', '1234567890' );
 
 -- -----------------------------------------------------
 -- Insert Secretary
@@ -162,8 +190,8 @@ INSERT INTO `Users`(`idUsers`, `Email`, `Password`, `FirstName`, `LastName`,
                             'Nanacy', '10', 'Secretary');
 
 INSERT INTO `Secretary`(`idSecretary`, `DepartmentName`, `UniversityName`, `IdNumber`)
-                    VALUES (1, 'Department of Informatics and Telecomunications',
-                            'National and Kapodistrian Univeristy of Athens', 'A234567890' );
+                    VALUES (1, 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                            'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών', 'A234567890' );
 
 -- -----------------------------------------------------
 -- Insert Publisher
@@ -176,38 +204,88 @@ INSERT INTO `Users`(`idUsers`, `Email`, `Password`, `FirstName`, `LastName`,
 INSERT INTO `Publisher`(`idPublisher`, `IdNumber`, `TaxNumber`, `Amka`)
                     VALUES (2, 'A123456789', '9876543210', '1472583690');
 
--- ------------------------Έκανα ένα Push. -----------------------------
+-- -----------------------------------------------------
 -- Insert Books
 -- -----------------------------------------------------
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (111, 'Discrete MAths', 'Rosen', '1997', 'Publisher A');
+                    VALUES (111, 'Διακριτά ΜΑθηματικά', 'Rosen', '1997', 'Εκδότης Α');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (222, 'Calcullus', 'Thomas', '1997', 'Publisher B');
+                    VALUES (222, 'Calcullus', 'Thomas', '1997', 'Εκδότης Β');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (333, 'The C++ Programming Language', 'Stroustup', '1997', 'Publisher C');
+                    VALUES (333, 'Η Γλώσσα Προγραμματισμού C++', 'Stroustup', '1997', 'Εκδότης Γ');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (444, 'The C Programming Language', 'K & R', '1997', 'Publisher A');
+                    VALUES (444, 'Η Γλώσσα Προγραμματισμού C', 'K & R', '1997', 'Εκδότης Α');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (555, 'Graphics and Visualisation', 'Theoxaris', '1997', 'Publisher A');
+                    VALUES (555, 'Γραφικά και Οπτικοποίηση', 'Θεοχάτης', '1997', 'Εκδότης Α');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (666, 'Stoixeia of Discrete Maths', 'Liu', '1997', 'Publisher B');
+                    VALUES (666, 'Στοιχεία Διακριτών Μαθηματικών', 'Liu', '1997', 'Εκδότης Β');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (777, 'Introduction to Algorithms', 'Someone', '1997', 'Publisher A');
+                    VALUES (777, 'Εισαγωγή στους Αλγορίθμους', 'Someone', '1997', 'Εκδότης Α');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (888, 'Carrer Guide', 'Kapoioiw', '1997', 'Publisher C');
+                    VALUES (888, 'Οδηγός Καριέρας', 'Κάποιος', '1997', 'Εκδότης Γ');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (999, 'Introducation to Philosophy', 'Joe Doe', '1997', 'Publisher C');
+                    VALUES (999, 'Εισαγωγή στην Φιλοσοφία', 'Joe Doe', '1997', 'Εκδότης Γ');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (123, 'AIMA', 'Koubarakis and Takis', '1997', 'Publisher B');
+                    VALUES (123, 'Τεχνητή Νοημοσήνη Μία Σύγχρονη Προσέγγιση', 
+                    'Κουμπαράκης και Τάκης', '1997', 'Εκδότης Β');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (741, 'History of the Ancient World', 'Me', '1997', 'Publisher B');
+                    VALUES (741, 'Ιστορία του Αρχαίου Κόσμου', 'Εγώ', '1997', 'Εκδότης Β');
+
+
+-- -----------------------------------------------------
+-- Insert Subject
+-- -----------------------------------------------------
+INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
+                    VALUES ('Διακριτά Μαθηματικά', 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών', '2', 'Κιαγιάς');
+
+INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
+                    VALUES ('Εισαγωγή στον Προγραμματισμό', 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών', '1', 'Σταματόπουλος');
+
+INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
+                    VALUES ('Ανάλυση 1', 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών','2', 'Δοδός');
+
+INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
+                    VALUES ('Εισαγωγή στην Μαθηματική Ανάλυση', 'Τμήμα Μαθηματικών', 
+                            'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών',
+                           '1', 'Μπαρμπάτης');
+
+INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
+                    VALUES ('Μαθηματικά 1', 'Τμήμα Μαθηματικών', 
+                            'Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης',
+                           '1', 'Παπαγιάννης');
+
+-- -----------------------------------------------------
+-- Insert SubjectBook
+-- -----------------------------------------------------
+INSERT INTO `SubjectBook`(`ISBN`, `SubjectName`, `DepartmentName`, `UniversityName`)
+                    VALUES (111, 'Διακριτά Μαθηματικά', 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
+
+INSERT INTO `SubjectBook`(`ISBN`, `SubjectName`, `DepartmentName`, `UniversityName`)
+                    VALUES (666, 'Διακριτά Μαθηματικά', 'Τμήμα Πληροφορικής και Τηλεπικοινωνιών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
+
+INSERT INTO `SubjectBook`(`ISBN`, `SubjectName`, `DepartmentName`, `UniversityName`)
+                    VALUES (222, 'Ανάλυση 1', 'Τμήμα Μαθηματικών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
+
+INSERT INTO `SubjectBook`(`ISBN`, `SubjectName`, `DepartmentName`, `UniversityName`)
+                    VALUES (222, 'Εισαγωγή στην Μαθηματική Ανάλυση', 'Τμήμα Μαθηματικών',
+                           'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών');
+
+INSERT INTO `SubjectBook`(`ISBN`, `SubjectName`, `DepartmentName`, `UniversityName`)
+                    VALUES (222, 'Μαθηματικά 1', 'Τμήμα Μαθηματικών',
+                           'Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης');
