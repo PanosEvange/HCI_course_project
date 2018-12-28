@@ -632,21 +632,9 @@ function mySearchBookFind(){
         $isFirst = '&';
     }
 
-    var $publFilter = $("#myPubl-filter").val();
-    if( $publFilter != "" ){
-        $url += $isFirst + "p=" + $publFilter;
-        $isFirst = '&';
-    }
-
     var $depFilter = $("#myDep-filter").val();
     if( $depFilter != "" ){
         $url += $isFirst + "d=" + $depFilter;
-        $isFirst = '&';
-    }
-
-    var $authorFilter = $("#myAuthor-filter").val();
-    if( $authorFilter != "" ){
-        $url += $isFirst + "a=" + $authorFilter;
         $isFirst = '&';
     }
 
@@ -656,15 +644,27 @@ function mySearchBookFind(){
         $isFirst = '&';
     }
 
-    var $isbnFilter = $("#myIsbn-filter").val();
-    if( $isbnFilter != "" ){
-        $url += $isFirst + "i=" + $isbnFilter;
-        $isFirst = '&';
-    }
-
     var $subjFilter = $("#mySubj-filter").val();
     if( $subjFilter != "" ){
         $url += $isFirst + "su=" + $subjFilter;
+        $isFirst = '&';
+    }
+
+    var $publFilter = $("#myPubl-filter").val();
+    if( $publFilter != "" ){
+        $url += $isFirst + "p=" + $publFilter;
+        $isFirst = '&';
+    }
+
+    var $authorFilter = $("#myAuthor-filter").val();
+    if( $authorFilter != "" ){
+        $url += $isFirst + "a=" + $authorFilter;
+        $isFirst = '&';
+    }
+
+    var $isbnFilter = $("#myIsbn-filter").val();
+    if( $isbnFilter != "" ){
+        $url += $isFirst + "i=" + $isbnFilter;
         $isFirst = '&';
     }
 
