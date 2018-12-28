@@ -2,11 +2,12 @@
 
     include 'login_db.php';
 
-    if (isset($_GET['q'])) {
+    if (isset($_POST['q'])) {
+        $searchTerm = $_POST['q'];
+        // parse_str("?".$_SERVER['QUERY_STRING'], $output);
 
-        $searchTerm = $_GET['q'];
-        $splited = explode("?", $searchTerm);
-        $title = $splited[0];
+        echo print_r($searchTerm, TRUE);
+        // echo print_r($_SERVER['QUERY_STRING'], TRUE);
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
@@ -17,18 +18,18 @@
         // $result = $conn->query($sql);
         // $rows = $result->num_rows;
 
-        $sql = ("SELECT * FROM Books WHERE Name LIKE '%$title%'");
+        $sql = ("SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'");
 
         $query = "SELECT * FROM donar";
         $conditions = array();
 
 
-        if (isset($_GET['p'])) {
-            $pub = $_GET['p'];
+        if (isset($_POST['p'])) {
+            $pub = $_POST['p'];
             $conditions[] = ("Publisher LIKE '$pub'");
-            echo "pub = '$pub'";
+            echo " pub = '$pub'";
         } else {
-            echo "Boo";
+            echo " Boo";
         }
 
         if (count($conditions) > 0) {
@@ -53,8 +54,8 @@
                 }
                 for ($i=0; $i < $page_res; $i++) {
                     $row = $result->fetch_assoc();
-                    // if (isset($_GET["myIsbn-filter"])) {
-                    //     if ($row["ISBN"] != $_GET["myIsbn-filter"]) {
+                    // if (isset($_POST["myIsbn-filter"])) {
+                    //     if ($row["ISBN"] != $_POST["myIsbn-filter"]) {
                     //         continue;
                     //     }
                     // }
@@ -103,7 +104,7 @@
     else {
         //do nothing
         echo '
-            <div class="placeholder"></div>
+            <div class="placeholder"><p>AAA</p></div>
         ';
     }
 ?>
