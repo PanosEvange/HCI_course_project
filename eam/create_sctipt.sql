@@ -208,7 +208,7 @@ INSERT INTO `Publisher`(`idPublisher`, `IdNumber`, `TaxNumber`, `Amka`)
 -- Insert Books
 -- -----------------------------------------------------
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (111, 'Διακριτά ΜΑθηματικά', 'Rosen', '1997', 'Εκδότης Α');
+                    VALUES (111, 'Διακριτά Μaθηματικά', 'Rosen', '1997', 'Εκδότης Α');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
                     VALUES (222, 'Calcullus', 'Thomas', '1997', 'Εκδότης Β');
