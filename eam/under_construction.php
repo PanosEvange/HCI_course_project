@@ -28,6 +28,8 @@
 
         <?php include 'header.php';?>
 
+        <?php include 'userOptions.php';?>
+        
         <div class="main-container-construct">
             <div class="my-under-construct-container container">
                 <p class="my-first-message">Αυτή η σελίδα βρίσκεται υπό κατασκευή.</p>

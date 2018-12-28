@@ -30,6 +30,8 @@ session_start();
 
         <?php include 'header.php';?>
 
+        <?php include 'userOptions.php';?>
+        
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
@@ -43,7 +45,7 @@ session_start();
         </div>
 
         <?php
-            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && isset($_SESSION['userType']) && $_SESSION['userType'] == 'Student' ) {
                 // User is logged in
                 include 'student_app_content_loggedin.php';
             }

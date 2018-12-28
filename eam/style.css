@@ -1382,15 +1382,12 @@ a#myFilterApplyButton:hover{
 }
 
 .user-options .card-header {
-    box-shadow: 0px 1px 20px 1px red;
-    background: #f89b9c;
     width: 200px;
+    margin-bottom: -45px;
     border-radius: 0px 0px 50px 30px;
 }
 
 .user-options .card-body {
-    box-shadow: 1px 1px 15px 1px red;
-    background: #f89b9c;
     height: 90px;
     border-radius: 0px 0px 20px 0px;
 }
@@ -1405,11 +1402,8 @@ a#myFilterApplyButton:hover{
 .user-options-buttons .btn {
     align-self: flex-end;
     border: 0;
-    color: #212529;
-    background-color: #ff5b5b;
-    box-shadow: 5px 5px #888888;
     width: 240px;
-    height: 40px;
+    height: 50px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -1420,14 +1414,114 @@ a#myFilterApplyButton:hover{
     margin-left: 20px;
 }
 
-.user-options-buttons .btn:hover{
+.user-options-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#myEmail-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myPassword-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myPassowrd-edit-content .fa{
+    color: black;
+    position: relative;
+    top: 7px;
+    left: 3px;
+    font-size: 20px;
+}
+
+#myPhone-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myAddress-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#user-options-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.student-user-options.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px red;
+    background: #f89b9c;
+
+}
+
+.student-user-options.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px red;
+    background: #f89b9c;
+}
+
+.student-user-options .user-options-buttons .btn {
+    color: #212529;
+    background-color: #ff5b5b;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.student-user-options .user-options-buttons .btn:hover{
     background-color: #bf0808;
     border-color:#ea7a91;
     border:1px solid #ea7a91;
 }
 
-.user-options-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.secretary-user-options.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px blue;
+    background: #b6dcef;
+
+}
+
+.secretary-user-options.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px blue;
+    background: #b6dcef;
+}
+
+.secretary-user-options .user-options-buttons .btn {
+    color: #212529;
+    background-color: #86c7e8;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.secretary-user-options .user-options-buttons .btn:hover{
+    background-color: #7babc3;
+    border-color:#76afcc !important;
+    border:1px solid #76afcc !important;
+}
+
+.publisher-user-options.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px green;
+    background: #58e879;
+}
+
+.publisher-user-options.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px green;
+    background: #58e879;
+}
+
+.publisher-user-options .user-options-buttons .btn {
+    color: #212529;
+    background-color: #38c73b;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.publisher-user-options .user-options-buttons .btn:hover{
+    background-color: #49b361;
+    border-color:#368447 !important;
+    border:1px solid #368447 !important;
 }

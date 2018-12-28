@@ -36,6 +36,8 @@ session_start();
 
         <?php include 'header.php';?>
 
+        <?php include 'userOptions.php';?>
+        
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">

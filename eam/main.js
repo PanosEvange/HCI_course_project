@@ -610,50 +610,60 @@ function myDepartmentOptionsDisplay(str) {
 function mySearchBookFind(){
 
     var $url = "./searchBooks.php";
+    var $isFirst = '?';
 
     var $searchTerm = $("#mySearchBookTerm").val();
     if( $searchTerm != "" ){
-        $url += "?q=" + $searchTerm;
+        $url += $isFirst + "q=" + $searchTerm;
+        $isFirst = '&';
     }
 
     var $univFilter = $("#myUniv-filter").val();
     if( $univFilter != "" ){
-        $url += "?u=" + $univFilter;
+        $url += $isFirst + "u=" + $univFilter;
+        $isFirst = '&';
     }
 
     var $depFilter = $("#myDep-filter").val();
     if( $depFilter != "" ){
-        $url += "?d=" + $depFilter;
+        $url += $isFirst + "d=" + $depFilter;
+        $isFirst = '&';
     }
 
     var $semFilter = $("#mySem-filter").val();
     if( $semFilter != "" ){
-        $url += "?s=" + $semFilter;
+        $url += $isFirst + "s=" + $semFilter;
+        $isFirst = '&';
     }
 
     var $subjFilter = $("#mySubj-filter").val();
     if( $subjFilter != "" ){
-        $url += "?su=" + $subjFilter;
+        $url += $isFirst + "su=" + $subjFilter;
+        $isFirst = '&';
     }
-    
+
     var $publFilter = $("#myPubl-filter").val();
     if( $publFilter != "" ){
-        $url += "?p=" + $publFilter;
+        $url += $isFirst + "p=" + $publFilter;
+        $isFirst = '&';
     }
 
     var $authorFilter = $("#myAuthor-filter").val();
     if( $authorFilter != "" ){
-        $url += "?a=" + $authorFilter;
+        $url += $isFirst + "a=" + $authorFilter;
+        $isFirst = '&';
     }
 
     var $isbnFilter = $("#myIsbn-filter").val();
     if( $isbnFilter != "" ){
-        $url += "?i=" + $isbnFilter;
+        $url += $isFirst + "i=" + $isbnFilter;
+        $isFirst = '&';
     }
 
     var $yearFilter = $("#myYear-filter").val();
     if( $yearFilter != "" ){
-        $url += "?y=" + $yearFilter;
+        $url += $isFirst + "y=" + $yearFilter;
+        $isFirst = '&';
     }
 
     window.location.replace($url);
@@ -678,9 +688,10 @@ $(document).ready(function() {
 
     $(document).on("click", "#myEmail-edit-icon-content .fa.fa-pencil-alt", function (e) {
 
-        var currentEmail = document.getElementById("myEmail-edit-content").innerHTML;
+        var currentEmail = document.getElementById("myEmail-edit-content-value").value;
         document.getElementById("myEmail-edit-content").innerHTML =
-        '<input type="text" name="email" onfocusout="updateValue()" value="' + currentEmail.trim() + '" id="myEmail-edit-profile" class="form-control" >';
+        '<input id="myEmail-editable-content-value" type="text" name="email" value="'
+         + currentEmail.trim() + '" id="myEmail-edit-profile" class="form-control" >';
 
         document.getElementById("myEmail-edit-icon-content").innerHTML =
         '<i class="fa fa-check" aria-hidden="true"></i>';
@@ -689,12 +700,98 @@ $(document).ready(function() {
     $(document).on("click", "#myEmail-edit-icon-content .fa.fa-check", function (e) {
 
         document.getElementById("myEmail-edit-content").innerHTML =
-        document.getElementById("myEmail-edit-content").value;
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myEmail-editable-content-value").value  + '" disabled/>';
 
         document.getElementById("myEmail-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        alert("Ευχαριστούμε. Το email σας ενημερώθηκε επιτυχώς!");
+        successEditΕmail();
+    });
+
+    $(document).on("click", "#myPassword-edit-icon-content .fa.fa-pencil-alt", function (e) {
+        var currentPassword = document.getElementById("myPassword-edit-content-value").value;
+        document.getElementById("myPassword-edit-content").innerHTML =
+        `<div class="input-group" id="show_hide_password_edit">
+          <input id="myPassword-editable-content-value" class="form-control" name="password" value="` + currentPassword.trim() + `" type="password"
+          <div class="input-group-addon">
+            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+          </div>
+         </div>`;
+
+        document.getElementById("myPassword-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#show_hide_password_edit a", function (event) {
+        event.preventDefault();
+        if($('#show_hide_password_edit input').attr("type") == "text"){
+            $('#show_hide_password_edit input').attr('type', 'password');
+            $('#show_hide_password_edit i').addClass( "fa-eye-slash" );
+            $('#show_hide_password_edit i').removeClass( "fa-eye" );
+        }else if($('#show_hide_password_edit input').attr("type") == "password"){
+            $('#show_hide_password_edit input').attr('type', 'text');
+            $('#show_hide_password_edit i').removeClass( "fa-eye-slash" );
+            $('#show_hide_password_edit i').addClass( "fa-eye" );
+        }
+    });
+
+    $(document).on("click", "#myPassword-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myPassword-edit-content").innerHTML =
+        '<input id="myPassword-edit-content-value" type=password value=' +
+         document.getElementById("myPassword-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myPassword-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditPassword();
+    });
+
+    $(document).on("click", "#myPhone-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myPhone-edit-content-value").value;
+        document.getElementById("myPhone-edit-content").innerHTML =
+        '<input id="myPhone-editable-content-value" type="text" name="myPhone" value="'
+         + currentEmail.trim() + '" id="myPhone-edit-profile" class="form-control" >';
+
+        document.getElementById("myPhone-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myPhone-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myPhone-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myPhone-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myPhone-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditPhone();
+    });
+
+    $(document).on("click", "#myAddress-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myAddress-edit-content-value").value;
+        document.getElementById("myAddress-edit-content").innerHTML =
+        '<input id="myAddress-editable-content-value" type="text" name="myAddress" value="'
+         + currentEmail.trim() + '" id="myAddress-edit-profile" class="form-control" >';
+
+        document.getElementById("myAddress-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myAddress-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myAddress-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myAddress-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myAddress-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditAddress();
     });
 
 });
@@ -717,6 +814,22 @@ function logoutPopup(){
     $('#logoutModal').modal();
 }
 
+function successEditΕmail(){
+    $('#successEdit-email').modal();
+}
+
+function successEditPassword(){
+    $('#successEdit-password').modal();
+}
+
+function successEditPhone(){
+    $('#successEdit-phone').modal();
+}
+
+function successEditAddress(){
+    $('#successEdit-address').modal();
+}
+
 $(document).ready(function(){
 
     $(document).on("keyup", "#login-password", function (e) {
@@ -730,5 +843,21 @@ $(document).ready(function(){
             document.getElementById("login-submit-button").click();
         }
     });
+
+    $(document).on("click", "#user-options-whole-area-icon", function (e) {
+
+        if ( document.getElementById("user-options-icon").classList.contains('fa-angle-down') ){
+            //angle up
+            document.getElementById("user-options-icon").classList.remove('fa-angle-down');
+            document.getElementById("user-options-icon").classList.add('fa-angle-up');
+        }
+        else{
+            //angle down
+            document.getElementById("user-options-icon").classList.remove('fa-angle-up');
+            document.getElementById("user-options-icon").classList.add('fa-angle-down');
+        }
+
+    });
+
 
 });
