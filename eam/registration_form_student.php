@@ -37,7 +37,7 @@ session_start();
         <?php include 'header.php';?>
 
         <?php include 'userOptions.php';?>
-        
+
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
@@ -173,7 +173,7 @@ session_start();
                       <div class="col-6">
                         <!-- <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg"> -->
 
-                        <select class="successRegField" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
+                        <select class="" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
                             <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
                             <?php include 'universityValues.php';?>
                         </select>
@@ -190,7 +190,7 @@ session_start();
                       <label for="myDepart" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
                         <!-- <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg"> -->
-                        <select class="successRegField" name="department" id="myDepart-reg" disabled>
+                        <select class="" name="department" onchange="myDepartmentChoose()" id="myDepart-reg" disabled>
                             <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
                         </select>
                       </div>

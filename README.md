@@ -3,19 +3,19 @@
 ## TO DO list
 
 ### General
-* Colors all pages
-* NavBar HomePage link should be shown as active only at home page -- maybe to
-do it dynamically using php
+* ~~Colors all pages~~
+* ~~NavBar HomePage link should be shown as active only at home page -- maybe to
+do it dynamically using php~~
 
 ### Registration_form
-* Datepicker
+* ~~Datepicker~~
 * Danger triangle with '!' at errors
 * Popup of successful registration
-* Dropdown/Suggestion for department/university fields
+* ~~Dropdown/Suggestion for department/university fields~~
 
 ### Home Page
-* Icons for sections (secretary,library etc)
-* colors
+* ~~Icons for sections (secretary,library etc)~~
+* ~~colors~~
 * Announcements
 
 ### DataBase and PHP
@@ -46,5 +46,4 @@ do it dynamically using php
 
 
 ### General MUST
-* At registration form make the submit button available only when user selects university and department.
-* And only when user selects birth date.
+* ~~At registration form make the submit button available only when user selects university and department.~~

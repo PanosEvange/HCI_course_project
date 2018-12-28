@@ -583,6 +583,9 @@ function myDepartmentOptionsDisplay(str) {
 
     $('#myDepart-reg').prop("disabled", false);
 
+    document.getElementById("myUniv-reg").classList.add('successRegField');
+    document.getElementById("myDepart-reg").classList.remove('successRegField');
+
     if (str == "") {
         document.getElementById("myDepart-reg").innerHTML += "";
         return;
@@ -604,7 +607,12 @@ function myDepartmentOptionsDisplay(str) {
         xmlhttp.open("GET","getDepartments.php?q="+str,true);
         xmlhttp.send();
     }
+    checkToEnable();
+}
 
+function myDepartmentChoose() {
+    document.getElementById("myDepart-reg").classList.add('successRegField');
+    checkToEnable();
 }
 
 function mySearchBookFind(){

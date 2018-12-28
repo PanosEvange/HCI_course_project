@@ -1,7 +1,8 @@
 <?php
     include 'login_db.php';
     // define variables and set to empty values
-    $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $id = $address = $phone = "";
+    $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $id = $phone = "";
+    $address = $addressNum = $municipality = $TK = "";
     $succ = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,6 +17,9 @@
         $id = $_POST["id"];
         $phone = $_POST["phone"];
         $address = $_POST["address"];
+        $addressNum = $_POST["addressNum"];
+        $municipality = $_POST["addressDimos"];
+        $TK = $_POST["addressTK"];
 
         require_once 'login_db.php'; //db info
 
@@ -25,9 +29,11 @@
         }
 
         $sql = ("INSERT INTO Users (Email, Password, FirstName,
-                                LastName, DateOfBirth, Phone, Address, UserType)
+                                LastName, DateOfBirth, Phone, Address,
+                                AddressNum, Municipality, TK, UserType)
                                 VALUES ('$email', '$pass', '$firstName',
-                                    '$lastName', 'none', '$phone', '$address', 'Secretary')");
+                                    '$lastName', '$date', '$phone', '$address',
+                                    '$addressNum', '$municipality', '$TK', 'Secretary')");
 
         if ($conn->query($sql) === TRUE) {
             $succ = "Επιτυχής καταχώρηση!";
