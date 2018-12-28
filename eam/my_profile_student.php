@@ -28,12 +28,13 @@
         <?php include 'header.php';?>
 
         <?php include 'userOptions.php';?>
-        
+
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                   <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li>Το προφίλ μου - Φοιτητής</li>
+                  <li><a href="./student_app.php">Εφαρμογή Φοιτητών</a></li>
+                  <li>Το προφίλ μου</li>
                 </ul>
             </div>
 
