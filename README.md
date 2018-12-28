@@ -46,5 +46,4 @@ do it dynamically using php
 
 
 ### General MUST
-* At registration form make the submit button available only when user selects university and department.
-* And only when user selects birth date.
+* ~~At registration form make the submit button available only when user selects university and department.~~
