@@ -27,14 +27,14 @@
 
             echo "u is ".$x."<br>";
         }
-        
+
         if (isset($_REQUEST['d'])) {
             $x = $_REQUEST["d"];
             $conditions[] = "LOWER(sb.DepartmentName) LIKE LOWER('%$x%')";
 
             echo "d is ".$x."<br>";
         }
-        
+
         if (isset($_REQUEST['s'])) {
             $x = $_REQUEST["s"];
             $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
@@ -48,11 +48,11 @@
 
             echo "su is ".$x."<br>";
         }
-        
+
         if (count($conditions) > 0) {
             $sql = ("SELECT DISTINCT b.Name, b.Publisher, b.Author, b.ISBN
                  FROM Books b, SubjectBook sb WHERE LOWER(b.Name) LIKE LOWER('%$searchTerm%') AND ");
-            $sql .= implode(' AND ', $conditions); 
+            $sql .= implode(' AND ', $conditions);
         }
         $conditions = array();
 
@@ -85,13 +85,15 @@
         }
 
         if (count($conditions) > 0) {
-            $sql .= " AND " . implode(' AND ', $conditions); 
+            $sql .= " AND " . implode(' AND ', $conditions);
         }
 
         $result = $conn->query($sql);
         echo "sql = '$sql' <br>";
         $rows = $result->num_rows;
         echo "rows is ".$rows."<br>";
+
+        $pageLimit = 3;
 
         if ($rows > 0) {
             echo '
@@ -100,13 +102,19 @@
                 </div>
             ';
             while ($rows != 0) {
-                if ($rows > 10) {
-                    $page_res = 10;
-                    $rows = $rows - 10;
+
+                if ($rows > $pageLimit) {
+                    $page_res = $pageLimit;
+                    $rows = $rows - $pageLimit;
                 } else {
                     $page_res = $rows;
                     $rows = 0;
                 }
+
+                echo '
+                    <div id="overlay" class="loading-overlay"><div id="text" class="overlay-content">Loading.....</div></div>
+                    <div class="searchResults-pagination-container">
+                ';
                 for ($i=0; $i < $page_res; $i++) {
                     $row = $result->fetch_assoc();
                     echo '
@@ -133,6 +141,20 @@
                             </div>
                         ';
                 }
+
+                // End of searchResults-pagination-container
+                echo '
+                    </div>
+                ';
+
+                if ($rows > $pageLimit) { /* Put pagination button */
+                    echo '
+                        <div class="more-button-pagination">
+                            <span class="btn" tabindex="1" id="more-button-pagination-id"> <span class="btn-content" >Περισσότερα</span> </span>
+                        </div>
+                    ';
+                }
+
                 break;
             }
         }

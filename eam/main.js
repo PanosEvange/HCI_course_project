@@ -916,7 +916,6 @@ $(document).ready(function(){
 
     });
 
-
 });
 
 $(function() {
@@ -932,5 +931,32 @@ $(function() {
             event.preventDefault();
             $("#mySearchBookTerm").val(ui.item.id);
         }
+    });
+});
+
+$(document).ready(function(){
+    $(document).on("click", "#more-button-pagination-id", function (e) {
+
+        $.ajax({
+            url:'paginationExecute.php',
+            type:'post',
+            data:{},
+            beforeSend: function() {
+                document.getElementById("overlay").style.display = "block";
+            },
+            complete: function(){
+                document.getElementById("overlay").style.display = "none";
+            },
+            success: function(response) {
+                var msg = "";
+                if(response == 1){
+
+                }
+                else{
+
+                }
+            }
+        });
+
     });
 });
