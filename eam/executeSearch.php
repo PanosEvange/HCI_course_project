@@ -19,7 +19,6 @@
             }
 
             while ($rows != 0) {
-
                 if ($rows > $pageLimit) {
                     $page_res = $pageLimit;
                     $rows = $rows - $pageLimit;
