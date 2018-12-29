@@ -918,3 +918,19 @@ $(document).ready(function(){
 
 
 });
+
+$(function() {
+    $("#mySearchBookTerm").autocomplete({
+        source: "search.php",
+    });
+});
+
+$(function() {
+    $("#mySearchBookTerm").autocomplete({
+        source: "autoCompleteSearchBook.php",
+        select: function( event, ui ) {
+            event.preventDefault();
+            $("#mySearchBookTerm").val(ui.item.id);
+        }
+    });
+});
