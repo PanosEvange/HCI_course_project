@@ -948,8 +948,8 @@ span.mySearchBookCounter {
     box-shadow: 4px 4px #9fa1a2;
     background-color: #343940 !important;
     border-color: #343940 !important;
-    width: 240px;
-    height: 75px;
+    width: 200px;
+    height: 60px;
     margin-top: 20px;
 }
 
@@ -958,7 +958,7 @@ span.mySearchBookCounter {
 }
 
 .myBooksSearchFiltersButton a{
-    font-size: 18px !important;
+    font-size: 16px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1002,11 +1002,11 @@ span.mySearchBookCounter {
 }
 
 .myBooksSearchFiltersInput .form-group.row {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .myBooksSearchFiltersInput .col-form-label{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -1020,8 +1020,8 @@ span.mySearchBookCounter {
     color: #212529;
     background-color: #f8f9fa;
     box-shadow: 5px 5px #888888;
-    width: 240px;
-    height: 75px;
+    width: 200px;
+    height: 65px;
     margin-top: 20px;
 }
 
