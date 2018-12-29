@@ -812,6 +812,55 @@ $(document).ready(function(){
           mySearchBookFind();
       }
     });
+
+    $(document).on("keyup", "#myUniv-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#myPubl-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#myDep-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#myAuthor-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#mySem-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#myIsbn-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#mySubj-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
+    $(document).on("keyup", "#myYear-filter", function (e) {
+        if(e.keyCode==13){
+            mySearchBookFind();
+        }
+    });
+
 });
 
 function loginPopup(){
