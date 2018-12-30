@@ -938,12 +938,13 @@ $(document).ready(function(){
     $(document).on("click", "#more-button-pagination-id", function (e) {
 
         var $currentPage = document.getElementById('paginationCurrentPage').innerHTML;
+        var $pageLimit = document.getElementById('paginationPageLimit').innerHTML;
         var $totalPages = document.getElementById('paginationTotalPages').innerHTML;
 
         var urlPagination = "./paginationExecute.php" + window.location.search;
 
         urlPagination += "&currentPage=" + $currentPage +
-        '&totalPages=' + $totalPages;
+        '&totalPages=' + $totalPages + "&pageLimit=" + $pageLimit ;
 
         $.ajax({
             url:urlPagination,

@@ -14,6 +14,7 @@
                     Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
                     </div>
                     <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
+                    <div id="paginationPageLimit" class="pagination-hidden-content">'.$pageLimit.'</div>
                     <div id="paginationCurrentPage" class="pagination-hidden-content">2</div>
                 ';
             } else {
@@ -22,6 +23,7 @@
                     Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα
                     </div>
                     <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
+                    <div id="paginationPageLimit" class="pagination-hidden-content">'.$pageLimit.'</div>
                     <div id="paginationCurrentPage" class="pagination-hidden-content">2</div>
                 ';
             }
