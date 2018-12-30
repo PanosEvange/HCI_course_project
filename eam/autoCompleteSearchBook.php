@@ -18,17 +18,42 @@ $searchTerm = $_GET['term'];
 // Generate skills data array
 $skillData = array();
 
-$data['id'] = $searchTerm."test1";
-$data['value'] = $searchTerm."test1";
-array_push($skillData, $data);
+include 'login_db.php';
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if (!$conn->set_charset("utf8")) {
+    // printf("Error loading character set utf8: %s<br>", $conn->error);
+    exit();
+} else {
+    // printf("Current character set: %s<br>", $conn->character_set_name());
+}
 
-$data['id'] = $searchTerm."test2";
-$data['value'] = $searchTerm."test2";
-array_push($skillData, $data);
+$sql = ("SELECT * FROM Books b WHERE LOWER(b.Name) LIKE LOWER('%$searchTerm%')");
 
-$data['id'] = $searchTerm."test3";
-$data['value'] = $searchTerm."test3";
-array_push($skillData, $data);
+$result = $conn->query($sql);
+$rows = $result->num_rows;
+
+for ($i=0; $i < $rows; $i++) {
+    $row = $result->fetch_assoc();
+    $data['id'] = $row['Name'];
+    $data['value'] = $row['Name'];
+	array_push($skillData, $data);
+}
+
+
+// $data['id'] = $searchTerm."test1";
+// $data['value'] = $searchTerm."test1";
+// array_push($skillData, $data);
+
+// $data['id'] = $searchTerm."test2";
+// $data['value'] = $searchTerm."test2";
+// array_push($skillData, $data);
+
+// $data['id'] = $searchTerm."test3";
+// $data['value'] = $searchTerm."test3";
+// array_push($skillData, $data);
 
 // if($query->num_rows > 0){
 //     while($row = $query->fetch_assoc()){

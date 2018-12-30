@@ -1,112 +1,24 @@
 <?php
+    
+    include 'searchFuncs.php';
 
-    include 'login_db.php';
-
-    if (isset($_REQUEST['q'])) {
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        if (!$conn->set_charset("utf8")) {
-            // printf("Error loading character set utf8: %s<br>", $conn->error);
-            exit();
-        } else {
-            // printf("Current character set: %s<br>", $conn->character_set_name());
-        }
-
-        $searchTerm = $_REQUEST["q"];
-        echo "q is ".$searchTerm."<br>";
-        $sql = ("SELECT * FROM Books b WHERE LOWER(b.Name) LIKE LOWER('%$searchTerm%')");
-
-
-        $conditions = array();
-
-        if (isset($_REQUEST['u'])) {
-            $x = $_REQUEST["u"];
-            $conditions[] = "LOWER(sb.UniversityName) LIKE LOWER('%$x%')";
-
-            echo "u is ".$x."<br>";
-        }
-
-        if (isset($_REQUEST['d'])) {
-            $x = $_REQUEST["d"];
-            $conditions[] = "LOWER(sb.DepartmentName) LIKE LOWER('%$x%')";
-
-            echo "d is ".$x."<br>";
-        }
-
-        if (isset($_REQUEST['s'])) {
-            $x = $_REQUEST["s"];
-            $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
-
-            echo "s is ".$x."<br>";
-        }
-
-        if (isset($_REQUEST['su'])) {
-            $x = $_REQUEST["su"];
-            $conditions[] = "LOWER(sb.SubjectName) LIKE LOWER('%$x%')";
-
-            echo "su is ".$x."<br>";
-        }
-
-        if (count($conditions) > 0) {
-            $sql = ("SELECT DISTINCT b.Name, b.Publisher, b.Author, b.ISBN
-                 FROM Books b, SubjectBook sb WHERE LOWER(b.Name) LIKE LOWER('%$searchTerm%') AND ");
-            $sql .= implode(' AND ', $conditions);
-        }
-        $conditions = array();
-
-        if (isset($_REQUEST['p'])) {
-            $x = $_REQUEST["p"];
-            $conditions[] = "LOWER(b.Publisher) LIKE LOWER('%$x%')";
-
-            echo "p is ".$x."<br>";
-        }
-
-        if (isset($_REQUEST['a'])) {
-            $x = $_REQUEST["a"];
-            $conditions[] = "LOWER(b.Author) LIKE LOWER('%$x%')";
-
-            echo "a is ".$x."<br>";
-        }
-
-        if (isset($_REQUEST['i'])) {
-            $x = $_REQUEST["i"];
-            $conditions[] = "LOWER(b.ISBN) LIKE LOWER('%$x%')";
-
-            echo "i is ".$x."<br>";
-        }
-
-        if (isset($_REQUEST['y'])) {
-            $x = $_REQUEST["y"];
-            $conditions[] = "LOWER(b.PublishYear) LIKE LOWER('%$x%')";
-
-            echo "y is ".$x."<br>";
-        }
-
-        if (count($conditions) > 0) {
-            $sql .= " AND " . implode(' AND ', $conditions);
-        }
-
-        $result = $conn->query($sql);
-        echo "sql = '$sql' <br>";
-        $rows = $result->num_rows;
-        echo "rows is ".$rows."<br>";
-
+    function printResults($rows, $result, $searchTerm='') {
         $pageLimit = 3;
 
-        $totalPages = 5; // to be calculated
-
         if ($rows > 0) {
-            echo '
-                <div class="mySearchBookResultsCount">
-                Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
-                </div>
-                <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
-                <div id="paginationCurrentPage" class="pagination-hidden-content">2</div>
-            ';
-            while ($rows != 0) {
+            if ($searchTerm != '') {
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
+                    </div>';
+            } else {
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα
+                    </div>';
+            }
 
+            while ($rows != 0) {
                 if ($rows > $pageLimit) {
                     $page_res = $pageLimit;
                     $rows = $rows - $pageLimit;
@@ -117,8 +29,7 @@
 
                 echo '
                     <div id="overlay" class="loading-overlay"><div id="text" class="overlay-content">Loading.....</div></div>
-                    <div id="searchResults-pagination-container-id" class="searchResults-pagination-container">
-                ';
+                    <div class="searchResults-pagination-container">';
                 for ($i=0; $i < $page_res; $i++) {
                     $row = $result->fetch_assoc();
                     echo '
@@ -142,21 +53,17 @@
                                 <div class="book-page">
                                     <a href="./under_construction.php"> Σελίδα του Βιβλίου <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
                                 </div>
-                            </div>
-                        ';
+                            </div>';
                 }
 
                 // End of searchResults-pagination-container
-                echo '
-                    </div>
-                ';
+                echo '</div>';
 
                 if ($rows > $pageLimit) { /* Put pagination button */
                     echo '
-                        <div id="more-button-pagination-div-id" class="more-button-pagination">
+                        <div class="more-button-pagination">
                             <span class="btn" tabindex="1" id="more-button-pagination-id"> <span class="btn-content" >Περισσότερα</span> </span>
-                        </div>
-                    ';
+                        </div>';
                 }
 
                 break;
@@ -166,24 +73,32 @@
             echo '
                 <div class="mySearchBookResultsCount">
                 Δρν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
-                </div>
-            ';
+                </div>';
         }
 
         echo '<div class="endOfResultsPlaceHolder">
-                </div>
-            ';
+                </div>';
+    }
 
-        $conn->close();
+// main like
+    include 'login_db.php';
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    if (!$conn->set_charset("utf8")) {
+        // printf("Error loading character set utf8: %s<br>", $conn->error);
+        exit();
+    } else {
+        // printf("Current character set: %s<br>", $conn->character_set_name());
+    }
 
+    if (isset($_REQUEST['q'])) {
+       executeSearchWithArg($conn); 
     }
     else {
-
-        //do nothing
-        echo '
-            <div class="placeholder"><p></p></div>
-        ';
+        executeSearchWithoutArg($conn);
     }
-
-
+    
+    $conn->close();
 ?>
