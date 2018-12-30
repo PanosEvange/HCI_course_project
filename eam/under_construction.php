@@ -21,6 +21,9 @@
     <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
     <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+    <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+    <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    
     <script src="main.js"></script>
     <title> New Eudoxus </title>
 </head>
@@ -29,7 +32,7 @@
         <?php include 'header.php';?>
 
         <?php include 'userOptions.php';?>
-        
+
         <div class="main-container-construct">
             <div class="my-under-construct-container container">
                 <p class="my-first-message">Αυτή η σελίδα βρίσκεται υπό κατασκευή.</p>

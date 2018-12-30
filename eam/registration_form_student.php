@@ -28,6 +28,9 @@ session_start();
         <script src="./vendor/daterangepicker/daterangepicker.js"></script>
         <link href="./vendor/daterangepicker/daterangepicker.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
         <script src="myDatePickerReg.js"></script>
         <script src="main.js"></script>
         <title> Registration </title>

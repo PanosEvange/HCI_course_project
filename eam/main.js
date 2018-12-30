@@ -802,6 +802,75 @@ $(document).ready(function() {
         successEditAddress();
     });
 
+    $(document).on("click", "#myAddressNum-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myAddressNum-edit-content-value").value;
+        document.getElementById("myAddressNum-edit-content").innerHTML =
+        '<input id="myAddressNum-editable-content-value" type="text" name="myAddressNum" value="'
+         + currentEmail.trim() + '" id="myAddressNum-edit-profile" class="form-control" >';
+
+        document.getElementById("myAddressNum-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myAddressNum-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myAddressNum-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myAddressNum-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myAddressNum-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditAddress();
+    });
+
+    $(document).on("click", "#myDimos-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myDimos-edit-content-value").value;
+        document.getElementById("myDimos-edit-content").innerHTML =
+        '<input id="myDimos-editable-content-value" type="text" name="myDimos" value="'
+         + currentEmail.trim() + '" id="myDimos-edit-profile" class="form-control" >';
+
+        document.getElementById("myDimos-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myDimos-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myDimos-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myDimos-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myDimos-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditAddress();
+    });
+
+    $(document).on("click", "#myAddressTK-edit-icon-content .fa.fa-pencil-alt", function (e) {
+
+        var currentEmail = document.getElementById("myAddressTK-edit-content-value").value;
+        document.getElementById("myAddressTK-edit-content").innerHTML =
+        '<input id="myAddressTK-editable-content-value" type="text" name="myAddressTK" value="'
+         + currentEmail.trim() + '" id="myAddressTK-edit-profile" class="form-control" >';
+
+        document.getElementById("myAddressTK-edit-icon-content").innerHTML =
+        '<i class="fa fa-check" aria-hidden="true"></i>';
+    });
+
+    $(document).on("click", "#myAddressTK-edit-icon-content .fa.fa-check", function (e) {
+
+        document.getElementById("myAddressTK-edit-content").innerHTML =
+        '<input id="myEmail-edit-content-value" type=text value="' +
+         document.getElementById("myAddressTK-editable-content-value").value  + '" disabled/>';
+
+        document.getElementById("myAddressTK-edit-icon-content").innerHTML =
+        '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
+
+        successEditAddress();
+    });
+
 });
 
 

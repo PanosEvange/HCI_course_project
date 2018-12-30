@@ -1448,6 +1448,21 @@ a#myFilterApplyButton:hover{
     border: none;
 }
 
+#myAddressNum-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myDimos-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myAddressTK-edit-content-value{
+    background: none;
+    border: none;
+}
+
 #user-options-icon {
     margin-left: 10px;
     font-size: 20px;

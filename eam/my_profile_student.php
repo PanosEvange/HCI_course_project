@@ -20,6 +20,9 @@
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
         <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
@@ -115,18 +118,43 @@
                 <div class="form-group row">
                   <label for="myPhoneNumber" class="col-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i> Τηλέφωνο Επικοινωνίας:</label>
                   <div class="col-6 myPhone-edit" id="myPhone-edit-content">
-                      <input id="myPhone-edit-content-value" type=text value="<?php echo $phone;?>" disabled/>
+                      <input id="myPhone-edit-content-value" type="text" name="phone" value="<?php echo $phone ?>" disabled>
                   </div>
                   <div class="col-1 myPhone-edit-icon" id="myPhone-edit-icon-content">
                       <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                   </div>
                 </div>
+
                 <div class="form-group row">
-                  <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
-                  <div class="col-6 myAddress-edit" id="myAddress-edit-content">
-                      <input id="myAddress-edit-content-value" type=text value="<?php echo $address;?>" disabled/>
+                  <label for="myAddress" class="col-2 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Οδός:</label>
+                  <div class="col-3 myAddress-edit" id="myAddress-edit-content">
+                      <input id="myAddress-edit-content-value" type="text" name="address" value="<?php echo $address ?>" disabled>
                   </div>
                   <div class="col-1 myAddress-edit-icon" id="myAddress-edit-icon-content">
+                      <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                  </div>
+                  <label for="myAddressNum" class="col-3 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Αριθμός:</label>
+                  <div class="col-2 myAddressNum-edit" id="myAddressNum-edit-content">
+                      <input id="myAddressNum-edit-content-value" type="text" name="addressNum"value="<?php echo $addressNum ?>" disabled>
+                  </div>
+                  <div class="col-1 myAddressNum-edit-icon" id="myAddressNum-edit-icon-content">
+                      <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="myDimos" class="col-2 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Δήμος:</label>
+                  <div class="col-3 myDimos-edit" id="myDimos-edit-content">
+                      <input id="myDimos-edit-content-value" type="text" name="addressDimos" value="<?php echo $municipality ?>" disabled>
+                  </div>
+                  <div class="col-1 myDimos-edit-icon" id="myDimos-edit-icon-content">
+                      <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                  </div>
+                  <label for="myAddressTK" class="col-3 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Ταχ. Κώδικας:</label>
+                  <div class="col-2 myAddressTK-edit" id="myAddressTK-edit-content">
+                      <input id="myAddressTK-edit-content-value" type="text" name="addressTK" value="<?php echo $postalCode ?>" disabled>
+                  </div>
+                  <div class="col-1 myAddressTK-edit-icon" id="myAddressTK-edit-icon-content">
                       <i class="fa fa-pencil-alt" aria-hidden="true"></i>
                   </div>
                 </div>
