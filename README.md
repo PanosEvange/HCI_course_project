@@ -2,6 +2,16 @@
 
 ## TO DO list
 
+### Next Steps
+* Validation when editing profile
+* Profile and Edit of Secretary and Publisher profile as it is at Student Profile
+* (**Minor**) Check if address functionality is OK at Secretary registration form
+* General search
+* Δήλωση and History
+* Display all books and filters
+* Search at home page for Books, Σημεία Διανομής, εκδότες etc
+* (**Maybe**) Display all Σημεία Διανομής, Εκδότες etc
+
 ### General
 * ~~Colors all pages~~
 * ~~NavBar HomePage link should be shown as active only at home page -- maybe to
