@@ -1586,3 +1586,7 @@ a#myFilterApplyButton:hover{
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
+
+.pagination-hidden-content{
+    display: none;
+}

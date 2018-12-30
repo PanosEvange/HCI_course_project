@@ -937,26 +937,64 @@ $(function() {
 $(document).ready(function(){
     $(document).on("click", "#more-button-pagination-id", function (e) {
 
+        var $currentPage = document.getElementById('paginationCurrentPage').innerHTML;
+        var $pageLimit = document.getElementById('paginationPageLimit').innerHTML;
+        var $totalPages = document.getElementById('paginationTotalPages').innerHTML;
+
+        var urlPagination = "./paginationExecute.php" + window.location.search;
+
+        urlPagination += "&currentPage=" + $currentPage +
+        '&totalPages=' + $totalPages + "&pageLimit=" + $pageLimit ;
+
         $.ajax({
-            url:'paginationExecute.php',
+            url:urlPagination,
             type:'post',
-            data:{},
             beforeSend: function() {
                 document.getElementById("overlay").style.display = "block";
             },
             complete: function(){
                 document.getElementById("overlay").style.display = "none";
             },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error");
+            },
             success: function(response) {
-                var msg = "";
-                if(response == 1){
-
+                for(var i = 0; i < response.totalNum; i += 1){
+                    document.getElementById('searchResults-pagination-container-id').innerHTML +=
+                    `<div class="mySearchBookOneResult">
+                        <div class="book-image">
+                            <img src="./150.png" alt="Image Placeholder">
+                        </div>
+                        <div class="book-title">` + response.entriesArray[i].Name +
+                        `</div>
+                        <div class="book-authors">` + response.entriesArray[i].Author +
+                        `</div>
+                        <div class="book-publisher">
+                            Εκδόσεις: ` + response.entriesArray[i].Publisher +
+                        `</div>
+                        <div class="book-isbn">
+                            ISBN: ` + response.entriesArray[i].ISBN +
+                        `</div>
+                        <div class="book-comments">
+                            <a href="#">Σχόλια(5)</a>
+                        </div>
+                        <div class="book-page">
+                            <a href="./under_construction.php"> Σελίδα του Βιβλίου <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                        </div>
+                    </div>`;
                 }
-                else{
 
-                }
+
             }
         });
+
+        if( $currentPage == $totalPages ){ //hide more button
+            var x = document.getElementById("more-button-pagination-div-id");
+            x.style.display = "none";
+        }
+        else{ //do currentPage ++
+            document.getElementById('paginationCurrentPage').innerHTML = parseInt($currentPage) + 1;
+        }
 
     });
 });
