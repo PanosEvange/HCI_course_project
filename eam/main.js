@@ -707,6 +707,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myEmail-edit-icon-content .fa.fa-check", function (e) {
 
+        var newEmail = document.getElementById("myEmail-editable-content-value").value;
+
         document.getElementById("myEmail-edit-content").innerHTML =
         '<input id="myEmail-edit-content-value" type=text value="' +
          document.getElementById("myEmail-editable-content-value").value  + '" disabled/>';
@@ -714,7 +716,23 @@ $(document).ready(function() {
         document.getElementById("myEmail-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditΕmail();
+        var urlToUpdate = "updateProfile.php?&newEmail=" + newEmail;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditΕmail();
+                }
+                else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
+
     });
 
     $(document).on("click", "#myPassword-edit-icon-content .fa.fa-pencil-alt", function (e) {
@@ -746,6 +764,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myPassword-edit-icon-content .fa.fa-check", function (e) {
 
+        var newPassword = document.getElementById("myPassword-editable-content-value").value;
+
         document.getElementById("myPassword-edit-content").innerHTML =
         '<input id="myPassword-edit-content-value" type=password value=' +
          document.getElementById("myPassword-editable-content-value").value  + '" disabled/>';
@@ -753,7 +773,21 @@ $(document).ready(function() {
         document.getElementById("myPassword-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditPassword();
+        var urlToUpdate = "updateProfile.php?&newPassword=" + newPassword;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditPassword();
+                }else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
     });
 
     $(document).on("click", "#myPhone-edit-icon-content .fa.fa-pencil-alt", function (e) {
@@ -769,6 +803,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myPhone-edit-icon-content .fa.fa-check", function (e) {
 
+        var newPhone = document.getElementById("myPhone-editable-content-value").value;
+
         document.getElementById("myPhone-edit-content").innerHTML =
         '<input id="myEmail-edit-content-value" type=text value="' +
          document.getElementById("myPhone-editable-content-value").value  + '" disabled/>';
@@ -776,7 +812,22 @@ $(document).ready(function() {
         document.getElementById("myPhone-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditPhone();
+        var urlToUpdate = "updateProfile.php?&newPhone=" + newPhone;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditPhone();
+                }else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
+
     });
 
     $(document).on("click", "#myAddress-edit-icon-content .fa.fa-pencil-alt", function (e) {
@@ -792,6 +843,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myAddress-edit-icon-content .fa.fa-check", function (e) {
 
+        var newAddress = document.getElementById("myAddress-editable-content-value").value;
+
         document.getElementById("myAddress-edit-content").innerHTML =
         '<input id="myEmail-edit-content-value" type=text value="' +
          document.getElementById("myAddress-editable-content-value").value  + '" disabled/>';
@@ -799,7 +852,22 @@ $(document).ready(function() {
         document.getElementById("myAddress-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditAddress();
+        var urlToUpdate = "updateProfile.php?&newAddress=" + newAddress;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditAddress();
+                }else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
+
     });
 
     $(document).on("click", "#myAddressNum-edit-icon-content .fa.fa-pencil-alt", function (e) {
@@ -815,6 +883,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myAddressNum-edit-icon-content .fa.fa-check", function (e) {
 
+        var newAddressNum = document.getElementById("myAddressNum-editable-content-value").value;
+
         document.getElementById("myAddressNum-edit-content").innerHTML =
         '<input id="myEmail-edit-content-value" type=text value="' +
          document.getElementById("myAddressNum-editable-content-value").value  + '" disabled/>';
@@ -822,7 +892,23 @@ $(document).ready(function() {
         document.getElementById("myAddressNum-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditAddress();
+        var urlToUpdate = "updateProfile.php?&newAddressNum=" + newAddressNum;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditAddress();
+                }
+                else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
+
     });
 
     $(document).on("click", "#myDimos-edit-icon-content .fa.fa-pencil-alt", function (e) {
@@ -838,6 +924,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myDimos-edit-icon-content .fa.fa-check", function (e) {
 
+        var newDimos = document.getElementById("myDimos-editable-content-value").value;
+
         document.getElementById("myDimos-edit-content").innerHTML =
         '<input id="myEmail-edit-content-value" type=text value="' +
          document.getElementById("myDimos-editable-content-value").value  + '" disabled/>';
@@ -845,7 +933,23 @@ $(document).ready(function() {
         document.getElementById("myDimos-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditAddress();
+        var urlToUpdate = "updateProfile.php?&newDimos=" + newDimos;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditAddress();
+                }
+                else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
+
     });
 
     $(document).on("click", "#myAddressTK-edit-icon-content .fa.fa-pencil-alt", function (e) {
@@ -861,6 +965,8 @@ $(document).ready(function() {
 
     $(document).on("click", "#myAddressTK-edit-icon-content .fa.fa-check", function (e) {
 
+        var newPostalCode = document.getElementById("myAddressTK-editable-content-value").value;
+
         document.getElementById("myAddressTK-edit-content").innerHTML =
         '<input id="myEmail-edit-content-value" type=text value="' +
          document.getElementById("myAddressTK-editable-content-value").value  + '" disabled/>';
@@ -868,7 +974,23 @@ $(document).ready(function() {
         document.getElementById("myAddressTK-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        successEditAddress();
+        var urlToUpdate = "updateProfile.php?&newPostalCode=" + newPostalCode;
+
+        $.ajax({
+            url:urlToUpdate,
+            type:'post',
+            success:function(response){
+                console.log(response);
+                if(response == 1){
+                    successEditAddress();
+                }
+                else{
+                    alert("Something went wrong!");
+                }
+            }
+        });
+
+
     });
 
 });

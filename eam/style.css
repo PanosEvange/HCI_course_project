@@ -1430,7 +1430,7 @@ a#myFilterApplyButton:hover{
     border: none;
 }
 
-#myPassowrd-edit-content .fa{
+.myPassword-edit .fa{
     color: black;
     position: relative;
     top: 7px;

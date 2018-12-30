@@ -22,7 +22,7 @@
 
         <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
         <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-        
+
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
