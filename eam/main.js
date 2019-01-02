@@ -959,6 +959,7 @@ $(document).ready(function(){
                 alert("error");
             },
             success: function(response) {
+                console.log(response);
                 for(var i = 0; i < response.totalNum; i += 1){
                     document.getElementById('searchResults-pagination-container-id').innerHTML +=
                     `<div class="mySearchBookOneResult">

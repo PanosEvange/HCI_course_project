@@ -5,13 +5,16 @@
     function printResults($rows, $result, $searchTerm='') {
         $pageLimit = 3;
 
-        $totalPages = 5; //to be calculated
+        $totalPages = floor($rows/$pageLimit);
+        if ($rows%$pageLimit != 0) {
+            $totalPages = $totalPages + 1;
+        }
 
         if ($rows > 0) {
             if ($searchTerm != '') {
                 echo '
                     <div class="mySearchBookResultsCount">
-                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
+                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\' totalPages = '.$totalPages.'.
                     </div>
                     <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
                     <div id="paginationPageLimit" class="pagination-hidden-content">'.$pageLimit.'</div>
@@ -20,7 +23,7 @@
             } else {
                 echo '
                     <div class="mySearchBookResultsCount">
-                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα
+                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα,  totalPages = '.$totalPages.'
                     </div>
                     <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
                     <div id="paginationPageLimit" class="pagination-hidden-content">'.$pageLimit.'</div>
@@ -81,10 +84,17 @@
             }
         }
         else {
-            echo '
-                <div class="mySearchBookResultsCount">
-                Δρν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
-                </div>';
+            if ($searchTerm != '') {
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Δεν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
+                    </div>';    
+            } else {
+                 echo '
+                    <div class="mySearchBookResultsCount">
+                    Δεν βρέθηκαν αποτελέσματα.
+                    </div>';
+            }
         }
 
         echo '<div class="endOfResultsPlaceHolder">
@@ -104,7 +114,7 @@
     }
 
     if (isset($_REQUEST['q'])) {
-       executeSearchWithArg($conn);
+        executeSearchWithArg($conn);
     }
     else {
         executeSearchWithoutArg($conn);

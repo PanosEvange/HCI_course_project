@@ -1,30 +1,48 @@
 <?php
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
+        include 'executeSearch.php';
+        include 'login_db.php';
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        if (!$conn->set_charset("utf8")) {
+            // printf("Error loading character set utf8: %s<br>", $conn->error);
+            exit();
+        }
+
+        if (isset($_REQUEST['q'])) {
+            $result = executeSearchWithArg($conn);
+        }
+        else {
+            $result = executeSearchWithoutArg($conn);
+        }
 
         $finalResult = new \stdClass();
 
-        $finalResult->totalNum = 2;
+        // page limit
+        $finalResult->totalNum = 3; 
 
         $allEntries = array();
 
         $counter = 0;
 
-        $entry = new \stdClass();
-        $entry->Name = "TestName1";
-        $entry->Author = "TestAuthor1";
-        $entry->Publisher = "TestPublisher1";
-        $entry->ISBN = "TestISBN1";
-        $allEntries[$counter] = $entry;
-        $counter ++;
+        $rows = $result->num_rows;
 
-        $entry = new \stdClass();
-        $entry->Name = "TestName2";
-        $entry->Author = "TestAuthor2";
-        $entry->Publisher = "TestPublisher2";
-        $entry->ISBN = "TestISBN2";
-        $allEntries[$counter] = $entry;
-        $counter ++;
+        for ($i=0; $i < $rows; $i++) { 
+            $row = $result->fetch_assoc();
+            $entry = new \stdClass();
+            $entry->Name = '$row["Name"]';
+            $entry->Author = '$row["Author"]';
+            $entry->Publisher = '$row["Publisher"]';
+            $entry->ISBN = '$row["ISBN"]';
+            $allEntries[$counter] = $entry;
+            $counter ++;
+        }
+
+        $conn->close();
 
         $finalResult->entriesArray = $allEntries;
 

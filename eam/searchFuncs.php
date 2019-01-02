@@ -1,4 +1,15 @@
 <?php
+
+    function paginationCheck($sql) {
+        if (isset($_REQUEST['currentPage'])) {
+            $offset = ($_REQUEST['currentPage'] - 1)*$_REQUEST['pageLimit'];
+            $limit = $_REQUEST['pageLimit'];
+            echo "offs = ". $offset . " and lim = ". $limit ."<br>" ;
+            $sql .= " LIMIT $limit OFFSET $offset";
+        }
+        return $sql;
+    }
+
     function executeSearchWithArg($conn) {
         $searchTerm = $_REQUEST["q"];
         echo "q is ".$searchTerm."<br>";
@@ -73,12 +84,19 @@
             $sql .= " AND " . implode(' AND ', $conditions);
         }
 
+        $sql = paginationCheck($sql);
+
         $result = $conn->query($sql);
         echo "sql = '$sql' <br>";
         $rows = $result->num_rows;
         echo "rows is ".$rows."<br>";
 
-        printResults($rows, $result, $searchTerm);
+        if (!isset($_REQUEST['currentPage'])) {
+            printResults($rows, $result, $searchTerm);
+            return $result;
+        } else {
+            return $result;
+        }
     }
 
     function executeSearchWithoutArg($conn) {
@@ -156,13 +174,21 @@
             $flag = true;
         }
 
+        $sql = paginationCheck($sql);
+
         if ($flag == true) {
             $result = $conn->query($sql);
             echo "sql = '$sql' <br>";
             $rows = $result->num_rows;
             echo "rows is ".$rows."<br>";
 
-            printResults($rows, $result);
+            if (!isset($_REQUEST['currentPage'])) {
+                printResults($rows, $result);
+                return $result;
+            } else {
+                // printResults($rows, $result);
+                return $result;
+            }
         } else {
             //do nothing
             echo '<div class="placeholder"><p></p></div>';
