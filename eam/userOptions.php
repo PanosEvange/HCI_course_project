@@ -11,7 +11,7 @@
                             <a href="./under_construction.php" class="btn"> Δήλωση Συγγραμμάτων </a>
                             <a href="./under_construction.php" class="btn my-ml"> Ανταλλαγή Συγγραμμάτων </a>
                             <a href="./student_app.php" class="btn my-ml"> Εφαρμογή Φοιτητών </a>
-                            <a href="./under_construction.php" class="btn my-ml"> Πληροφορίες για Φοιτητές </a>
+                            <a href="./student_info.php" class="btn my-ml"> Πληροφορίες για Φοιτητές </a>
                         </div>
                       </div>
                     <div class="card-header">

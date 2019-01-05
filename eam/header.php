@@ -24,7 +24,7 @@
               Πληροφορίες
             </a>
             <div class="dropdown-menu dropdown-menu-right myNavbarDropdownInfo" aria-labelledby="navbarDropdownInfo">
-              <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Φοιτητές</a>
+              <a class="dropdown-item" href="./student_info.php">Πληροφορίες για Φοιτητές</a>
               <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Γραμματείες</a>
               <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Εκδότες</a>
               <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>

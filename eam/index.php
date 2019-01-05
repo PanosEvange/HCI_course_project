@@ -57,7 +57,7 @@ session_start();
                       Πληροφορίες
                     </a>
                     <div class="dropdown-menu dropdown-menu-right myNavbarDropdownInfo" aria-labelledby="navbarDropdownInfo">
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Φοιτητές</a>
+                      <a class="dropdown-item" href="./student_info.php">Πληροφορίες για Φοιτητές</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Γραμματείες</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Εκδότες</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
@@ -95,7 +95,7 @@ session_start();
                           <a href="./under_construction.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
                           <a href="./under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
                           <a href="./student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                          <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
+                          <a href="./student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
                   </div>
                 </div>
                 <div class="my-section secretary-area">
@@ -242,7 +242,7 @@ session_start();
                         </div>
                       </div>
                       <div class="input-field second-wrap">
-                        <input id="search" type="text" placeholder="Αναζήτηση..." />
+                        <input id="" type="text" placeholder="Αναζήτηση..." />
                       </div>
                       <div class="input-field third-wrap">
                         <button class="btn-search" type="button">

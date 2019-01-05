@@ -1769,3 +1769,73 @@ a#myFilterApplyButton:hover{
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+.student-info a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+
+.student-info #accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+.student-info #accordion .panel-heading{
+    padding: 0;
+}
+
+.student-info #accordion .panel-title a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #fff;
+    background: #343940;
+    border: 2px solid #9c9ea2;
+    padding: 15px 20px 15px 47px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+
+.student-info #accordion .panel-title:hover a.collapsed{
+    background: #343940;
+    color: #fff;
+}
+
+.student-info #accordion .panel-title a.collapsed{
+    background: #fff;
+    border-color: #ddd;
+    color: #888;
+}
+
+.student-info #accordion .panel-title a:before{
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.student-info #accordion .panel-title a.collapsed:before{
+    content: "\f107";
+}
+
+.student-info #accordion .panel-body{
+    font-size: 16px;
+    color: #000;
+    line-height: 25px;
+    border: 2px solid #9c9ea2;
+    border-top: none;
+    padding: 14px 20px;
+    background: #ffffff;
+}
+
+.student-info {
+    margin-top: 20px;
+    margin-bottom: 600px;
+}
