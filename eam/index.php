@@ -58,7 +58,7 @@ session_start();
                     </a>
                     <div class="dropdown-menu dropdown-menu-right myNavbarDropdownInfo" aria-labelledby="navbarDropdownInfo">
                       <a class="dropdown-item" href="./student_info.php">Πληροφορίες για Φοιτητές</a>
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Γραμματείες</a>
+                      <a class="dropdown-item" href="./secretary_info.php">Πληροφορίες για Γραμματείς</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Εκδότες</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
                     </div>
@@ -144,7 +144,7 @@ session_start();
                             <a href="./under_construction.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
                             <a href="./under_construction.php" class="btn section-button" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
                             <a href="./secretary_app.php" class="btn section-button" >Εφαρμογή Γραμματείας</a>
-                            <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
+                            <a href="./secretary_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
                     </div>
                 </div>
                 <div class="my-section publisher-area">

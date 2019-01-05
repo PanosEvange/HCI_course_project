@@ -39,7 +39,7 @@ session_start();
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                   <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li>Πληροφορίες για Φοιτητές</li>
+                  <li>Πληροφορίες για Γραμματείς</li>
                 </ul>
             </div>
 
@@ -47,15 +47,15 @@ session_start();
 
         </div>
 
-        <div class="container student-info">
+        <div class="container secretary-info">
             <div class="row">
                 <div class="col-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingTwo">
+                            <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Πώς μπορώ να δηλώσω ένα σύγγραμμα;
+                                        Πώς μπορώ να αφαιρέσω ένα σύγγραμμα;
                                     </a>
                                 </h4>
                             </div>
@@ -66,7 +66,7 @@ session_start();
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
+                            <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         Πώς μπορώ να αναζητήσω συγγράμματα;
@@ -80,10 +80,10 @@ session_start();
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingFour">
+                            <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Πώς μπορώ να δω το ιστορικό των δηλώσεων μου;
+                                        Πώς μπορώ να δω τι εκκρεμότητες έχω;
                                     </a>
                                 </h4>
                             </div>

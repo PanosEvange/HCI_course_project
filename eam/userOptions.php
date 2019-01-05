@@ -33,7 +33,7 @@
                             <a href="./under_construction.php" class="btn" >Διαχείριση Συγγραμμάτων</a>
                             <a href="./under_construction.php" class="btn my-ml" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
                             <a href="./secretary_app.php" class="btn my-ml" >Εφαρμογή Γραμματείας</a>
-                            <a href="./under_construction.php" class="btn my-ml" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
+                            <a href="./secretary_info.php" class="btn my-ml" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
                         </div>
                       </div>
                     <div class="card-header">
