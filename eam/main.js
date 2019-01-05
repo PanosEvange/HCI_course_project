@@ -577,6 +577,17 @@ $(document).ready(function() {
 
     $('#myDepart-reg').select2({ width: '100%' });
 
+    $('#home-page-search-select').select2({ width: '100%' });
+
+    $('#home-page-search-select2').select2({ width: '100%' });
+
+    $('#home-page-search-select3').select2({ width: '100%' });
+
+    $('#home-page-search-select4').select2({ width: '100%' });
+
+    $('#home-page-search-select5').select2({ width: '100%' });
+
+    $('#home-page-search-select6').select2({ width: '100%' });
 });
 
 function myDepartmentOptionsDisplay(str) {
@@ -1189,3 +1200,75 @@ $(document).ready(function(){
 
     });
 });
+
+function myDepartmentOptionsDisplayHomePage(str) {
+
+    $('#myDepart-reg').prop("disabled", false);
+
+    if (str == "") {
+        document.getElementById("myDepart-reg").innerHTML += "";
+        return;
+    }
+    else {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("myDepart-reg").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","getDepartments.php?q="+str,true);
+        xmlhttp.send();
+    }
+
+}
+
+function homePageSearchSelect(str) {
+
+    if (str == "book") {
+        enableBook();
+        disableStore();
+        disablePublisher();
+    }
+    else if (str == "store"){
+        enableStore();
+        disableBook();
+        disablePublisher();
+    }
+    else if (str == "publisher"){
+        enablePublisher();
+        disableBook();
+        disableStore();
+    }
+
+}
+
+function enableBook() {
+    $('#myFiltersInputBook').prop("hidden", false);
+}
+
+function enableStore() {
+    $('#myFiltersInputStore').prop("hidden", false);
+}
+
+function enablePublisher() {
+    $('#myFiltersInputPublisher').prop("hidden", false);
+}
+
+function disableStore() {
+    $('#myFiltersInputStore').prop("hidden", true);
+}
+
+function disablePublisher() {
+    $('#myFiltersInputPublisher').prop("hidden", true);
+}
+
+function disableBook() {
+    $('#myFiltersInputBook').prop("hidden", true);
+}
