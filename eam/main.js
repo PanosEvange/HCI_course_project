@@ -1234,18 +1234,22 @@ function homePageSearchSelect(str) {
     if (str == "book") {
         enableBook();
         disableStore();
-        disablePublisher();
+        //disablePublisher();
     }
     else if (str == "store"){
         enableStore();
         disableBook();
-        disablePublisher();
+        //disablePublisher();
     }
     else if (str == "publisher"){
-        enablePublisher();
+        // enablePublisher();
         disableBook();
         disableStore();
     }
+
+    var element = document.getElementById("home-page-search-select-arrow");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
 
 }
 
@@ -1272,3 +1276,44 @@ function disablePublisher() {
 function disableBook() {
     $('#myFiltersInputBook').prop("hidden", true);
 }
+
+$(document).ready(function(){
+
+    if ($(".home-page-search .inner-form").length){
+        $('.home-page-search .inner-form b[role="presentation"]').hide();
+        $('.home-page-search .inner-form .select2-selection__arrow').append('<i id="home-page-search-select-arrow" class="fa fa-angle-down"></i>');
+    }
+
+
+
+    $(document).on("click", ".home-page-search .inner-form .select2-container--focus", function () {
+        var element = document.getElementById("home-page-search-select-arrow");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+
+        // alert("HA");
+    });
+
+    $(document).on("click", ".home-page-search .inner-form .select2-container--open", function () {
+        var element = document.getElementById("home-page-search-select-arrow");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+        // alert("HO");
+    });
+
+    $('#home-page-search-select').on('select2-open', function() {
+        $('.select2-results .info').on('mouseup', function(e) {
+            alert("LOLOLO");
+        });
+    });
+
+    // $(document).on("click", ".home-page-search .inner-form .select2-results__option", function () {
+    //     var element = document.getElementById("home-page-search-select-arrow");
+    //     element.classList.remove("fa-angle-down");
+    //     element.classList.add("fa-angle-up");
+    //     // alert("HO");
+    // });
+
+
+
+});

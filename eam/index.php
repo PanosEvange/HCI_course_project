@@ -313,7 +313,7 @@ session_start();
                           </div>
                   </div>
 
-                  <div class="filter-home-page" id="myFiltersInputPublisher" hidden>
+                  <!-- <div class="filter-home-page" id="myFiltersInputPublisher" hidden>
                           <div class="form-group row">
                             <label for="Name" class="col-2 col-form-label">Όνομα:</label>
                             <div class="col-4">
@@ -333,7 +333,7 @@ session_start();
                                 </select>
                             </div>
                           </div>
-                  </div>
+                  </div> -->
 
 
 
