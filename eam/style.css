@@ -212,8 +212,6 @@ span.my-svg-text {
 }
 
 .my-breadcrumb{
-    /*display: flex;
-    justify-content: center;*/
     margin-left: auto;
     min-width: 300px;
     grid-area: my-breadcrumb;
@@ -493,6 +491,7 @@ a.section-button:hover{
     height: 50px;
     margin-top: -50px;
     padding-top: 10px;
+    float: left;
 }
 
 /* Registration_form css */
@@ -1637,7 +1636,7 @@ a#myFilterApplyButton:hover{
     -ms-flex-align: center;
     align-items: center;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .home-page-search form .inner-form .input-field {
@@ -1698,11 +1697,13 @@ a#myFilterApplyButton:hover{
     border-color: #343940 !important;
     width: 75px;
     cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .home-page-search form .inner-form .input-field.third-wrap .btn-search svg {
     color: #a8acad ;
     width: 30px;
+    margin-top: 5px;
 }
 
 .home-page-search form .inner-form .input-field.third-wrap .btn-search:hover svg {
@@ -1724,7 +1725,7 @@ a#myFilterApplyButton:hover{
 
 .home-page-search .inner-form .select2-container--default .select2-selection--single {
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 10px 0px 0px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1932,4 +1933,365 @@ a#myFilterApplyButton:hover{
 
 .home-page-search .inner-form .select2-container--default .select2-selection--single:hover {
     background-color: #c6c6c6;
+}
+
+.dilosi-steps-breadcrumb {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps {
+    margin: 40px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.steps a {
+    color: white;
+    text-decoration: none;
+}
+
+.steps a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.steps em {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.steps li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-left: 0;
+    width: 300px; /* 100 / number of steps */
+    height: 80px; /* total height */
+    list-style-type: none;
+    padding: 5px 5px 5px 30px; /* padding around text, last should include arrow width */
+    border-right: 3px solid white; /* width: gap between arrows, color: background of document */
+    position: relative;
+}
+
+/* remove extra padding on the first object since it doesn't have an arrow to the left */
+.steps li:first-child {
+    padding-left: 5px;
+    margin-left: 40px;
+}
+
+/* white arrow to the left to "erase" background (starting from the 2nd object) */
+.steps li:nth-child(n+2)::before {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    border-left: 25px solid white; /* width: arrow width, color: background of document */
+    border-top: 40px solid transparent; /* width: half height */
+    border-bottom: 40px solid transparent; /* width: half height */
+    width: 0;
+    height: 0;
+    content: " ";
+}
+
+/* colored arrow to the right */
+.steps li::after {
+    z-index: 1; /* need to bring this above the next item */
+    position: absolute;
+    top: 0;
+    right: -25px; /* arrow width (negated) */
+    display: block;
+    border-left: 25px solid #7c8437; /* width: arrow width */
+    border-top: 40px solid transparent; /* width: half height */
+    border-bottom: 40px solid transparent; /* width: half height */
+    width:0;
+    height:0;
+    content: " ";
+}
+
+/* Setup colors (both the background and the arrow) */
+
+/* Completed */
+.steps li { background-color: #7C8437; }
+.steps li::after { border-left-color: #7c8437; }
+
+/* Current */
+.steps li.current { background-color: #C36615; }
+.steps li.current::after { border-left-color: #C36615; }
+
+/* Following */
+.steps li.current ~ li { background-color: #9d9999; }
+.steps li.current ~ li::after { border-left-color: #9d9999; }
+
+/* Hover for completed and current */
+.steps li:hover {background-color: #696}
+.steps li:hover::after {border-left-color: #696}
+
+
+.dilosi-step1-select-subjects {
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.dilosi-step1-select-subjects .title{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.subjects-list{
+    padding-left: 190px;
+    padding-top: 20px;
+}
+
+.subjects-list li{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Customize the label (the container) */
+.label-my-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.label-my-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.label-my-checkbox .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    height: 25px;
+    width: 25px;
+    background-color: #f8f9fa;
+}
+
+/* On mouse-over, add a grey background color */
+.label-my-checkbox:hover input ~ .checkmark {
+  background-color: #76aae2;
+}
+
+/* When the checkbox is checked, add a blue background */
+.label-my-checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.label-my-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.label-my-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.label-my-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 7px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.next-step .btn{
+    width: 220px;
+    height: 70px;
+    margin-bottom: 200px;
+    float: right;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+    margin-right: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-step a.btn{
+    color: #a8acad;
+    font-size: 21px;
+}
+
+.next-step .fa-angle-right{
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+.next-step a.btn:hover{
+    color: #fffff3;
+}
+
+.previous-step .btn{
+    width: 220px;
+    height: 70px;
+    margin-bottom: 200px;
+    float: left;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous-step a.btn{
+    color: #a8acad;
+    font-size: 21px;
+}
+
+.previous-step .fa-angle-left{
+    font-size: 30px;
+    padding-right: 7px;
+}
+
+.previous-step a.btn:hover{
+    color: #fffff3;
+}
+
+.dilosi-step2-select-book {
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.dilosi-step2-select-book .title{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.books-list-item{
+    width: 600px;
+    margin-top: 20px;
+    background: #dddddd;
+    grid-template-columns:1fr 400px 1fr;
+    display: grid;
+    grid-template-areas:
+        "dilosi-book-radio-button dilosi-book-title dilosi-book-title"
+        "dilosi-book-radio-button dilosi-book-info dilosi-book-comments";
+    padding: 30px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+    grid-row-gap: 20px;
+}
+
+.dilosi-book-title{
+    grid-area: dilosi-book-title;
+}
+
+.dilosi-book-comments{
+    grid-area: dilosi-book-comments;
+    justify-self: right;
+}
+
+/* The container */
+.dilosi-book-radio-button {
+    grid-area: dilosi-book-radio-button;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 23px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    justify-self: left;
+    align-self: center;
+}
+
+/* Hide the browser's default radio button */
+.dilosi-book-radio-button input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.dilosi-book-radio-button .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.dilosi-book-radio-button:hover input ~ .checkmark {
+    background-color: #76aae2;
+}
+
+/* When the radio button is checked, add a blue background */
+.dilosi-book-radio-button input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.dilosi-book-radio-button input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.dilosi-book-radio-button .checkmark:after {
+    top: 14px;
+    left: 13px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
 }
