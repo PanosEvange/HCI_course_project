@@ -3,15 +3,15 @@
 -- Base is  sdi1500039
 
 
-DROP TABLE Users;
-DROP TABLE Student;
-DROP TABLE Secretary;
-DROP TABLE Publisher;
-DROP TABLE University;
-DROP TABLE Department;
-DROP TABLE Books;
-DROP Table Subject;
-DROP Table SubjectBook;
+DROP TABLE IF EXISTS sdi1500039.Users;
+DROP TABLE IF EXISTS sdi1500039.Student;
+DROP TABLE IF EXISTS sdi1500039.Secretary;
+DROP TABLE IF EXISTS sdi1500039.Publisher;
+DROP TABLE IF EXISTS sdi1500039.University;
+DROP TABLE IF EXISTS sdi1500039.Department;
+DROP TABLE IF EXISTS sdi1500039.Books;
+DROP Table IF EXISTS sdi1500039.Subject;
+DROP Table IF EXISTS sdi1500039.SubjectBook;
 
 -- -----------------------------------------------------
 -- Table sdi1500039.Users
@@ -235,7 +235,7 @@ INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
                     VALUES (999, 'Εισαγωγή στην Φιλοσοφία', 'Joe Doe', '1997', 'Εκδότης Γ');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (123, 'Τεχνητή Νοημοσήνη Μία Σύγχρονη Προσέγγιση', 
+                    VALUES (123, 'Τεχνητή Νοημοσήνη Μία Σύγχρονη Προσέγγιση',
                     'Κουμπαράκης και Τάκης', '1997', 'Εκδότης Β');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
@@ -258,12 +258,12 @@ INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semest
                            'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών','2', 'Δοδός');
 
 INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
-                    VALUES ('Εισαγωγή στην Μαθηματική Ανάλυση', 'Τμήμα Μαθηματικών', 
+                    VALUES ('Εισαγωγή στην Μαθηματική Ανάλυση', 'Τμήμα Μαθηματικών',
                             'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών',
                            '1', 'Μπαρμπάτης');
 
 INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
-                    VALUES ('Μαθηματικά 1', 'Τμήμα Μαθηματικών', 
+                    VALUES ('Μαθηματικά 1', 'Τμήμα Μαθηματικών',
                             'Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης',
                            '1', 'Παπαγιάννης');
 
