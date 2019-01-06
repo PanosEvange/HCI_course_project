@@ -92,7 +92,7 @@ session_start();
                     <span class="my-svg-text">Φοιτητής</span> </h5>
                   </div>
                   <div class="button-area">
-                          <a href="./under_construction.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
+                          <a href="./dilosi_step1.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
                           <a href="./under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
                           <a href="./student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
                           <a href="./student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>

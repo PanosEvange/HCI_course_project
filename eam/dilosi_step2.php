@@ -169,7 +169,7 @@ session_start();
         </div>
 
         <div class="next-step">
-            <a class="btn" href="./dilosi_step2.php" title="dilosi_step2">Επόμενο Βήμα <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="btn" href="./dilosi_step3.php" title="dilosi_step3">Επόμενο Βήμα <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
 
         <?php include 'footer.php';?>
