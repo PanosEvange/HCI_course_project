@@ -3,63 +3,65 @@
     include 'login_db.php';
 
     if (isset($_GET['q'])) {
-        $searchTerm = $_GET['q'];
-
-        // $uni = $_POST['uni'];
-        // $dept = $_POST['dept'];
-        // $semester = $_POST['semester'];
-        // $class = $_POST['class'];
-        // $publisher = $_POST['publisher'];
-        // $author = $_POST['author'];
-        // $ISBN = $_POST['ISBN'];
-        // $year = $_POST['year'];
-
-        //Do real escaping here
-
-        // $query = "SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'";
-        // $conditions = array();
-
-        // if(! empty($uni)) {
-        //   $conditions[] = "uni='$uni'";
-        // }
-        // if(! empty($dept)) {
-        //   $conditions[] = "dept='$dept'";
-        // }
-        // if(! empty($semester)) {
-        //   $conditions[] = "semester='$semester'";
-        // }
-        // if(! empty($class)) {
-        //   $conditions[] = "class='$class'";
-        // }
-        // if(! empty($publisher)) {
-        //   $conditions[] = "Publisher='$publisher'";
-        // }
-        // if(! empty($author)) {
-        //   $conditions[] = "Author='$author'";
-        // }
-        // if(! empty($ISBN)) {
-        //   $conditions[] = "ISBN='$ISBN'";
-        // }
-        // if(! empty($year)) {
-        //   $conditions[] = "PublishYear='$year'";
-        // }
-        //
-        // if (count($conditions) > 0) {
-        //   $sql .= implode(' AND ', $conditions);
-        // }
-
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = ("SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'");
+        // $searchTermArray = explode("?", $_GET['q']);
+        // $searchTerm = $searchTermArray[0];
+
+        $searchTerm = $_GET['q'];
+
+        //Do real escaping here
+
+        $sql = "SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'";
+        $conditions = array();
+
+        // if(isset($_GET['u'])) {
+        //     $uni = $_GET['u'];
+        //     $conditions[] = "Uni='$uni'";
+        // }
+        // if(isset($_GET['d'])) {
+        //     $dept = $_GET['d'];
+        //     $conditions[] = "dept='$dept'";
+        // }
+        // if(isset($_GET['s'])) {
+        //     $semester = $_GET['s'];
+        //     $conditions[] = "semester='$semester'";
+        // }
+        // if(isset($_GET['su'])) {
+        //     $subject = $_GET['su'];
+        //     $conditions[] = "subject='$subject'";
+        // }
+
+        if(isset($_GET['p'])) {
+            $publisher = $_GET['p'];
+            $conditions[] = "Publisher='$publisher'";
+        }
+        if(isset($_GET['a'])) {
+            $author = $_GET['a'];
+            $conditions[] = "Author='$author'";
+        }
+        if(isset($_GET['i'])) {
+            $ISBN = $_GET['i'];
+            $conditions[] = "ISBN='$ISBN'";
+        }
+        if(isset($_GET['y'])) {
+            $year = $_GET['y'];
+            $conditions[] = "PublishYear='$year'";
+        }
+
+        if (count($conditions) > 0) {
+          $sql .= implode(' AND ', $conditions);
+        }
+
         $result = $conn->query($sql);
         $rows = $result->num_rows;
 
         if ($rows > 0) {
-            // If there was results for the query print them
+            // If there were results for the query print them
             echo '
                 <div class="mySearchBookResultsCount">
                 Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
