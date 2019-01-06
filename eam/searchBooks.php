@@ -23,6 +23,9 @@ session_start();
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
         <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
@@ -54,8 +57,8 @@ session_start();
                       Πληροφορίες
                     </a>
                     <div class="dropdown-menu dropdown-menu-right myNavbarDropdownInfo" aria-labelledby="navbarDropdownInfo">
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Φοιτητές</a>
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Γραμματείες</a>
+                      <a class="dropdown-item" href="./student_info.php">Πληροφορίες για Φοιτητές</a>
+                      <a class="dropdown-item" href="./secretary_info.php">Πληροφορίες για Γραμματείς</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Εκδότες</a>
                       <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
                     </div>
@@ -68,6 +71,8 @@ session_start();
             </nav>
         </div>
         <!-- Header End -->
+
+        <?php include 'userOptions.php';?>
 
         <div class="below-nav-bar">
             <div class="my-breadcrumb">

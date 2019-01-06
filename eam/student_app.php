@@ -23,12 +23,17 @@ session_start();
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
         <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
     <body>
 
         <?php include 'header.php';?>
+
+        <?php include 'userOptions.php';?>
 
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
@@ -43,7 +48,7 @@ session_start();
         </div>
 
         <?php
-            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && isset($_SESSION['userType']) && $_SESSION['userType'] == 'Student' ) {
                 // User is logged in
                 include 'student_app_content_loggedin.php';
             }

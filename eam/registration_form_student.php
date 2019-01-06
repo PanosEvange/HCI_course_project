@@ -28,6 +28,9 @@ session_start();
         <script src="./vendor/daterangepicker/daterangepicker.js"></script>
         <link href="./vendor/daterangepicker/daterangepicker.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
         <script src="myDatePickerReg.js"></script>
         <script src="main.js"></script>
         <title> Registration </title>
@@ -35,6 +38,8 @@ session_start();
     <body>
 
         <?php include 'header.php';?>
+
+        <?php include 'userOptions.php';?>
 
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
@@ -150,7 +155,7 @@ session_start();
                     </div>
                     <div class="form-group row">
 
-                      <label for="myBirthDate" class="col-5 col-form-label"><i class="fa fa-calendar" aria-hidden="true"></i>   <span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
+                      <label for="myBirthDate" class="col-5 col-form-label"><i class="fa fa-calendar" aria-hidden="true"></i>  Ημερομηνία Γέννησης:</label>
                       <div class="input-group date col-6 successRegField my-calendar" id="myBirthDate-reg">
                           <input type="text" readonly onfocus="this.blur" class="form-control" onkeydown="return false" name="date" value="">
                           <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
@@ -171,7 +176,7 @@ session_start();
                       <div class="col-6">
                         <!-- <input type="text" name="university" onfocusout="valUniv()" value=""class="form-control" id="myUniv-reg"> -->
 
-                        <select class="successRegField" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
+                        <select class="" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplay(this.value)">
                             <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
                             <?php include 'universityValues.php';?>
                         </select>
@@ -188,7 +193,7 @@ session_start();
                       <label for="myDepart" class="col-5 col-form-label"><i class="fa fa-graduation-cap" aria-hidden="true"></i>   <span class="my-req-star">*</span>Τμήμα:</label>
                       <div class="col-6">
                         <!-- <input type="text" name="department" onfocusout="valDep()" value=""class="form-control" id="myDepart-reg"> -->
-                        <select class="successRegField" name="department" id="myDepart-reg" disabled>
+                        <select class="" name="department" onchange="myDepartmentChoose()" id="myDepart-reg" disabled>
                             <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
                         </select>
                       </div>

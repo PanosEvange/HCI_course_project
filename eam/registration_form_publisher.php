@@ -23,12 +23,17 @@ session_start();
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
         <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
     <body>
 
         <?php include 'header.php';?>
+
+        <?php include 'userOptions.php';?>
 
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
@@ -142,18 +147,6 @@ session_start();
                         <div class="col-6 error-last-name-reg">
                         </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="myBirthDate" class="col-5 col-form-label"><span class="my-req-star">*</span>Ημερομηνία Γέννησης:</label>
-                      <div class="col-6">
-                        <input type="text" name="date" onfocusout="valBirthDate()" value="<?php echo $date ?>"class="form-control" id="myBirthDate-reg">
-                      </div>
-                    </div>
-                    <div class="row error-msg">
-                        <div class="col-5">
-                        </div>
-                        <div class="col-6 error-date-reg">
-                        </div>
-                    </div>
                 </div>
                 <div class="my-reg-law-info">
                     <h> Νομικά Στοιχεία </h>
@@ -231,21 +224,51 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                      <label for="myAddress" class="col-5 col-form-label">Διεύθυνση Κατοικίας:</label>
-                      <div class="col-6">
+                      <label for="myAddress" class="col-2 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Οδός:</label>
+                      <div class="col-4">
                         <input type="text" name="address" onfocusout="valAddress()" value="<?php echo $address ?>"class="form-control successRegField" id="myAddress-reg">
                       </div>
+                      <label for="myAddressNum" class="col-3 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Αριθμός:</label>
+                      <div class="col-2">
+                        <input type="text" name="addressNum" onfocusout="valAddressNumber()" value="<?php echo $addressNum ?>" class="form-control successRegField" id="myAddressNum-reg">
+                      </div>
                       <div class="col-1">
-                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
-                          data-content="Εισάγετε την διεύθηνση κατοικίας σας. Πρέπει να είανι υποχρεωτικά στη μορφή
-                          Διέυθηνση Αριθμός, Πόλη, ΤΚ">
-                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
                       </div>
                     </div>
                     <div class="row error-msg">
-                        <div class="col-5">
+                        <div class="col-2">
                         </div>
-                        <div class="col-6 error-myAddress-reg">
+                        <div class="col-4 error-myAddress-reg">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                        <div class="col-2 error-myAddressΝum-reg">
+                        </div>
+                        <div class="col-1">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="myDimos" class="col-2 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Δήμος:</label>
+                      <div class="col-4">
+                        <input type="text" name="addressDimos" onfocusout="valMunicipality()" value="<?php echo $municipality ?>" class="form-control successRegField" id="myAddressDimos-reg">
+                      </div>
+                      <label for="myAddressTK" class="col-3 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i> Ταχ. Κώδικας:</label>
+                      <div class="col-2">
+                        <input type="text" name="addressTK" onfocusout="valTK()" value="<?php echo $TK ?>" class="form-control successRegField" id="myAddressTK-reg">
+                      </div>
+                      <div class="col-1">
+                      </div>
+                    </div>
+                    <div class="row error-msg">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-4 error-myAddressDimos-reg">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                        <div class="col-2 error-myAddressTK-reg">
+                        </div>
+                        <div class="col-1">
                         </div>
                     </div>
                 </div>

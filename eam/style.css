@@ -7,9 +7,8 @@ body{
 }
 
 .myNavbarDropdownInfo .dropdown-item:hover{
-    /*box-shadow: 5px 5px #545b62;*/
-    background-color: #17a2b8 !important;
-    border-color:#0d6471 !important;
+    background-color: #969e9b !important;
+    border-color:#343940 !important;
 }
 
 .user-info {
@@ -203,8 +202,6 @@ span.my-svg-text {
 }
 
 .below-nav-bar {
-    /*margin-left: auto;
-    margin-right: auto;*/
     min-width: 1300px;
     margin-top: 60px;
     display: grid;
@@ -489,17 +486,6 @@ a.section-button:hover{
 
 .library-area .section-button.btn{
     background-color: #d6c82c;
-}
-
-.my-announcement{
-    width: 1232px;
-    margin-top:20px;
-    margin-bottom:70px;
-    background-color: #ddd;
-    padding: 10px;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-    height: 400px;
 }
 
 .footer {
@@ -950,8 +936,8 @@ span.mySearchBookCounter {
     box-shadow: 4px 4px #9fa1a2;
     background-color: #343940 !important;
     border-color: #343940 !important;
-    width: 240px;
-    height: 75px;
+    width: 200px;
+    height: 60px;
     margin-top: 20px;
 }
 
@@ -960,7 +946,7 @@ span.mySearchBookCounter {
 }
 
 .myBooksSearchFiltersButton a{
-    font-size: 18px !important;
+    font-size: 16px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1004,11 +990,11 @@ span.mySearchBookCounter {
 }
 
 .myBooksSearchFiltersInput .form-group.row {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .myBooksSearchFiltersInput .col-form-label{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -1022,8 +1008,8 @@ span.mySearchBookCounter {
     color: #212529;
     background-color: #f8f9fa;
     box-shadow: 5px 5px #888888;
-    width: 240px;
-    height: 75px;
+    width: 200px;
+    height: 65px;
     margin-top: 20px;
 }
 
@@ -1067,7 +1053,7 @@ a#myFilterApplyButton:hover{
 .back-to-reg-options {
     width: 400px;
     position: relative;
-    left: 279px;
+    left: 345px;
 }
 
 .back-to-reg-options .btn{
@@ -1372,4 +1358,578 @@ a#myFilterApplyButton:hover{
 
 .title-of-table {
     margin-top: 40px;
+}
+
+.user-options .card a {
+    color: black;
+}
+
+.user-options .card {
+    background: none;
+    border: none;
+}
+
+.user-options .card-header {
+    width: 200px;
+    margin-bottom: -45px;
+    border-radius: 0px 0px 50px 30px;
+}
+
+.user-options .card-body {
+    height: 90px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.user-options{
+    margin-top: 50px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-options-buttons .btn {
+    align-self: flex-end;
+    border: 0;
+    width: 240px;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-options-buttons .btn.my-ml{
+    margin-left: 20px;
+}
+
+.user-options-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#myEmail-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myPassword-edit-content-value{
+    background: none;
+    border: none;
+}
+
+.myPassword-edit .fa{
+    color: black;
+    position: relative;
+    top: 7px;
+    left: 3px;
+    font-size: 20px;
+}
+
+#myPhone-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myAddress-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myAddressNum-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myDimos-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#myAddressTK-edit-content-value{
+    background: none;
+    border: none;
+}
+
+#user-options-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.student-user-options.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px red;
+    background: #f89b9c;
+
+}
+
+.student-user-options.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px red;
+    background: #f89b9c;
+}
+
+.student-user-options .user-options-buttons .btn {
+    color: #212529;
+    background-color: #ff5b5b;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.student-user-options .user-options-buttons .btn:hover{
+    background-color: #bf0808;
+    border-color:#ea7a91;
+    border:1px solid #ea7a91;
+}
+
+.secretary-user-options.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px blue;
+    background: #b6dcef;
+
+}
+
+.secretary-user-options.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px blue;
+    background: #b6dcef;
+}
+
+.secretary-user-options .user-options-buttons .btn {
+    color: #212529;
+    background-color: #86c7e8;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.secretary-user-options .user-options-buttons .btn:hover{
+    background-color: #7babc3;
+    border-color:#76afcc !important;
+    border:1px solid #76afcc !important;
+}
+
+.publisher-user-options.user-options .card-header {
+    box-shadow: 0px 1px 20px 1px green;
+    background: #58e879;
+}
+
+.publisher-user-options.user-options .card-body {
+    box-shadow: 1px 1px 15px 1px green;
+    background: #58e879;
+}
+
+.publisher-user-options .user-options-buttons .btn {
+    color: #212529;
+    background-color: #38c73b;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.publisher-user-options .user-options-buttons .btn:hover{
+    background-color: #49b361;
+    border-color:#368447 !important;
+    border:1px solid #368447 !important;
+}
+
+.more-button-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.more-button-pagination .btn {
+    border: 0;
+    color: #212529;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-button-pagination .btn .btn-content{
+    font-size: 22px !important;
+    color: #a8acad !important;
+}
+
+.more-button-pagination .btn .btn-content:hover{
+    color: #fffff3 !important;
+}
+
+.more-button-pagination .btn:hover .btn-content{
+    color: #fffff3 !important;
+}
+
+.more-button-pagination .btn:focus{
+    border-color: #fff !important;
+    box-shadow: none !important;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.pagination-hidden-content{
+    display: none;
+}
+
+.main-content-2{
+    flex-direction: row;
+    justify-content: center;
+    min-width: 1200px;
+    margin-bottom: 170px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 590px);
+    grid-column-gap: 50px;
+}
+
+.my-announcement{
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 300px;
+}
+
+/* Home Page search */
+.home-page-search {
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    flex-direction: column;
+}
+
+.home-page-search form {
+    width: 100%;
+    max-width: 790px;
+    margin-bottom: 0;
+}
+
+.home-page-search form .inner-form {
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.home-page-search form .inner-form .input-field {
+    height: 68px;
+}
+
+.home-page-search form .inner-form .input-field input {
+    height: 100%;
+    background: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.home-page-search form .inner-form .input-field input.placeholder {
+    color: #888;
+    font-size: 20px;
+}
+
+.home-page-search form .inner-form .input-field input:-moz-placeholder {
+    color: #888;
+    font-size: 20px;
+}
+
+.home-page-search form .inner-form .input-field input::-webkit-input-placeholder {
+    color: #888;
+    font-size: 20px;
+}
+
+.home-page-search form .inner-form .input-field input:hover, .home-page-search form .inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+    border-color: #fff;
+}
+
+.home-page-search form .inner-form .input-field.first-wrap {
+    width: 150px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.home-page-search form .inner-form .input-field.second-wrap {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.home-page-search form .inner-form .input-field.third-wrap {
+    width: 74px;
+}
+
+.home-page-search form .inner-form .input-field.third-wrap .btn-search {
+    height: 100%;
+    width: 100%;
+    color: #212529;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+    width: 75px;
+    cursor: pointer;
+}
+
+.home-page-search form .inner-form .input-field.third-wrap .btn-search svg {
+    color: #a8acad ;
+    width: 30px;
+}
+
+.home-page-search form .inner-form .input-field.third-wrap .btn-search:hover svg {
+    color: #fffff3 ;
+}
+
+.home-page-search form .inner-form .input-field.third-wrap .btn-search:hover {
+    background: #50c058;
+}
+
+.home-page-search form .inner-form .input-field.third-wrap .btn-search:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.home-page-search .inner-form .select2-selection {
+  height: 68px !important;
+}
+
+.home-page-search .inner-form .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-page-search .inner-form .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #212529;
+    line-height: 28px;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.home-page-search .inner-form .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: auto;
+}
+
+.home-page-search .inner-form .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-width: 10px 7px 10px 7px;
+    left: 18%;
+    top: 45%;
+    width: 10px;
+}
+
+.filter-home-page {
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-top: 30px;
+}
+
+.filter-home-page .form-group.row {
+    margin-bottom: 20px;
+}
+
+.filter-home-page #myFilterApplyButton{
+    border: 0;
+    color: #212529;
+    background-color: #f8f9fa;
+    box-shadow: 5px 5px #888888;
+    width: 180px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.filter-home-page .col-form-label{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.filter-home-page .form-control{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.student-info a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+
+.student-info #accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+.student-info #accordion .panel-heading{
+    padding: 0;
+}
+
+.student-info #accordion .panel-title a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #fff;
+    background: #343940;
+    border: 2px solid #9c9ea2;
+    padding: 15px 20px 15px 47px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+
+.student-info #accordion .panel-title:hover a.collapsed{
+    background: #343940;
+    color: #fff;
+}
+
+.student-info #accordion .panel-title a.collapsed{
+    background: #fff;
+    border-color: #ddd;
+    color: #888;
+}
+
+.student-info #accordion .panel-title a:before{
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.student-info #accordion .panel-title a.collapsed:before{
+    content: "\f107";
+}
+
+.student-info #accordion .panel-body{
+    font-size: 16px;
+    color: #000;
+    line-height: 25px;
+    border: 2px solid #9c9ea2;
+    border-top: none;
+    padding: 14px 20px;
+    background: #ffffff;
+}
+
+.student-info {
+    margin-top: 20px;
+    margin-bottom: 600px;
+}
+
+.secretary-info a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+
+.secretary-info #accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+.secretary-info #accordion .panel-heading{
+    padding: 0;
+}
+
+.secretary-info #accordion .panel-title a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #fff;
+    background: #343940;
+    border: 2px solid #9c9ea2;
+    padding: 15px 20px 15px 47px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+
+.secretary-info #accordion .panel-title:hover a.collapsed{
+    background: #343940;
+    color: #fff;
+}
+
+.secretary-info #accordion .panel-title a.collapsed{
+    background: #fff;
+    border-color: #ddd;
+    color: #888;
+}
+
+.secretary-info #accordion .panel-title a:before{
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.secretary-info #accordion .panel-title a.collapsed:before{
+    content: "\f107";
+}
+
+.secretary-info #accordion .panel-body{
+    font-size: 16px;
+    color: #000;
+    line-height: 25px;
+    border: 2px solid #9c9ea2;
+    border-top: none;
+    padding: 14px 20px;
+    background: #ffffff;
+}
+
+.secretary-info {
+    margin-top: 20px;
+    margin-bottom: 600px;
+}
+
+#home-page-search-select-arrow {
+    font-size: 25px;
+    position: relative;
+    right: 7px;
+}
+
+#home-page-search-select-arrow:hover{
+    color:#6c757d;
+}
+
+.home-page-search .inner-form .select2-container--default .select2-selection--single:hover {
+    background-color: #c6c6c6;
 }

@@ -21,8 +21,10 @@ require_once 'login_db.php'; //db info
     $lastName = $row["LastName"];
     $date = $row["DateOfBirth"];
     $phone = $row["Phone"];
-    // $address = $row["Address"];
-    $address = "test";
+    $address = $row["Address"];
+    $addressNum = $row["AddressNum"];
+    $municipality = $row["Municipality"];
+    $postalCode = $row["TK"];
 
     $sql = "SELECT * FROM Student WHERE idStudent = '$id' ";
     $result = $conn->query($sql);

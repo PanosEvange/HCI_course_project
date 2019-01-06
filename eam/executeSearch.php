@@ -1,88 +1,48 @@
 <?php
 
-    include 'login_db.php';
+    include 'searchFuncs.php';
 
-    if (isset($_GET['q'])) {
+    function printResults($rows, $result, $searchTerm='') {
+        $pageLimit = 3;
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // $searchTermArray = explode("?", $_GET['q']);
-        // $searchTerm = $searchTermArray[0];
-
-        $searchTerm = $_GET['q'];
-
-        //Do real escaping here
-
-        $sql = "SELECT * FROM Books WHERE Name LIKE '%$searchTerm%'";
-        $conditions = array();
-
-        // if(isset($_GET['u'])) {
-        //     $uni = $_GET['u'];
-        //     $conditions[] = "Uni='$uni'";
-        // }
-        // if(isset($_GET['d'])) {
-        //     $dept = $_GET['d'];
-        //     $conditions[] = "dept='$dept'";
-        // }
-        // if(isset($_GET['s'])) {
-        //     $semester = $_GET['s'];
-        //     $conditions[] = "semester='$semester'";
-        // }
-        // if(isset($_GET['su'])) {
-        //     $subject = $_GET['su'];
-        //     $conditions[] = "subject='$subject'";
-        // }
-
-        if(isset($_GET['p'])) {
-            $publisher = $_GET['p'];
-            $conditions[] = "Publisher='$publisher'";
-        }
-        if(isset($_GET['a'])) {
-            $author = $_GET['a'];
-            $conditions[] = "Author='$author'";
-        }
-        if(isset($_GET['i'])) {
-            $ISBN = $_GET['i'];
-            $conditions[] = "ISBN='$ISBN'";
-        }
-        if(isset($_GET['y'])) {
-            $year = $_GET['y'];
-            $conditions[] = "PublishYear='$year'";
-        }
-
-        if (count($conditions) > 0) {
-          $sql .= implode(' AND ', $conditions);
-        }
-
-        $result = $conn->query($sql);
-        $rows = $result->num_rows;
+        $totalPages = 5; //to be calculated
 
         if ($rows > 0) {
-            // If there were results for the query print them
-            echo '
-                <div class="mySearchBookResultsCount">
-                Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
-                </div>
-            ';
+            if ($searchTerm != '') {
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα για \''.$searchTerm.'\'.
+                    </div>
+                    <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
+                    <div id="paginationPageLimit" class="pagination-hidden-content">'.$pageLimit.'</div>
+                    <div id="paginationCurrentPage" class="pagination-hidden-content">2</div>
+                ';
+            } else {
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Βρέθηκαν <span class="mySearchBookCounter">'.$rows.'</span> αποτελέσματα
+                    </div>
+                    <div id="paginationTotalPages" class="pagination-hidden-content">'.$totalPages.'</div>
+                    <div id="paginationPageLimit" class="pagination-hidden-content">'.$pageLimit.'</div>
+                    <div id="paginationCurrentPage" class="pagination-hidden-content">2</div>
+                ';
+            }
+
             while ($rows != 0) {
-                // We will only have 10 books in each page
-                if ($rows > 10) {
-                    $page_res = 10;
-                    $rows = $rows - 10;
+                if ($rows > $pageLimit) {
+                    $page_res = $pageLimit;
+                    $rows = $rows - $pageLimit;
                 } else {
                     $page_res = $rows;
                     $rows = 0;
                 }
+
+                echo '
+                    <div id="overlay" class="loading-overlay"><div id="text" class="overlay-content">Loading.....</div></div>
+                    <div id="searchResults-pagination-container-id" class="searchResults-pagination-container">
+                ';
                 for ($i=0; $i < $page_res; $i++) {
                     $row = $result->fetch_assoc();
-                    // if (isset($_GET["myIsbn-filter"])) {
-                    //     if ($row["ISBN"] != $_GET["myIsbn-filter"]) {
-                    //         continue;
-                    //     }
-                    // }
                     echo '
                             <div class="mySearchBookOneResult">
                                 <div class="book-image">
@@ -104,9 +64,19 @@
                                 <div class="book-page">
                                     <a href="./under_construction.php"> Σελίδα του Βιβλίου <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
                                 </div>
-                            </div>
-                        ';
+                            </div>';
                 }
+
+                // End of searchResults-pagination-container
+                echo '</div>';
+
+                if ($rows > $pageLimit) { /* Put pagination button */
+                    echo '
+                        <div id="more-button-pagination-div-id" class="more-button-pagination">
+                            <span class="btn" tabindex="1" id="more-button-pagination-id"> <span class="btn-content" >Περισσότερα</span> </span>
+                        </div>';
+                }
+
                 break;
             }
         }
@@ -114,21 +84,32 @@
             echo '
                 <div class="mySearchBookResultsCount">
                 Δρν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
-                </div>
-            ';
+                </div>';
         }
 
         echo '<div class="endOfResultsPlaceHolder">
-                </div>
-            ';
+                </div>';
+    }
 
-        $conn->close();
+// main like
+    include 'login_db.php';
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    if (!$conn->set_charset("utf8")) {
+        // printf("Error loading character set utf8: %s<br>", $conn->error);
+        exit();
+    } else {
+        // printf("Current character set: %s<br>", $conn->character_set_name());
+    }
 
+    if (isset($_REQUEST['q'])) {
+       executeSearchWithArg($conn);
     }
     else {
-        //do nothing
-        echo '
-            <div class="placeholder"></div>
-        ';
+        executeSearchWithoutArg($conn);
     }
+
+    $conn->close();
 ?>

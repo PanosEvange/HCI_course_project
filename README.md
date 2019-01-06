@@ -2,20 +2,25 @@
 
 ## TO DO list
 
-### General
-* Colors all pages
-* NavBar HomePage link should be shown as active only at home page -- maybe to
-do it dynamically using php
+### Next Steps
+* Search books filters should be with dropdown list
+* Validation errors in greek
+* Pagination
+* Validation when editing profile
+* Profile and Edit of Secretary and Publisher profile as it is at Student Profile
+* (**Minor**) Check if address functionality is OK at Secretary registration form
+* General search
+* Δήλωση and History
+* Display all books and filters
+* Search at home page for Books, Σημεία Διανομής, εκδότες etc
+* (**Maybe**) Display all Σημεία Διανομής, Εκδότες etc
+
 
 ### Registration_form
-* Datepicker
 * Danger triangle with '!' at errors
 * Popup of successful registration
-* Dropdown/Suggestion for department/university fields
 
 ### Home Page
-* Icons for sections (secretary,library etc)
-* colors
 * Announcements
 
 ### DataBase and PHP
@@ -25,33 +30,3 @@ do it dynamically using php
 
 ### Login/logout
 * Where to redirect? At home page always?
-* Popup of successful logout
-
-### General comments made by Stathis
-1. ~~Αρχική σελίδα γενικά είναι οκ για αυτή τη φάση. Προφανώς θέλει χρώματα κτλ και ίσως και πιο μεγάλες ακόμα γραμματοσειρές στα κουμπιά.~~
-
-2. ~~Σελίδα επιλογής εγγραφής πρέπει τα γράμματα να είναι πιο μεγάλα σίγουρα, συν τα προφανή δλδ χρώματα και σωστά εικονίδια. Όταν πας από επιλογή εγγραφής σε κάποια συγκεκριμένη το breadcrumb πρέπει να είναι home>εγγραφή>γραμματεια ή κάτι παρόμοιο. Πέραν αυτού ίσως πρέπει να δίνεται και άλλος πιο ξεκάθαρος τρόπος να πάει πίσω στην επιλογή εγγραφής. Κάποιο κουμπί πάνω αριστερά ή κάτι τέτοιο.~~
-
-3. ~~Γενικά για τις φόρμες, είτε θα έχουν όλα τα πεδία από ένα εικονιδιο είτε κανένα. Τα να έχουν μερικά δεν είναι ωραίο.~~
-
-4. ~~Στην επιλογή τμήματος εφόσον έχει επιλεχθεί ίδρυμα (καλύτερα ίδρυμα πάρα σχολή) δε χρειάζεται το κάθε τμήμα να ξεκινάει με το όνομα του ιδρύματος. Επίσης καλύτερα να είναι ελληνικά εκεί.~~
-
-5. ~~Date picker είναι οκ. Δε ξέρω αν μου αρέσει το ότι το μαξ είναι το 2000 γτ κάποιοι τρελοί μπαίνουν και πιο μικροι σε σχολές αλλά λεπτομέρεια νομίζω, πολύ λεπτομέρεια. Το μιν θα το έβαζα πιο παλιά. Πάλι υπάρχουν άνθρωποι μεγάλης ηλικίας που φοιτούν σε σχολές. Αυτό δεν είναι τόσο ασήμαντο θα έλεγα. Θα πρότεινα να μπει 1930 ή και νωρίτερα. Επίσης ιδανικά το default να μην είναι 1951, γίνεται αυτό να αλλάξει;~~
-
-6. ~~Όταν δε μπορείς να πατήσεις το ολοκλήρωση εγγραφής γτ δεν έχεις βάλει όλα τα στοιχεία καλύτερα να έχει άλλο χρώμα, γκρι πχ~~
-
-* ~~Δε κάνει search με enter~~
-
-* ~~To κουμπί αναζήτησης θέλει πιο στρογγυλές γωνίες,~~  _?? να είναι στο ίδιο μέγεθος με το πεδίο αναζήτησης. ??_
-
-* ~~Το πεδίο αναζήτησης να έχεις πιο στρογγυλές γωνίες και να ανάβει γαλάζιο γύρω γύρω όταν πάει να γράψει ο χρήστης~~
-
-* ~~Δε ξέρω αν είναι σκόπιμο ή ξεχασμένο αλλά λέει 10 αποτελέσματα ενώ εμφανίζει 5~~ και δεν έχει κουμπι "περισσότερα"
-
-* ~~Επίσης το κουμπί αναζήτησης να φωτίζεται όταν πάει το mouse πάνω~~
-
-* ~~Μπορούμε στη under construction να έχουμε λινκ στην σελίδα από την οποία προήλθε και όχι μόνο στην αρχική;~~
-
-### General MUST
-* At registration form make the submit button available only when user selects university and department.
-* And only when user selects birth date.

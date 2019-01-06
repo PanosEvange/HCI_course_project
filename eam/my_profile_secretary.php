@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,6 +20,9 @@ session_start();
         <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
         <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
+        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
@@ -30,11 +30,14 @@ session_start();
 
         <?php include 'header.php';?>
 
+        <?php include 'userOptions.php';?>
+
         <div class="below-nav-bar">
             <div class="my-breadcrumb">
                 <ul class="breadcrumb">
                   <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li>Το προφίλ μου - Γραμματεία</li>
+                  <li><a href="./secretary_app.php">Εφαρμογή Γραμματείας</a></li>
+                  <li>Το προφίλ μου</li>
                 </ul>
             </div>
 
