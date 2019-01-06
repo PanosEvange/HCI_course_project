@@ -2083,7 +2083,7 @@ a#myFilterApplyButton:hover{
 }
 
 /* Create a custom checkbox */
-.checkmark {
+.label-my-checkbox .checkmark {
     position: absolute;
     top: 5px;
     left: 0px;
@@ -2103,7 +2103,7 @@ a#myFilterApplyButton:hover{
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+.label-my-checkbox .checkmark:after {
   content: "";
   position: absolute;
   display: none;
@@ -2128,7 +2128,7 @@ a#myFilterApplyButton:hover{
 }
 
 .next-step .btn{
-    width: 200px;
+    width: 220px;
     height: 70px;
     margin-bottom: 200px;
     float: right;
@@ -2153,4 +2153,145 @@ a#myFilterApplyButton:hover{
 
 .next-step a.btn:hover{
     color: #fffff3;
+}
+
+.previous-step .btn{
+    width: 220px;
+    height: 70px;
+    margin-bottom: 200px;
+    float: left;
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous-step a.btn{
+    color: #a8acad;
+    font-size: 21px;
+}
+
+.previous-step .fa-angle-left{
+    font-size: 30px;
+    padding-right: 7px;
+}
+
+.previous-step a.btn:hover{
+    color: #fffff3;
+}
+
+.dilosi-step2-select-book {
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.dilosi-step2-select-book .title{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.books-list-item{
+    width: 600px;
+    margin-top: 20px;
+    background: #dddddd;
+    grid-template-columns:1fr 400px 1fr;
+    display: grid;
+    grid-template-areas:
+        "dilosi-book-radio-button dilosi-book-title dilosi-book-title"
+        "dilosi-book-radio-button dilosi-book-info dilosi-book-comments";
+    padding: 30px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+    grid-row-gap: 20px;
+}
+
+.dilosi-book-title{
+    grid-area: dilosi-book-title;
+}
+
+.dilosi-book-comments{
+    grid-area: dilosi-book-comments;
+    justify-self: right;
+}
+
+/* The container */
+.dilosi-book-radio-button {
+    grid-area: dilosi-book-radio-button;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 23px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    justify-self: left;
+    align-self: center;
+}
+
+/* Hide the browser's default radio button */
+.dilosi-book-radio-button input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.dilosi-book-radio-button .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.dilosi-book-radio-button:hover input ~ .checkmark {
+    background-color: #76aae2;
+}
+
+/* When the radio button is checked, add a blue background */
+.dilosi-book-radio-button input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.dilosi-book-radio-button input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.dilosi-book-radio-button .checkmark:after {
+    top: 14px;
+    left: 13px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
 }
