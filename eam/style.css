@@ -1637,7 +1637,7 @@ a#myFilterApplyButton:hover{
     -ms-flex-align: center;
     align-items: center;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .home-page-search form .inner-form .input-field {
@@ -1698,11 +1698,13 @@ a#myFilterApplyButton:hover{
     border-color: #343940 !important;
     width: 75px;
     cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .home-page-search form .inner-form .input-field.third-wrap .btn-search svg {
     color: #a8acad ;
     width: 30px;
+    margin-top: 5px;
 }
 
 .home-page-search form .inner-form .input-field.third-wrap .btn-search:hover svg {
@@ -1724,7 +1726,7 @@ a#myFilterApplyButton:hover{
 
 .home-page-search .inner-form .select2-container--default .select2-selection--single {
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 10px 0px 0px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
