@@ -2128,7 +2128,7 @@ a#myFilterApplyButton:hover{
 }
 
 .next-step .btn{
-    width: 220px;
+    width: 260px;
     height: 70px;
     margin-bottom: 200px;
     float: right;
@@ -2156,7 +2156,7 @@ a#myFilterApplyButton:hover{
 }
 
 .previous-step .btn{
-    width: 220px;
+    width: 260px;
     height: 70px;
     margin-bottom: 200px;
     float: left;
@@ -2294,4 +2294,133 @@ a#myFilterApplyButton:hover{
     height: 14px;
     border-radius: 50%;
     background: white;
+}
+
+.dilosi-step3-select-delivery {
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.dilosi-step3-select-delivery .title{
+    font-size: 25px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.books-list-final-info{
+    width: 800px;
+    margin-top: 20px;
+    background: #dddddd;
+    grid-template-columns: 1fr 770px 1fr;
+    display: grid;
+    grid-template-areas:
+        ". books-list-final-title ."
+        ". books-list-final-middle ."
+        ". books-list-final-hours .";
+    padding: 30px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+    grid-row-gap: 10px;
+}
+
+.books-list-final-middle{
+    display: grid;
+    grid-area: books-list-final-middle;
+    grid-template-columns: 1fr 415px;
+}
+
+.books-list-final-title{
+    grid-area: books-list-final-title;
+    width: 700px;
+}
+
+.books-list-final-comments{
+
+}
+
+.books-list-final-delivery{
+    display: flex;
+    flex-direction: row;
+}
+
+.books-list-final-hours{
+    grid-area: books-list-final-hours;
+}
+
+.my-select-title-books-list-final-delivery {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.my-select-books-list-final-delivery {
+    width: 240px;
+}
+
+.my-select-books-list-final-delivery .select2-container--default .select2-selection--single .select2-selection__rendered {
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.my-select-books-list-final-delivery .select2-selection {
+    height: 60px !important;
+}
+
+.my-select-books-list-final-delivery .select2-container--default .select2-selection--single {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.my-select-books-list-final-delivery .fa {
+    font-size: 25px;
+    position: relative;
+    right: 7px;
+    top: 15px;
+}
+
+.my-select-books-list-final-delivery .fa:hover{
+    color:#6c757d;
+}
+
+.my-select-books-list-final-delivery .select2-container--default .select2-selection--single:hover {
+    background-color: #c6c6c6;
+}
+
+.dilosi-step3-notifications {
+    background-color: #ddd;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.dilosi-step3-notifications .availability{
+    padding-left: 100px;
+}
+
+.dilosi-step3-notifications .poria-dilosis {
+    padding-left: 100px;
+}
+
+.dilosi-step3-notifications input[type=checkbox] {
+    margin-top: 10px;
 }

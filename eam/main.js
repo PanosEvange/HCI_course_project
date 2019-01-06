@@ -588,6 +588,12 @@ $(document).ready(function() {
     $('#home-page-search-select5').select2({ width: '100%' });
 
     $('#home-page-search-select6').select2({ width: '100%' });
+
+    $('#books-list-final-delivery-select1').select2({ width: '100%' });
+
+    $('#books-list-final-delivery-select2').select2({ width: '100%' });
+
+    $('#books-list-final-delivery-select3').select2({ width: '100%' });
 });
 
 function myDepartmentOptionsDisplay(str) {
@@ -1284,36 +1290,104 @@ $(document).ready(function(){
         $('.home-page-search .inner-form .select2-selection__arrow').append('<i id="home-page-search-select-arrow" class="fa fa-angle-down"></i>');
     }
 
-
-
     $(document).on("click", ".home-page-search .inner-form .select2-container--focus", function () {
         var element = document.getElementById("home-page-search-select-arrow");
         element.classList.add("fa-angle-down");
         element.classList.remove("fa-angle-up");
-
-        // alert("HA");
     });
 
     $(document).on("click", ".home-page-search .inner-form .select2-container--open", function () {
         var element = document.getElementById("home-page-search-select-arrow");
         element.classList.remove("fa-angle-down");
         element.classList.add("fa-angle-up");
-        // alert("HO");
     });
-
-    $('#home-page-search-select').on('select2-open', function() {
-        $('.select2-results .info').on('mouseup', function(e) {
-            alert("LOLOLO");
-        });
-    });
-
-    // $(document).on("click", ".home-page-search .inner-form .select2-results__option", function () {
-    //     var element = document.getElementById("home-page-search-select-arrow");
-    //     element.classList.remove("fa-angle-down");
-    //     element.classList.add("fa-angle-up");
-    //     // alert("HO");
-    // });
-
 
 
 });
+
+$(document).ready(function(){
+
+    if ($(".my-select-books-list-final-delivery-1").length){
+        $('.my-select-books-list-final-delivery-1 b[role="presentation"]').hide();
+        $('.my-select-books-list-final-delivery-1 .select2-selection__arrow').append('<i id="delivery-select-arrow1" class="fa fa-angle-down"></i>');
+    }
+
+    $(document).on("click", ".my-select-books-list-final-delivery-1 .select2-container--focus", function () {
+        var element = document.getElementById("delivery-select-arrow1");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+    });
+
+    $(document).on("click", ".my-select-books-list-final-delivery-1 .select2-container--open", function () {
+        var element = document.getElementById("delivery-select-arrow1");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+    });
+
+});
+
+function deliverySelect1() {
+
+    var element = document.getElementById("delivery-select-arrow1");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
+
+}
+
+$(document).ready(function(){
+
+    if ($(".my-select-books-list-final-delivery-2").length){
+        $('.my-select-books-list-final-delivery-2 b[role="presentation"]').hide();
+        $('.my-select-books-list-final-delivery-2 .select2-selection__arrow').append('<i id="delivery-select-arrow2" class="fa fa-angle-down"></i>');
+    }
+
+    $(document).on("click", ".my-select-books-list-final-delivery-2 .select2-container--focus", function () {
+        var element = document.getElementById("delivery-select-arrow2");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+    });
+
+    $(document).on("click", ".my-select-books-list-final-delivery-2 .select2-container--open", function () {
+        var element = document.getElementById("delivery-select-arrow2");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+    });
+
+});
+
+function deliverySelect2() {
+
+    var element = document.getElementById("delivery-select-arrow2");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
+
+}
+
+$(document).ready(function(){
+
+    if ($(".my-select-books-list-final-delivery-3").length){
+        $('.my-select-books-list-final-delivery-3 b[role="presentation"]').hide();
+        $('.my-select-books-list-final-delivery-3 .select2-selection__arrow').append('<i id="delivery-select-arrow3" class="fa fa-angle-down"></i>');
+    }
+
+    $(document).on("click", ".my-select-books-list-final-delivery-3 .select2-container--focus", function () {
+        var element = document.getElementById("delivery-select-arrow3");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+    });
+
+    $(document).on("click", ".my-select-books-list-final-delivery-3 .select2-container--open", function () {
+        var element = document.getElementById("delivery-select-arrow3");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+    });
+
+});
+
+function deliverySelect3() {
+
+    var element = document.getElementById("delivery-select-arrow3");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
+
+}
