@@ -1,6 +1,6 @@
 <div class="secretary-app-content">
     <div class="edit-books secretary-app-button">
-        <a href="./under_construction.php" class="btn"><span class="button-text">Επεξεργασία Συγγραμμάτων<br/>Για Μαθήματα</span></a>
+        <a href="./secretary_edit_books.php" class="btn"><span class="button-text">Επεξεργασία Συγγραμμάτων<br/>Για Μαθήματα</span></a>
     </div>
     <div class="edit-program-studies secretary-app-button">
         <a href="./under_construction.php" class="btn"><span class="button-text">Επεξεργασία Προγράμματος<br/>Σπουδών</span></a>

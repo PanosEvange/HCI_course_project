@@ -594,6 +594,10 @@ $(document).ready(function() {
     $('#books-list-final-delivery-select2').select2({ width: '100%' });
 
     $('#books-list-final-delivery-select3').select2({ width: '100%' });
+
+    $('#search-subject-to-edit-select1').select2({ width: '100%' });
+
+    $('#search-subject-to-edit-select2').select2({ width: '100%' });
 });
 
 function myDepartmentOptionsDisplay(str) {
@@ -1395,3 +1399,31 @@ function deliverySelect3() {
     element.classList.remove("fa-angle-up");
 
 }
+
+$(document).on("click", "#search-subject-secretary", function () {
+    document.getElementById("to-append-results").innerHTML =
+     `
+     <h3 class="results-title"> Αποτελέσματα Αναζήτησης </h1>
+
+     <div class="subject-info-to-edit">
+         <div class="subject-info-to-edit-title">
+             <b>Μάθημα:</b>   Διακριτά Μαθηματικά 1
+         </div>
+         <div class="subject-info-to-edit-professor">
+             <b>Καθηγητής:</b> Ιάκωβος Χριστόπουλος
+         </div>
+         <div class="subject-info-to-edit-line">
+             <div class="subject-info-to-edit-semister">
+                 <b>Εξάμηνο:</b> 3ο
+             </div>
+             <div class="subject-info-to-edit-button">
+                 <a href="diakrita1.php">Επεξεργασία Μαθήματος</a>
+             </div>
+         </div>
+     </div>
+
+     <div class="placeholder-secretary-edit-books">
+
+     </div>
+    `;
+});

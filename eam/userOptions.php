@@ -30,7 +30,7 @@
                   <div class="card">
                       <div id="collapseOne" class="collapse" data-parent="#accordion">
                         <div class="card-body user-options-buttons">
-                            <a href="./under_construction.php" class="btn" >Διαχείριση Συγγραμμάτων</a>
+                            <a href="./secretary_edit_books.php" class="btn" >Διαχείριση Συγγραμμάτων</a>
                             <a href="./under_construction.php" class="btn my-ml" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
                             <a href="./secretary_app.php" class="btn my-ml" >Εφαρμογή Γραμματείας</a>
                             <a href="./secretary_info.php" class="btn my-ml" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>

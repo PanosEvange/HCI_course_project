@@ -217,6 +217,7 @@ span.my-svg-text {
     grid-area: my-breadcrumb;
     margin-top:10px;
 }
+
 .my-breadcrumb .breadcrumb{
     background-color: #fff !important;
     background: none !important;
@@ -2424,4 +2425,125 @@ a#myFilterApplyButton:hover{
 
 .dilosi-step3-notifications input[type=checkbox] {
     margin-top: 10px;
+}
+
+.search-subject-to-edit{
+    background-color: #ddd;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 10px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-subject-to-edit .btn{
+    box-shadow: 4px 4px #9fa1a2;
+    background-color: #343940 !important;
+    border-color: #343940 !important;
+}
+
+.search-subject-to-edit a.btn{
+    color: #a8acad;
+}
+
+.search-subject-to-edit a.btn:hover{
+    color: #fffff3 !important;
+}
+
+.search-subject-to-edit input{
+    border-radius: 5px;
+}
+
+.secretary-app.my-breadcrumb{
+    margin-left: 300px;
+    width: 600px;
+}
+
+.search-button-subject {
+    padding-left: 120px;
+}
+
+.search-subject {
+    padding-left: 120px;
+}
+
+.subject-info-to-edit{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 800px;
+    margin-top: 40px;
+    background: #dddddd;
+    padding: 30px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+    display: flex;
+    flex-direction: column;
+}
+
+.subject-info-to-edit-title{
+    padding: 10px;
+    font-size: 18px;
+}
+
+.subject-info-to-edit-professor{
+    padding: 10px;
+    font-size: 18px;
+}
+
+.subject-info-to-edit-line{
+    padding: 10px;
+    font-size: 18px;
+}
+
+.subject-info-to-edit-semister{
+
+}
+
+.subject-info-to-edit-button{
+    float: right;
+}
+
+.search-subject-label-input {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.subject-info-to-edit b{
+    padding-right: 10px;
+}
+
+.results-title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.placeholder-secretary-edit-books{
+    margin-bottom: 500px;
+}
+
+.search-semister {
+    display: flex;
+}
+
+.search-semister .select2-container--default .select2-selection--single .select2-selection__rendered{
+    width: 100px;
+    text-align: center;
+}
+
+.search-subject {
+    display: flex;
+}
+
+.search-subject .select2-container--default .select2-selection--single .select2-selection__rendered{
+    width: 300px;
+    text-align: center;
 }
