@@ -68,7 +68,7 @@ session_start();
                         ΤΕΧΝΗΤΗ ΝΟΗΜΟΣΥΝΗ - ΕΚΔΟΣΕΙΣ ΠΑΝ/ΜΙΟΥ ΜΑΚΕΔΟΝΙΑΣ (13.4%)
                     </div>
                     <div class="dilosi-book-info">
-                        <a href="./under_construction" title="more-info">Περισσότερες Πληροφορίες</a>
+                        <a href="./under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
                     </div>
                     <div class="dilosi-book-comments">
                         <a href="#" title="comments">Σχόλια(2)</a>
@@ -83,7 +83,7 @@ session_start();
                         ΤΕΧΝΗΤΗ ΝΟΗΜΟΣΥΝΗ: ΜΙΑ ΣΥΓΧΡΟΝΗ ΠΡΟΣΕΓΓΙΣΗ - ΕΚΔΟΣΕΙΣ ΚΛΕΙΔΑΡΙΘΜΟΣ (86.6%)
                     </div>
                     <div class="dilosi-book-info">
-                        <a href="./under_construction" title="more-info">Περισσότερες Πληροφορίες</a>
+                        <a href="./under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
                     </div>
                     <div class="dilosi-book-comments">
                         <a href="#" title="comments">Σχόλια(17)</a>
@@ -104,7 +104,7 @@ session_start();
                         ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ - Χ. ΓΚΙΟΥΡΔΑ (39.2%)
                     </div>
                     <div class="dilosi-book-info">
-                        <a href="./under_construction" title="more-info">Περισσότερες Πληροφορίες</a>
+                        <a href="./under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
                     </div>
                     <div class="dilosi-book-comments">
                         <a href="#" title="comments">Σχόλια(4)</a>
@@ -119,7 +119,7 @@ session_start();
                         ΣΥΓΧΡΟΝΑ ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ - ΕΚΔΟΣΕΙΣ ΚΛΕΙΔΑΡΙΘΜΟΣ (60.8%)
                     </div>
                     <div class="dilosi-book-info">
-                        <a href="./under_construction" title="more-info">Περισσότερες Πληροφορίες</a>
+                        <a href="./under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
                     </div>
                     <div class="dilosi-book-comments">
                         <a href="#" title="comments">Σχόλια(9)</a>
@@ -140,7 +140,7 @@ session_start();
                         Γραφικά και Οπτικοποιήση - Εκδόσεις Συμμετρία (62.9%)
                     </div>
                     <div class="dilosi-book-info">
-                        <a href="./under_construction" title="more-info">Περισσότερες Πληροφορίες</a>
+                        <a href="./under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
                     </div>
                     <div class="dilosi-book-comments">
                         <a href="#" title="comments">Σχόλια(6)</a>
@@ -155,7 +155,7 @@ session_start();
                         Γραφικά Αρχές και Αλγόριθμοι - Εκδόσεις Συμμετρία (37.1%)
                     </div>
                     <div class="dilosi-book-info">
-                        <a href="./under_construction" title="more-info">Περισσότερες Πληροφορίες</a>
+                        <a href="./under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
                     </div>
                     <div class="dilosi-book-comments">
                         <a href="#" title="comments">Σχόλια(4)</a>
