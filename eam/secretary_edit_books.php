@@ -105,23 +105,6 @@ session_start();
             </div>
         </div>
 
-        <div class="subject-info-to-edit">
-            <div class="subject-info-to-edit-title">
-                <b>Μάθημα:</b>   Διακριτά Μαθηματικά 2
-            </div>
-            <div class="subject-info-to-edit-professor">
-                <b>Καθηγητής:</b> Ιάκωβος Χριστόπουλος
-            </div>
-            <div class="subject-info-to-edit-line">
-                <div class="subject-info-to-edit-semister">
-                    <b>Εξάμηνο:</b> 4ο
-                </div>
-                <div class="subject-info-to-edit-button">
-                    <a href="diakrita2.php">Επεξεργασία Μαθήματος</a>
-                </div>
-            </div>
-        </div>
-
         <div class="placeholder-secretary-edit-books">
 
         </div> -->

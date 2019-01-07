@@ -1083,6 +1083,10 @@ function successDilosiPopup(){
     $('#dilosiModal').modal();
 }
 
+function successRemovalPopup(){
+    $('#removalModal').modal();
+}
+
 function logoutPopup(){
     $('#logoutModal').modal();
 }
@@ -1426,4 +1430,20 @@ $(document).on("click", "#search-subject-secretary", function () {
 
      </div>
     `;
+});
+
+$(document).on("click", "#remove-book-1", function () {
+    $('#removeBookModal1').modal();
+});
+
+$(document).on("click", "#remove-book-2", function () {
+    $('#removeBookModal2').modal();
+});
+
+$(document).on("click", "#remove-book-3", function () {
+    $('#removeBookModal3').modal();
+});
+
+$(document).on("click", "#success-remove-book", function () {
+    window.location = "./secretary_app.php?successRemoval";
 });
