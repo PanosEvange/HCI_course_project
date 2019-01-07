@@ -60,7 +60,7 @@ session_start();
 
         <?php include 'footer.php';?>
 
-        <!-- Login Modal -->
+        <!-- Modal -->
         <div class="modal" id="removalModal">
           <div class="modal-dialog">
             <div class="modal-content">
