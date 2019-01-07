@@ -1,7 +1,7 @@
 <?php
     function executeSearchWithArg($conn) {
         $searchTerm = $_REQUEST["q"];
-        echo "q is ".$searchTerm."<br>";
+        //echo "q is ".$searchTerm."<br>";
         $sql = ("SELECT * FROM Books b WHERE LOWER(b.Name) LIKE LOWER('%$searchTerm%')");
 
         $conditions = array();
@@ -10,28 +10,28 @@
             $x = $_REQUEST["u"];
             $conditions[] = "LOWER(sb.UniversityName) LIKE LOWER('%$x%')";
 
-            echo "u is ".$x."<br>";
+            //echo "u is ".$x."<br>";
         }
 
         if (isset($_REQUEST['d'])) {
             $x = $_REQUEST["d"];
             $conditions[] = "LOWER(sb.DepartmentName) LIKE LOWER('%$x%')";
 
-            echo "d is ".$x."<br>";
+            //echo "d is ".$x."<br>";
         }
 
         if (isset($_REQUEST['s'])) {
             $x = $_REQUEST["s"];
             $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
 
-            echo "s is ".$x."<br>";
+            //echo "s is ".$x."<br>";
         }
 
         if (isset($_REQUEST['su'])) {
             $x = $_REQUEST["su"];
             $conditions[] = "LOWER(sb.SubjectName) LIKE LOWER('%$x%')";
 
-            echo "su is ".$x."<br>";
+            //echo "su is ".$x."<br>";
         }
 
         if (count($conditions) > 0) {
@@ -45,28 +45,28 @@
             $x = $_REQUEST["p"];
             $conditions[] = "LOWER(b.Publisher) LIKE LOWER('%$x%')";
 
-            echo "p is ".$x."<br>";
+            //echo "p is ".$x."<br>";
         }
 
         if (isset($_REQUEST['a'])) {
             $x = $_REQUEST["a"];
             $conditions[] = "LOWER(b.Author) LIKE LOWER('%$x%')";
 
-            echo "a is ".$x."<br>";
+            //echo "a is ".$x."<br>";
         }
 
         if (isset($_REQUEST['i'])) {
             $x = $_REQUEST["i"];
             $conditions[] = "LOWER(b.ISBN) LIKE LOWER('%$x%')";
 
-            echo "i is ".$x."<br>";
+            //echo "i is ".$x."<br>";
         }
 
         if (isset($_REQUEST['y'])) {
             $x = $_REQUEST["y"];
             $conditions[] = "LOWER(b.PublishYear) LIKE LOWER('%$x%')";
 
-            echo "y is ".$x."<br>";
+            //echo "y is ".$x."<br>";
         }
 
         if (count($conditions) > 0) {
@@ -74,9 +74,9 @@
         }
 
         $result = $conn->query($sql);
-        echo "sql = '$sql' <br>";
+        //echo "sql = '$sql' <br>";
         $rows = $result->num_rows;
-        echo "rows is ".$rows."<br>";
+        //echo "rows is ".$rows."<br>";
 
         printResults($rows, $result, $searchTerm);
     }
@@ -91,28 +91,28 @@
             $x = $_REQUEST["u"];
             $conditions[] = "LOWER(sb.UniversityName) LIKE LOWER('%$x%')";
 
-            echo "u is ".$x."<br>";
+            //echo "u is ".$x."<br>";
         }
 
         if (isset($_REQUEST['d'])) {
             $x = $_REQUEST["d"];
             $conditions[] = "LOWER(sb.DepartmentName) LIKE LOWER('%$x%')";
 
-            echo "d is ".$x."<br>";
+            //echo "d is ".$x."<br>";
         }
 
         if (isset($_REQUEST['s'])) {
             $x = $_REQUEST["s"];
             $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
 
-            echo "s is ".$x."<br>";
+            //echo "s is ".$x."<br>";
         }
 
         if (isset($_REQUEST['su'])) {
             $x = $_REQUEST["su"];
             $conditions[] = "LOWER(sb.SubjectName) LIKE LOWER('%$x%')";
 
-            echo "su is ".$x."<br>";
+            //echo "su is ".$x."<br>";
         }
 
         if (count($conditions) > 0) {
@@ -127,28 +127,28 @@
             $x = $_REQUEST["p"];
             $conditions[] = "LOWER(b.Publisher) LIKE LOWER('%$x%')";
 
-            echo "p is ".$x."<br>";
+            //echo "p is ".$x."<br>";
         }
 
         if (isset($_REQUEST['a'])) {
             $x = $_REQUEST["a"];
             $conditions[] = "LOWER(b.Author) LIKE LOWER('%$x%')";
 
-            echo "a is ".$x."<br>";
+            //echo "a is ".$x."<br>";
         }
 
         if (isset($_REQUEST['i'])) {
             $x = $_REQUEST["i"];
             $conditions[] = "LOWER(b.ISBN) LIKE LOWER('%$x%')";
 
-            echo "i is ".$x."<br>";
+            //echo "i is ".$x."<br>";
         }
 
         if (isset($_REQUEST['y'])) {
             $x = $_REQUEST["y"];
             $conditions[] = "LOWER(b.PublishYear) LIKE LOWER('%$x%')";
 
-            echo "y is ".$x."<br>";
+            //echo "y is ".$x."<br>";
         }
 
         if (count($conditions) > 0) {
@@ -158,9 +158,9 @@
 
         if ($flag == true) {
             $result = $conn->query($sql);
-            echo "sql = '$sql' <br>";
+            //echo "sql = '$sql' <br>";
             $rows = $result->num_rows;
-            echo "rows is ".$rows."<br>";
+            //echo "rows is ".$rows."<br>";
 
             printResults($rows, $result);
         } else {

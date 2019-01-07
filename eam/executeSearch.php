@@ -83,7 +83,7 @@
         else {
             echo '
                 <div class="mySearchBookResultsCount">
-                Δρν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
+                Δεν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
                 </div>';
         }
 

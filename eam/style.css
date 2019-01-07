@@ -921,6 +921,7 @@ span.mySearchBookCounter {
 
 .endOfResultsPlaceHolder {
     height: 300px;
+    margin-bottom: 350px;
 }
 
 .myBooksSearchFiltersButton {
