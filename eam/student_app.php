@@ -67,14 +67,14 @@ session_start();
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Ευχαριστούμε!!</h4>
+                <h4 class="modal-title">Επιτυχής ολοκλήρωση δήλωσης</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">
-                Η Δήλωση σας Πραγματοποιήθηκε Επιτυχώς!
-              </div>
+              <!-- <div class="modal-body">
+                Επιτυχής ολοκλήρωση δήλωσης!
+              </div> -->
 
               <!-- Modal footer -->
               <div class="modal-footer">
