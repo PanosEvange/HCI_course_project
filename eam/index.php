@@ -355,14 +355,14 @@ session_start();
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Καλωσήρθατε!!</h4>
+                <h4 class="modal-title">Επιτυχής σύνδεση</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">
+              <!-- <div class="modal-body">
                 Συνδεθήκατε Επιτυχώς!
-              </div>
+              </div> -->
 
               <!-- Modal footer -->
               <div class="modal-footer">
@@ -380,14 +380,14 @@ session_start();
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Αντίο!!</h4>
+                <h4 class="modal-title">Επιτυχής αποσύνδεση</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">
+              <!-- <div class="modal-body">
                 Αποσυνδεθήκατε Επιτυχώς!
-              </div>
+              </div> -->
 
               <!-- Modal footer -->
               <div class="modal-footer">
