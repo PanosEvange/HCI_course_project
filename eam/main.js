@@ -1075,6 +1075,10 @@ function loginPopup(){
     $('#loginModal').modal();
 }
 
+function successDilosiPopup(){
+    $('#dilosiModal').modal();
+}
+
 function logoutPopup(){
     $('#logoutModal').modal();
 }

@@ -25,7 +25,7 @@ session_start();
 
         <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
         <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-        
+
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
@@ -59,6 +59,37 @@ session_start();
         ?>
 
         <?php include 'footer.php';?>
+
+        <!-- Login Modal -->
+        <div class="modal" id="dilosiModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Ευχαριστούμε!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                Η Δήλωση σας Πραγματοποιήθηκε Επιτυχώς!
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <?php
+            if (isset($_GET['succesfulDilosi'])) {
+                echo '<script>successDilosiPopup()</script>';
+            }
+        ?>
 
     </body>
 </html>
