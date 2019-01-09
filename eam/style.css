@@ -2698,3 +2698,108 @@ a#myFilterApplyButton:hover{
 #removeBookModal3 .modal-footer .yes-button{
     margin-right: 110px;
 }
+
+.mySearchPublisherOneResult {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    margin-top: 20px;
+    background: #dddddd;
+    grid-template-columns: 250px 1fr;
+    display: grid;
+    grid-template-areas:
+        "publisher-image publisher-name"
+        "publisher-image publisher-description"
+        "publisher-image publisher-description"
+        "publisher-list-books publisher-site";
+    padding: 30px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+}
+
+.publisher-image {
+    grid-area: publisher-image;
+}
+
+.publisher-name {
+    grid-area: publisher-name;
+    font-size: 25px;
+}
+
+.publisher-description {
+    grid-area: publisher-description;
+    font-size: 18px;
+}
+
+.publisher-list-books {
+    grid-area: publisher-list-books;
+    margin-top: 25px;
+}
+
+.publisher-site {
+    grid-area: publisher-site;
+    justify-self: right;
+    margin-top: 25px;
+}
+
+.mySearchStoreOneResult {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    margin-top: 20px;
+    background: #dddddd;
+    grid-template-columns: 1fr;
+    display: grid;
+    padding: 30px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+    grid-row-gap: 20px;
+}
+
+.store-name {
+    justify-self: center;
+    font-size: 25px;
+}
+
+.store-address {
+    display: flex;
+    font-size: 18px;
+}
+
+.store-address b{
+    padding-right: 20px;
+}
+
+
+.store-hours {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.store-phone {
+        display: flex;
+    font-size: 18px;
+}
+
+.store-phone b{
+    padding-right: 20px;
+}
+
+
+.store-map {
+    margin-top: 25px;
+    float: left;
+}
+
+.store-site {
+    float: right;
+    margin-top: 25px;
+}
+
+
+.hours-content{
+    padding-left: 30px;
+}

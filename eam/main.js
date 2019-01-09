@@ -1447,3 +1447,11 @@ $(document).on("click", "#remove-book-3", function () {
 $(document).on("click", "#success-remove-book", function () {
     window.location = "./secretary_app.php?successRemoval";
 });
+
+function mySearchPublisherFind(){
+    window.location.replace("./searchPublisher.php");
+}
+
+function mySearchStoreFind(){
+    window.location.replace("./searchStore.php");
+}
