@@ -48,7 +48,7 @@ session_start();
         </div>
 
         <div class="search-container myBooksSearch">
-            <input class="MySearchBookSearchBox" type="text" placeholder="Αναζητήστε τον εκδότη που θέλετε..." name="mySearchBookQuery" id="mySearchBookTerm">
+            <input class="MySearchBookSearchBox" type="text" placeholder="Αναζητήστε τον εκδότη που θέλετε..." name="mySearchBookQuery" id="mySearchPublisherTerm">
             <button class="MySearchBookSearchButton" type="submit" onclick="mySearchPublisherFind()"><i class="fa fa-search"></i></button>
         </div>
 

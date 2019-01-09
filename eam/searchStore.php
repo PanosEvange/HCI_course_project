@@ -48,7 +48,7 @@ session_start();
         </div>
 
         <div class="search-container myBooksSearch">
-            <input class="MySearchBookSearchBox" type="text" placeholder="Αναζητήστε το σημείο διανομής που θέλετε..." name="mySearchBookQuery" id="mySearchBookTerm">
+            <input class="MySearchBookSearchBox" type="text" placeholder="Αναζητήστε το σημείο διανομής που θέλετε..." name="mySearchBookQuery" id="mySearchStoreTerm">
             <button class="MySearchBookSearchButton" type="submit" onclick="mySearchStoreFind()"><i class="fa fa-search"></i></button>
         </div>
 
@@ -163,35 +163,6 @@ session_start();
                 <div class="col-7">
                     2243578963
                 </div>
-            </div>
-            <div class="store-links">
-                <div class="store-map">
-                    <a href="./under_construction.php"> Εμφάνιση στο χάρτη</a>
-                </div>
-                <div class="store-site">
-                    <a href="./under_construction.php"> Σελίδα καταστήματος</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mySearchStoreOneResult">
-            <div class="store-name">
-                Κλειδάριθμος Πατρών
-            </div>
-            <div class="store-address">
-                <b>Διεύθυνση:</b> Λαρίσης 43, Πάτρα, 34213
-            </div>
-            <div class="store-hours">
-                <div class="label-hours">
-                    <b>Ώρες Λειτουργίας:</b>
-                </div>
-                <div class="hours-content">
-                    Δευτέρα-Παρασκευή: 08:00-19:00 <br/>
-                    Σάββατο: 10:00-16:00 <br/>
-                </div>
-            </div>
-            <div class="store-phone">
-                <b>Τηλέφωνο επικοινωνίας:</b> 2243578963
             </div>
             <div class="store-links">
                 <div class="store-map">

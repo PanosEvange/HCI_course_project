@@ -1466,3 +1466,58 @@ function mySearchPublisherFind(){
 function mySearchStoreFind(){
     window.location.replace("./searchStore.php");
 }
+
+$(document).ready(function(){
+
+    $('#mySearchStoreTerm').keypress(function(e){
+      if(e.keyCode==13){
+          mySearchStoreFind();
+      }
+    });
+
+    $('#mySearchPublisherTerm').keypress(function(e){
+      if(e.keyCode==13){
+          mySearchPublisherFind();
+      }
+    });
+
+    $(document).on("click", ".home-page-search .btn-search", function (e) {
+         e.preventDefault();
+         var valueSelected = $('#home-page-search-select').val();
+         if( valueSelected == 'book' ){
+             var url = "./searchBooks.php"
+             var q = $('#home-page-search-input').val();
+             if( q != '' ){
+                  var url = url + "?q=" + q;
+             }
+             window.location.replace(url);
+         }
+         else if( valueSelected == 'store' ){
+             mySearchStoreFind();
+         }
+         else if( valueSelected == 'publisher' ){
+             mySearchPublisherFind();
+         }
+    });
+
+    $('#home-page-search-input').keypress(function(e){
+      if(e.keyCode==13){
+          e.preventDefault();
+          var valueSelected = $('#home-page-search-select').val();
+          if( valueSelected == 'book' ){
+              var url = "./searchBooks.php"
+              var q = $('#home-page-search-input').val();
+              if( q != '' ){
+                   var url = url +  "?q=" + q;
+              }
+              window.location.replace(url);
+          }
+          else if( valueSelected == 'store' ){
+              mySearchStoreFind();
+          }
+          else if( valueSelected == 'publisher' ){
+              mySearchPublisherFind();
+          }
+      }
+    });
+});
