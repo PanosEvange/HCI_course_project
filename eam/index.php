@@ -65,7 +65,7 @@ session_start();
                   </li>
                 </ul>
                 <form class="my-search-bar mr-auto">
-                  <input class="form-control my-search-area" type="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control my-search-area" type="text" id="generalSearch" placeholder="Search" aria-label="Search">
                   <button class="btn my-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </nav>
@@ -230,7 +230,7 @@ session_start();
 
             <div class="main-content-2 mr-auto ml-auto">
                 <div class="home-page-search">
-                  <form>
+                  <form onsubmit="return homePageSearchSubmit()">
                     <div class="inner-form">
                       <div class="input-field first-wrap">
                         <div class="input-select">
@@ -242,7 +242,7 @@ session_start();
                         </div>
                       </div>
                       <div class="input-field second-wrap">
-                        <input id="" type="text" placeholder="Αναζήτηση..." />
+                        <input id="home-page-search-input" type="text" placeholder="Αναζήτηση..." />
                       </div>
                       <div class="input-field third-wrap">
                         <button class="btn-search" type="button">

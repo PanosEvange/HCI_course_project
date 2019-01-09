@@ -65,7 +65,7 @@ session_start();
                   </li>
                 </ul>
                 <form class="my-search-bar mr-auto">
-                  <input class="form-control my-search-area" type="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control my-search-area" type="text" id="generalSearch" placeholder="Search" aria-label="Search">
                   <button class="btn my-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </nav>

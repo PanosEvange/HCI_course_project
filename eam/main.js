@@ -1073,6 +1073,13 @@ $(document).ready(function(){
         }
     });
 
+    $('#generalSearch').keypress(function(e){
+      if(e.keyCode==13){
+          e.preventDefault();
+          window.location.replace("./under_construction.php");
+      }
+    });
+
 });
 
 function loginPopup(){
@@ -1314,6 +1321,10 @@ $(document).ready(function(){
         element.classList.add("fa-angle-up");
     });
 
+    $(document).on("click", ".my-search-bar .my-search-button", function (e) {
+        e.preventDefault();
+        window.location.replace("./under_construction.php");
+    });
 
 });
 
