@@ -22,7 +22,7 @@
 
         <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
         <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-        
+
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
@@ -32,18 +32,14 @@
 
         <?php include 'userOptions.php';?>
 
-        <div class="below-nav-bar">
-            <div class="my-breadcrumb">
-                <ul class="breadcrumb">
-                  <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li><a href="./under_construction.php">Εφαρμογή Εκδοτών</a></li>
-                  <li>Το προφίλ μου</li>
-                </ul>
-            </div>
-
-            <?php include 'isLoggedIn.php';?>
-
+        <div class="my-breadcrumb">
+            <ul class="breadcrumb">
+              <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+              <li><a href="./under_construction.php">Εφαρμογή Εκδοτών</a></li>
+              <li>Το προφίλ μου</li>
+            </ul>
         </div>
+
 
         <div class="placeholder">
 

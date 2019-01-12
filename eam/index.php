@@ -44,13 +44,7 @@ session_start();
                     <a class="nav-link" href="./under_construction.php">Ανακοινώσεις</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./searchBooks.php">Αναζήτηση Συγγραμμάτων</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="./under_construction.php">Επικοινωνία</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">FAQ</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="./under_construction.php" id="navbarDropdownInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,26 +58,44 @@ session_start();
                     </div>
                   </li>
                 </ul>
-                <form class="my-search-bar mr-auto">
-                  <input class="form-control my-search-area" type="text" id="generalSearch" placeholder="Search" aria-label="Search">
-                  <button class="btn my-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
+                <div class="home-page-search">
+                    <form class="my-search-bar" onsubmit="return homePageSearchSubmit()">
+                      <div class="inner-form">
+                        <div class="input-field first-wrap">
+                          <div class="input-select">
+                            <select id="home-page-search-select" onchange="homePageSearchSelect(this.value)">
+                              <option value="book" selected>Σύγγραμμα</option>'
+                              <option value="store">Σημείο Διανομής</option>'
+                              <option value="publisher">Εκδότης</option>'
+                            </select>
+                          </div>
+                        </div>
+                        <div class="input-field second-wrap">
+                          <input id="home-page-search-input" type="text" placeholder="Αναζήτηση..." />
+                        </div>
+                        <div class="input-field third-wrap">
+                          <button class="btn-search" type="button">
+                            <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" viewBox="0 0 512 512">
+                              <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <?php include 'isLoggedIn.php';?>
             </nav>
         </div>
         <!-- Header End -->
 
         <?php include 'userOptions.php';?>
 
-        <div class="below-nav-bar">
-            <div class="my-breadcrumb">
-                <ul class="breadcrumb">
-                  <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-
-            <?php include 'isLoggedIn.php';?>
-
+        <div class="my-breadcrumb">
+            <ul class="breadcrumb">
+              <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
+
 
             <div class="main-content mr-auto ml-auto">
                 <div class="my-section student-area">
@@ -228,121 +240,11 @@ session_start();
                 </div>
             </div>
 
-            <div class="main-content-2 mr-auto ml-auto">
-                <div class="home-page-search">
-                  <form onsubmit="return homePageSearchSubmit()">
-                    <div class="inner-form">
-                      <div class="input-field first-wrap">
-                        <div class="input-select">
-                          <select id="home-page-search-select" onchange="homePageSearchSelect(this.value)">
-                            <option value="book" selected>Σύγγραμμα</option>'
-                            <option value="store">Σημείο Διανομής</option>'
-                            <option value="publisher">Εκδότης</option>'
-                          </select>
-                        </div>
-                      </div>
-                      <div class="input-field second-wrap">
-                        <input id="home-page-search-input" type="text" placeholder="Αναζήτηση..." />
-                      </div>
-                      <div class="input-field third-wrap">
-                        <button class="btn-search" type="button">
-                          <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" viewBox="0 0 512 512">
-                            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
 
-                  <div class="filter-home-page" id="myFiltersInputBook">
-                          <div class="form-group row">
-                            <label for="University" class="col-2 col-form-label">Πανεπιστήμιο:</label>
-                            <div class="col-1"></div>
-                            <div class="col-4">
-                              <select class="" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplayHomePage(this.value)">
-                                  <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
-                                  <?php include 'universityValues.php';?>
-                              </select>
-                            </div>
-                            <label for="Semister" class="col-2 col-form-label">Εξάμηνο:</label>
-                            <div class="col-2">
-                                <select id="home-page-search-select2">
-                                    <option value="" selected disabled hidden>Νο</option>
-                                    <option value="1">1ο</option>
-                                    <option value="2">2ο</option>
-                                    <option value="3">3ο</option>
-                                    <option value="4">4ο</option>
-                                    <option value="5">5ο</option>
-                                    <option value="6">6ο</option>
-                                    <option value="7">7ο</option>
-                                    <option value="8">8ο</option>
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="Department" class="col-2 col-form-label">Τμήμα:</label>
-                            <div class="col-1"></div>
-                            <div class="col-4">
-                                <select class="" name="department" id="myDepart-reg" disabled>
-                                    <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
-                                </select>
-                            </div>
-                          </div>
-                  </div>
-
-                  <div class="filter-home-page" id="myFiltersInputStore" hidden>
-                          <div class="form-group row">
-                            <label for="Region" class="col-2 col-form-label">Πόλη:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select3">
-                                    <option value="" selected disabled hidden>Πόλη</option>
-                                    <option value="Athens">Αθήνα</option>
-                                    <option value="Thessaloniki">Θεσσαλονίκη</option>
-                                    <option value="Crete">Κρήτη</option>
-                                    <option value="Yianena">Γιάννενα</option>
-                                </select>
-                            </div>
-                            <label for="Eidos" class="col-2 col-form-label">Κατεύθυνση:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select4">
-                                    <option value="" selected disabled hidden>Κατεύθυνση</option>
-                                    <option value="thetikes">Θετικές Επιστήμες</option>
-                                    <option value="theoritikes">Θεωρητικές Επιστήμες</option>
-                                </select>
-                            </div>
-                          </div>
-                  </div>
-
-                  <!-- <div class="filter-home-page" id="myFiltersInputPublisher" hidden>
-                          <div class="form-group row">
-                            <label for="Name" class="col-2 col-form-label">Όνομα:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select5">
-                                    <option value="" selected disabled hidden>Όνομα</option>
-                                    <option value="Ιωάννης">Ιωάννης</option>
-                                    <option value="Γεώργιος">Γεώργιος</option>
-                                    <option value="Κωνσταντίνος">Κωνσταντίνος</option>
-                                </select>
-                            </div>
-                            <label for="Eidos" class="col-2 col-form-label">Κατεύθυνση:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select6">
-                                    <option value="" selected disabled hidden>Κατεύθυνση</option>
-                                    <option value="thetikes">Θετικές Επιστήμες</option>
-                                    <option value="theoritikes">Θεωρητικές Επιστήμες</option>
-                                </select>
-                            </div>
-                          </div>
-                  </div> -->
-
-
-
-                </div>
-
-                <div class="my-announcement">
-                    Anouncements
-                </div>
+            <div class="my-announcement mr-auto ml-auto">
+                Anouncements
             </div>
+
 
 
 

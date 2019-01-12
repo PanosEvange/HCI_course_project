@@ -35,18 +35,14 @@ session_start();
 
         <?php include 'userOptions.php';?>
 
-        <div class="below-nav-bar">
-            <div class="my-breadcrumb">
-                <ul class="breadcrumb">
-                  <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li><a href="./student_app.php">Εφαρμογή Φοιτητών</a></li>
-                  <li>Δήλωση Συγγραμμάτων</li>
-                </ul>
-            </div>
-
-            <?php include 'isLoggedIn.php';?>
-
+        <div class="my-breadcrumb">
+            <ul class="breadcrumb">
+              <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+              <li><a href="./student_app.php">Εφαρμογή Φοιτητών</a></li>
+              <li>Δήλωση Συγγραμμάτων</li>
+            </ul>
         </div>
+
 
         <div class="dilosi-steps-breadcrumb">
             <ul class="steps steps-3">

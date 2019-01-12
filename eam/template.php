@@ -25,7 +25,7 @@ session_start();
 
         <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
         <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-        
+
         <script src="main.js"></script>
         <title> New Eudoxus </title>
     </head>
@@ -35,21 +35,15 @@ session_start();
 
         <?php include 'userOptions.php';?>
 
-        <div class="below-nav-bar">
-            <div class="my-breadcrumb">
-                <ul class="breadcrumb">
-                  <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                  <li><a href="#">Previous1</a></li>
-                  <li><a href="#">Previous2</a></li>
-                  <li><a href="#">Previous3</a></li>
-                  <li>current</li>
-                </ul>
-            </div>
-
-            <?php include 'isLoggedIn.php';?>
-
+        <div class="my-breadcrumb">
+            <ul class="breadcrumb">
+              <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+              <li><a href="#">Previous1</a></li>
+              <li><a href="#">Previous2</a></li>
+              <li><a href="#">Previous3</a></li>
+              <li>current</li>
+            </ul>
         </div>
-
 
 
         <?php include 'footer.php';?>
