@@ -210,10 +210,8 @@ ul.breadcrumb li a:hover {
 .login-area{
     margin-right: auto;
     grid-area: login-area;
-    display: grid;
     grid-template-columns: repeat(2, 100px);
     grid-column-gap: 5px;
-    margin-top:10px;
 }
 
 .my-hide{
@@ -482,4 +480,8 @@ a.section-button:hover{
     justify-content: center;
     align-items: center;
     min-width: 1100px;
+}
+
+.my-search-bar {
+    margin-left: 30px;
 }

@@ -7,26 +7,26 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
+        <link href="/vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
 
         <!-- Bootstrap core CSS -->
-        <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Bootstrap core JavaScript -->
-        <script src="./vendor/jquery/jquery.min.js"></script>
-        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <link href="./vendor/select2-4.0.6-rc.1/dist/css/select2.css" rel="stylesheet">
-        <script src="./vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
+        <link href="/vendor/select2-4.0.6-rc.1/dist/css/select2.css" rel="stylesheet">
+        <script src="/vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
 
-        <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
-        <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+        <script src="/vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
+        <link href="/vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
-        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
-        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <link href="/vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="/vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
-        <script src="./js/main.js"></script>
+        <script src="/js/main.js"></script>
         <title> New Eudoxus </title>
     </head>
     <body>
@@ -35,26 +35,26 @@ session_start();
         <div class="my-nav-bar">
             <!-- Navigation -->
             <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
-              <a class="navbar-brand ml-auto" href="./index.php">Νέος Εύδοξος</a>
+              <a class="navbar-brand ml-auto" href="/index.php">Νέος Εύδοξος</a>
                 <ul class="my-navbar-main-list navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.php"><i class="fa fa-home" aria-hidden="true"></i>Αρχική <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/index.php"><i class="fa fa-home" aria-hidden="true"></i>Αρχική <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">Ανακοινώσεις</a>
+                    <a class="nav-link" href="/common/under_construction.php">Ανακοινώσεις</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">Επικοινωνία</a>
+                    <a class="nav-link" href="/common/under_construction.php">Επικοινωνία</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./under_construction.php" id="navbarDropdownInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/common/under_construction.php" id="navbarDropdownInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Πληροφορίες
                     </a>
                     <div class="dropdown-menu dropdown-menu-right myNavbarDropdownInfo" aria-labelledby="navbarDropdownInfo">
-                      <a class="dropdown-item" href="./student_info.php">Πληροφορίες για Φοιτητές</a>
-                      <a class="dropdown-item" href="./secretary_info.php">Πληροφορίες για Γραμματείς</a>
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Εκδότες</a>
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
+                      <a class="dropdown-item" href="/student/student_info.php">Πληροφορίες για Φοιτητές</a>
+                      <a class="dropdown-item" href="/secretary/secretary_info.php">Πληροφορίες για Γραμματείς</a>
+                      <a class="dropdown-item" href="/common/under_construction.php">Πληροφορίες για Εκδότες</a>
+                      <a class="dropdown-item" href="/common/under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
                     </div>
                   </li>
                 </ul>
@@ -83,16 +83,24 @@ session_start();
                       </div>
                     </form>
                 </div>
-                <?php include 'isLoggedIn.php';?>
+                <?php
+                    $path = $_SERVER['DOCUMENT_ROOT'];
+                    $path .= "/login/isLoggedIn.php";
+                    include $path;
+                ?>
             </nav>
         </div>
         <!-- Header End -->
 
-        <?php include 'userOptions.php';?>
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/userOptions.php";
+            include $path;
+        ?>
 
         <div class="my-breadcrumb">
             <ul class="breadcrumb">
-              <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+              <li><a href="/index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
             </ul>
         </div>
 
@@ -104,10 +112,10 @@ session_start();
                     <span class="my-svg-text">Φοιτητής</span> </h5>
                   </div>
                   <div class="button-area">
-                          <a href="./dilosi_step1.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
-                          <a href="./under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                          <a href="./student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                          <a href="./student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
+                          <a href="/student/dilosi_step1.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
+                          <a href="/common/under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
+                          <a href="/student/student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
+                          <a href="/student/student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
                   </div>
                 </div>
                 <div class="my-section secretary-area">
@@ -153,10 +161,10 @@ session_start();
                           <span class="my-svg-text">Γραμματεία</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="./secretary_edit_books.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
-                            <a href="./under_construction.php" class="btn section-button" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
-                            <a href="./secretary_app.php" class="btn section-button" >Εφαρμογή Γραμματείας</a>
-                            <a href="./secretary_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
+                            <a href="/secretary/secretary_edit_books.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
+                            <a href="/secretary/secretary_app.php" class="btn section-button" >Εφαρμογή Γραμματείας</a>
+                            <a href="/secretary/secretary_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
                     </div>
                 </div>
                 <div class="my-section publisher-area">
@@ -197,10 +205,10 @@ session_start();
                           <span class="my-svg-text">Εκδότες</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="./under_construction.php" class="btn section-button" >Προσθήκη Συγγράμματος</a>
-                            <a href="./under_construction.php" class="btn section-button" >Διαχείριση <br> Σημείων Διανομής</a>
-                            <a href="./under_construction.php" class="btn section-button" >Εφαρμογή Εκδοτών</a>
-                            <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Εκδότες</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Προσθήκη Συγγράμματος</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Διαχείριση <br> Σημείων Διανομής</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Εφαρμογή Εκδοτών</a>
+                            <a href="/common/under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Εκδότες</a>
                     </div>
                 </div>
                 <div class="my-section library-area">
@@ -232,10 +240,10 @@ session_start();
                           <span class="my-svg-text">Βιβλιοθήκες</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="./under_construction.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
-                            <a href="./under_construction.php" class="btn section-button" >Συνεργαζόμενοι Εκδότες</a>
-                            <a href="./under_construction.php" class="btn section-button" >Εφαρμογή Βιβλιοθηκών</a>
-                            <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Βιβλιοθήκες</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Συνεργαζόμενοι Εκδότες</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Εφαρμογή Βιβλιοθηκών</a>
+                            <a href="/common/under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Βιβλιοθήκες</a>
                     </div>
                 </div>
             </div>
@@ -248,7 +256,11 @@ session_start();
 
 
 
-        <?php include 'footer.php';?>
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/footer.php";
+            include $path;
+        ?>
 
         <!-- Login Modal -->
         <div class="modal" id="loginModal">

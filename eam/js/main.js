@@ -17,13 +17,13 @@ $(document).on("click", "#login-submit-button", function () {
 
     if( email != "" && password != "" ){
         $.ajax({
-            url:'login.php',
+            url:'/login/login.php',
             type:'post',
             data:{email:email,password:password},
             success:function(response){
                 var msg = "";
                 if(response == 1){
-                    window.location = "index.php?login";
+                    window.location = "/index.php?login";
                 }else{
                     msg = "Invalid email or password!";
                 }
@@ -625,7 +625,7 @@ function myDepartmentOptionsDisplay(str) {
                 document.getElementById("myDepart-reg").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getDepartments.php?q="+str,true);
+        xmlhttp.open("GET","/common/getDepartments.php?q="+str,true);
         xmlhttp.send();
     }
     checkToEnable();
@@ -638,7 +638,7 @@ function myDepartmentChoose() {
 
 function mySearchBookFind(){
 
-    var $url = "./searchBooks.php";
+    var $url = "/search/searchBooks.php";
     var $isFirst = '?';
 
     var $searchTerm = $("#mySearchBookTerm").val();
@@ -737,7 +737,7 @@ $(document).ready(function() {
         document.getElementById("myEmail-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newEmail=" + newEmail;
+        var urlToUpdate = "/profile/updateProfile.php?&newEmail=" + newEmail;
 
         $.ajax({
             url:urlToUpdate,
@@ -794,7 +794,7 @@ $(document).ready(function() {
         document.getElementById("myPassword-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newPassword=" + newPassword;
+        var urlToUpdate = "/profile/updateProfile.php?&newPassword=" + newPassword;
 
         $.ajax({
             url:urlToUpdate,
@@ -833,7 +833,7 @@ $(document).ready(function() {
         document.getElementById("myPhone-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newPhone=" + newPhone;
+        var urlToUpdate = "/profile/updateProfile.php?&newPhone=" + newPhone;
 
         $.ajax({
             url:urlToUpdate,
@@ -873,7 +873,7 @@ $(document).ready(function() {
         document.getElementById("myAddress-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newAddress=" + newAddress;
+        var urlToUpdate = "/profile/updateProfile.php?&newAddress=" + newAddress;
 
         $.ajax({
             url:urlToUpdate,
@@ -913,7 +913,7 @@ $(document).ready(function() {
         document.getElementById("myAddressNum-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newAddressNum=" + newAddressNum;
+        var urlToUpdate = "/profile/updateProfile.php?&newAddressNum=" + newAddressNum;
 
         $.ajax({
             url:urlToUpdate,
@@ -954,7 +954,7 @@ $(document).ready(function() {
         document.getElementById("myDimos-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newDimos=" + newDimos;
+        var urlToUpdate = "/profile/updateProfile.php?&newDimos=" + newDimos;
 
         $.ajax({
             url:urlToUpdate,
@@ -995,7 +995,7 @@ $(document).ready(function() {
         document.getElementById("myAddressTK-edit-icon-content").innerHTML =
         '<i class="fa fa-pencil-alt" aria-hidden="true"></i>';
 
-        var urlToUpdate = "updateProfile.php?&newPostalCode=" + newPostalCode;
+        var urlToUpdate = "/profile/updateProfile.php?&newPostalCode=" + newPostalCode;
 
         $.ajax({
             url:urlToUpdate,
@@ -1076,7 +1076,7 @@ $(document).ready(function(){
     $('#generalSearch').keypress(function(e){
       if(e.keyCode==13){
           e.preventDefault();
-          window.location.replace("./under_construction.php");
+          window.location.replace("/common/under_construction.php");
       }
     });
 
@@ -1153,7 +1153,7 @@ $(function() {
 
 $(function() {
     $("#mySearchBookTerm").autocomplete({
-        source: "autoCompleteSearchBook.php",
+        source: "/search/autoCompleteSearchBook.php",
         select: function( event, ui ) {
             event.preventDefault();
             $("#mySearchBookTerm").val(ui.item.id);
@@ -1168,7 +1168,7 @@ $(document).ready(function(){
         var $pageLimit = document.getElementById('paginationPageLimit').innerHTML;
         var $totalPages = document.getElementById('paginationTotalPages').innerHTML;
 
-        var urlPagination = "./paginationExecute.php" + window.location.search;
+        var urlPagination = "/search/paginationExecute.php" + window.location.search;
 
         urlPagination += "&currentPage=" + $currentPage +
         '&totalPages=' + $totalPages + "&pageLimit=" + $pageLimit ;
@@ -1190,7 +1190,7 @@ $(document).ready(function(){
                     document.getElementById('searchResults-pagination-container-id').innerHTML +=
                     `<div class="mySearchBookOneResult">
                         <div class="book-image">
-                            <img src="./150.png" alt="Image Placeholder">
+                            <img src="/images/150.png" alt="Image Placeholder">
                         </div>
                         <div class="book-title">` + response.entriesArray[i].Name +
                         `</div>
@@ -1206,7 +1206,7 @@ $(document).ready(function(){
                             <a href="#">Σχόλια(5)</a>
                         </div>
                         <div class="book-page">
-                            <a href="./under_construction.php"> Σελίδα του Βιβλίου <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                            <a href="/common/under_construction.php"> Σελίδα του Βιβλίου <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
                         </div>
                     </div>`;
                 }
@@ -1248,7 +1248,7 @@ function myDepartmentOptionsDisplayHomePage(str) {
                 document.getElementById("myDepart-reg").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getDepartments.php?q="+str,true);
+        xmlhttp.open("GET","/common/getDepartments.php?q="+str,true);
         xmlhttp.send();
     }
 
@@ -1323,7 +1323,7 @@ $(document).ready(function(){
 
     $(document).on("click", ".my-search-bar .my-search-button", function (e) {
         e.preventDefault();
-        window.location.replace("./under_construction.php");
+        window.location.replace("/common/under_construction.php");
     });
 
 });
@@ -1432,7 +1432,7 @@ $(document).on("click", "#search-subject-secretary", function () {
                  <b>Εξάμηνο:</b> 3ο
              </div>
              <div class="subject-info-to-edit-button">
-                 <a href="diakrita1.php">Επεξεργασία Μαθήματος</a>
+                 <a href="/secretary/diakrita1.php">Επεξεργασία Μαθήματος</a>
              </div>
          </div>
      </div>
@@ -1456,15 +1456,15 @@ $(document).on("click", "#remove-book-3", function () {
 });
 
 $(document).on("click", "#success-remove-book", function () {
-    window.location = "./secretary_app.php?successRemoval";
+    window.location = "/secretary/secretary_app.php?successRemoval";
 });
 
 function mySearchPublisherFind(){
-    window.location.replace("./searchPublisher.php");
+    window.location.replace("/search/searchPublisher.php");
 }
 
 function mySearchStoreFind(){
-    window.location.replace("./searchStore.php");
+    window.location.replace("/search/searchStore.php");
 }
 
 $(document).ready(function(){
@@ -1485,7 +1485,7 @@ $(document).ready(function(){
          e.preventDefault();
          var valueSelected = $('#home-page-search-select').val();
          if( valueSelected == 'book' ){
-             var url = "./searchBooks.php"
+             var url = "/search/searchBooks.php"
              var q = $('#home-page-search-input').val();
              if( q != '' ){
                   var url = url + "?q=" + q;
@@ -1505,7 +1505,7 @@ $(document).ready(function(){
           e.preventDefault();
           var valueSelected = $('#home-page-search-select').val();
           if( valueSelected == 'book' ){
-              var url = "./searchBooks.php"
+              var url = "/search/searchBooks.php"
               var q = $('#home-page-search-input').val();
               if( q != '' ){
                    var url = url +  "?q=" + q;
