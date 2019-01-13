@@ -1571,3 +1571,55 @@ $(document).ready(function(){
     });
 
 });
+
+function updateSessionInfo(){
+
+    var counter = 0;
+    var url = "";
+
+    if ($('#AI-check').prop('checked') == true){
+        url += "&q_" + counter + "=" + $('#AI-check').val();
+        counter ++;
+    }
+
+    if ($('#OS-check').prop('checked') == true){
+        url += "&q_" + counter + "=" + $('#OS-check').val();
+        counter ++;
+    }
+
+    if ($('#Parallel-check').prop('checked') == true){
+        url += "&q_" + counter + "=" + $('#Parallel-check').val();
+        counter ++;
+    }
+
+    if ($('#Graphics-check').prop('checked') == true){
+        url += "&q_" + counter + "=" + $('#Graphics-check').val();
+        counter ++;
+    }
+
+    if ($('#Languages-check').prop('checked') == true){
+        url += "&q_" + counter + "=" + $('#Languages-check').val();
+        counter ++;
+    }
+
+    if ($('#Analysis-check').prop('checked') == true){
+        url = "&q_" + counter + "=" + $('#Analysis-check').val();
+        counter ++;
+    }
+
+    url = "/common/updateSessionInfo.php?number=" + counter + url;
+
+    $.ajax({
+        url:url,
+        type:'post',
+        success:function(response){
+            var msg = "";
+            if(response == 1){
+                // alert("OK!");
+            }
+            else{
+                // alert(response);
+            }
+        }
+    });
+}

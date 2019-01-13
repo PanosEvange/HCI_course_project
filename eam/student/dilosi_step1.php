@@ -63,37 +63,37 @@
             <ul class="subjects-list">
               <li>
                   <label class="label-my-checkbox">Τεχνητή Νοημοσύνη
-                      <input type="checkbox" name="subject1" value="subject1">
+                      <input type="checkbox" name="subject1" id="AI-check" value="AI">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Λειτουργικά Συστήματα
-                      <input type="checkbox" name="subject2" value="subject2">
+                      <input type="checkbox" name="subject2" id="OS-check" value="OS">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Παράλληλα Συστήματα
-                      <input type="checkbox" name="subject3" value="subject3">
+                      <input type="checkbox" name="subject3" id="Parallel-check" value="Parallel">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Γραφικά 1
-                      <input type="checkbox" name="subject4" value="subject4">
+                      <input type="checkbox" name="subject4" id="Graphics-check" value="Graphics">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Αρχές Γλωσσών Προγραμματισμού
-                      <input type="checkbox" name="subject5" value="subject5">
+                      <input type="checkbox" name="subject5" id="Languages-check" value="Languages">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Αριθμητική Ανάλυση
-                      <input type="checkbox" name="subject6" value="subject6">
+                      <input type="checkbox" name="subject6" id="Analysis-check" value="Analysis">
                       <span class="checkmark"></span>
                   </label>
               </li>
@@ -101,7 +101,7 @@
         </div>
 
         <div class="next-step">
-            <a class="btn" href="/student/dilosi_step2.php" title="dilosi_step2">Επόμενο Βήμα <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="btn" href="/student/dilosi_step2.php" onclick="updateSessionInfo()" title="dilosi_step2">Επόμενο Βήμα <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
 
         <?php

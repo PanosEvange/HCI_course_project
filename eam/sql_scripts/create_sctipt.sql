@@ -44,6 +44,17 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Student (
 );
 
 -- -----------------------------------------------------
+-- Table sdi1500039.SubjectBookDilosi
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBookDilosi (
+  subjectBookName VARCHAR(250) NOT NULL,
+  subjectBookPublisher VARCHAR(250) NOT NULL,
+  subjectName VARCHAR(250) NOT NULL,
+  bookPososto VARCHAR(250) NOT NULL,
+  PRIMARY KEY (subjectBookName)
+);
+
+-- -----------------------------------------------------
 -- Table sdi1500039.Secretary
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS sdi1500039.Secretary (
@@ -121,6 +132,46 @@ CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBook (
 -- -----------------------------------------------------
 -- Insert some mock data
 -- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Insert SubjectBookDilosi
+-- -----------------------------------------------------
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Τεχνητή Νοημοσύνη Μια Εισαγωγή','Κλειδάριθμος','AI','64%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Τεχνητή Νοημοσύνη Μια Προσέγγιση','Γκιούρδας','AI','36%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Λειτουργικά Συστήματα για Μηχανικούς','Ασημάκης','OS','24.36%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Μια εισαγωγή στα Λειτουργικά Συστήματα','Πατάκης','OS','75.64%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Παράλληλα Συστήματα MPI','Κλειδάριθμος','Parallel','55.5%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Παράλληλα Συστήματα OpenMP','Πανεπιστημιακές Εκδόσεις Κρήτης','Parallel','44.5%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Γραφικά για Μηχανικούς','Μεταίχμιο','Graphics','70%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Προχωρημένα Γραφικά','Συμμετρία','Graphics','30%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Αρχές Γλωσσών με Haskel','Αρχιμήδης','Languages','80%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Αρχές Γλωσσών Μια εισαγωγή','Κλειδάριθμος','Languages','20%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Αριθμητική Ανάλυση μια Σύγχρονη Προσέγγιση','Κλειδάριθμος','Analysis','48%');
+
+INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
+                VALUES ('Εισαγωγή στην Αριθμητική Ανάλυση','Συμμετρία','Analysis','52%');
 
 -- -----------------------------------------------------
 -- Insert Univerities
@@ -235,7 +286,7 @@ INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
                     VALUES (999, 'Εισαγωγή στην Φιλοσοφία', 'Joe Doe', '1997', 'Εκδότης Γ');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
-                    VALUES (123, 'Τεχνητή Νοημοσήνη Μία Σύγχρονη Προσέγγιση', 
+                    VALUES (123, 'Τεχνητή Νοημοσήνη Μία Σύγχρονη Προσέγγιση',
                     'Κουμπαράκης και Τάκης', '1997', 'Εκδότης Β');
 
 INSERT INTO `Books`(`ISBN`, `Name`, `Author`, `PublishYear`, `Publisher`)
@@ -258,12 +309,12 @@ INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semest
                            'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών','2', 'Δοδός');
 
 INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
-                    VALUES ('Εισαγωγή στην Μαθηματική Ανάλυση', 'Τμήμα Μαθηματικών', 
+                    VALUES ('Εισαγωγή στην Μαθηματική Ανάλυση', 'Τμήμα Μαθηματικών',
                             'Εθνικό και Καποδιστριακό Πανεπηστήμιο Αθηνών',
                            '1', 'Μπαρμπάτης');
 
 INSERT INTO `Subject`(`SubjectName`, `DepartmentName`, `UniversityName`, `Semester`, `Professor`)
-                    VALUES ('Μαθηματικά 1', 'Τμήμα Μαθηματικών', 
+                    VALUES ('Μαθηματικά 1', 'Τμήμα Μαθηματικών',
                             'Αριστοτέλιο Πανεπηστήμιο Θεσσαλονίκης',
                            '1', 'Παπαγιάννης');
 

@@ -51,10 +51,22 @@ session_start();
             </ul>
         </div>
 
+        <?php
+            if (isset($_SESSION['numberOfSubjects'])) {
+                $number = $_SESSION['numberOfSubjects'];
+                for ($i=0; $i < $number; $i++) {
+                    $varName = "q_".$i;
+                    if (isset($_SESSION[$varName])) {
+                        $var = $_SESSION[$varName];
+                        echo $var.'</br>';
+                    }
+                }
+            }
+        ?>
 
         <div class="dilosi-steps-breadcrumb">
             <ul class="steps steps-3">
-              <li><a href="/student/dilosi_step1.php" title=""><em>Επιλογή Μαθημάτων</em></a></li>
+              <li><a href="/student/dilosi_step.php" title=""><em>Επιλογή Μαθημάτων</em></a></li>
               <li class="current"><a href="#" title=""><em>Επιλογή Συγγραμμάτων</em></a></li>
               <li><a href="#" title=""><em>Ολοκλήρωση Δήλωσης</em></a></li>
             </ul>
@@ -169,7 +181,7 @@ session_start();
         </div>
 
         <div class="previous-step">
-            <a class="btn" href="/student/dilosi_step1.php" title="dilosi_step1"><i class="fa fa-angle-left" aria-hidden="true"></i> Προηγούμενο Βήμα </a>
+            <a class="btn" href="/student/dilosi_step.php" title="dilosi_step1"><i class="fa fa-angle-left" aria-hidden="true"></i> Προηγούμενο Βήμα </a>
         </div>
 
         <div class="next-step">
