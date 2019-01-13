@@ -1456,15 +1456,15 @@ $(document).on("click", "#remove-book-3", function () {
 });
 
 $(document).on("click", "#success-remove-book", function () {
-    window.location = "/secretary/secretary_app.php?successRemoval";
+    window.location.href = "/secretary/secretary_app.php?successRemoval";
 });
 
 function mySearchPublisherFind(){
-    window.location.replace("/search/searchPublisher.php");
+    window.location.href = "/search/searchPublisher.php";
 }
 
 function mySearchStoreFind(){
-    window.location.replace("/search/searchStore.php");
+    window.location.href = "/search/searchStore.php";
 }
 
 $(document).ready(function(){
@@ -1490,7 +1490,7 @@ $(document).ready(function(){
              if( q != '' ){
                   var url = url + "?q=" + q;
              }
-             window.location.replace(url);
+             window.location.href = url;
          }
          else if( valueSelected == 'store' ){
              mySearchStoreFind();
@@ -1510,7 +1510,7 @@ $(document).ready(function(){
               if( q != '' ){
                    var url = url +  "?q=" + q;
               }
-              window.location.replace(url);
+              window.location.href = url;
           }
           else if( valueSelected == 'store' ){
               mySearchStoreFind();
