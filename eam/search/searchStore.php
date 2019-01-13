@@ -55,6 +55,42 @@ session_start();
             <button class="MySearchBookSearchButton" type="submit" onclick="mySearchStoreFind()"><i class="fa fa-search"></i></button>
         </div>
 
+        <div id="filterButtonContainer" class="myBooksSearchFiltersButton">
+            <a href="#" class="btn" onclick="BookSearchFilterToggle()" id="myFilterButton"> Φίλτρα <br/> Αναζήτησης <i id="filterButtonIcon" class="fa fa-angle-down" aria-hidden="true"></i> </a>
+        </div>
+
+        <div class="myBooksSearchFiltersInput myHiddenClass" id="myFiltersInput">
+            <div class="form-group row">
+              <label for="University" class="col-2 col-form-label">Πόλη:</label>
+              <div class="col-3">
+                <!-- <input type="text" name="University" id="myUniv-filter" class="form-control" > -->
+                <select id="home-page-search-select3">
+                    <option value="" selected disabled hidden>Πόλη</option>
+                    <option value="Athens">Αθήνα</option>
+                    <option value="Thessaloniki">Θεσσαλονίκη</option>
+                    <option value="Crete">Κρήτη</option>
+                    <option value="Yianena">Γιάννενα</option>
+                </select>
+              </div>
+              <div class="col-2"></div>
+              <label for="Publisher" class="col-2 col-form-label">Κατεύθυνση:</label>
+              <div class="col-3">
+                  <select id="home-page-search-select4">
+                      <option value="" selected disabled hidden>Κατεύθυνση</option>
+                      <option value="thetikes">Θετικές Επιστήμες</option>
+                      <option value="theoritikes">Θεωρητικές Επιστήμες</option>
+                  </select>
+              </div>
+            </div>
+            <div class="form-group row">
+
+              <div class="col-8"></div>
+              <div class="col-4">
+                <a href="#" class="btn" onclick="mySearchStoreFind()" id="myFilterApplyButton"> Εφαρμογή Φίλτρων </a>
+              </div>
+            </div>
+        </div>
+
         <div class="mySearchBookResultsCount">
         Βρέθηκαν <span class="mySearchBookCounter">3</span> αποτελέσματα για 'Κλειδάριθμος'.
         </div>
