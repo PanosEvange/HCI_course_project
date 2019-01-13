@@ -5,7 +5,7 @@
 * Back-end dilosi + summary at home page
 * Back-end secretary remove book
 * ~~If logged out student press Dilosi -> ask him to sign in~~
-* Search books filters should be with dropdown lists
+* ~~Search books filters should be with dropdown lists~~
 * Dilosi -> Comments,More info, Show map -> Under Construction Popup
 * Dilosi step breadcrumb -> green at current step, green at previous steps, next step not clickable
 * default τροπος παραλαβης -> store

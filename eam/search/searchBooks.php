@@ -61,9 +61,17 @@ session_start();
 
         <div class="myBooksSearchFiltersInput myHiddenClass" id="myFiltersInput">
             <div class="form-group row">
-              <label for="University" class="col-2 col-form-label">Πανεπιστήμιο:</label>
+              <label for="University" class="col-2 col-form-label">Ίδρυμα:</label>
               <div class="col-3">
-                <input type="text" name="University" id="myUniv-filter" class="form-control" >
+                <!-- <input type="text" name="University" id="myUniv-filter" class="form-control" > -->
+                <select class="" name="university" id="myUniv-search-select" onchange="myDepartmentOptionsDisplaySearchBooks(this.value)">
+                    <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
+                    <?php
+                        $path = $_SERVER['DOCUMENT_ROOT'];
+                        $path .= "/common/universityValues.php";
+                        include $path;
+                    ?>
+                </select>
               </div>
               <div class="col-2"></div>
               <label for="Publisher" class="col-2 col-form-label">Εκδόσεις:</label>
@@ -74,7 +82,10 @@ session_start();
             <div class="form-group row">
               <label for="Department" class="col-2 col-form-label">Τμήμα:</label>
               <div class="col-3">
-                <input type="text" name="Department" id="myDep-filter" class="form-control" >
+                <!-- <input type="text" name="Department" id="myDep-filter" class="form-control" > -->
+                <select class="" name="department" id="myDepart-search-select" disabled>
+                    <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
+                </select>
               </div>
               <div class="col-2"></div>
               <label for="Author" class="col-2 col-form-label">Συγγραφέας:</label>
@@ -85,7 +96,18 @@ session_start();
             <div class="form-group row">
               <label for="Semister" class="col-2 col-form-label">Εξάμηνο:</label>
               <div class="col-3">
-                <input type="text" name="Semister" id="mySem-filter" class="form-control" >
+                <!-- <input type="text" name="Semister" id="mySem-filter" class="form-control" > -->
+                <select id="mySem-search-select">
+                    <option value="" selected disabled hidden>Νο</option>
+                    <option value="1">1ο</option>
+                    <option value="2">2ο</option>
+                    <option value="3">3ο</option>
+                    <option value="4">4ο</option>
+                    <option value="5">5ο</option>
+                    <option value="6">6ο</option>
+                    <option value="7">7ο</option>
+                    <option value="8">8ο</option>
+                </select>
               </div>
               <div class="col-2"></div>
               <label for="Isbn" class="col-2 col-form-label">ISBN:</label>

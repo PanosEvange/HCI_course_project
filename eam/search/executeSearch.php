@@ -81,10 +81,19 @@
             }
         }
         else {
-            echo '
-                <div class="mySearchBookResultsCount">
-                Δεν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
-                </div>';
+            if ($searchTerm != '') {
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Δεν βρέθηκαν αποτελέσματα για \''.$searchTerm.'\'.
+                    </div>';
+            }
+            else{
+                echo '
+                    <div class="mySearchBookResultsCount">
+                    Δεν βρέθηκαν αποτελέσματα.
+                    </div>';
+            }
+
         }
 
         echo '<div class="endOfResultsPlaceHolder">

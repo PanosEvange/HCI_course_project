@@ -22,7 +22,7 @@
 
         if (isset($_REQUEST['s'])) {
             $x = $_REQUEST["s"];
-            $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
+            // $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
 
             //echo "s is ".$x."<br>";
         }
@@ -103,7 +103,7 @@
 
         if (isset($_REQUEST['s'])) {
             $x = $_REQUEST["s"];
-            $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
+            // $conditions[] = "LOWER(sb.Semester) = LOWER('$x')";
 
             //echo "s is ".$x."<br>";
         }
@@ -158,6 +158,9 @@
 
         if ($flag == true) {
             $result = $conn->query($sql);
+            if (!$result) {
+                trigger_error('Invalid query: ' . $conn->error);
+            }
             //echo "sql = '$sql' <br>";
             $rows = $result->num_rows;
             //echo "rows is ".$rows."<br>";

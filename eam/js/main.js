@@ -577,6 +577,12 @@ $(document).ready(function() {
 
     $('#myDepart-reg').select2({ width: '100%' });
 
+    $('#myUniv-search-select').select2({ width: '100%' });
+
+    $('#mySem-search-select').select2({ width: '100%' });
+
+    $('#myDepart-search-select').select2({ width: '100%' });
+
     $('#home-page-search-select').select2({ width: '100%' });
 
     $('#home-page-search-select2').select2({ width: '100%' });
@@ -647,19 +653,19 @@ function mySearchBookFind(){
         $isFirst = '&';
     }
 
-    var $univFilter = $("#myUniv-filter").val();
+    var $univFilter = $("#myUniv-search-select").val();
     if( $univFilter != "" ){
         $url += $isFirst + "u=" + $univFilter;
         $isFirst = '&';
     }
 
-    var $depFilter = $("#myDep-filter").val();
+    var $depFilter = $("#myDepart-search-select").val();
     if( $depFilter != "" ){
         $url += $isFirst + "d=" + $depFilter;
         $isFirst = '&';
     }
 
-    var $semFilter = $("#mySem-filter").val();
+    var $semFilter = $("#mySem-search-select").val();
     if( $semFilter != "" ){
         $url += $isFirst + "s=" + $semFilter;
         $isFirst = '&';
@@ -1226,12 +1232,12 @@ $(document).ready(function(){
     });
 });
 
-function myDepartmentOptionsDisplayHomePage(str) {
+function myDepartmentOptionsDisplaySearchBooks(str) {
 
-    $('#myDepart-reg').prop("disabled", false);
+    $('#myDepart-search-select').prop("disabled", false);
 
     if (str == "") {
-        document.getElementById("myDepart-reg").innerHTML += "";
+        document.getElementById("myDepart-search-select").innerHTML += "";
         return;
     }
     else {
@@ -1245,7 +1251,7 @@ function myDepartmentOptionsDisplayHomePage(str) {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("myDepart-reg").innerHTML = this.responseText;
+                document.getElementById("myDepart-search-select").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","/common/getDepartments.php?q="+str,true);
