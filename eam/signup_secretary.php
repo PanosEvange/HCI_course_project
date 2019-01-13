@@ -1,5 +1,5 @@
 <?php
-    include 'login_db.php';
+    include './db_login/login_db.php';
     // define variables and set to empty values
     $email = $pass = $passConf = $firstName = $lastName = $date = $uni = $dept = $id = $phone = "";
     $address = $addressNum = $municipality = $TK = "";
@@ -21,7 +21,7 @@
         $municipality = $_POST["addressDimos"];
         $TK = $_POST["addressTK"];
 
-        require_once 'login_db.php'; //db info
+        require_once './db_login/login_db.php'; //db info
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {

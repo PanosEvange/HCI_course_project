@@ -46,7 +46,7 @@
                     echo '
                             <div class="mySearchBookOneResult">
                                 <div class="book-image">
-                                    <img src="./150.png" alt="Image Placeholder">
+                                    <img src="./images/150.png" alt="Image Placeholder">
                                 </div>
                                 <div class="book-title">'.$row["Name"].'
                                 </div>
@@ -92,7 +92,7 @@
     }
 
 // main like
-    include 'login_db.php';
+    include './db_login/login_db.php';
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

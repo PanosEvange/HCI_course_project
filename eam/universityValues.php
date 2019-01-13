@@ -1,7 +1,7 @@
 <?php
-    include 'login_db.php';
+    include './db_login/login_db.php';
 
-    require_once 'login_db.php'; //db info
+    require_once './db_login/login_db.php'; //db info
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {

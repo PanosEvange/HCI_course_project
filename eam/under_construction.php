@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="under_construct_style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/under_construct_style.css">
 
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,8 +23,8 @@
 
     <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
     <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    
-    <script src="main.js"></script>
+
+    <script src="./js/main.js"></script>
     <title> New Eudoxus </title>
 </head>
     <body>

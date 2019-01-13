@@ -8,7 +8,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
 
         <!-- Bootstrap core CSS -->
         <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@ session_start();
         <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
         <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
-        <script src="main.js"></script>
+        <script src="./js/main.js"></script>
         <title> New Eudoxus </title>
     </head>
     <body>
@@ -67,7 +67,7 @@ session_start();
 
         <div class="editBookResult">
             <div class="editBookResult-image">
-                <img src="./150.png" alt="Image Placeholder">
+                <img src="./images/150.png" alt="Image Placeholder">
             </div>
             <div class="editBookResult-title">
                 Διακριτά Μαθηματικά για Χημικούς
@@ -82,7 +82,7 @@ session_start();
 
         <div class="editBookResult">
             <div class="editBookResult-image">
-                <img src="./150.png" alt="Image Placeholder">
+                <img src="./images/150.png" alt="Image Placeholder">
             </div>
             <div class="editBookResult-title">
                 Διακριτά Μαθηματικά για Φυσικούς
@@ -97,7 +97,7 @@ session_start();
 
         <div class="editBookResult">
             <div class="editBookResult-image">
-                <img src="./150.png" alt="Image Placeholder">
+                <img src="./images/150.png" alt="Image Placeholder">
             </div>
             <div class="editBookResult-title">
                 Διακριτά Μαθηματικά μια Εισαγωγή

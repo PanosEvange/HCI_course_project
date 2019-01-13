@@ -7,7 +7,7 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
 
         <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
 
@@ -32,7 +32,7 @@ session_start();
         <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
         <script src="myDatePickerReg.js"></script>
-        <script src="main.js"></script>
+        <script src="./js/main.js"></script>
         <title> Registration </title>
     </head>
     <body>

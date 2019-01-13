@@ -23,7 +23,7 @@
 
       if( ! (strcmp($emailErr, "") or strcmp($passErr, "")) ){
 
-          require_once 'login_db.php'; //db info
+          require_once './db_login/login_db.php'; //db info
 
           // Create connection
           $conn = new mysqli($servername, $username, $password, $dbname);
