@@ -1,6 +1,6 @@
 <div class="student-app-content">
     <div class="new-dilosi-button student-app-button">
-        <a href="/student/dilosi_step1.php" class="btn"><span class="button-text"><br/>Νέα Δήλωση<br/>Συγγραμμάτων</span></a>
+        <a href="/student/dilosi_step.php" class="btn"><span class="button-text"><br/>Νέα Δήλωση<br/>Συγγραμμάτων</span></a>
     </div>
     <div class="edit-current-button student-app-button">
         <a href="/common/under_construction.php" class="btn"><span class="button-text"><br/>Επεξεργασία Τρέχουσας<br/>Δήλωσης</span></a>

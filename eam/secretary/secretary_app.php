@@ -67,6 +67,12 @@ session_start();
             include $path;
         ?>
 
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/login_popup_content.php";
+            include $path;
+        ?>
+        
         <!-- Modal -->
         <div class="modal" id="removalModal">
           <div class="modal-dialog">

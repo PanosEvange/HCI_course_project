@@ -299,5 +299,11 @@ session_start();
             <p class="text-center text-white">Copyright &copy; Eudoxus Team 2018</p>
         </footer>
         <!-- Footer End  -->
+
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/login_popup_content.php";
+            include $path;
+        ?>
     </body>
 </html>

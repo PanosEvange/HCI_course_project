@@ -112,7 +112,7 @@ session_start();
                     <span class="my-svg-text">Φοιτητής</span> </h5>
                   </div>
                   <div class="button-area">
-                          <a href="/student/dilosi_step1.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
+                          <a href="/student/dilosi_step.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
                           <a href="/common/under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
                           <a href="/student/student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
                           <a href="/student/student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
@@ -314,10 +314,23 @@ session_start();
 
         <?php
             if (isset($_GET['login'])) {
-                echo '<script>loginPopup()</script>';
+                if(isset($_SESSION['loggedinMessage'])){
+                    //we have already shown this message
+                }
+                else{
+                    $_SESSION['loggedinMessage'] = true;
+                    echo '<script>loginPopup()</script>';
+                }
             }
             if (isset($_GET['logout'])) {
-                echo '<script>logoutPopup()</script>';
+                if(isset($_SESSION['loggedoutMessage'])){
+                    //we have already shown this message
+                }
+                else{
+                    $_SESSION['loggedoutMessage'] = true;
+                    echo '<script>logoutPopup()</script>';
+                }
+
             }
         ?>
 

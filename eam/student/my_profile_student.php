@@ -174,6 +174,12 @@
             include $path;
         ?>
 
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/login_popup_content.php";
+            include $path;
+        ?>
+        
         <!-- Email Edit Modal -->
         <div class="modal" id="successEdit-email">
           <div class="modal-dialog">

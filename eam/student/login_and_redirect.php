@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,22 +34,39 @@ session_start();
             include $path;
         ?>
 
-        <?php
-            $path = $_SERVER['DOCUMENT_ROOT'];
-            $path .= "/common/userOptions.php";
-            include $path;
-        ?>
-
         <div class="my-breadcrumb">
             <ul class="breadcrumb">
               <li><a href="/index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-              <li><a href="#">Previous1</a></li>
-              <li><a href="#">Previous2</a></li>
-              <li><a href="#">Previous3</a></li>
-              <li>current</li>
+              <li>Είσοδος</li>
             </ul>
         </div>
 
+        <div class="redirect-login-paragraph">
+            <p> Παρακαλούμε πραγματοποιήστε είσοδο προκειμένου να συνεχίσετε. </p>
+        </div>
+
+        <div class="redirect-login">
+                <div>
+                    <label class="my-label-email" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
+                    <input type="email" name="email" id="login-redirect-email" class="form-control input-md">
+                    <label class="my-label-password" for="password"><i class="fa fa-lock" aria-hidden="true"></i>  Password:</label>
+                    <!-- Password field -->
+                    <div class="input-group" id="show_hide_password_login">
+                        <input class="form-control" type="password" name="password" id="login-redirect-password">
+                        <div class="input-group-addon login-popup">
+                          <a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="error-msg-login">
+
+                    </div>
+                    <div class="last-actions">
+                        <a class="my-password-remember" href="/common/under_construction.php">Υπενθύμιση Password</a>
+                        <label class="my-label-stay-login"><input type="checkbox" value="">  Να παραμείνω συνδεδεμένος</label>
+                        <a href="#" class="btn btn-primary my-submit" id="redirect-login-submit-button">Είσοδος</a>
+                    </div>
+                </div>
+        </div>
 
         <?php
             $path = $_SERVER['DOCUMENT_ROOT'];
@@ -65,6 +79,6 @@ session_start();
             $path .= "/common/login_popup_content.php";
             include $path;
         ?>
-
+        
     </body>
 </html>

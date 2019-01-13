@@ -6,7 +6,7 @@
                 '
                 <div class="student-user-options user-options">
                         <div class="user-options-buttons">
-                            <a href="/student/dilosi_step1.php" class="btn"> Δήλωση Συγγραμμάτων </a>
+                            <a href="/student/dilosi_step.php" class="btn"> Δήλωση Συγγραμμάτων </a>
                             <a href="/common/under_construction.php" class="btn my-ml"> Ανταλλαγή Συγγραμμάτων </a>
                             <a href="/student/student_app.php" class="btn my-ml"> Εφαρμογή Φοιτητών </a>
                             <a href="/student/student_info.php" class="btn my-ml"> Πληροφορίες για Φοιτητές </a>

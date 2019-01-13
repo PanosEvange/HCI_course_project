@@ -42,6 +42,11 @@
               $_SESSION['loggedin'] = true;
               $_SESSION['username'] = $email;
               $_SESSION['userType'] = $row["UserType"];
+
+              if(isset($_SESSION['loggedoutMessage'])){
+                  unset($_SESSION['loggedoutMessage']);
+              }
+
               echo 1;
           }
           else {

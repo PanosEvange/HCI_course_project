@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -110,6 +107,12 @@ session_start();
         <?php
             $path = $_SERVER['DOCUMENT_ROOT'];
             $path .= "/common/footer.php";
+            include $path;
+        ?>
+
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/login_popup_content.php";
             include $path;
         ?>
 
