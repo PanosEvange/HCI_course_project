@@ -2859,3 +2859,9 @@ a#myFilterApplyButton:hover{
     justify-content: center;
     align-items: center;
 }
+
+.current-subjects-new-dilosi {
+    padding-top: 50px;
+    font-size: 20px;
+    color: #50f1e4;
+}

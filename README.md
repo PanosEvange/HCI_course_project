@@ -16,6 +16,7 @@
 * Fixed dropdowns values in greek instead of '?????
 * ~~Αν μείνει χρόνος, το μήνυμα για επιτυχή σύνδεση/αποσύνδεση να βγαίνει 1 φόρα ακόμα και με reload~~
 * Profile secretary and Edit
+* Pagination and dilosi history
 
 ## Comments by Stathis
 

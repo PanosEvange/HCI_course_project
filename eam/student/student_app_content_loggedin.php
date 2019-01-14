@@ -15,35 +15,67 @@
             Το Pin σου είναι: 123456789123
         </div>
 
-        <div class="current-subjects">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                    <th scope="col">Μάθημα</th>
-                    <th scope="col">Παραλήφθηκε</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Διακριτά Μαθηματικά</td>
-                    <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                </tr>
-                <tr>
-                    <td>Πιθανότητες και Στοιχεία Στατιστικής</td>
-                    <td><i class="fa fa-minus" aria-hidden="true"></i></td>
-                </tr>
-                <tr>
-                    <td>Γραμμική Άλγεβρα</td>
-                    <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                </tr>
-                <tr>
-                    <td>Λογική Σχεδιάση</td>
-                    <td><i class="fa fa-minus" aria-hidden="true"></i></td>
-                </tr>
-              </tbody>
-            </table>
-        </div>
+        <?php
+            //connect to database and use $q
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/db_login/login_db.php";
+            include $path;
 
+
+            require_once $path; //db info
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $conn->set_charset("utf8");
+
+            //Find dilosi of this student
+            if (isset($_SESSION['username'])) {
+                $studentEmail = $_SESSION['username'];
+
+                $sql = ("SELECT * FROM  Dilosi WHERE studentEmail = '$studentEmail'");
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    echo '
+                        <div class="current-subjects">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                    <th scope="col">Μάθημα</th>
+                                    <th scope="col">Παραλήφθηκε</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                    ';
+                    while ($row = $result->fetch_assoc()) {
+                        echo '
+                                <tr>
+                                    <td>'.$row["subjectName"].'</td>
+                                    <td><i class="fa fa-minus" aria-hidden="true"></i></td>
+                                </tr>
+                        ';
+                    }
+                    echo '
+                            </tbody>
+                          </table>
+                      </div>
+                    ';
+                }
+                else{
+                    echo '
+                        <div class="current-subjects-new-dilosi">
+                            Εκκρεμεί νέα δήλωση.
+                        </div>
+                    ';
+                }
+
+            }
+
+            $conn->close();
+        ?>
 
     </div>
     <div class="exchange-button student-app-button">

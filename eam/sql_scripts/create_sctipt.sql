@@ -133,10 +133,11 @@ CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBookDilosi (
 -- Table sdi1500039.Dilosi
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS sdi1500039.Dilosi (
+  ID int NOT NULL AUTO_INCREMENT,
   subjectName VARCHAR(250) NOT NULL,
   subjectBookName VARCHAR(250) NOT NULL,
   studentEmail VARCHAR(250) NOT NULL,
-  PRIMARY KEY (subjectName)
+  PRIMARY KEY (ID)
 );
 
 -- -----------------------------------------------------
