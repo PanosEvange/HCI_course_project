@@ -21,7 +21,7 @@
 ## Comments by Stathis
 
 * Breadcrumb be like marked
-* Current dilosi πιο ανοικτο background
+* ~~Current dilosi πιο ανοικτο background~~
 * dilosi step 2/3 -> το μέσα πλαίσιο λευκό
 * Επεξεργασία Συγγράμματος πιο μεγάλα αφού είναι άδεια
 * ~~Οταν αφαιρειται συγγραμμα να μενεισ την ιδια σελιδα~~

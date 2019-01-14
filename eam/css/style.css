@@ -1110,7 +1110,7 @@ a#myFilterApplyButton:hover{
 .current-dilosi {
     grid-area: current-dilosi;
     border: 2px solid #343940;
-    background: #ff5b5b;
+    background: #f36666;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -2432,6 +2432,8 @@ a#myFilterApplyButton:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 120px;
+    font-size: 17px;
 }
 
 .search-subject-to-edit .btn{
