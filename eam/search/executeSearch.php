@@ -5,7 +5,10 @@
     function printResults($rows, $result, $searchTerm='') {
         $pageLimit = 3;
 
-        $totalPages = 5; //to be calculated
+        $totalPages = intdiv ($rows , $pageLimit );
+        if( $rows % $pageLimit != 0 ){
+            $totalPages ++;
+        }
 
         if ($rows > 0) {
             if ($searchTerm != '') {
