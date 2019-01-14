@@ -2,7 +2,6 @@
 -- -----------------------------------------------------
 -- Base is  sdi1500039
 
-
 DROP TABLE IF EXISTS sdi1500039.Users;
 DROP TABLE IF EXISTS sdi1500039.Student;
 DROP TABLE IF EXISTS sdi1500039.Secretary;
