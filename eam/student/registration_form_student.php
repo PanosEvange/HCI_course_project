@@ -216,6 +216,11 @@ session_start();
                       <div class="col-6">
                         <input type="text" name="am" onfocusout="valAm()" value="<?php echo $am ?>"class="form-control" id="myAm-reg">
                       </div>
+                      <div class="col-1">
+                          <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
+                          data-content="Ο αριθμός μητρώου αποτελείται από 8 εώς 14 αριθμούς.">
+                              <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                      </div>
                     </div>
                     <div class="row error-msg">
                         <div class="col-5">

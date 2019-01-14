@@ -206,7 +206,7 @@ session_start();
                       <div class="col-1">
                           <span class="my-question-popover" title="" data-toggle="popover" data-trigger="hover"
                           data-content="Εισάγετε τον αριθμό που αναγράφεται στην μπροστινή μεριά της αστυνομικής ταυτότητας σας. Ξεκινάει υποχρεωτικά
-                          με Α ακολουθούμενο από ένα γράμμα και αριθμούς ή μόνο αριθμούς. Απαραίτητα 10 χαρακτήρες.">
+                          με Α ακολουθούμενο από ένα γράμμα και αριθμούς ή μόνο αριθμούς. Απαραίτητα 10 χαρακτήρες συνολικά.">
                               <i class="fa fa-question-circle" aria-hidden="true"></i></span>
                       </div>
                     </div>

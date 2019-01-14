@@ -85,7 +85,7 @@ function valRegEmail() {
     var $email = $("#myEmail-reg").val();
     var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if ($email.length == 0) {
-        var msg = "Please enter an email! Email is a required filed!";
+        var msg = "Παρακαλούμε εισάγετε email. Το email αποτελεί υποχρεωτικό πεδίο.";
         $(".error-email-reg").html(msg);
         document.getElementById("myEmail-reg").classList.remove("successRegField");
     }
@@ -95,7 +95,7 @@ function valRegEmail() {
         $(".error-email-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid Email form!";
+        var msg = "Το email δεν είναι στη σωστή μορφή.";
         $(".error-email-reg").html(msg);
         document.getElementById("myEmail-reg").classList.remove("successRegField");
     }
@@ -113,7 +113,7 @@ function valPassword() {
         //replace all classes with only error
         document.getElementById("myPasswordStrength").className = "col-6 error-pass-reg";
 
-        var msg = "Please enter a password! Password is a required field";
+        var msg = "Παρακαλούμε εισάγετε κωδικό. Ο κωδικός αποτελεί υποχρεωτικό πεδίο.";
         $(".error-pass-reg").html(msg);
         document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
@@ -123,7 +123,7 @@ function valPassword() {
         //replace all classes with success and strong
         document.getElementById("myPasswordStrength").className = "col-6 successRegField strongPass";
 
-        var msg = "Strong";
+        var msg = "Ισχυρός";
         $(".strongPass").html(msg);
     }
     else if ( mediumRegex.test($password) || $password.length > 10) {
@@ -132,7 +132,7 @@ function valPassword() {
         //replace all classes with success and medium
         document.getElementById("myPasswordStrength").className = "col-6 successRegField mediumPass";
 
-        var msg = "Medium";
+        var msg = "Μέτριος";
         $(".mediumPass").html(msg);
     }
     else if ( weakRegex.test($password)) {
@@ -141,7 +141,7 @@ function valPassword() {
         //replace all classes with success and weak
         document.getElementById("myPasswordStrength").className = "col-6 successRegField weakPass";
 
-        var msg = "Weak";
+        var msg = "Αδύναμος";
         $(".weakPass").html(msg);
     }
     else{ //write error message
@@ -149,7 +149,7 @@ function valPassword() {
         //replace all classes with only error
         document.getElementById("myPasswordStrength").className = "col-6 error-pass-reg";
 
-        var msg = "Invalid Password!";
+        var msg = "Μη έγκυρη μορφή κωδικού.";
         $(".error-pass-reg").html(msg);
         document.getElementById("myPassword-reg").classList.remove('successRegField');
     }
@@ -160,7 +160,7 @@ function valPassConf() {
     var $passConf = $("#myPasswordConfirm-reg").val();
     var $pass = $("#myPassword-reg").val();
     if ( $passConf.length == 0) {
-        var msg = "This field is required!";
+        var msg = "Αυτό το πεδίο είναι υποχρεωτικό.";
         $(".error-conf-pass-reg").html(msg);
         document.getElementById("myPasswordConfirm-reg").classList.remove('successRegField');
     }
@@ -170,7 +170,7 @@ function valPassConf() {
         $(".error-conf-pass-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Passwords don't match!";
+        var msg = "Οι κωδικοί δεν ταιριάζουν.";
         $(".error-conf-pass-reg").html(msg);
         document.getElementById("myPasswordConfirm-reg").classList.remove('successRegField');
     }
@@ -181,7 +181,7 @@ function valFirstName() {
     var $firstName = $("#myFirstName-reg").val();
     re =/^[α-ωάέήίόύώ ,.'-]|[a-z ,.'-]+$/i;
     if ($firstName.length == 0) {
-        var msg = "Please insert a first name! First name is a required field!";
+        var msg = "Παρακαλούμε εισάγετε όνομα. Το όνομα αποτελεί υποχρεωτικό πεδίο.";
         $(".error-first-name-reg").html(msg);
         document.getElementById("myFirstName-reg").classList.remove('successRegField');
     }
@@ -191,7 +191,7 @@ function valFirstName() {
         $(".error-first-name-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid first name";
+        var msg = "Μη έγκυρο όνομα.";
         $(".error-first-name-reg").html(msg);
         document.getElementById("myFirstName-reg").classList.remove('successRegField');
     }
@@ -203,7 +203,7 @@ function valLastName() {
     re =/^[α-ωάέήίόύώ ,.'-]|[a-z ,.'-]+$/i;
     // re =/^[a-z ,.'-]+$/i;
     if ($lastName.length == 0) {
-        var msg = "Please insert a last name! Last name is a required field";
+        var msg = "Παρακαλούμε εισάγετε επώνυμο. Το επώνυμο αποτελεί υποχρεωτικό πεδίο.";
         $(".error-last-name-reg").html(msg);
         document.getElementById("myLastName-reg").classList.remove('successRegField');
     }
@@ -213,7 +213,7 @@ function valLastName() {
         $(".error-last-name-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid last name";
+        var msg = "Μη έγκυρο επώνυμο.";
         $(".error-last-name-reg").html(msg);
         document.getElementById("myLastName-reg").classList.remove('successRegField');
     }
@@ -222,16 +222,11 @@ function valLastName() {
 
 function valBirthDate() {
     var $date = $("#myBirthDate-reg").val();
-    if( $date == 10 ){
-        document.getElementById("myBirthDate-reg").classList.add('successRegField');
-        var msg = "";
-        $(".error-date-reg").html(msg);
-    }
-    else{ //write error message
-        var msg = "Invalid date of birth";
-        $(".error-date-reg").html(msg);
-        document.getElementById("myBirthDate-reg").classList.remove('successRegField');
-    }
+
+    document.getElementById("myBirthDate-reg").classList.add('successRegField');
+    var msg = "";
+    $(".error-date-reg").html(msg);
+
     checkToEnable();
 }
 
@@ -239,17 +234,17 @@ function valIdNumber() {
     var $id = $("#myIdNumber-reg").val();
     re = /^Α[Α-Ω]?[0-9]*$/;
     if ($id.length == 0) {
-        var msg = "Please insert an ID number! ID number is a required field";
+        var msg = "Παρακαλούμε εισάγετε τον αριθμό ταυτότητας. Αποτελεί υποχρεωτικό πεδίο.";
         $(".error-id-reg").html(msg);
         document.getElementById("myIdNumber-reg").classList.remove('successRegField');
     }
-    else if( $id.length == 9 && re.test($id)){
+    else if( $id.length == 10 && re.test($id)){
         document.getElementById("myIdNumber-reg").classList.add('successRegField');
         var msg = "";
         $(".error-id-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invlaid ID number";
+        var msg = "Μη έγκυρος αριθμός ταυτότητας.";
         $(".error-id-reg").html(msg);
         document.getElementById("myIdNumber-reg").classList.remove('successRegField');
     }
@@ -260,7 +255,7 @@ function valTaxNumber() {
     var $tax = $("#myTaxNumber-reg").val();
     re = /^[0-9]*$/;
     if ($tax.length == 0) {
-        var msg = "Please insert a tax number! Tax number is a required field";
+        var msg = "Παρακαλούμε εισάγετε τον ΑΦΜ. Αποτελεί υποχρεωτικό πεδίο.";
         $(".error-tax-reg").html(msg);
         document.getElementById("myTaxNumber-reg").classList.remove('successRegField');
     }
@@ -270,7 +265,7 @@ function valTaxNumber() {
         $(".error-tax-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid tax number";
+        var msg = "Μη έγκυρος ΑΦΜ.";
         $(".error-tax-reg").html(msg);
         document.getElementById("myTaxNumber-reg").classList.remove('successRegField');
     }
@@ -281,7 +276,7 @@ function valAmkaNumber() {
     var $amka = $("#myAmkaNumber-reg").val();
     re = /^[0-9]*$/;
     if ($amka.length == 0) {
-        var msg = "Please insert an amka number! Amka number is a required field";
+        var msg = "Παρακαλούμε εισάγετε τον ΑΜΚΑ. Αποτελεί υποχρεωτικό πεδίο.";
         $(".error-amka-reg").html(msg);
         document.getElementById("myAmkaNumber-reg").classList.remove('successRegField');
     }
@@ -291,7 +286,7 @@ function valAmkaNumber() {
         $(".error-amka-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid amka";
+        var msg = "Μη έγκυρος ΑΜΚΑ.";
         $(".error-amka-reg").html(msg);
         document.getElementById("myAmkaNumber-reg").classList.remove('successRegField');
     }
@@ -312,7 +307,7 @@ function valPhoneNumber() {
         $(".error-phone-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid phone number";
+        var msg = "Μη έγκυρος αριθμός τηλεφώνου.";
         $(".error-phone-reg").html(msg);
         document.getElementById("myPhoneNumber-reg").classList.remove('successRegField');
     }
@@ -333,7 +328,7 @@ function valAddress() {
         $(".error-myAddress-reg").html(msg);
     }
     else{ //write error message
-        var msg = "Invalid address";
+        var msg = "Μη έγκυρη οδός.";
         $(".error-myAddress-reg").html(msg);
         document.getElementById("myAddress-reg").classList.remove('successRegField');
     }
@@ -353,7 +348,7 @@ function valAddressNumber() {
         var msg = "";
         $(".error-myAddressΝum-reg").html(msg);
     } else {
-        var msg = "Invalid";
+        var msg = "Μη έγκυρος αριθμός.";
         $(".error-myAddressΝum-reg").html(msg);
         document.getElementById("myAddressNum-reg").classList.remove('successRegField');
     }
@@ -373,7 +368,7 @@ function valMunicipality() {
         var msg = "";
         $(".error-myAddressDimos-reg").html(msg);
     } else {
-        var msg = "Invalid Municipality";
+        var msg = "Μη έγκυρος δήμος.";
         $(".error-myAddressDimos-reg").html(msg);
         document.getElementById("myAddressDimos-reg").classList.remove('successRegField');
     }
@@ -393,7 +388,7 @@ function valTK() {
         var msg = "";
         $(".error-myAddressTK-reg").html(msg);
     } else {
-        var msg = "Invalid TK";
+        var msg = "Μη έγκυρος Ταχ. Κώδικας.";
         $(".error-myAddressTK-reg").html(msg);
         document.getElementById("myAddressTK-reg").classList.remove('successRegField');
     }
@@ -447,7 +442,7 @@ function valAm() {
     re = /^[0-9]*$/;
     if ($am.length == 0) {
         document.getElementById("myAm-reg").classList.remove('successRegField');
-        var msg = "This field is required";
+        var msg = "Αυτό το πεδίο είναι υποχρεωτικό.";
         $(".error-am-reg").html(msg);
     } else if ( re.test($am) && $am.length >= 8 && $am.length <= 14) {
         document.getElementById("myAm-reg").classList.add('successRegField');
@@ -456,7 +451,7 @@ function valAm() {
     }
     else {
         document.getElementById("myAm-reg").classList.remove('successRegField');
-        var msg = "invalid AM";
+        var msg = "Μη έγκυρος Αριθμός Μητρώου.";
         $(".error-am-reg").html(msg);
     }
     checkToEnable();
