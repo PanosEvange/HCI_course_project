@@ -1170,7 +1170,7 @@ a#myFilterApplyButton:hover{
 .current-dilosi .my-pin{
     margin-top: 30px;
     border: 1px solid black;
-    background: #9c9ea2;
+    background: #e9e9e9;
     border-radius: 10px;
     padding: 10px;
     width: 280px;
@@ -1178,7 +1178,7 @@ a#myFilterApplyButton:hover{
 
 .current-subjects {
     margin-top: 40px;
-    background: #9c9ea2;
+    background: #e9e9e9;
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -1186,6 +1186,14 @@ a#myFilterApplyButton:hover{
 .current-subjects .table{
     margin-bottom: 0;
     font-size: 15px;
+}
+
+.current-subjects .table thead th {
+    border-bottom: 2px solid #aeb1b5;
+}
+
+.current-subjects .table-bordered td, .current-subjects .table-bordered th {
+    border: 1px solid #a0a3a7;
 }
 
 .current-subjects .table th{
