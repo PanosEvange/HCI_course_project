@@ -25,7 +25,7 @@
         $municipality = $_POST["addressDimos"];
         $TK = $_POST["addressTK"];
 
-        require_once './db_login/login_db.php'; //db info
+        require_once $path; //db info
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
