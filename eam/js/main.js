@@ -660,19 +660,19 @@ function mySearchBookFind(){
     }
 
     var $univFilter = $("#myUniv-search-select").val();
-    if( $univFilter != "" ){
+    if( $univFilter != "" && $univFilter != null ){
         $url += $isFirst + "u=" + $univFilter;
         $isFirst = '&';
     }
 
     var $depFilter = $("#myDepart-search-select").val();
-    if( $depFilter != "" ){
+    if( $depFilter != "" && $depFilter != null ){
         $url += $isFirst + "d=" + $depFilter;
         $isFirst = '&';
     }
 
     var $semFilter = $("#mySem-search-select").val();
-    if( $semFilter != "" ){
+    if( $semFilter != "" && $semFilter != null ){
         $url += $isFirst + "s=" + $semFilter;
         $isFirst = '&';
     }
