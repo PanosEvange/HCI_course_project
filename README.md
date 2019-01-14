@@ -12,7 +12,7 @@
 * change address at dilosi step3
 * ~~Login reload current page~~
 * ~~Logout go to home page~~
-* Fixed Error messages in greek
+* ~~Fixed Error messages in greek~~
 * ~~Fixed dropdowns values in greek instead of '?????~~
 * ~~Αν μείνει χρόνος, το μήνυμα για επιτυχή σύνδεση/αποσύνδεση να βγαίνει 1 φόρα ακόμα και με reload~~
 * Profile secretary and Edit
@@ -20,8 +20,8 @@
 
 ## Comments by Stathis
 
-* Breadcrumb be like marked
+* ~~Breadcrumb be like marked~~
 * ~~Current dilosi πιο ανοικτο background~~
 * dilosi step 2/3 -> το μέσα πλαίσιο λευκό
-* Επεξεργασία Συγγράμματος πιο μεγάλα αφού είναι άδεια
+* ~~Επεξεργασία Συγγράμματος πιο μεγάλα αφού είναι άδεια~~
 * ~~Οταν αφαιρειται συγγραμμα να μενεισ την ιδια σελιδα~~

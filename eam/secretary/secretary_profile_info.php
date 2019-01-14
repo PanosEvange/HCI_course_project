@@ -13,6 +13,7 @@ require_once $path; //db info
 
     // Get the info of the student
     $email = $_SESSION["username"];
+    $conn->set_charset("utf8");
     $sql = "SELECT * FROM Users WHERE Email = '$email' ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
@@ -24,6 +25,9 @@ require_once $path; //db info
     $date = $row["DateOfBirth"];
     $phone = $row["Phone"];
     $address = $row["Address"];
+    $addressNum = $row["AddressNum"];
+    $municipality = $row["Municipality"];
+    $postalCode = $row["TK"];
 
     $sql = "SELECT * FROM Secretary WHERE idSecretary = '$id' ";
     $result = $conn->query($sql);
