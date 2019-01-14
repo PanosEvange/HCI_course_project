@@ -55,11 +55,11 @@
         <div class="redirect-login">
                 <div>
                     <label class="my-label-email" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
-                    <input type="email" name="email" id="login-redirect-email" class="form-control input-md">
+                    <input type="email" name="email" id="login-redirect-email-secretary" class="form-control input-md">
                     <label class="my-label-password" for="password"><i class="fa fa-lock" aria-hidden="true"></i>  Password:</label>
                     <!-- Password field -->
                     <div class="input-group" id="show_hide_password_login">
-                        <input class="form-control" type="password" name="password" id="login-redirect-password">
+                        <input class="form-control" type="password" name="password" id="login-redirect-password-secretary">
                         <div class="input-group-addon login-popup">
                           <a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                         </div>

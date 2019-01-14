@@ -1678,21 +1678,21 @@ $(document).ready(function(){
         }
     });
 
-    $(document).on("keyup", "#login-redirect-password", function (e) {
+    $(document).on("keyup", "#login-redirect-password-secretary", function (e) {
         if(e.keyCode==13){
             document.getElementById("redirect-login-submit-button-secretary").click();
         }
     });
 
-    $(document).on("keyup", "#login-redirect-email", function (e) {
+    $(document).on("keyup", "#login-redirect-email-secretary", function (e) {
         if(e.keyCode==13){
             document.getElementById("redirect-login-submit-button-secretary").click();
         }
     });
 
     $(document).on("click", "#redirect-login-submit-button-secretary", function () {
-        var email = $("#login-redirect-email").val();
-        var password = $("#login-redirect-password").val();
+        var email = $("#login-redirect-email-secretary").val();
+        var password = $("#login-redirect-password-secretary").val();
 
         if( email != "" && password != "" ){
             $.ajax({
