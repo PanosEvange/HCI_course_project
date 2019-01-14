@@ -601,6 +601,12 @@ $(document).ready(function() {
 
     $('#books-list-final-delivery-select3').select2({ width: '100%' });
 
+    $('#books-list-final-delivery-select4').select2({ width: '100%' });
+
+    $('#books-list-final-delivery-select5').select2({ width: '100%' });
+
+    $('#books-list-final-delivery-select6').select2({ width: '100%' });
+
     $('#search-subject-to-edit-select1').select2({ width: '100%' });
 
     $('#search-subject-to-edit-select2').select2({ width: '100%' });
@@ -1421,6 +1427,93 @@ function deliverySelect3() {
 
 }
 
+$(document).ready(function(){
+
+    if ($(".my-select-books-list-final-delivery-4").length){
+        $('.my-select-books-list-final-delivery-4 b[role="presentation"]').hide();
+        $('.my-select-books-list-final-delivery-4 .select2-selection__arrow').append('<i id="delivery-select-arrow4" class="fa fa-angle-down"></i>');
+    }
+
+    $(document).on("click", ".my-select-books-list-final-delivery-4 .select2-container--focus", function () {
+        var element = document.getElementById("delivery-select-arrow4");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+    });
+
+    $(document).on("click", ".my-select-books-list-final-delivery-4 .select2-container--open", function () {
+        var element = document.getElementById("delivery-select-arrow4");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+    });
+
+});
+
+function deliverySelect4() {
+
+    var element = document.getElementById("delivery-select-arrow4");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
+
+}
+
+$(document).ready(function(){
+
+    if ($(".my-select-books-list-final-delivery-5").length){
+        $('.my-select-books-list-final-delivery-5 b[role="presentation"]').hide();
+        $('.my-select-books-list-final-delivery-5 .select2-selection__arrow').append('<i id="delivery-select-arrow5" class="fa fa-angle-down"></i>');
+    }
+
+    $(document).on("click", ".my-select-books-list-final-delivery-5 .select2-container--focus", function () {
+        var element = document.getElementById("delivery-select-arrow5");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+    });
+
+    $(document).on("click", ".my-select-books-list-final-delivery-5 .select2-container--open", function () {
+        var element = document.getElementById("delivery-select-arrow5");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+    });
+
+});
+
+function deliverySelect5() {
+
+    var element = document.getElementById("delivery-select-arrow5");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
+
+}
+
+$(document).ready(function(){
+
+    if ($(".my-select-books-list-final-delivery-6").length){
+        $('.my-select-books-list-final-delivery-6 b[role="presentation"]').hide();
+        $('.my-select-books-list-final-delivery-6 .select2-selection__arrow').append('<i id="delivery-select-arrow6" class="fa fa-angle-down"></i>');
+    }
+
+    $(document).on("click", ".my-select-books-list-final-delivery-6 .select2-container--focus", function () {
+        var element = document.getElementById("delivery-select-arrow6");
+        element.classList.add("fa-angle-down");
+        element.classList.remove("fa-angle-up");
+    });
+
+    $(document).on("click", ".my-select-books-list-final-delivery-6 .select2-container--open", function () {
+        var element = document.getElementById("delivery-select-arrow6");
+        element.classList.remove("fa-angle-down");
+        element.classList.add("fa-angle-up");
+    });
+
+});
+
+function deliverySelect6() {
+
+    var element = document.getElementById("delivery-select-arrow6");
+    element.classList.add("fa-angle-down");
+    element.classList.remove("fa-angle-up");
+
+}
+
 $(document).on("click", "#search-subject-secretary", function () {
     document.getElementById("to-append-results").innerHTML =
      `
@@ -1642,8 +1735,6 @@ function updateSessionInfo2(number){
     }
 
     url = "/common/updateSessionInfo2.php?number=" + number + url;
-
-    alert("Url is " + url)
 
     $.ajax({
         url:url,

@@ -51,10 +51,6 @@ session_start();
             </ul>
         </div>
 
-        <?php
-            echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
-        ?>
-
         <div class="dilosi-steps-breadcrumb">
             <ul class="steps steps-3">
               <li><a href="/student/dilosi_step1.php" title=""><em>Επιλογή Μαθημάτων</em></a></li>
@@ -63,104 +59,79 @@ session_start();
             </ul>
         </div>
 
-        <div class="dilosi-step3-select-delivery">
-            <h1 class="title">Τεχνητή Νοημοσύνη</h1>
-            <div class="books-list-final-info">
-                <div class="books-list-final-title">
-                    Σύγγραμμα: ΤΕΧΝΗΤΗ ΝΟΗΜΟΣΥΝΗ: ΜΙΑ ΣΥΓΧΡΟΝΗ ΠΡΟΣΕΓΓΙΣΗ
-                </div>
-                <div class="books-list-final-middle">
-                    <div class="books-list-final-comments">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                        | <a href="#" title="comments">Σχόλια(17)</a>
-                    </div>
-                    <div class="books-list-final-delivery">
-                        <div class="my-select-title-books-list-final-delivery">
-                            Τρόπος Παραλαβής:
-                        </div>
-                        <div class="my-select-books-list-final-delivery my-select-books-list-final-delivery-1">
-                            <select id="books-list-final-delivery-select1" onchange="deliverySelect1()">
-                                <option value="" selected disabled hidden>Επιλέξτε Τρόπο</option>
-                                <option value="publisher">Από σημείο διανομής του εκδότη</option>
-                                <option value="library">Από Πανεπιστημιακή Βιβλιοθήκη</option>
-                                <option value="home">Παράδοση στο σπίτι</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="books-list-final-hours">
-                    Ωράριο: 11:00-17:00 Δευτέρα-Παρασκευή <br/>
-                    Διεύθυνση: Ακαδημίας 42, Αθήνα 106 72 <br/>
-                    <a href="/common/under_construction.php" title="map">Εμφάνιση στο χάρτη</a>
-                </div>
-            </div>
-        </div>
+        <?php
+            //connect to database and use $q
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/db_login/login_db.php";
+            include $path;
 
-        <div class="dilosi-step3-select-delivery">
-            <h1 class="title">Λειτουργικά Συστήματα</h1>
-            <div class="books-list-final-info">
-                <div class="books-list-final-title">
-                    Σύγγραμμα: ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ
-                </div>
-                <div class="books-list-final-middle">
-                    <div class="books-list-final-comments">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                        | <a href="#" title="comments">Σχόλια(4)</a>
-                    </div>
-                    <div class="books-list-final-delivery">
-                        <div class="my-select-title-books-list-final-delivery">
-                            Τρόπος Παραλαβής:
-                        </div>
-                        <div class="my-select-books-list-final-delivery my-select-books-list-final-delivery-2">
-                            <select id="books-list-final-delivery-select2" onchange="deliverySelect2()">
-                                <option value="" selected disabled hidden>Επιλέξτε Τρόπο</option>
-                                <option value="publisher">Από σημείο διανομής του εκδότη</option>
-                                <option value="library">Από Πανεπιστημιακή Βιβλιοθήκη</option>
-                                <option value="home">Παράδοση στο σπίτι</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="books-list-final-hours">
-                    Ωράριο: 08:30-19:00 Δευτέρα-Παρασκευή <br/>
-                    Διεύθυνση: Ακαδημίας 75, Αθήνα 106 72 <br/>
-                    <a href="/common/under_construction.php" title="map">Εμφάνιση στο χάρτη</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="dilosi-step3-select-delivery">
-            <h1 class="title">Γραφικά 1</h1>
-            <div class="books-list-final-info">
-                <div class="books-list-final-title">
-                    Σύγγραμμα: Γραφικά και Οπτικοποίηση
-                </div>
-                <div class="books-list-final-middle">
-                    <div class="books-list-final-comments">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                        | <a href="#" title="comments">Σχόλια(6)</a>
-                    </div>
-                    <div class="books-list-final-delivery">
-                        <div class="my-select-title-books-list-final-delivery">
-                            Τρόπος Παραλαβής:
-                        </div>
-                        <div class="my-select-books-list-final-delivery my-select-books-list-final-delivery-3">
-                            <select id="books-list-final-delivery-select3" onchange="deliverySelect3()">
-                                <option value="" selected disabled hidden>Επιλέξτε Τρόπο</option>
-                                <option value="publisher">Από σημείο διανομής του εκδότη</option>
-                                <option value="library">Από Πανεπιστημιακή Βιβλιοθήκη</option>
-                                <option value="home">Παράδοση στο σπίτι</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="books-list-final-hours">
-                    Ωράριο: 09:00-16:00 Δευτέρα-Παρασκευή <br/>
-                    Διεύθυνση: Ιωάννου Θεολόγου 80, Ζωγράφου 157 73 <br/>
-                    <a href="/common/under_construction.php" title="map">Εμφάνιση στο χάρτη</a>
-                </div>
-            </div>
-        </div>
+            require_once $path; //db info
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $conn->set_charset("utf8");
+
+            if (isset($_SESSION['numberOfSubjects'])) {
+                $number = $_SESSION['numberOfSubjects2'];
+                for ($i=0; $i < $number; $i++) {
+                    $varName = "s_".$i;
+                    $varName2 = "q_".$i;
+                    if (isset($_SESSION[$varName])) {
+                        $var = $_SESSION[$varName];
+                        $varSubject = $_SESSION[$varName2];
+
+                        //Find books for this subject
+                        $sql = ("SELECT * FROM  SubjectBookDilosi WHERE subjectBookName = '$var'");
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                    $counter = $i +1;
+                                    echo '
+                                        <div class="dilosi-step3-select-delivery">
+                                            <h1 class="title">'.$varSubject.'</h1>
+                                            <div class="books-list-final-info">
+                                                <div class="books-list-final-title">
+                                                    '.$row["subjectBookName"].'
+                                                </div>
+                                                <div class="books-list-final-middle">
+                                                    <div class="books-list-final-comments">
+                                                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
+                                                        | <a href="#" title="comments">Σχόλια(17)</a>
+                                                    </div>
+                                                    <div class="books-list-final-delivery">
+                                                        <div class="my-select-title-books-list-final-delivery">
+                                                            Τρόπος Παραλαβής:
+                                                        </div>
+                                                        <div class="my-select-books-list-final-delivery my-select-books-list-final-delivery-'.$counter.'">
+                                                            <select id="books-list-final-delivery-select'.$counter.'" onchange="deliverySelect'.$counter.'()">
+                                                                <option value="publisher" selected>Από σημείο διανομής του εκδότη</option>
+                                                                <option value="library">Από Πανεπιστημιακή Βιβλιοθήκη</option>
+                                                                <option value="home">Παράδοση στο σπίτι</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="books-list-final-hours">
+                                                    Εκδόσεις: '.$row["subjectBookPublisher"].' <br/>
+                                                    Ωράριο: 11:00-17:00 Δευτέρα-Παρασκευή <br/>
+                                                    Διεύθυνση: Ακαδημίας 42, Αθήνα 106 72 <br/>
+                                                    <a href="/common/under_construction.php" title="map">Εμφάνιση στο χάρτη</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ';
+                            }
+                        }
+                    }
+
+                }
+            }
+            $conn->close();
+        ?>
 
         <div class="dilosi-step3-notifications">
             <div class="poria-dilosis">
