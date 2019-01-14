@@ -45,6 +45,13 @@
             <p> Παρακαλούμε πραγματοποιήστε είσοδο προκειμένου να συνεχίσετε. </p>
         </div>
 
+        <div class="redirect-sign-up-paragraph">
+            <p> Αν είσαι νέος φοιτητής έφτασε η ώρα να εγγραφείς και συ!</p>
+            <div class="my-signup">
+                <a href="/student/registration_form_student.php" class="btn" >Εγγραφή</a>
+            </div>
+        </div>
+
         <div class="redirect-login">
                 <div>
                     <label class="my-label-email" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>  Email:</label>
@@ -79,6 +86,6 @@
             $path .= "/common/login_popup_content.php";
             include $path;
         ?>
-        
+
     </body>
 </html>
