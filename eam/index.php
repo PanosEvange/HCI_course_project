@@ -7,26 +7,26 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="./vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link href="/vendor/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
 
         <!-- Bootstrap core CSS -->
-        <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Bootstrap core JavaScript -->
-        <script src="./vendor/jquery/jquery.min.js"></script>
-        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <link href="./vendor/select2-4.0.6-rc.1/dist/css/select2.css" rel="stylesheet">
-        <script src="./vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
+        <link href="/vendor/select2-4.0.6-rc.1/dist/css/select2.css" rel="stylesheet">
+        <script src="/vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
 
-        <script src="./vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
-        <link href="./vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+        <script src="/vendor/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
+        <link href="/vendor/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
-        <link href="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
-        <script src="./vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <link href="/vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+        <script src="/vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
-        <script src="main.js"></script>
+        <script src="/js/main.js"></script>
         <title> New Eudoxus </title>
     </head>
     <body>
@@ -35,55 +35,75 @@ session_start();
         <div class="my-nav-bar">
             <!-- Navigation -->
             <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
-              <a class="navbar-brand ml-auto" href="./index.php">Νέος Εύδοξος</a>
+              <a class="navbar-brand ml-auto" href="/index.php">Νέος Εύδοξος</a>
                 <ul class="my-navbar-main-list navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.php"><i class="fa fa-home" aria-hidden="true"></i>Αρχική <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/index.php"><i class="fa fa-home" aria-hidden="true"></i>Αρχική <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">Ανακοινώσεις</a>
+                    <a class="nav-link" href="/common/under_construction.php">Ανακοινώσεις</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./searchBooks.php">Αναζήτηση Συγγραμμάτων</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">Επικοινωνία</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./under_construction.php">FAQ</a>
+                    <a class="nav-link" href="/common/under_construction.php">Επικοινωνία</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./under_construction.php" id="navbarDropdownInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/common/under_construction.php" id="navbarDropdownInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Πληροφορίες
                     </a>
                     <div class="dropdown-menu dropdown-menu-right myNavbarDropdownInfo" aria-labelledby="navbarDropdownInfo">
-                      <a class="dropdown-item" href="./student_info.php">Πληροφορίες για Φοιτητές</a>
-                      <a class="dropdown-item" href="./secretary_info.php">Πληροφορίες για Γραμματείς</a>
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Εκδότες</a>
-                      <a class="dropdown-item" href="./under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
+                      <a class="dropdown-item" href="/student/student_info.php">Πληροφορίες για Φοιτητές</a>
+                      <a class="dropdown-item" href="/secretary/secretary_info.php">Πληροφορίες για Γραμματείς</a>
+                      <a class="dropdown-item" href="/common/under_construction.php">Πληροφορίες για Εκδότες</a>
+                      <a class="dropdown-item" href="/common/under_construction.php">Πληροφορίες για Βιβλιοθήκη</a>
                     </div>
                   </li>
                 </ul>
-                <form class="my-search-bar mr-auto">
-                  <input class="form-control my-search-area" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn my-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
+                <div class="home-page-search">
+                    <form class="my-search-bar" onsubmit="return homePageSearchSubmit()">
+                      <div class="inner-form">
+                        <div class="input-field first-wrap">
+                          <div class="input-select">
+                            <select id="home-page-search-select" onchange="homePageSearchSelect(this.value)">
+                              <option value="book" selected>Σύγγραμμα</option>'
+                              <option value="store">Σημείο Διανομής</option>'
+                              <option value="publisher">Εκδότης</option>'
+                            </select>
+                          </div>
+                        </div>
+                        <div class="input-field second-wrap">
+                          <input id="home-page-search-input" type="text" placeholder="Αναζήτηση..." />
+                        </div>
+                        <div class="input-field third-wrap">
+                          <button class="btn-search" type="button">
+                            <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" viewBox="0 0 512 512">
+                              <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <?php
+                    $path = $_SERVER['DOCUMENT_ROOT'];
+                    $path .= "/login/isLoggedIn.php";
+                    include $path;
+                ?>
             </nav>
         </div>
         <!-- Header End -->
 
-        <?php include 'userOptions.php';?>
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/userOptions.php";
+            include $path;
+        ?>
 
-        <div class="below-nav-bar">
-            <div class="my-breadcrumb">
-                <ul class="breadcrumb">
-                  <li><a href="./index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-
-            <?php include 'isLoggedIn.php';?>
-
+        <div class="my-breadcrumb">
+            <ul class="breadcrumb">
+              <li><a href="/index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
+
 
             <div class="main-content mr-auto ml-auto">
                 <div class="my-section student-area">
@@ -92,10 +112,10 @@ session_start();
                     <span class="my-svg-text">Φοιτητής</span> </h5>
                   </div>
                   <div class="button-area">
-                          <a href="./dilosi_step1.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
-                          <a href="./under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
-                          <a href="./student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
-                          <a href="./student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
+                          <a href="/student/dilosi_step.php" class="btn section-button" >Δήλωση Συγγραμμάτων</a>
+                          <a href="/common/under_construction.php" class="btn section-button" >Ανταλλαγή Συγγραμμάτων</a>
+                          <a href="/student/student_app.php" class="btn section-button" >Εφαρμογή Φοιτητών</a>
+                          <a href="/student/student_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Φοιτητές</a>
                   </div>
                 </div>
                 <div class="my-section secretary-area">
@@ -141,10 +161,10 @@ session_start();
                           <span class="my-svg-text">Γραμματεία</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="./under_construction.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
-                            <a href="./under_construction.php" class="btn section-button" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
-                            <a href="./secretary_app.php" class="btn section-button" >Εφαρμογή Γραμματείας</a>
-                            <a href="./secretary_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
+                            <a href="/secretary/secretary_edit_books_prepare.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
+                            <a href="/secretary/secretary_app.php" class="btn section-button" >Εφαρμογή Γραμματείας</a>
+                            <a href="/secretary/secretary_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
                     </div>
                 </div>
                 <div class="my-section publisher-area">
@@ -185,10 +205,10 @@ session_start();
                           <span class="my-svg-text">Εκδότες</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="./under_construction.php" class="btn section-button" >Προσθήκη Συγγράμματος</a>
-                            <a href="./under_construction.php" class="btn section-button" >Διαχείριση <br> Σημείων Διανομής</a>
-                            <a href="./under_construction.php" class="btn section-button" >Εφαρμογή Εκδοτών</a>
-                            <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Εκδότες</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Προσθήκη Συγγράμματος</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Διαχείριση <br> Σημείων Διανομής</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Εφαρμογή Εκδοτών</a>
+                            <a href="/common/under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Εκδότες</a>
                     </div>
                 </div>
                 <div class="my-section library-area">
@@ -220,133 +240,64 @@ session_start();
                           <span class="my-svg-text">Βιβλιοθήκες</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="./under_construction.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
-                            <a href="./under_construction.php" class="btn section-button" >Συνεργαζόμενοι Εκδότες</a>
-                            <a href="./under_construction.php" class="btn section-button" >Εφαρμογή Βιβλιοθηκών</a>
-                            <a href="./under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Βιβλιοθήκες</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Συνεργαζόμενοι Εκδότες</a>
+                            <a href="/common/under_construction.php" class="btn section-button" >Εφαρμογή Βιβλιοθηκών</a>
+                            <a href="/common/under_construction.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Βιβλιοθήκες</a>
                     </div>
                 </div>
             </div>
 
-            <div class="main-content-2 mr-auto ml-auto">
-                <div class="home-page-search">
-                  <form>
-                    <div class="inner-form">
-                      <div class="input-field first-wrap">
-                        <div class="input-select">
-                          <select id="home-page-search-select" onchange="homePageSearchSelect(this.value)">
-                            <option value="book" selected>Σύγγραμμα</option>'
-                            <option value="store">Σημείο Διανομής</option>'
-                            <option value="publisher">Εκδότης</option>'
-                          </select>
-                        </div>
-                      </div>
-                      <div class="input-field second-wrap">
-                        <input id="" type="text" placeholder="Αναζήτηση..." />
-                      </div>
-                      <div class="input-field third-wrap">
-                        <button class="btn-search" type="button">
-                          <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" viewBox="0 0 512 512">
-                            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                          </svg>
-                        </button>
-                      </div>
+
+            <div class="my-announcement mr-auto ml-auto">
+
+                <p> Ανακοινώσεις </p>
+                <div class="an-announcement">
+                    <div class="date">
+                        05/01/2019
                     </div>
-                  </form>
-
-                  <div class="filter-home-page" id="myFiltersInputBook">
-                          <div class="form-group row">
-                            <label for="University" class="col-2 col-form-label">Πανεπιστήμιο:</label>
-                            <div class="col-1"></div>
-                            <div class="col-4">
-                              <select class="" name="university" id="myUniv-reg" onchange="myDepartmentOptionsDisplayHomePage(this.value)">
-                                  <option value="" selected disabled hidden>Επιλογή Ιδρύματος</option>
-                                  <?php include 'universityValues.php';?>
-                              </select>
-                            </div>
-                            <label for="Semister" class="col-2 col-form-label">Εξάμηνο:</label>
-                            <div class="col-2">
-                                <select id="home-page-search-select2">
-                                    <option value="" selected disabled hidden>Νο</option>
-                                    <option value="1">1ο</option>
-                                    <option value="2">2ο</option>
-                                    <option value="3">3ο</option>
-                                    <option value="4">4ο</option>
-                                    <option value="5">5ο</option>
-                                    <option value="6">6ο</option>
-                                    <option value="7">7ο</option>
-                                    <option value="8">8ο</option>
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="Department" class="col-2 col-form-label">Τμήμα:</label>
-                            <div class="col-1"></div>
-                            <div class="col-4">
-                                <select class="" name="department" id="myDepart-reg" disabled>
-                                    <option value="" selected disabled hidden>Επιλογή Τμήματος</option>
-                                </select>
-                            </div>
-                          </div>
-                  </div>
-
-                  <div class="filter-home-page" id="myFiltersInputStore" hidden>
-                          <div class="form-group row">
-                            <label for="Region" class="col-2 col-form-label">Πόλη:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select3">
-                                    <option value="" selected disabled hidden>Πόλη</option>
-                                    <option value="Athens">Αθήνα</option>
-                                    <option value="Thessaloniki">Θεσσαλονίκη</option>
-                                    <option value="Crete">Κρήτη</option>
-                                    <option value="Yianena">Γιάννενα</option>
-                                </select>
-                            </div>
-                            <label for="Eidos" class="col-2 col-form-label">Κατεύθυνση:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select4">
-                                    <option value="" selected disabled hidden>Κατεύθυνση</option>
-                                    <option value="thetikes">Θετικές Επιστήμες</option>
-                                    <option value="theoritikes">Θεωρητικές Επιστήμες</option>
-                                </select>
-                            </div>
-                          </div>
-                  </div>
-
-                  <!-- <div class="filter-home-page" id="myFiltersInputPublisher" hidden>
-                          <div class="form-group row">
-                            <label for="Name" class="col-2 col-form-label">Όνομα:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select5">
-                                    <option value="" selected disabled hidden>Όνομα</option>
-                                    <option value="Ιωάννης">Ιωάννης</option>
-                                    <option value="Γεώργιος">Γεώργιος</option>
-                                    <option value="Κωνσταντίνος">Κωνσταντίνος</option>
-                                </select>
-                            </div>
-                            <label for="Eidos" class="col-2 col-form-label">Κατεύθυνση:</label>
-                            <div class="col-4">
-                                <select id="home-page-search-select6">
-                                    <option value="" selected disabled hidden>Κατεύθυνση</option>
-                                    <option value="thetikes">Θετικές Επιστήμες</option>
-                                    <option value="theoritikes">Θεωρητικές Επιστήμες</option>
-                                </select>
-                            </div>
-                          </div>
-                  </div> -->
-
-
-
+                    <div class="announcement-content">
+                        Η προθεσμία για την δήλωση των συγγραμμάτων λήγει στις 23/01/2019. Παρακαλείσθε όλοι να μεριμνήσετε για την έγκαιρη...
+                    </div>
+                    <div class="announcement-more">
+                        <a href="/common/under_construction.php"> Διαβάστε περισσότερα</a>
+                    </div>
                 </div>
 
-                <div class="my-announcement">
-                    Anouncements
+                <div class="an-announcement">
+                    <div class="date">
+                        02/01/2019
+                    </div>
+                    <div class="announcement-content">
+                        Ανακοινώθηκε η εγκύκλιος για τον διορισμό ενός ατόμου στην θέση του υπεύθυνου αναπληρωτή για...
+                    </div>
+                    <div class="announcement-more">
+                        <a href="/common/under_construction.php"> Διαβάστε περισσότερα</a>
+                    </div>
                 </div>
+
+                <div class="an-announcement">
+                    <div class="date">
+                        01/01/2019
+                    </div>
+                    <div class="announcement-content">
+                        Η ομάδα του Εύδοξου ανακοινώνει ότι από 01/01/2019 αλλάζει η πολιτική απορρήτου. Παρακαλείσθε όλοι να...
+                    </div>
+                    <div class="announcement-more">
+                        <a href="/common/under_construction.php"> Διαβάστε περισσότερα</a>
+                    </div>
+                </div>
+
             </div>
 
 
 
-        <?php include 'footer.php';?>
+
+        <?php
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/common/footer.php";
+            include $path;
+        ?>
 
         <!-- Login Modal -->
         <div class="modal" id="loginModal">
@@ -355,14 +306,14 @@ session_start();
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Καλωσήρθατε!!</h4>
+                <h4 class="modal-title">Επιτυχής σύνδεση</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">
+              <!-- <div class="modal-body">
                 Συνδεθήκατε Επιτυχώς!
-              </div>
+              </div> -->
 
               <!-- Modal footer -->
               <div class="modal-footer">
@@ -380,13 +331,33 @@ session_start();
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Αντίο!!</h4>
+                <h4 class="modal-title">Επιτυχής αποσύνδεση</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">
+              <!-- <div class="modal-body">
                 Αποσυνδεθήκατε Επιτυχώς!
+              </div> -->
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div class="modal" id="registrationModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Επιτυχής εγγραφή</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal footer -->
@@ -400,10 +371,32 @@ session_start();
 
         <?php
             if (isset($_GET['login'])) {
-                echo '<script>loginPopup()</script>';
+                if(isset($_SESSION['loggedinMessage'])){
+                    //we have already shown this message
+                }
+                else{
+                    $_SESSION['loggedinMessage'] = true;
+                    echo '<script>loginPopup()</script>';
+                }
             }
             if (isset($_GET['logout'])) {
-                echo '<script>logoutPopup()</script>';
+                if(isset($_SESSION['loggedoutMessage'])){
+                    //we have already shown this message
+                }
+                else{
+                    $_SESSION['loggedoutMessage'] = true;
+                    echo '<script>logoutPopup()</script>';
+                }
+
+            }
+            if (isset($_GET['register'])) {
+                if(isset($_SESSION['registrationMessage'])){
+                    //we have already shown this message
+                }
+                else{
+                    $_SESSION['registrationMessage'] = true;
+                    echo '<script>registerPopup()</script>';
+                }
             }
         ?>
 
