@@ -2899,3 +2899,7 @@ a#myFilterApplyButton:hover{
     font-size: 20px;
     border-bottom: 3px solid #7b7b7b;
 }
+
+.dilosi-popover {
+    margin-left: -10px;
+}

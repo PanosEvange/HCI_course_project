@@ -99,8 +99,32 @@ session_start();
                                                 </div>
                                                 <div class="books-list-final-middle">
                                                     <div class="books-list-final-comments">
-                                                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                                                        | <a href="#" title="comments">Σχόλια(17)</a>
+                                                        <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                         class="btn dilosi-popover" role="button" data-toggle="popover"
+                                                         data-trigger="click" title="Περισσότερες Πληροφορίες"
+                                                         data-content=\'
+                                                             <div id="popover-content" class="hidden">
+                                                                     <div>
+                                                                         Υπό κατασκευή.
+                                                                     </div>
+                                                             </div>
+                                                         \'
+                                                         >
+                                                         Περισσότερες Πληροφορίες
+                                                         </a>
+                                                        | <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                         class="btn" role="button" data-toggle="popover"
+                                                         data-trigger="click" title="Σχόλια"
+                                                         data-content=\'
+                                                             <div id="popover-content" class="hidden">
+                                                                     <div>
+                                                                         Υπό κατασκευή.
+                                                                     </div>
+                                                             </div>
+                                                         \'
+                                                         >
+                                                         Σχόλια(7)
+                                                         </a>
                                                     </div>
                                                     <div class="books-list-final-delivery">
                                                         <div class="my-select-title-books-list-final-delivery">
@@ -119,7 +143,19 @@ session_start();
                                                     Εκδόσεις: '.$row["subjectBookPublisher"].' <br/>
                                                     Ωράριο: 11:00-17:00 Δευτέρα-Παρασκευή <br/>
                                                     Διεύθυνση: Ακαδημίας 42, Αθήνα 106 72 <br/>
-                                                    <a href="/common/under_construction.php" title="map">Εμφάνιση στο χάρτη</a>
+                                                        <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                         class="btn dilosi-popover" role="button" data-toggle="popover"
+                                                         data-trigger="click" title="Χάρτης"
+                                                         data-content=\'
+                                                             <div id="popover-content" class="hidden">
+                                                                     <div>
+                                                                         Υπό κατασκευή.
+                                                                     </div>
+                                                             </div>
+                                                         \'
+                                                         >
+                                                         Εμφάνιστη στο χάρτη
+                                                         </a>
                                                 </div>
                                             </div>
                                         </div>

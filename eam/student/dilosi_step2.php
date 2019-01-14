@@ -105,10 +105,34 @@ session_start();
                                                 .$row["subjectBookName"].' - '.$row["subjectBookPublisher"].' ('.$row["bookPososto"].')
                                             </div>
                                             <div class="dilosi-book-info">
-                                                <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
+                                                <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                 class="btn" role="button" data-toggle="popover"
+                                                 data-trigger="click" title="Περισσότερες Πληροφορίες"
+                                                 data-content=\'
+                                                     <div id="popover-content" class="hidden">
+                                                             <div>
+                                                                 Υπό κατασκευή.
+                                                             </div>
+                                                     </div>
+                                                 \'
+                                                 >
+                                                 Περισσότερες Πληροφορίες
+                                                 </a>
                                             </div>
                                             <div class="dilosi-book-comments">
-                                                <a href="#" title="comments">Σχόλια(2)</a>
+                                                <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                 class="btn" role="button" data-toggle="popover"
+                                                 data-trigger="click" title="Σχόλια"
+                                                 data-content=\'
+                                                     <div id="popover-content" class="hidden">
+                                                             <div>
+                                                                 Υπό κατασκευή.
+                                                             </div>
+                                                     </div>
+                                                 \'
+                                                 >
+                                                 Σχόλια(2)
+                                                 </a>
                                             </div>
                                         </div>
                                     ';
@@ -124,10 +148,34 @@ session_start();
                                                 .$row["subjectBookName"].' - '.$row["subjectBookPublisher"].' ('.$row["bookPososto"].')
                                             </div>
                                             <div class="dilosi-book-info">
-                                                <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
+                                                <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                 class="btn" role="button" data-toggle="popover"
+                                                 data-trigger="click" title="Περισσότερες Πληροφορίες"
+                                                 data-content=\'
+                                                     <div id="popover-content" class="hidden">
+                                                             <div>
+                                                                 Υπό κατασκευή.
+                                                             </div>
+                                                     </div>
+                                                 \'
+                                                 >
+                                                 Περισσότερες Πληροφορίες
+                                                 </a>
                                             </div>
                                             <div class="dilosi-book-comments">
-                                                <a href="#" title="comments">Σχόλια(2)</a>
+                                                <a href="#" onclick="return false;" tabindex="0" data-placement="bottom"
+                                                 class="btn" role="button" data-toggle="popover"
+                                                 data-trigger="click" title="Σχόλια"
+                                                 data-content=\'
+                                                     <div id="popover-content" class="hidden">
+                                                             <div>
+                                                                 Υπό κατασκευή.
+                                                             </div>
+                                                     </div>
+                                                 \'
+                                                 >
+                                                 Σχόλια(2)
+                                                 </a>
                                             </div>
                                         </div>
                                     ';
