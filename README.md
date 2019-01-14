@@ -3,7 +3,7 @@
 ## TO DO list
 
 * ~~Back-end dilosi + summary at home page~~
-* Back-end secretary remove book
+* ~~Back-end secretary remove book~~
 * ~~If logged out student press Dilosi -> ask him to sign in~~
 * ~~Search books filters should be with dropdown lists~~
 * Dilosi -> Comments,More info, Show map -> Under Construction Popup
@@ -24,4 +24,4 @@
 * Current dilosi πιο ανοικτο background
 * dilosi step 2/3 -> το μέσα πλαίσιο λευκό
 * Επεξεργασία Συγγράμματος πιο μεγάλα αφού είναι άδεια
-* Οταν αφαιρειται συγγραμμα να μενεισ την ιδια σελιδα
+* ~~Οταν αφαιρειται συγγραμμα να μενεισ την ιδια σελιδα~~

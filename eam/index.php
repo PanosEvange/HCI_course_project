@@ -250,7 +250,44 @@ session_start();
 
 
             <div class="my-announcement mr-auto ml-auto">
-                Anouncements
+
+                <p> Ανακοινώσεις </p>
+                <div class="an-announcement">
+                    <div class="date">
+                        05/01/2019
+                    </div>
+                    <div class="announcement-content">
+                        Η προθεσμία για την δήλωση των συγγραμμάτων λήγει στις 23/01/2019. Παρακαλείσθε όλοι να μεριμνήσετε για την έγκαιρη...
+                    </div>
+                    <div class="announcement-more">
+                        <a href="/common/under_construction.php"> Διαβάστε περισσότερα</a>
+                    </div>
+                </div>
+
+                <div class="an-announcement">
+                    <div class="date">
+                        02/01/2019
+                    </div>
+                    <div class="announcement-content">
+                        Ανακοινώθηκε η εγκύκλιος για τον διορισμό ενός ατόμου στην θέση του υπεύθυνου αναπληρωτή για...
+                    </div>
+                    <div class="announcement-more">
+                        <a href="/common/under_construction.php"> Διαβάστε περισσότερα</a>
+                    </div>
+                </div>
+
+                <div class="an-announcement">
+                    <div class="date">
+                        01/01/2019
+                    </div>
+                    <div class="announcement-content">
+                        Η ομάδα του Εύδοξου ανακοινώνει ότι από 01/01/2019 αλλάζει η πολιτική απορρήτου. Παρακαλείσθε όλοι να...
+                    </div>
+                    <div class="announcement-more">
+                        <a href="/common/under_construction.php"> Διαβάστε περισσότερα</a>
+                    </div>
+                </div>
+
             </div>
 
 

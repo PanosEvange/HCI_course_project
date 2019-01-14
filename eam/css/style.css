@@ -1592,14 +1592,16 @@ a#myFilterApplyButton:hover{
 }
 
 .my-announcement{
+    display: flex;
     min-width: 1230px;
     width: 1230px;
     background-color: #ddd;
-    padding: 10px;
+    padding: 25px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    height: 300px;
     margin-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Home Page search */
@@ -2868,4 +2870,31 @@ a#myFilterApplyButton:hover{
 
 .next-step {
     margin-bottom: 500px;
+}
+
+.an-announcement {
+    background: #ece9e9;
+    border: 1px solid #212529;
+    border-radius: 8px;
+    box-shadow: 4px 3px #999;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 15px;
+    width: 1000px;
+}
+
+.announcement-content {
+    padding: 17px;
+}
+
+.announcement-more a {
+    float: right;
+    margin-right: 25px;
+}
+
+.my-announcement p {
+    align-self: flex-start;
+    font-size: 20px;
+    border-bottom: 3px solid #7b7b7b;
 }
