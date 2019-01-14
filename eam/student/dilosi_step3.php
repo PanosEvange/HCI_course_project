@@ -150,7 +150,14 @@ session_start();
         </div>
 
         <div class="next-step">
-            <a class="btn" href="/student/student_app.php?succesfulDilosi" title="complete">Ολοκλήρωση Δήλωσης <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <?php
+                if(isset($_SESSION['numberOfSubjects2'])) {
+                    $number = $_SESSION['numberOfSubjects2'];
+                    echo '<a class="btn" href="/student/student_app.php?successfulDilosi" onclick="updateSessionInfo3('.$number.')
+                    " title="complete">Ολοκλήρωση Δήλωσης <i class="fa fa-angle-right" aria-hidden="true"></i></a>';
+                }
+            ?>
+
         </div>
 
         <?php

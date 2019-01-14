@@ -44,17 +44,6 @@ CREATE TABLE IF NOT EXISTS sdi1500039.Student (
 );
 
 -- -----------------------------------------------------
--- Table sdi1500039.SubjectBookDilosi
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBookDilosi (
-  subjectBookName VARCHAR(250) NOT NULL,
-  subjectBookPublisher VARCHAR(250) NOT NULL,
-  subjectName VARCHAR(250) NOT NULL,
-  bookPososto VARCHAR(250) NOT NULL,
-  PRIMARY KEY (subjectBookName)
-);
-
--- -----------------------------------------------------
 -- Table sdi1500039.Secretary
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS sdi1500039.Secretary (
@@ -128,6 +117,27 @@ CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBook (
   CONSTRAINT PK_Subject PRIMARY KEY (UniversityName, DepartmentName, SubjectName, ISBN)
 );
 
+
+-- -----------------------------------------------------
+-- Table sdi1500039.SubjectBookDilosi
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBookDilosi (
+  subjectBookName VARCHAR(250) NOT NULL,
+  subjectBookPublisher VARCHAR(250) NOT NULL,
+  subjectName VARCHAR(250) NOT NULL,
+  bookPososto VARCHAR(250) NOT NULL,
+  PRIMARY KEY (subjectBookName)
+);
+
+-- -----------------------------------------------------
+-- Table sdi1500039.Dilosi
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS sdi1500039.Dilosi (
+  subjectName VARCHAR(250) NOT NULL,
+  subjectBookName VARCHAR(250) NOT NULL,
+  studentEmail VARCHAR(250) NOT NULL,
+  PRIMARY KEY (subjectName)
+);
 
 -- -----------------------------------------------------
 -- Insert some mock data

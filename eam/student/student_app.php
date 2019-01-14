@@ -72,7 +72,7 @@ session_start();
             $path .= "/common/login_popup_content.php";
             include $path;
         ?>
-        
+
         <!-- Login Modal -->
         <div class="modal" id="dilosiModal">
           <div class="modal-dialog">
@@ -99,8 +99,14 @@ session_start();
         </div>
 
         <?php
-            if (isset($_GET['succesfulDilosi'])) {
-                echo '<script>successDilosiPopup()</script>';
+            if (isset($_GET['successfulDilosi'])) {
+                if(isset($_SESSION['successfullDilosiMessage'])){
+                    //we have already shown this message
+                }
+                else{
+                    $_SESSION['successfullDilosiMessage'] = true;
+                    echo '<script>successDilosiPopup()</script>';
+                }
             }
         ?>
 

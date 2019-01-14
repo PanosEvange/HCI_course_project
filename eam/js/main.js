@@ -1750,3 +1750,22 @@ function updateSessionInfo2(number){
         }
     });
 }
+
+function updateSessionInfo3(number){
+
+    url = "/common/updateSessionInfo3.php?number=" + number;
+
+    $.ajax({
+        url:url,
+        type:'post',
+        success:function(response){
+            var msg = "";
+            if(response == 1){
+                // alert("OK!");
+            }
+            else{
+                alert(response);
+            }
+        }
+    });
+}
