@@ -63,37 +63,37 @@
             <ul class="subjects-list">
               <li>
                   <label class="label-my-checkbox">Τεχνητή Νοημοσύνη
-                      <input type="checkbox" name="subject1" id="AI-check" value="AI">
+                      <input type="checkbox" name="subject1" id="AI-check" value="Τεχνητή Νοημοσύνη">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Λειτουργικά Συστήματα
-                      <input type="checkbox" name="subject2" id="OS-check" value="OS">
+                      <input type="checkbox" name="subject2" id="OS-check" value="Λειτουργικά Συστήματα">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Παράλληλα Συστήματα
-                      <input type="checkbox" name="subject3" id="Parallel-check" value="Parallel">
+                      <input type="checkbox" name="subject3" id="Parallel-check" value="Παράλληλα Συστήματα">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Γραφικά 1
-                      <input type="checkbox" name="subject4" id="Graphics-check" value="Graphics">
+                      <input type="checkbox" name="subject4" id="Graphics-check" value="Γραφικά 1">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Αρχές Γλωσσών Προγραμματισμού
-                      <input type="checkbox" name="subject5" id="Languages-check" value="Languages">
+                      <input type="checkbox" name="subject5" id="Languages-check" value="Αρχές Γλωσσών Προγραμματισμού">
                       <span class="checkmark"></span>
                   </label>
               </li>
               <li>
                   <label class="label-my-checkbox">Αριθμητική Ανάλυση
-                      <input type="checkbox" name="subject6" id="Analysis-check" value="Analysis">
+                      <input type="checkbox" name="subject6" id="Analysis-check" value="Αριθμητική Ανάλυση">
                       <span class="checkmark"></span>
                   </label>
               </li>

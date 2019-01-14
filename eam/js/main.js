@@ -1603,7 +1603,7 @@ function updateSessionInfo(){
     }
 
     if ($('#Analysis-check').prop('checked') == true){
-        url = "&q_" + counter + "=" + $('#Analysis-check').val();
+        url += "&q_" + counter + "=" + $('#Analysis-check').val();
         counter ++;
     }
 
@@ -1618,7 +1618,43 @@ function updateSessionInfo(){
                 // alert("OK!");
             }
             else{
-                // alert(response);
+                //alert(response);
+            }
+        }
+    });
+}
+
+function updateSessionInfo2(number){
+
+    var url = "";
+
+    $("input:radio[name='r']:checked").val()
+    var groupName = "";
+    var value = "";
+
+    for (var i = 0; i < number; i++) {
+
+        groupName = "input:radio[name='group" + i + "']:checked";
+        value = $(groupName).val();
+
+        url += "&s_" + i + "=" + value;
+
+    }
+
+    url = "/common/updateSessionInfo2.php?number=" + number + url;
+
+    alert("Url is " + url)
+
+    $.ajax({
+        url:url,
+        type:'post',
+        success:function(response){
+            var msg = "";
+            if(response == 1){
+                // alert("OK!");
+            }
+            else{
+                //alert(response);
             }
         }
     });

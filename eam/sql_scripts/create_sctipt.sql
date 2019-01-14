@@ -138,40 +138,40 @@ CREATE TABLE IF NOT EXISTS sdi1500039.SubjectBook (
 -- -----------------------------------------------------
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Τεχνητή Νοημοσύνη Μια Εισαγωγή','Κλειδάριθμος','AI','64%');
+                VALUES ('Τεχνητή Νοημοσύνη Μια Εισαγωγή','Κλειδάριθμος','Τεχνητή Νοημοσύνη','64%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Τεχνητή Νοημοσύνη Μια Προσέγγιση','Γκιούρδας','AI','36%');
+                VALUES ('Τεχνητή Νοημοσύνη Μια Προσέγγιση','Γκιούρδας','Τεχνητή Νοημοσύνη','36%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Λειτουργικά Συστήματα για Μηχανικούς','Ασημάκης','OS','24.36%');
+                VALUES ('Λειτουργικά Συστήματα για Μηχανικούς','Ασημάκης','Λειτουργικά Συστήματα','24.36%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Μια εισαγωγή στα Λειτουργικά Συστήματα','Πατάκης','OS','75.64%');
+                VALUES ('Μια εισαγωγή στα Λειτουργικά Συστήματα','Πατάκης','Λειτουργικά Συστήματα','75.64%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Παράλληλα Συστήματα MPI','Κλειδάριθμος','Parallel','55.5%');
+                VALUES ('Παράλληλα Συστήματα MPI','Κλειδάριθμος','Παράλληλα Συστήματα','55.5%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Παράλληλα Συστήματα OpenMP','Πανεπιστημιακές Εκδόσεις Κρήτης','Parallel','44.5%');
+                VALUES ('Παράλληλα Συστήματα OpenMP','Πανεπιστημιακές Εκδόσεις Κρήτης','Παράλληλα Συστήματα','44.5%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Γραφικά για Μηχανικούς','Μεταίχμιο','Graphics','70%');
+                VALUES ('Γραφικά για Μηχανικούς','Μεταίχμιο','Γραφικά 1','70%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Προχωρημένα Γραφικά','Συμμετρία','Graphics','30%');
+                VALUES ('Προχωρημένα Γραφικά','Συμμετρία','Γραφικά 1','30%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Αρχές Γλωσσών με Haskel','Αρχιμήδης','Languages','80%');
+                VALUES ('Αρχές Γλωσσών με Haskel','Αρχιμήδης','Αρχές Γλωσσών Προγραμματισμού','80%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Αρχές Γλωσσών Μια εισαγωγή','Κλειδάριθμος','Languages','20%');
+                VALUES ('Αρχές Γλωσσών Μια εισαγωγή','Κλειδάριθμος','Αρχές Γλωσσών Προγραμματισμού','20%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Αριθμητική Ανάλυση μια Σύγχρονη Προσέγγιση','Κλειδάριθμος','Analysis','48%');
+                VALUES ('Αριθμητική Ανάλυση μια Σύγχρονη Προσέγγιση','Κλειδάριθμος','Αριθμητική Ανάλυση','48%');
 
 INSERT INTO `SubjectBookDilosi`(`subjectBookName`,`subjectBookPublisher`,`subjectName`,`bookPososto`)
-                VALUES ('Εισαγωγή στην Αριθμητική Ανάλυση','Συμμετρία','Analysis','52%');
+                VALUES ('Εισαγωγή στην Αριθμητική Ανάλυση','Συμμετρία','Αριθμητική Ανάλυση','52%');
 
 -- -----------------------------------------------------
 -- Insert Univerities

@@ -51,6 +51,9 @@ session_start();
             </ul>
         </div>
 
+        <?php
+            echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
+        ?>
 
         <div class="dilosi-steps-breadcrumb">
             <ul class="steps steps-3">

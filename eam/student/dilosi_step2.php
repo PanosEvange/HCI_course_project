@@ -51,19 +51,6 @@ session_start();
             </ul>
         </div>
 
-        <?php
-            if (isset($_SESSION['numberOfSubjects'])) {
-                $number = $_SESSION['numberOfSubjects'];
-                for ($i=0; $i < $number; $i++) {
-                    $varName = "q_".$i;
-                    if (isset($_SESSION[$varName])) {
-                        $var = $_SESSION[$varName];
-                        echo $var.'</br>';
-                    }
-                }
-            }
-        ?>
-
         <div class="dilosi-steps-breadcrumb">
             <ul class="steps steps-3">
               <li><a href="/student/dilosi_step.php" title=""><em>Επιλογή Μαθημάτων</em></a></li>
@@ -72,120 +59,107 @@ session_start();
             </ul>
         </div>
 
-        <div class="dilosi-step2-select-book">
-            <h1 class="title">Τεχνητή Νοημοσύνη</h1>
-            <fieldset id="group1">
-                <div class="books-list-item">
-                    <label class="dilosi-book-radio-button">
-                      <input type="radio" checked="checked" name="group1">
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dilosi-book-title">
-                        ΤΕΧΝΗΤΗ ΝΟΗΜΟΣΥΝΗ - ΕΚΔΟΣΕΙΣ ΠΑΝ/ΜΙΟΥ ΜΑΚΕΔΟΝΙΑΣ (13.4%)
-                    </div>
-                    <div class="dilosi-book-info">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                    </div>
-                    <div class="dilosi-book-comments">
-                        <a href="#" title="comments">Σχόλια(2)</a>
-                    </div>
-                </div>
-                <div class="books-list-item">
-                    <label class="dilosi-book-radio-button">
-                      <input type="radio" name="group1">
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dilosi-book-title">
-                        ΤΕΧΝΗΤΗ ΝΟΗΜΟΣΥΝΗ: ΜΙΑ ΣΥΓΧΡΟΝΗ ΠΡΟΣΕΓΓΙΣΗ - ΕΚΔΟΣΕΙΣ ΚΛΕΙΔΑΡΙΘΜΟΣ (86.6%)
-                    </div>
-                    <div class="dilosi-book-info">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                    </div>
-                    <div class="dilosi-book-comments">
-                        <a href="#" title="comments">Σχόλια(17)</a>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
+        <?php
+            //connect to database and use $q
+            $path = $_SERVER['DOCUMENT_ROOT'];
+            $path .= "/db_login/login_db.php";
+            include $path;
 
-        <div class="dilosi-step2-select-book">
-            <h1 class="title">Λειτουργικά Συστήματα</h1>
-            <fieldset id="group2">
-                <div class="books-list-item">
-                    <label class="dilosi-book-radio-button">
-                      <input type="radio" checked="checked" name="group2">
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dilosi-book-title">
-                        ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ - Χ. ΓΚΙΟΥΡΔΑ (39.2%)
-                    </div>
-                    <div class="dilosi-book-info">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                    </div>
-                    <div class="dilosi-book-comments">
-                        <a href="#" title="comments">Σχόλια(4)</a>
-                    </div>
-                </div>
-                <div class="books-list-item">
-                    <label class="dilosi-book-radio-button">
-                      <input type="radio" name="group2">
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dilosi-book-title">
-                        ΣΥΓΧΡΟΝΑ ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ - ΕΚΔΟΣΕΙΣ ΚΛΕΙΔΑΡΙΘΜΟΣ (60.8%)
-                    </div>
-                    <div class="dilosi-book-info">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                    </div>
-                    <div class="dilosi-book-comments">
-                        <a href="#" title="comments">Σχόλια(9)</a>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
 
-        <div class="dilosi-step2-select-book">
-            <h1 class="title">Γραφικά 1</h1>
-            <fieldset id="group3">
-                <div class="books-list-item">
-                    <label class="dilosi-book-radio-button">
-                      <input type="radio" checked="checked" name="group3">
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dilosi-book-title">
-                        Γραφικά και Οπτικοποιήση - Εκδόσεις Συμμετρία (62.9%)
-                    </div>
-                    <div class="dilosi-book-info">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                    </div>
-                    <div class="dilosi-book-comments">
-                        <a href="#" title="comments">Σχόλια(6)</a>
-                    </div>
-                </div>
-                <div class="books-list-item">
-                    <label class="dilosi-book-radio-button">
-                      <input type="radio" name="group3">
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dilosi-book-title">
-                        Γραφικά Αρχές και Αλγόριθμοι - Εκδόσεις Συμμετρία (37.1%)
-                    </div>
-                    <div class="dilosi-book-info">
-                        <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
-                    </div>
-                    <div class="dilosi-book-comments">
-                        <a href="#" title="comments">Σχόλια(4)</a>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
+            require_once $path; //db info
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $conn->set_charset("utf8");
+
+            if (isset($_SESSION['numberOfSubjects'])) {
+                $number = $_SESSION['numberOfSubjects'];
+                for ($i=0; $i < $number; $i++) {
+                    $varName = "q_".$i;
+                    if (isset($_SESSION[$varName])) {
+                        $var = $_SESSION[$varName];
+
+                        echo '
+                            <div class="dilosi-step2-select-book">
+                                <h1 class="title">'.$var.'
+                                </h1>
+                                <fieldset id="group'.$i.'">
+                        ';
+                        //Find books for this subject
+                        $sql = ("SELECT * FROM  SubjectBookDilosi WHERE subjectName = '$var'");
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            $counterForCheck = 0;
+                            while ($row = $result->fetch_assoc()) {
+                                if( $counterForCheck == 0 ){
+                                    echo '
+                                        <div class="books-list-item">
+                                            <label class="dilosi-book-radio-button">
+                                              <input type="radio" checked="checked" value="'.$row["subjectBookName"].'" name="group'.$i.'">
+                                              <span class="checkmark"></span>
+                                            </label>
+                                            <div class="dilosi-book-title">'
+                                                .$row["subjectBookName"].' - '.$row["subjectBookPublisher"].' ('.$row["bookPososto"].')
+                                            </div>
+                                            <div class="dilosi-book-info">
+                                                <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
+                                            </div>
+                                            <div class="dilosi-book-comments">
+                                                <a href="#" title="comments">Σχόλια(2)</a>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+                                else{
+                                    echo '
+                                        <div class="books-list-item">
+                                            <label class="dilosi-book-radio-button">
+                                              <input type="radio" value="'.$row["subjectBookName"].'" name="group'.$i.'">
+                                              <span class="checkmark"></span>
+                                            </label>
+                                            <div class="dilosi-book-title">'
+                                                .$row["subjectBookName"].' - '.$row["subjectBookPublisher"].' ('.$row["bookPososto"].')
+                                            </div>
+                                            <div class="dilosi-book-info">
+                                                <a href="/common/under_construction.php" title="more-info">Περισσότερες Πληροφορίες</a>
+                                            </div>
+                                            <div class="dilosi-book-comments">
+                                                <a href="#" title="comments">Σχόλια(2)</a>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+                                $counterForCheck ++;
+                            }
+                        }
+
+                        echo '
+                                </fieldset>
+                            </div>
+
+                        ';
+                    }
+
+                }
+            }
+            $conn->close();
+        ?>
 
         <div class="previous-step">
             <a class="btn" href="/student/dilosi_step.php" title="dilosi_step1"><i class="fa fa-angle-left" aria-hidden="true"></i> Προηγούμενο Βήμα </a>
         </div>
 
         <div class="next-step">
-            <a class="btn" href="/student/dilosi_step3.php" title="dilosi_step3">Επόμενο Βήμα <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <?php
+                if(isset($_SESSION['numberOfSubjects'])) {
+                    $number = $_SESSION['numberOfSubjects'];
+                    echo '<a class="btn" href="/student/dilosi_step3.php" onclick="updateSessionInfo2('.$number.')
+                    " title="dilosi_step3">Επόμενο Βήμα <i class="fa fa-angle-right" aria-hidden="true"></i></a>';
+                }
+            ?>
         </div>
 
         <?php
