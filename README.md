@@ -2,7 +2,7 @@
 
 ## TO DO list
 
-* Back-end dilosi + summary at home page
+* ~~Back-end dilosi + summary at home page~~
 * Back-end secretary remove book
 * ~~If logged out student press Dilosi -> ask him to sign in~~
 * ~~Search books filters should be with dropdown lists~~
@@ -13,10 +13,10 @@
 * ~~Login reload current page~~
 * ~~Logout go to home page~~
 * Fixed Error messages in greek
-* Fixed dropdowns values in greek instead of '?????
+* ~~Fixed dropdowns values in greek instead of '?????~~
 * ~~Αν μείνει χρόνος, το μήνυμα για επιτυχή σύνδεση/αποσύνδεση να βγαίνει 1 φόρα ακόμα και με reload~~
 * Profile secretary and Edit
-* Pagination and dilosi history
+* ~~Pagination~~ and dilosi history
 
 ## Comments by Stathis
 
