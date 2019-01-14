@@ -41,7 +41,7 @@
                 }
 
                 echo '
-                    <div id="overlay" class="loading-overlay"><div id="text" class="overlay-content">Loading.....</div></div>
+                    <div id="overlay" class="loading-overlay"><div id="text" class="overlay-content">Loading...</div></div>
                     <div id="searchResults-pagination-container-id" class="searchResults-pagination-container">
                 ';
                 for ($i=0; $i < $page_res; $i++) {
