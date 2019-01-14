@@ -56,5 +56,10 @@
         }
 
         $conn->close();
+        unset($_SESSION['registrationMessage']);
+        echo '<script type="text/javascript">',
+             'window.location.href = "/index.php?register";',
+             '</script>'
+        ;
     }
 ?>

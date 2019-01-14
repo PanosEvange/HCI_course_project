@@ -1110,6 +1110,10 @@ function logoutPopup(){
     $('#logoutModal').modal();
 }
 
+function registerPopup(){
+    $('#registrationModal').modal();
+}
+
 function successEditΕmail(){
     $('#successEdit-email').modal();
 }
