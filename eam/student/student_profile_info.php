@@ -13,6 +13,7 @@ require_once $path; //db info
 
     // Get the info of the student
     $email = $_SESSION["username"];
+    $conn->set_charset("utf8");
     $sql = "SELECT * FROM Users WHERE Email = '$email' ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();

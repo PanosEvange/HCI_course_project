@@ -98,7 +98,7 @@
             <div class="my-university-info">
                 <h> Στοιχεία Σχολής </h>
                 <div class="form-group row">
-                  <label for="myUniv" class="col-5 col-form-label">Σχολή:</label>
+                  <label for="myUniv" class="col-5 col-form-label">Ίδρυμα:</label>
                   <div class="col-6">
                       <?php echo $uni;?>
                   </div>
@@ -179,7 +179,7 @@
             $path .= "/common/login_popup_content.php";
             include $path;
         ?>
-        
+
         <!-- Email Edit Modal -->
         <div class="modal" id="successEdit-email">
           <div class="modal-dialog">

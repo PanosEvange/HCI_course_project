@@ -1,6 +1,2 @@
 -- Drop all the tables
-DROP TABLE Users;
-DROP TABLE Student;
-DROP TABLE Secretary;
-DROP TABLE University;
-DROP TABLE Department;
+DROP TABLE `Books`, `Department`, `Dilosi`, `Publisher`, `Secretary`, `Student`, `Subject`, `SubjectBook`, `SubjectBookDilosi`, `University`, `Users`;

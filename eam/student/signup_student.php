@@ -47,7 +47,7 @@
         }
         $last_id = $conn->insert_id;
         $sql = ("INSERT INTO Student (idStudent, DepartmentName, UniversityName, AM)
-                                VALUES ($last_id, '$uni', '$dept', '$am')");
+                                VALUES ($last_id, '$dept', '$uni', '$am')");
         if ($conn->query($sql) === TRUE) {
             $succ = "Επιτυχής καταχώρηση!";
         }

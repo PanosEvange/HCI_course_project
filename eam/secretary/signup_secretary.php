@@ -46,7 +46,7 @@
         }
         $last_id = $conn->insert_id;
         $sql = ("INSERT INTO Secretary (idSecretary, DepartmentName, UniversityName, IdNumber)
-                                VALUES ($last_id, '$uni', '$dept', '$id')");
+                                VALUES ($last_id, '$dept', '$uni', '$id')");
         if ($conn->query($sql) === TRUE) {
             $succ = "Επιτυχής καταχώρηση!";
         }
