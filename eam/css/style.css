@@ -2013,11 +2013,11 @@ a#myFilterApplyButton:hover{
 .steps li::after { border-left-color: #7c8437; }
 
 /* Current */
-.steps li.current { background-color: #C36615; }
-.steps li.current::after { border-left-color: #C36615; }
+.steps li.current { background-color: #7C8437; pointer-events: none; }
+.steps li.current::after { border-left-color: #7C8437; }
 
 /* Following */
-.steps li.current ~ li { background-color: #9d9999; }
+.steps li.current ~ li { background-color: #9d9999; pointer-events: none; }
 .steps li.current ~ li::after { border-left-color: #9d9999; }
 
 /* Hover for completed and current */
@@ -2201,7 +2201,7 @@ a#myFilterApplyButton:hover{
 .books-list-item{
     width: 600px;
     margin-top: 20px;
-    background: #dddddd;
+    background: #f1ecec;
     grid-template-columns:1fr 400px 1fr;
     display: grid;
     grid-template-areas:
@@ -2314,7 +2314,7 @@ a#myFilterApplyButton:hover{
 .books-list-final-info{
     width: 800px;
     margin-top: 20px;
-    background: #dddddd;
+    background: #f1ecec;
     grid-template-columns: 1fr 770px 1fr;
     display: grid;
     grid-template-areas:
@@ -2456,8 +2456,7 @@ a#myFilterApplyButton:hover{
 }
 
 .secretary-app.my-breadcrumb{
-    margin-left: 300px;
-    width: 600px;
+
 }
 
 .search-button-subject {
@@ -2543,8 +2542,7 @@ a#myFilterApplyButton:hover{
 }
 
 .secretary-app-step2.my-breadcrumb {
-    margin-left: 210px;
-    width: 780px;
+
 }
 
 .secretary-step2-subject-info{
