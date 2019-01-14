@@ -1651,7 +1651,47 @@ $(document).ready(function(){
                 success:function(response){
                     var msg = "";
                     if(response == 1){
-                        window.location = "/student/dilosi_step.php";
+                        window.location = "/student/dilosi_step.php?login";
+                    }else{
+                        msg = "Invalid email or password!";
+                    }
+                    $(".error-msg-login").html(msg);
+                }
+            });
+            return false;
+        }
+        else{
+            var msg = "Enter email and password!";
+            $(".error-msg-login").html(msg);
+            return false;
+        }
+    });
+
+    $(document).on("keyup", "#login-redirect-password", function (e) {
+        if(e.keyCode==13){
+            document.getElementById("redirect-login-submit-button-secretary").click();
+        }
+    });
+
+    $(document).on("keyup", "#login-redirect-email", function (e) {
+        if(e.keyCode==13){
+            document.getElementById("redirect-login-submit-button-secretary").click();
+        }
+    });
+
+    $(document).on("click", "#redirect-login-submit-button-secretary", function () {
+        var email = $("#login-redirect-email").val();
+        var password = $("#login-redirect-password").val();
+
+        if( email != "" && password != "" ){
+            $.ajax({
+                url:'/login/login.php',
+                type:'post',
+                data:{email:email,password:password},
+                success:function(response){
+                    var msg = "";
+                    if(response == 1){
+                        window.location = "/secretary/secretary_edit_books_prepare.php?login";
                     }else{
                         msg = "Invalid email or password!";
                     }

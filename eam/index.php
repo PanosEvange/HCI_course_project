@@ -161,7 +161,7 @@ session_start();
                           <span class="my-svg-text">Γραμματεία</span></h5>
                     </div>
                     <div class="button-area">
-                            <a href="/secretary/secretary_edit_books.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
+                            <a href="/secretary/secretary_edit_books_prepare.php" class="btn section-button" >Διαχείριση Συγγραμμάτων</a>
                             <a href="/common/under_construction.php" class="btn section-button" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
                             <a href="/secretary/secretary_app.php" class="btn section-button" >Εφαρμογή Γραμματείας</a>
                             <a href="/secretary/secretary_info.php" class="btn section-button" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>

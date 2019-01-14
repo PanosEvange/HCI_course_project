@@ -19,7 +19,7 @@
                 '
                 <div class="secretary-user-options user-options">
                     <div class="user-options-buttons">
-                        <a href="/secretary/secretary_edit_books.php" class="btn" >Διαχείριση Συγγραμμάτων</a>
+                        <a href="/secretary/secretary_edit_books_prepare.php" class="btn" >Διαχείριση Συγγραμμάτων</a>
                         <a href="/common/under_construction.php" class="btn my-ml" >Επεξεργασία <br> Προγράμματος Σπουδών</a>
                         <a href="/secretary/secretary_app.php" class="btn my-ml" >Εφαρμογή Γραμματείας</a>
                         <a href="/secretary/secretary_info.php" class="btn my-ml" ><span class="my-content">Πληροφορίες <br> για Γραμματείς</a>
