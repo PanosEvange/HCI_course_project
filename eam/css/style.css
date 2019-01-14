@@ -2631,7 +2631,7 @@ a#myFilterApplyButton:hover{
 }
 
 .editBooks-step2-placeholder{
-    margin-bottom: 100px;
+    margin-bottom: 500px;
 }
 
 #removeBookModal1 .modal-footer {
@@ -2864,4 +2864,8 @@ a#myFilterApplyButton:hover{
     padding-top: 50px;
     font-size: 20px;
     color: #50f1e4;
+}
+
+.next-step {
+    margin-bottom: 500px;
 }

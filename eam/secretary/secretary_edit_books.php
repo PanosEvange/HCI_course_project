@@ -69,10 +69,12 @@
                 <span class="search-subject-label-input">Μάθημα:</span>
                 <select id="search-subject-to-edit-select2">
                     <option value="" selected disabled hidden>Επιλέξτε Μάθημα</option>
-                    <option value="1">Διακριτά Μαθηματικά 1</option>
-                    <option value="2">Διακριτά Μαθηματικά 2</option>
-                    <option value="3">Φυσική</option>
-                    <option value="4">Χημεία</option>
+                    <option value="Τεχνητή Νοημοσύνη">Τεχνητή Νοημοσύνη</option>
+                    <option value="Λειτουργικά Συστήματα">Λειτουργικά Συστήματα</option>
+                    <option value="Παράλληλα Συστήματα">Παράλληλα Συστήματα</option>
+                    <option value="Γραφικά 1">Γραφικά 1</option>
+                    <option value="Αρχές Γλωσσών Προγραμματισμού">Αρχές Γλωσσών Προγραμματισμού</option>
+                    <option value="Αριθμητική Ανάλυση">Αριθμητική Ανάλυση</option>
                 </select>
 
             </div>

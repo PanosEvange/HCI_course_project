@@ -73,36 +73,6 @@ session_start();
             include $path;
         ?>
         
-        <!-- Modal -->
-        <div class="modal" id="removalModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h4 class="modal-title">Επιτυχής αφαίρεση συγγράμματος</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-
-              <!-- Modal body -->
-              <!-- <div class="modal-body">
-                Επιτυχής ολοκλήρωση δήλωσης!
-              </div> -->
-
-              <!-- Modal footer -->
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <?php
-            if (isset($_GET['successRemoval'])) {
-                echo '<script>successRemovalPopup()</script>';
-            }
-        ?>
 
     </body>
 </html>

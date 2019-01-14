@@ -1519,31 +1519,38 @@ function deliverySelect6() {
 }
 
 $(document).on("click", "#search-subject-secretary", function () {
-    document.getElementById("to-append-results").innerHTML =
-     `
-     <h3 class="results-title"> Αποτελέσματα Αναζήτησης </h1>
 
-     <div class="subject-info-to-edit">
-         <div class="subject-info-to-edit-title">
-             <b>Μάθημα:</b>   Διακριτά Μαθηματικά 1
-         </div>
-         <div class="subject-info-to-edit-professor">
-             <b>Καθηγητής:</b> Ιάκωβος Χριστόπουλος
-         </div>
-         <div class="subject-info-to-edit-line">
-             <div class="subject-info-to-edit-semister">
-                 <b>Εξάμηνο:</b> 3ο
+    $subjectName = $("#search-subject-to-edit-select2").val();
+
+    if( $subjectName != null ){
+        document.getElementById("to-append-results").innerHTML =
+         `
+         <h3 class="results-title"> Αποτελέσματα Αναζήτησης </h1>
+
+         <div class="subject-info-to-edit">
+             <div class="subject-info-to-edit-title">
+                 <b>Μάθημα:</b>` + $subjectName +
+            `
              </div>
-             <div class="subject-info-to-edit-button">
-                 <a href="/secretary/diakrita1.php">Επεξεργασία Μαθήματος</a>
+             <div class="subject-info-to-edit-professor">
+                 <b>Καθηγητής:</b> Ιάκωβος Χριστόπουλος
+             </div>
+             <div class="subject-info-to-edit-line">
+                 <div class="subject-info-to-edit-semister">
+                     <b>Εξάμηνο:</b> 3ο
+                 </div>
+                 <div class="subject-info-to-edit-button">
+                     <a href="/secretary/subject_to_edit.php?s=` + $subjectName + `">Επεξεργασία Μαθήματος</a>
+                 </div>
              </div>
          </div>
-     </div>
 
-     <div class="placeholder-secretary-edit-books">
+         <div class="placeholder-secretary-edit-books">
 
-     </div>
-    `;
+         </div>
+        `;
+    }
+
 });
 
 $(document).on("click", "#remove-book-1", function () {
@@ -1558,8 +1565,12 @@ $(document).on("click", "#remove-book-3", function () {
     $('#removeBookModal3').modal();
 });
 
-$(document).on("click", "#success-remove-book", function () {
-    window.location.href = "/secretary/secretary_app.php?successRemoval";
+$(document).on("click", "#remove-book-4", function () {
+    $('#removeBookModal4').modal();
+});
+
+$(document).on("click", "#remove-book-5", function () {
+    $('#removeBookModal5').modal();
 });
 
 function mySearchPublisherFind(){
@@ -1812,4 +1823,29 @@ function updateSessionInfo3(number){
             }
         }
     });
+}
+
+// $(document).on("click", "#success-remove-book", function () {
+//     window.location.href = "/secretary/secretary_app.php?successRemoval";
+// });
+
+function removeBook(bookToRemove){
+    //alert("Book " + bookToRemove + " will be removed!");
+
+    url = "/common/removeBook.php?name=" + bookToRemove;
+
+    $.ajax({
+        url:url,
+        type:'post',
+        success:function(response){
+            var msg = "";
+            if(response == 1){
+                window.location.href = String( document.location.href ).replace( '#', '' ) + "&successRemoval"
+            }
+            else{
+                alert(response);
+            }
+        }
+    });
+
 }
