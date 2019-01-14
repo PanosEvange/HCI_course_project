@@ -5,66 +5,64 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
     if (isset($_SESSION['userType']) ) {
 
-        if( $_SESSION['userType'] == 'Student' ){
-            $toReturn = "Student";
-        }
-        else if( $_SESSION['userType'] == 'Secretary' ){
+        $userName = $_SESSION['username'];
 
-        }
-        else if( $_SESSION['userType'] == 'Publisher' ){
+        $path = $_SERVER['DOCUMENT_ROOT'];
+        $path .= "/db_login/login_db.php";
+        include $path;
 
+        require_once $path; //db info
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
 
-        if (isset($_SESSION['userType']) ) {
-            $userName = $_SESSION['username'];
-        }
-
-        $toReturn = $toReturn." ".$userName;
+        $conn->set_charset("utf8");
 
         if (isset($_REQUEST['newEmail'])) {
-            $newPassword = $_REQUEST["newEmail"];
-            //$toReturn = $toReturn." newEmail";
-            // Update Email
+            $newEmail = $_REQUEST["newEmail"];
+            $sql = "UPDATE Users SET Email='$newEmail' WHERE Email='$userName'";
         }
 
         if (isset($_REQUEST['newPassword'])) {
             $newPassword = $_REQUEST["newPassword"];
-            //$toReturn = $toReturn." newPassword";
-            // Update password
+            $sql = "UPDATE Users SET Password='$newPassword' WHERE Email='$userName'";
         }
 
         if (isset($_REQUEST['newPhone'])) {
-            $newPassword = $_REQUEST["newPhone"];
-            //$toReturn = $toReturn." newPhone";
-            // Update phone
+            $newPhone = $_REQUEST["newPhone"];
+            $sql = "UPDATE Users SET Phone='$newPhone' WHERE Email='$userName'";
         }
 
         if (isset($_REQUEST['newAddress'])) {
-            $newPassword = $_REQUEST["newAddress"];
-            //$toReturn = $toReturn." newAddress";
-            // Update address
+            $newAddress = $_REQUEST["newAddress"];
+            $sql = "UPDATE Users SET Address='$newAddress' WHERE Email='$userName'";
         }
 
         if (isset($_REQUEST['newAddressNum'])) {
-            $newPassword = $_REQUEST["newAddressNum"];
-            //$toReturn = $toReturn." newAddressNum";
-            // Update addressNum
+            $newAddressNum = $_REQUEST["newAddressNum"];
+            $sql = "UPDATE Users SET AddressNum='$newAddressNum' WHERE Email='$userName'";
         }
 
         if (isset($_REQUEST['newDimos'])) {
-            $newPassword = $_REQUEST["newDimos"];
-            //$toReturn = $toReturn." newDimos";
-            // Update Dimos
+            $newDimos = $_REQUEST["newDimos"];
+            $sql = "UPDATE Users SET Municipality='$newDimos' WHERE Email='$userName'";
         }
 
         if (isset($_REQUEST['newPostalCode'])) {
-            $newPassword = $_REQUEST["newPostalCode"];
-            //$toReturn = $toReturn." newPostalCode";
-            // Update Postal Code
+            $newPostalCode = $_REQUEST["newPostalCode"];
+            $sql = "UPDATE Users SET TK='$newPostalCode' WHERE Email='$userName'";
         }
 
-        //echo $toReturn;
-        echo 1;
+        if ($conn->query($sql) === TRUE) {
+            $conn->close();
+            echo 1;
+        }
+        else {
+            $conn->close();
+            echo "Error updating record: " . $conn->error;
+        }
     }
 }
 else{

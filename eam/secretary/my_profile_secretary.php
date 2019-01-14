@@ -47,8 +47,7 @@
               <li>Το προφίλ μου</li>
             </ul>
         </div>
-
-
+        
         <?php include 'secretary_profile_info.php';?>
 
         <div class="my-main-content-registration my-profile-info">
